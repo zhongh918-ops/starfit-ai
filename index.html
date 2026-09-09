@@ -110,13 +110,13 @@
     <aside class="card">
       <label>产品（可切换 3 个测试品）</label>
       <select id="product"></select>
-      <label>产品描述</label>
-      <textarea id="desc"></textarea>
+      <label>产品描述 / 关键词</label>
+      <textarea id="desc" placeholder="输入卖点或关键词，例如：时尚、美妆、情绪价值。改完点「跑通匹配」。"></textarea>
       <label>目标人群</label>
       <input id="audience" value="18-28">
-      <label>初始 TAG</label>
+      <label>从描述识别出的 TAG</label>
       <div class="tags" id="seedTags"></div>
-      <button class="run" id="run">跑通匹配 · 咖啡找代言人</button>
+      <button class="run" id="run">跑通匹配</button>
       <button class="ghost" id="refresh">抓取最新热榜（约 1 分钟）</button>
       <p class="muted" style="margin-top:10px" id="hint">明星库 8 人；粉丝结构 hybrid。打开本页即自动匹配，热榜可手动刷新。</p>
     </aside>
@@ -141,7 +141,7 @@ function setLive() {
     : '公开网页：github.io 在国内常打不开。热榜由本机每 30 分钟抓一次后自动发布。';
   document.getElementById('refresh').hidden = !live;
   document.getElementById('hint').textContent = live
-    ? '明星库 8 人；粉丝结构 hybrid。打开本页即自动匹配，热榜可手动刷新。手机请用同一 Wi-Fi 打开下方局域网地址。'
+    ? '在描述里输入关键词后点「跑通匹配」。明星库 8 人。手机请用同一 Wi-Fi：http://192.168.1.42:8765/'
     : '国内手机请用 jsDelivr 链接。本页是快照，不是秒级热搜；电脑开机时约每 30 分钟更新一次。';
 }
 
@@ -164,6 +164,9 @@ async function load(keepProduct) {
   state.meta = data.meta;
   setLive();
   const sel = document.getElementById('product');
+  if (!state.products.some(p => p.id === 'custom')) {
+    state.products.push({ id: 'custom', name: '自定义产品', category: 'Custom', audience: '18-28', seed_tags: [], description: '' });
+  }
   if (!state.seeded) {
     sel.innerHTML = '';
     state.products.forEach((x, i) => {
@@ -175,15 +178,61 @@ async function load(keepProduct) {
     state.seeded = true;
   }
   if (!keepProduct) fillProduct();
+  else syncTagsFromDesc();
   render();
+}
+
+const TAG_RULES = {
+  '运动': /运动|健身|跑步|马拉松|NBA|CBA|足球|篮球|奥运|训练|瑜伽|骑行|网球|乒乓|运动员|跑鞋|球鞋|健身房|sports?|fitness|running|gym/i,
+  '户外': /户外|露营|徒步|登山|旅行|自驾|city\s*walk|海边|滑雪|冲浪|川西|outdoor|camping|hiking|travel/i,
+  '健康': /健康|养生|减脂|减肥|睡眠|防晒|低糖|无糖|轻食|蛋白|health/i,
+  '科技': /科技|AI|人工智能|芯片|华为|苹果|小米|机器人|智能|数码|手机|耳机|降噪|折叠|tech|smart/i,
+  '情绪价值': /情绪|治愈|松弛|氛围|陪伴|真诚|解压|燕麦系|healing/i,
+  '便利': /便利|即饮|外卖|通勤|速溶|懒人|到家|convenient/i,
+  '时尚': /时尚|穿搭|美妆|潮流|秀场|时装|造型|fashion|beauty|makeup/i,
+  '体验': /体验|沉浸|快闪|线下|展览|市集|experience/i,
+  '咖啡': /咖啡|拿铁|冷萃|美式|咖啡因|茶姬|coffee|latte/i,
+  '活力': /青春|活力|街舞|热血|燃|youth|energy/i
+};
+const EN_ALIAS = { sports:'运动', sport:'运动', fitness:'运动', running:'运动', gym:'运动', outdoor:'户外', outdoors:'户外', health:'健康', tech:'科技', fashion:'时尚', beauty:'时尚', makeup:'时尚', coffee:'咖啡' };
+
+function extractTags(text) {
+  const found = [];
+  const seen = new Set();
+  const add = t => { if (t && !seen.has(t)) { seen.add(t); found.push(t); } };
+  const raw = (text || '').trim();
+  if (!raw) return found;
+  Object.keys(TAG_RULES).forEach(tag => { if (raw.includes(tag)) add(tag); });
+  Object.keys(TAG_RULES).forEach(tag => { if (TAG_RULES[tag].test(raw)) add(tag); });
+  raw.split(/[\s,，、;；/|]+/).forEach(tok => {
+    const k = tok.trim().toLowerCase();
+    if (EN_ALIAS[k]) add(EN_ALIAS[k]);
+  });
+  return found;
+}
+
+function currentSeed() {
+  const extracted = extractTags(document.getElementById('desc').value);
+  if (extracted.length) return extracted;
+  const p = state.products.find(x => x.id === document.getElementById('product').value);
+  return (p && p.seed_tags) ? p.seed_tags.slice() : [];
+}
+
+function syncTagsFromDesc() {
+  const extracted = extractTags(document.getElementById('desc').value);
+  const seed = currentSeed();
+  const fallback = extracted.length === 0 && seed.length > 0;
+  document.getElementById('seedTags').innerHTML = seed.map(t => `<span class="tag on">${t}</span>`).join('')
+    + (fallback ? '<span class="muted">描述里还没识别到关键词，暂用产品预设 TAG</span>' : '')
+    + (!seed.length ? '<span class="muted">请在描述里写关键词，例如：运动、时尚、科技</span>' : '');
 }
 
 function fillProduct() {
   const p = state.products.find(x => x.id === document.getElementById('product').value);
-  document.getElementById('desc').value = p.description;
-  document.getElementById('audience').value = p.audience;
-  document.getElementById('seedTags').innerHTML = p.seed_tags.map(t => `<span class="tag on">${t}</span>`).join('');
-  document.getElementById('run').textContent = p.id === 'cold-brew' ? '跑通匹配 · 咖啡找代言人' : `跑通匹配 · ${p.category}`;
+  document.getElementById('desc').value = p.description || '';
+  document.getElementById('audience').value = p.audience || '18-28';
+  document.getElementById('run').textContent = p.id === 'custom' ? '按描述匹配代言人' : '跑通匹配';
+  syncTagsFromDesc();
 }
 
 function optimizeTags(seedTags, trends) {
@@ -205,12 +254,14 @@ function optimizeTags(seedTags, trends) {
     const w = v === 'caution' ? 0.55 : 1.15;
     push(tag, 'seed', w);
   });
-  ['健康', '便利', '体验', '情绪价值'].forEach(tag => push(tag, 'trend-add', 0.62));
   return result.sort((a, b) => b.weight * (0.5 + 0.5 * b.heat) - a.weight * (0.5 + 0.5 * a.heat));
 }
 
 function ageFit(celeb) {
+  const aud = document.getElementById('audience').value || '';
   const s = celeb.fan_profile.age_split;
+  if (/18\s*[-–]\s*24/.test(aud) && !/25/.test(aud)) return s['18-24'] || 0;
+  if (/29\s*[-–]\s*35/.test(aud)) return s['29-35'] || 0;
   return (s['18-24'] || 0) + (s['25-28'] || 0);
 }
 
@@ -219,6 +270,7 @@ function matchOne(optTags, celeb) {
   const hits = [];
   optTags.forEach(t => {
     const cv = celeb.tags[t.tag] || 0;
+    if (!state.celebrities.some(c => (c.tags[t.tag] || 0) > 0)) return;
     const w = t.weight * (0.5 + 0.5 * t.heat);
     num += w * cv;
     den += w;
@@ -232,45 +284,52 @@ function matchOne(optTags, celeb) {
   return { celeb, tagScore, ageScore, heatScore, riskScore, final, hits: hits.sort((a,b)=>b.celeb-a.celeb).slice(0,4) };
 }
 
-function campaign(product, tags, top) {
-  const tagStr = tags.slice(0, 4).map(t => t.tag).join(' / ');
+function campaign(product, tags, top, desc) {
+  const tagStr = tags.slice(0, 4).map(t => t.tag).join(' / ') || product.name;
   const name = top.celeb.name;
-  const map = {
-    'cold-brew': {
-      direction: `把冷萃做成 ${name} 的「随身冷静」：训练前后、city walk、机车/通勤都可以开盖。避开高咖啡因焦虑（TrendRadar 上茶饮咖啡因曾上热搜），强调低负担、真材实料。`,
-      slogans: [
-        `${name}同款冷静 · 冷萃即走`,
-        `热的是生活，冷的是你`,
-        `打开罐，比打开社交更轻`
-      ]
-    },
-    'shoes': {
-      direction: `用 ${name} 的运动真实感带训练场景，科技缓震做产品证据，而不是喊口号。`,
-      slogans: [`这一步，被看见`, `轻，是为了再跑一公里`, `${name} · 训练日从落地开始`]
-    },
-    'headphones': {
-      direction: `把降噪做成情绪边界：通勤、图书馆、夜跑。${name} 负责「我需要自己的声音」。`,
-      slogans: [`世界先静一下`, `你的节奏，入耳生效`, `${name} · 把噪音留在舱外`]
-    }
+  const customized = (desc || '').trim() && (desc || '').trim() !== (product.description || '').trim();
+  if (!customized && product.id === 'cold-brew') {
+    return {
+      direction: `把冷萃做成 ${name} 的「随身冷静」：训练前后、city walk、机车/通勤都可以开盖。避开高咖啡因焦虑，强调低负担、真材实料。`,
+      slogans: [`${name}同款冷静 · 冷萃即走`, `热的是生活，冷的是你`, `打开罐，比打开社交更轻`]
+    };
+  }
+  if (!customized && product.id === 'shoes') {
+    return { direction: `用 ${name} 的运动真实感带训练场景，科技缓震做产品证据。`, slogans: [`这一步，被看见`, `轻，是为了再跑一公里`, `${name} · 训练日从落地开始`] };
+  }
+  if (!customized && product.id === 'headphones') {
+    return { direction: `把降噪做成情绪边界。${name} 负责「我需要自己的声音」。`, slogans: [`世界先静一下`, `你的节奏，入耳生效`, `${name} · 把噪音留在舱外`] };
+  }
+  const snippet = (desc || product.name).replace(/\s+/g, ' ').slice(0, 48);
+  return {
+    direction: `根据你的描述「${snippet}」，用 ${name} 的人设承接 ${tagStr}。内容走真实场景，不硬广。`,
+    slogans: [`${name} × ${tags[0] ? tags[0].tag : product.name}`, `被看见的是你，不是广告`, `${tagStr} · 从人设出发`]
   };
-  return map[product.id] || { direction: `围绕 ${tagStr} 与 ${name} 的形象交集做内容。`, slogans: [`${name} × ${product.name}`] };
 }
 
 function pct(x) { return Math.round(x * 100); }
 
-function whyLine(product, r) {
-  if (product.id === 'cold-brew' && r.celeb.why_for_coffee) return r.celeb.why_for_coffee;
+function whyLine(product, r, desc) {
+  const customized = (desc || '').trim() && (desc || '').trim() !== (product.description || '').trim();
+  if (!customized && product.id === 'cold-brew' && r.celeb.why_for_coffee) return r.celeb.why_for_coffee;
   const tags = r.hits.map(h => h.tag).join('、') || '趋势 TAG';
-  return `与「${product.name}」的交集在 ${tags}；用真实人设带 ${product.category} 场景，而不是硬广。`;
+  return `按你输入的关键词，与「${tags}」重合最高；用真实人设带产品场景，而不是硬广。`;
 }
 
 function render() {
+  if (!state.trends || !state.celebrities) return;
   const product = state.products.find(x => x.id === document.getElementById('product').value);
-  const seed = product.seed_tags;
+  const desc = document.getElementById('desc').value;
+  syncTagsFromDesc();
+  const seed = currentSeed();
+  if (!seed.length) {
+    document.getElementById('out').innerHTML = '<p class="muted">请先在产品描述里输入关键词（例如：运动、时尚、科技、情绪价值），再点「跑通匹配」。</p>';
+    return;
+  }
   const opt = optimizeTags(seed, state.trends);
   const ranked = state.celebrities.map(c => matchOne(opt, c)).sort((a,b) => b.final - a.final);
   const top3 = ranked.slice(0, 3);
-  const camp = campaign(product, opt, top3[0]);
+  const camp = campaign(product, opt, top3[0], desc);
 
   const tagTable = opt.map(t => `
     <tr>
@@ -289,7 +348,7 @@ function render() {
       </div>
       <div>
         <div class="tags">${r.hits.map(h => `<span class="tag on">${h.tag} ${pct(h.celeb)}</span>`).join('')}</div>
-        <p class="why">${whyLine(product, r)}<br>粉丝 18–28 覆盖 ${pct(r.ageScore)}% · 风险 ${r.celeb.risk.level} · TrendRadar 提及 ${r.celeb.heat_mentions} 次<br>${r.celeb.evidence.map(e => `「${e.title}」`).join(' ')}</p>
+        <p class="why">${whyLine(product, r, desc)}<br>目标人群覆盖 ${pct(r.ageScore)}% · 风险 ${r.celeb.risk.level} · TrendRadar 提及 ${r.celeb.heat_mentions} 次<br>${r.celeb.evidence.map(e => `「${e.title}」`).join(' ')}</p>
         <div class="bars">
           ${[['TAG', r.tagScore],['年龄', r.ageScore],['热度', r.heatScore],['低风险', r.riskScore]].map(([k,v]) => `
             <div class="bar"><span>${k}</span><i><em style="width:${pct(v)}%"></em></i><span>${pct(v)}</span></div>`).join('')}
@@ -300,7 +359,7 @@ function render() {
 
   document.getElementById('out').innerHTML = `
     <h3 style="margin-bottom:8px">趋势对 TAG 的判断</h3>
-    <p class="muted">种子 TAG「${seed.join('、')}」对照最新热榜。表格中的「今」是今天新抓到的条数，匹配分会随刷新变化。</p>
+    <p class="muted">从描述识别出「${seed.join('、')}」，对照最新热榜后匹配代言人。改描述再点「跑通匹配」会重算 Top 3。</p>
     <table>
       <tr><th>TAG</th><th>动作</th><th>数据</th><th>依据</th></tr>
       ${tagTable}
@@ -319,7 +378,17 @@ function render() {
 }
 
 document.getElementById('product').addEventListener('change', () => { fillProduct(); render(); });
-document.getElementById('run').addEventListener('click', render);
+document.getElementById('run').addEventListener('click', () => {
+  render();
+  document.getElementById('out').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+let descTimer = null;
+document.getElementById('desc').addEventListener('input', () => {
+  syncTagsFromDesc();
+  clearTimeout(descTimer);
+  descTimer = setTimeout(render, 400);
+});
+document.getElementById('audience').addEventListener('change', render);
 document.getElementById('refresh').addEventListener('click', async () => {
   const btn = document.getElementById('refresh');
   btn.disabled = true;
