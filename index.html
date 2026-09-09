@@ -131,9 +131,9 @@ function setLive() {
   const live = !!m.live;
   const today = m.today_items != null ? `今日 ${m.today_items} 条` : '';
   const when = (m.source_mtime || m.generated_at || '').replace('T', ' ').slice(0, 19);
-  const published = (m.generated_at || '').replace('T', ' ').slice(0, 19);
+  const clock = new Date().toTimeString().slice(0, 8);
   document.getElementById('liveMeta').textContent = live
-    ? `实时 · ${today} · 热榜更新 ${when || '—'}`
+    ? `实时 ${clock} · ${today} · 热榜 ${when || '—'}`
     : `公开网页 · 热榜 ${when || '—'} · ${today}`;
   document.getElementById('dot').classList.toggle('off', !live);
   document.querySelector('.sub').textContent = live
@@ -342,7 +342,8 @@ load().catch(err => {
   document.getElementById('dot').classList.add('off');
   document.getElementById('out').innerHTML = `<p class="muted">网站未启动。在 starfit-ai 目录运行：<br><code>python3 app.py</code><br>然后打开 http://localhost:8765/<br>${err}</p>`;
 });
-setInterval(() => { if (state.trends && state.meta && state.meta.live) load(true).catch(() => {}); }, 20000);
+setInterval(() => { if (state.meta && state.meta.live) setLive(); }, 1000);
+setInterval(() => { if (state.trends && state.meta && state.meta.live) load(true).catch(() => {}); }, 8000);
 </script>
 </body>
 </html>

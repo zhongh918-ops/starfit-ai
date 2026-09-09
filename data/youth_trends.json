@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 112,
     "today_count": 15,
-    "heat": 0.491,
+    "heat": 0.376,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -15,15 +15,15 @@
       },
       {
         "date": "2026-09-09",
-        "title": "美网女单还剩6人：世界前5和郑钦文",
+        "title": "美网女单仅剩世界前5和郑钦文",
         "platform": "toutiao",
-        "rank": 4
+        "rank": 7
       },
       {
         "date": "2026-09-09",
-        "title": "印度女运动员因外貌遭网暴",
-        "platform": "toutiao",
-        "rank": 5
+        "title": "印度女子力量举运动员因外貌走红",
+        "platform": "baidu",
+        "rank": 7
       },
       {
         "date": "2026-09-09",
@@ -33,9 +33,9 @@
       },
       {
         "date": "2026-09-09",
-        "title": "沈阳马拉松赛后一次性纸杯遍地，市体育局称「是普遍现象，已全面清扫」，这是不可避免的吗？有没有替代方案？",
-        "platform": "zhihu",
-        "rank": 9
+        "title": "郑钦文今晚对阵莱巴金娜",
+        "platform": "douyin",
+        "rank": 8
       }
     ],
     "sources": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 33,
     "today_count": 2,
-    "heat": 0.084,
+    "heat": 0.068,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -54,13 +54,13 @@
         "date": "2026-09-09",
         "title": "小米新推SUV,车顶能露营",
         "platform": "tieba",
-        "rank": 10
+        "rank": 12
       },
       {
         "date": "2026-09-09",
         "title": "版权到期,旅行青蛙官宣停运",
         "platform": "tieba",
-        "rank": 27
+        "rank": 29
       },
       {
         "date": "2025-12-24",
@@ -87,9 +87,9 @@
   },
   "健康": {
     "tag": "健康",
-    "mention_count": 53,
-    "today_count": 4,
-    "heat": 0.155,
+    "mention_count": 54,
+    "today_count": 5,
+    "heat": 0.142,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 339,
-    "today_count": 26,
+    "mention_count": 350,
+    "today_count": 37,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -144,27 +144,27 @@
       },
       {
         "date": "2026-09-09",
-        "title": "新CEO首秀,折叠iPhone驾到",
-        "platform": "tieba",
-        "rank": 3
+        "title": "曝iPhone Air 2将作为iPhone 18推出",
+        "platform": "toutiao",
+        "rank": 1
       },
       {
         "date": "2026-09-09",
-        "title": "刚刚，DeepSeek新模型内测！网友实测：快得飞起！",
-        "platform": "wallstreetcn-hot",
-        "rank": 5
+        "title": "Duo 手机iPad二合一",
+        "platform": "weibo",
+        "rank": 2
       },
       {
         "date": "2026-09-09",
         "title": "苹果十余年来最重磅发布会：首款折叠iPhone即将亮相，新CEO首秀登场",
         "platform": "cls-hot",
-        "rank": 5
+        "rank": 3
       },
       {
         "date": "2026-09-09",
-        "title": "AI攻克数学难题,韦神尴尬了",
+        "title": "新CEO首秀,折叠iPhone驾到",
         "platform": "tieba",
-        "rank": 5
+        "rank": 3
       }
     ],
     "sources": [
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 27,
     "today_count": 2,
-    "heat": 0.078,
+    "heat": 0.062,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -183,13 +183,13 @@
         "date": "2026-09-09",
         "title": "燕麦系秋天的神",
         "platform": "douyin",
-        "rank": 2
+        "rank": 1
       },
       {
         "date": "2026-09-09",
         "title": "白鹿穿燕麦系小跳一下",
         "platform": "douyin",
-        "rank": 24
+        "rank": 23
       },
       {
         "date": "2025-12-24",
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 20,
     "today_count": 1,
-    "heat": 0.046,
+    "heat": 0.038,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -226,7 +226,7 @@
         "date": "2026-09-09",
         "title": "自费买可乐的外卖骑手被奖励一年骑手餐",
         "platform": "weibo",
-        "rank": 30
+        "rank": 4
       },
       {
         "date": "2025-12-26",
@@ -259,12 +259,18 @@
   },
   "时尚": {
     "tag": "时尚",
-    "mention_count": 26,
-    "today_count": 0,
-    "heat": 0.027,
+    "mention_count": 27,
+    "today_count": 1,
+    "heat": 0.045,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
+      {
+        "date": "2026-09-09",
+        "title": "张国伟来时装周走秀了",
+        "platform": "douyin",
+        "rank": 24
+      },
       {
         "date": "2025-12-21",
         "title": "普京又“催生”：生育子女应成为一种潮流",
@@ -288,12 +294,6 @@
         "title": "白鹿星光大赏有3套造型",
         "platform": "weibo",
         "rank": 14
-      },
-      {
-        "date": "2025-12-21",
-        "title": "张萌早八就发了星光大赏造型图",
-        "platform": "weibo",
-        "rank": 15
       }
     ],
     "sources": [
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 30,
     "today_count": 0,
-    "heat": 0.031,
+    "heat": 0.03,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -347,7 +347,7 @@
     "tag": "咖啡",
     "mention_count": 17,
     "today_count": 0,
-    "heat": 0.018,
+    "heat": 0.017,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
@@ -390,15 +390,15 @@
     "tag": "活力",
     "mention_count": 35,
     "today_count": 4,
-    "heat": 0.136,
+    "heat": 0.105,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
       {
         "date": "2026-09-09",
-        "title": "燃油车真卖不动了吗",
-        "platform": "baidu",
-        "rank": 1
+        "title": "8 月新能源车零售 100.5 万辆，同比下降 10.1%，燃油车零售 54 万辆，同比下降 40%，如何解读？",
+        "platform": "zhihu",
+        "rank": 2
       },
       {
         "date": "2026-09-09",
@@ -408,15 +408,15 @@
       },
       {
         "date": "2026-09-09",
-        "title": "8 月新能源车零售 100.5 万辆，同比下降 10.1%，燃油车零售 54 万辆，同比下降 40%，如何解读？",
-        "platform": "zhihu",
-        "rank": 3
+        "title": "燃油车真卖不动了吗",
+        "platform": "baidu",
+        "rank": 8
       },
       {
         "date": "2026-09-09",
         "title": "伊朗战事让美国人为燃油多付千亿美元",
         "platform": "toutiao",
-        "rank": 7
+        "rank": 26
       },
       {
         "date": "2025-12-22",
