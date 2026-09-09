@@ -1,41 +1,41 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 120,
-    "today_count": 5,
-    "heat": 0.301,
+    "mention_count": 125,
+    "today_count": 10,
+    "heat": 0.241,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
       {
         "date": "2026-09-10",
-        "title": "郑钦文对阵莱巴金娜",
-        "platform": "douyin",
-        "rank": 1
-      },
-      {
-        "date": "2026-09-10",
-        "title": "郑钦文vs莱巴金娜",
-        "platform": "weibo",
+        "title": "郑钦文止步美网八强",
+        "platform": "baidu",
         "rank": 2
       },
       {
         "date": "2026-09-10",
-        "title": "健身人的训练成绩单",
-        "platform": "douyin",
-        "rank": 7
+        "title": "中国女篮3分险胜 晋级世界杯八强",
+        "platform": "baidu",
+        "rank": 4
       },
       {
         "date": "2026-09-10",
-        "title": "郑钦文莱巴金娜美网数据对比",
+        "title": "郑钦文美网1比2莱巴金娜",
         "platform": "weibo",
-        "rank": 17
+        "rank": 6
       },
       {
         "date": "2026-09-10",
         "title": "郑钦文从排名跌到一百名开外到如今一路挺进美网八强，你认为她的状态算重回巅峰了吗？",
         "platform": "zhihu",
-        "rank": 20
+        "rank": 7
+      },
+      {
+        "date": "2026-09-10",
+        "title": "健身人的训练成绩单",
+        "platform": "douyin",
+        "rank": 9
       }
     ],
     "sources": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 35,
     "today_count": 1,
-    "heat": 0.07,
+    "heat": 0.043,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -87,12 +87,30 @@
   },
   "健康": {
     "tag": "健康",
-    "mention_count": 55,
-    "today_count": 0,
-    "heat": 0.05,
+    "mention_count": 58,
+    "today_count": 3,
+    "heat": 0.09,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
+      {
+        "date": "2026-09-10",
+        "title": "起底“神药”直播间①｜年售3.9亿的“养生局”：假专家、假神药，卖货全靠演",
+        "platform": "thepaper",
+        "rank": 3
+      },
+      {
+        "date": "2026-09-10",
+        "title": "被忽视的血管“杀手”：低密度脂蛋白",
+        "platform": "toutiao",
+        "rank": 8
+      },
+      {
+        "date": "2026-09-10",
+        "title": "起底“神药”直播间②｜假洋品牌在国外注册转国内销：上架小网店，带货靠主播",
+        "platform": "thepaper",
+        "rank": 8
+      },
       {
         "date": "2025-12-22",
         "title": "抗癌药平替有效成分为0",
@@ -104,24 +122,6 @@
         "title": "大脑消耗糖分这么多，为什么没有动脑减肥法？",
         "platform": "zhihu",
         "rank": 2
-      },
-      {
-        "date": "2025-12-21",
-        "title": "冬至时节如何养生",
-        "platform": "weibo",
-        "rank": 3
-      },
-      {
-        "date": "2025-12-21",
-        "title": "持续加码医保投入 夯实健康中国",
-        "platform": "toutiao",
-        "rank": 3
-      },
-      {
-        "date": "2026-09-09",
-        "title": "司美格鲁肽背后的女人",
-        "platform": "weibo",
-        "rank": 4
       }
     ],
     "sources": [
@@ -130,16 +130,34 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 384,
-    "today_count": 17,
+    "mention_count": 415,
+    "today_count": 48,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
     "evidence": [
       {
         "date": "2026-09-10",
-        "title": "被取消资助女生愿换掉苹果手机",
-        "platform": "weibo",
+        "title": "苹果秋季发布会",
+        "platform": "baidu",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-10",
+        "title": "DeepSeek双线推进：V4.1 Flash模型明日发布 同步筹备科创板IPO",
+        "platform": "cls-hot",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-10",
+        "title": "iPhone折叠屏真机上手",
+        "platform": "douyin",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-10",
+        "title": "如何评价 2026 苹果秋季发布会？哪些亮点值得关注？",
+        "platform": "zhihu",
         "rank": 1
       },
       {
@@ -147,24 +165,6 @@
         "title": "如何评价 DeepSeek V4.1 Flash 将于 2026 年 9 月 10 日上线，以及 V4Pro 下架？",
         "platform": "zhihu",
         "rank": 2
-      },
-      {
-        "date": "2026-09-10",
-        "title": "新CEO首秀,折叠iPhone驾到",
-        "platform": "tieba",
-        "rank": 3
-      },
-      {
-        "date": "2026-09-10",
-        "title": "OpenAI 首席科学家称已造出「异星心智」，并警告「全人类都要刹车」，这意味着什么？",
-        "platform": "zhihu",
-        "rank": 3
-      },
-      {
-        "date": "2026-09-10",
-        "title": "美国指责中国AI公司蒸馏美企，外交部回应",
-        "platform": "ifeng",
-        "rank": 4
       }
     ],
     "sources": [
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 29,
     "today_count": 1,
-    "heat": 0.065,
+    "heat": 0.038,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -183,7 +183,7 @@
         "date": "2026-09-10",
         "title": "燕麦系秋天的神",
         "platform": "douyin",
-        "rank": 4
+        "rank": 7
       },
       {
         "date": "2025-12-24",
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 22,
     "today_count": 1,
-    "heat": 0.058,
+    "heat": 0.032,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -259,12 +259,18 @@
   },
   "时尚": {
     "tag": "时尚",
-    "mention_count": 27,
-    "today_count": 0,
-    "heat": 0.025,
+    "mention_count": 28,
+    "today_count": 1,
+    "heat": 0.037,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
+      {
+        "date": "2026-09-10",
+        "title": "张国伟来时装周走秀了",
+        "platform": "douyin",
+        "rank": 28
+      },
       {
         "date": "2025-12-21",
         "title": "普京又“催生”：生育子女应成为一种潮流",
@@ -288,12 +294,6 @@
         "title": "白鹿星光大赏有3套造型",
         "platform": "weibo",
         "rank": 14
-      },
-      {
-        "date": "2025-12-21",
-        "title": "张萌早八就发了星光大赏造型图",
-        "platform": "weibo",
-        "rank": 15
       }
     ],
     "sources": [
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 30,
     "today_count": 0,
-    "heat": 0.027,
+    "heat": 0.025,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -347,7 +347,7 @@
     "tag": "咖啡",
     "mention_count": 17,
     "today_count": 0,
-    "heat": 0.015,
+    "heat": 0.014,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
@@ -388,9 +388,9 @@
   },
   "活力": {
     "tag": "活力",
-    "mention_count": 36,
-    "today_count": 1,
-    "heat": 0.071,
+    "mention_count": 39,
+    "today_count": 4,
+    "heat": 0.087,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
@@ -398,30 +398,30 @@
         "date": "2026-09-10",
         "title": "8 月新能源车零售 100.5 万辆，同比下降 10.1%，燃油车零售 54 万辆，同比下降 40%，如何解读？",
         "platform": "zhihu",
-        "rank": 1
+        "rank": 16
+      },
+      {
+        "date": "2026-09-10",
+        "title": "燃油车真的卖不动了吗",
+        "platform": "toutiao",
+        "rank": 20
+      },
+      {
+        "date": "2026-09-10",
+        "title": "鸣潮共鸣者景燃PV",
+        "platform": "bilibili-hot-search",
+        "rank": 20
+      },
+      {
+        "date": "2026-09-10",
+        "title": "鸣潮景燃主题曲三叩首",
+        "platform": "bilibili-hot-search",
+        "rank": 29
       },
       {
         "date": "2025-12-22",
         "title": "中国人造太阳燃料取自海水",
         "platform": "weibo",
-        "rank": 3
-      },
-      {
-        "date": "2025-12-22",
-        "title": "从多领域成就感受中国经济活力",
-        "platform": "baidu",
-        "rank": 3
-      },
-      {
-        "date": "2025-12-24",
-        "title": "消费有“数”活力无界",
-        "platform": "douyin",
-        "rank": 3
-      },
-      {
-        "date": "2025-12-24",
-        "title": "从流动数据看中国经济活力",
-        "platform": "toutiao",
         "rank": 3
       }
     ],
