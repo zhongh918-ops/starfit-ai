@@ -1,0 +1,1033 @@
+{
+  "trends": {
+    "运动": {
+      "tag": "运动",
+      "mention_count": 112,
+      "today_count": 15,
+      "heat": 0.491,
+      "verdict": "keep",
+      "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
+      "evidence": [
+        {
+          "date": "2026-09-09",
+          "title": "皇马2:1击败国米",
+          "platform": "douyin",
+          "rank": 1
+        },
+        {
+          "date": "2026-09-09",
+          "title": "美网女单还剩6人：世界前5和郑钦文",
+          "platform": "toutiao",
+          "rank": 4
+        },
+        {
+          "date": "2026-09-09",
+          "title": "印度女运动员因外貌遭网暴",
+          "platform": "toutiao",
+          "rank": 5
+        },
+        {
+          "date": "2026-09-09",
+          "title": "郑钦文 美网中国选手独苗",
+          "platform": "baidu",
+          "rank": 8
+        },
+        {
+          "date": "2026-09-09",
+          "title": "沈阳马拉松赛后一次性纸杯遍地，市体育局称「是普遍现象，已全面清扫」，这是不可避免的吗？有没有替代方案？",
+          "platform": "zhihu",
+          "rank": 9
+        }
+      ],
+      "sources": [
+        "TrendRadar 11 平台热榜"
+      ]
+    },
+    "户外": {
+      "tag": "户外",
+      "mention_count": 33,
+      "today_count": 2,
+      "heat": 0.084,
+      "verdict": "caution",
+      "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
+      "evidence": [
+        {
+          "date": "2026-09-09",
+          "title": "小米新推SUV,车顶能露营",
+          "platform": "tieba",
+          "rank": 10
+        },
+        {
+          "date": "2026-09-09",
+          "title": "版权到期,旅行青蛙官宣停运",
+          "platform": "tieba",
+          "rank": 27
+        },
+        {
+          "date": "2025-12-24",
+          "title": "2025我的旅行特别鸣谢",
+          "platform": "douyin",
+          "rank": 2
+        },
+        {
+          "date": "2025-12-22",
+          "title": "23岁硕士川西徒步因高反去世",
+          "platform": "toutiao",
+          "rank": 5
+        },
+        {
+          "date": "2025-12-22",
+          "title": "23岁硕士徒步去世前已主动返程",
+          "platform": "weibo",
+          "rank": 5
+        }
+      ],
+      "sources": [
+        "TrendRadar 11 平台热榜"
+      ]
+    },
+    "健康": {
+      "tag": "健康",
+      "mention_count": 53,
+      "today_count": 4,
+      "heat": 0.155,
+      "verdict": "add",
+      "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
+      "evidence": [
+        {
+          "date": "2026-09-09",
+          "title": "司美格鲁肽背后的女人",
+          "platform": "weibo",
+          "rank": 4
+        },
+        {
+          "date": "2026-09-09",
+          "title": "IG是否有机会冲击冠军",
+          "platform": "bilibili-hot-search",
+          "rank": 5
+        },
+        {
+          "date": "2026-09-09",
+          "title": "起底“神药”直播间①｜年售3.9亿的“养生局”：假专家、假神药，卖货全靠演",
+          "platform": "thepaper",
+          "rank": 7
+        },
+        {
+          "date": "2026-09-09",
+          "title": "起底“神药”直播间②｜假洋品牌在国外注册转国内销：上架小网店，带货靠主播",
+          "platform": "thepaper",
+          "rank": 11
+        },
+        {
+          "date": "2025-12-22",
+          "title": "抗癌药平替有效成分为0",
+          "platform": "weibo",
+          "rank": 2
+        }
+      ],
+      "sources": [
+        "TrendRadar 11 平台热榜"
+      ]
+    },
+    "科技": {
+      "tag": "科技",
+      "mention_count": 339,
+      "today_count": 26,
+      "heat": 1.0,
+      "verdict": "keep",
+      "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
+      "evidence": [
+        {
+          "date": "2026-09-09",
+          "title": "胡塞袭击推油价逼近100美元，美股指收跌，医疗股重挫领跌道指，AI光通信大涨",
+          "platform": "wallstreetcn-hot",
+          "rank": 1
+        },
+        {
+          "date": "2026-09-09",
+          "title": "新CEO首秀,折叠iPhone驾到",
+          "platform": "tieba",
+          "rank": 3
+        },
+        {
+          "date": "2026-09-09",
+          "title": "刚刚，DeepSeek新模型内测！网友实测：快得飞起！",
+          "platform": "wallstreetcn-hot",
+          "rank": 5
+        },
+        {
+          "date": "2026-09-09",
+          "title": "苹果十余年来最重磅发布会：首款折叠iPhone即将亮相，新CEO首秀登场",
+          "platform": "cls-hot",
+          "rank": 5
+        },
+        {
+          "date": "2026-09-09",
+          "title": "AI攻克数学难题,韦神尴尬了",
+          "platform": "tieba",
+          "rank": 5
+        }
+      ],
+      "sources": [
+        "TrendRadar 11 平台热榜"
+      ]
+    },
+    "情绪价值": {
+      "tag": "情绪价值",
+      "mention_count": 27,
+      "today_count": 2,
+      "heat": 0.078,
+      "verdict": "add",
+      "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
+      "evidence": [
+        {
+          "date": "2026-09-09",
+          "title": "燕麦系秋天的神",
+          "platform": "douyin",
+          "rank": 2
+        },
+        {
+          "date": "2026-09-09",
+          "title": "白鹿穿燕麦系小跳一下",
+          "platform": "douyin",
+          "rank": 24
+        },
+        {
+          "date": "2025-12-24",
+          "title": "马上测·回顾2025：两位“较真”记者，这一年测评的快乐、震惊和成就",
+          "platform": "thepaper",
+          "rank": 1
+        },
+        {
+          "date": "2025-12-25",
+          "title": "现在，欧洲情绪很不稳定",
+          "platform": "ifeng",
+          "rank": 4
+        },
+        {
+          "date": "2025-12-21",
+          "title": "斐济旅行治愈所有不快乐",
+          "platform": "douyin",
+          "rank": 7
+        }
+      ],
+      "sources": [
+        "TrendRadar 11 平台热榜"
+      ]
+    },
+    "便利": {
+      "tag": "便利",
+      "mention_count": 20,
+      "today_count": 1,
+      "heat": 0.046,
+      "verdict": "add",
+      "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
+      "evidence": [
+        {
+          "date": "2026-09-09",
+          "title": "自费买可乐的外卖骑手被奖励一年骑手餐",
+          "platform": "weibo",
+          "rank": 30
+        },
+        {
+          "date": "2025-12-26",
+          "title": "贾国龙预制菜风波后发声，称靠吃安眠药入睡，如果能重来坚决不硬刚，如何看待西贝未来的发展？",
+          "platform": "zhihu",
+          "rank": 2
+        },
+        {
+          "date": "2025-12-27",
+          "title": "小区歧视外卖员,百名骑手集结抗议",
+          "platform": "tieba",
+          "rank": 4
+        },
+        {
+          "date": "2025-12-27",
+          "title": "外卖骑手在家中猝死被保险公司拒赔",
+          "platform": "baidu",
+          "rank": 7
+        },
+        {
+          "date": "2025-12-22",
+          "title": "妈妈为救白血病女儿跑成外卖单王",
+          "platform": "baidu",
+          "rank": 10
+        }
+      ],
+      "sources": [
+        "TrendRadar 11 平台热榜"
+      ]
+    },
+    "时尚": {
+      "tag": "时尚",
+      "mention_count": 26,
+      "today_count": 0,
+      "heat": 0.027,
+      "verdict": "optional",
+      "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
+      "evidence": [
+        {
+          "date": "2025-12-21",
+          "title": "普京又“催生”：生育子女应成为一种潮流",
+          "platform": "ifeng",
+          "rank": 5
+        },
+        {
+          "date": "2025-12-21",
+          "title": "火影鸣佐传说时装技能爆料",
+          "platform": "bilibili-hot-search",
+          "rank": 12
+        },
+        {
+          "date": "2025-12-21",
+          "title": "田曦薇造型师审美",
+          "platform": "weibo",
+          "rank": 12
+        },
+        {
+          "date": "2025-12-21",
+          "title": "白鹿星光大赏有3套造型",
+          "platform": "weibo",
+          "rank": 14
+        },
+        {
+          "date": "2025-12-21",
+          "title": "张萌早八就发了星光大赏造型图",
+          "platform": "weibo",
+          "rank": 15
+        }
+      ],
+      "sources": [
+        "TrendRadar 11 平台热榜"
+      ]
+    },
+    "体验": {
+      "tag": "体验",
+      "mention_count": 30,
+      "today_count": 0,
+      "heat": 0.031,
+      "verdict": "add",
+      "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
+      "evidence": [
+        {
+          "date": "2025-12-22",
+          "title": "老广沉浸式夜生活",
+          "platform": "bilibili-hot-search",
+          "rank": 3
+        },
+        {
+          "date": "2025-12-26",
+          "title": "鸣潮3.0吧友体验实况",
+          "platform": "tieba",
+          "rank": 3
+        },
+        {
+          "date": "2025-12-27",
+          "title": "非遗市集艺探究竟",
+          "platform": "weibo",
+          "rank": 11
+        },
+        {
+          "date": "2025-12-22",
+          "title": "房车里度过暴风雪夜是何体验",
+          "platform": "bilibili-hot-search",
+          "rank": 15
+        },
+        {
+          "date": "2025-12-25",
+          "title": "glm4.7 发布，实际体验怎样？",
+          "platform": "zhihu",
+          "rank": 15
+        }
+      ],
+      "sources": [
+        "TrendRadar 11 平台热榜"
+      ]
+    },
+    "咖啡": {
+      "tag": "咖啡",
+      "mention_count": 17,
+      "today_count": 0,
+      "heat": 0.018,
+      "verdict": "optional",
+      "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
+      "evidence": [
+        {
+          "date": "2025-12-26",
+          "title": "如何评价睡前消息称国产茶类饮品（点名某茶姬）咖啡因含量过高，是准毒品的擦边球？",
+          "platform": "zhihu",
+          "rank": 1
+        },
+        {
+          "date": "2025-12-27",
+          "title": "霸王茶姬大跌",
+          "platform": "weibo",
+          "rank": 1
+        },
+        {
+          "date": "2025-12-26",
+          "title": "霸王茶姬 咖啡因",
+          "platform": "weibo",
+          "rank": 6
+        },
+        {
+          "date": "2025-12-26",
+          "title": "美股指开盘涨跌不一，霸王茶姬股价创新低，金属再度狂飙，金银铜齐创新高，沪铜首次站上十万关口",
+          "platform": "wallstreetcn-hot",
+          "rank": 8
+        },
+        {
+          "date": "2025-12-26",
+          "title": "咖啡因变毒品,马督公又出暴论",
+          "platform": "tieba",
+          "rank": 9
+        }
+      ],
+      "sources": [
+        "TrendRadar 11 平台热榜"
+      ]
+    },
+    "活力": {
+      "tag": "活力",
+      "mention_count": 35,
+      "today_count": 4,
+      "heat": 0.136,
+      "verdict": "optional",
+      "note": "青春/燃向内容，适合运动与潮流人设。",
+      "evidence": [
+        {
+          "date": "2026-09-09",
+          "title": "燃油车真卖不动了吗",
+          "platform": "baidu",
+          "rank": 1
+        },
+        {
+          "date": "2026-09-09",
+          "title": "青春华章",
+          "platform": "douyin",
+          "rank": 3
+        },
+        {
+          "date": "2026-09-09",
+          "title": "8 月新能源车零售 100.5 万辆，同比下降 10.1%，燃油车零售 54 万辆，同比下降 40%，如何解读？",
+          "platform": "zhihu",
+          "rank": 3
+        },
+        {
+          "date": "2026-09-09",
+          "title": "伊朗战事让美国人为燃油多付千亿美元",
+          "platform": "toutiao",
+          "rank": 7
+        },
+        {
+          "date": "2025-12-22",
+          "title": "中国人造太阳燃料取自海水",
+          "platform": "weibo",
+          "rank": 3
+        }
+      ],
+      "sources": [
+        "TrendRadar 11 平台热榜"
+      ]
+    }
+  },
+  "celebrities": [
+    {
+      "id": "wang-yibo",
+      "name": "王一博",
+      "name_en": "Wang Yibo",
+      "gender": "male",
+      "birth_year": 1997,
+      "occupations": [
+        "演员",
+        "舞者",
+        "摩托车手"
+      ],
+      "tags": {
+        "运动": 0.93,
+        "户外": 0.62,
+        "科技": 0.58,
+        "健康": 0.45,
+        "时尚": 0.82,
+        "真诚": 0.6,
+        "活力": 0.96,
+        "体验": 0.55,
+        "便利": 0.2,
+        "情绪价值": 0.48
+      },
+      "fan_profile": {
+        "core_age": [
+          18,
+          28
+        ],
+        "age_split": {
+          "18-24": 0.46,
+          "25-28": 0.34,
+          "29-35": 0.2
+        },
+        "interests": [
+          "街舞",
+          "机车",
+          "潮流穿搭",
+          "综艺"
+        ],
+        "engagement": "短视频与综艺互动高，粉丝行动力强",
+        "platforms": [
+          "微博",
+          "抖音",
+          "B站"
+        ]
+      },
+      "risk": {
+        "score": 0.32,
+        "level": "medium",
+        "notes": [
+          "高强度行程导致状态波动上热搜",
+          "机车形象存在安全争议"
+        ]
+      },
+      "heat_mentions": 5,
+      "evidence": [
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-21",
+          "title": "王一博身心疲惫正调整状态"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-27",
+          "title": "王一博连吃饭都有小节目"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-25",
+          "title": "王一博 一生要出片的中国男人"
+        }
+      ],
+      "why_for_coffee": "运动×潮流×即饮场景：训练前后、机车出行的随身补给。",
+      "today_mentions": 0
+    },
+    {
+      "id": "wu-lei",
+      "name": "吴磊",
+      "name_en": "Wu Lei / Leo Wu",
+      "gender": "male",
+      "birth_year": 1999,
+      "occupations": [
+        "演员"
+      ],
+      "tags": {
+        "运动": 0.78,
+        "户外": 0.88,
+        "科技": 0.3,
+        "健康": 0.62,
+        "时尚": 0.55,
+        "真诚": 0.86,
+        "活力": 0.8,
+        "体验": 0.7,
+        "便利": 0.25,
+        "情绪价值": 0.72
+      },
+      "fan_profile": {
+        "core_age": [
+          18,
+          28
+        ],
+        "age_split": {
+          "18-24": 0.38,
+          "25-28": 0.4,
+          "29-35": 0.22
+        },
+        "interests": [
+          "旅行",
+          "户外",
+          "剧集",
+          "生活vlog"
+        ],
+        "engagement": "评论区生活向互动多，亲近感强",
+        "platforms": [
+          "微博",
+          "抖音"
+        ]
+      },
+      "risk": {
+        "score": 0.18,
+        "level": "low",
+        "notes": [
+          "形象稳定，负面热搜少"
+        ]
+      },
+      "heat_mentions": 5,
+      "evidence": [
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-21",
+          "title": "吴磊座位"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-26",
+          "title": "吴磊直播"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-25",
+          "title": "大唐双姝也是吴磊的青梅竹马"
+        }
+      ],
+      "why_for_coffee": "户外轻出行 + 真诚陪伴，适合冷萃「随身、自然、不摆拍」。",
+      "today_mentions": 0
+    },
+    {
+      "id": "yi-yang-qianxi",
+      "name": "易烊千玺",
+      "name_en": "Jackson Yee",
+      "gender": "male",
+      "birth_year": 2000,
+      "occupations": [
+        "演员",
+        "歌手"
+      ],
+      "tags": {
+        "运动": 0.42,
+        "户外": 0.35,
+        "科技": 0.84,
+        "健康": 0.5,
+        "时尚": 0.78,
+        "真诚": 0.92,
+        "活力": 0.55,
+        "体验": 0.6,
+        "便利": 0.22,
+        "情绪价值": 0.8
+      },
+      "fan_profile": {
+        "core_age": [
+          18,
+          28
+        ],
+        "age_split": {
+          "18-24": 0.5,
+          "25-28": 0.32,
+          "29-35": 0.18
+        },
+        "interests": [
+          "电影",
+          "设计",
+          "科技品牌",
+          "舞台"
+        ],
+        "engagement": "高质量讨论多，品牌调性契合度高",
+        "platforms": [
+          "微博",
+          "抖音"
+        ]
+      },
+      "risk": {
+        "score": 0.22,
+        "level": "low-medium",
+        "notes": [
+          "公众期待高，内容需克制、避免过度娱乐化"
+        ]
+      },
+      "heat_mentions": 6,
+      "evidence": [
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-21",
+          "title": "易烊千玺演讲"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-23",
+          "title": "华为何刚晒与易烊千玺合照"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-22",
+          "title": "易烊千玺绿色叠加西装"
+        }
+      ],
+      "why_for_coffee": "科技 TAG 最强背书（鸿蒙），适合把冷萃做成「冷静、克制、新一代」。",
+      "today_mentions": 0
+    },
+    {
+      "id": "bai-lu",
+      "name": "白鹿",
+      "name_en": "Bai Lu",
+      "gender": "female",
+      "birth_year": 1994,
+      "occupations": [
+        "演员"
+      ],
+      "tags": {
+        "运动": 0.38,
+        "户外": 0.5,
+        "科技": 0.22,
+        "健康": 0.55,
+        "时尚": 0.9,
+        "真诚": 0.7,
+        "活力": 0.88,
+        "体验": 0.75,
+        "便利": 0.4,
+        "情绪价值": 0.82
+      },
+      "fan_profile": {
+        "core_age": [
+          18,
+          28
+        ],
+        "age_split": {
+          "18-24": 0.42,
+          "25-28": 0.36,
+          "29-35": 0.22
+        },
+        "interests": [
+          "剧集",
+          "穿搭",
+          "生活碎片",
+          "舞蹈"
+        ],
+        "engagement": "热搜造型/生活向内容传播快",
+        "platforms": [
+          "微博",
+          "抖音"
+        ]
+      },
+      "risk": {
+        "score": 0.2,
+        "level": "low",
+        "notes": [
+          "娱乐热搜多为造型与剧宣，品牌风险低"
+        ]
+      },
+      "heat_mentions": 16,
+      "evidence": [
+        {
+          "source": "TrendRadar/douyin",
+          "date": "2026-09-09",
+          "title": "白鹿穿燕麦系小跳一下"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-24",
+          "title": "白鹿回应自驾开车"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-21",
+          "title": "白鹿星光大赏有3套造型"
+        }
+      ],
+      "why_for_coffee": "样本期内热搜最多，活力+情绪价值适合日常即饮，但运动/科技弱于男性运动偶像。",
+      "today_mentions": 1
+    },
+    {
+      "id": "huang-jingyu",
+      "name": "黄景瑜",
+      "name_en": "Johnny Huang",
+      "gender": "male",
+      "birth_year": 1992,
+      "occupations": [
+        "演员"
+      ],
+      "tags": {
+        "运动": 0.9,
+        "户外": 0.72,
+        "科技": 0.28,
+        "健康": 0.8,
+        "时尚": 0.48,
+        "真诚": 0.75,
+        "活力": 0.7,
+        "体验": 0.45,
+        "便利": 0.18,
+        "情绪价值": 0.4
+      },
+      "fan_profile": {
+        "core_age": [
+          22,
+          32
+        ],
+        "age_split": {
+          "18-24": 0.28,
+          "25-28": 0.38,
+          "29-35": 0.34
+        },
+        "interests": [
+          "健身",
+          "军旅/动作",
+          "户外"
+        ],
+        "engagement": "硬朗人设稳，健身内容信任度高",
+        "platforms": [
+          "微博",
+          "抖音"
+        ]
+      },
+      "risk": {
+        "score": 0.16,
+        "level": "low",
+        "notes": [
+          "人设稳定；粉丝年龄略偏 25+"
+        ]
+      },
+      "heat_mentions": 4,
+      "evidence": [
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-27",
+          "title": "黄景瑜这辈子别想坐我车了"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-23",
+          "title": "爱奇艺真把黄景瑜的话当个事办了"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-25",
+          "title": "黄景瑜真连上网了"
+        }
+      ],
+      "why_for_coffee": "运动+健康最强，适合训练补给叙事；对 18–24 覆盖弱于王一博/千玺。",
+      "today_mentions": 0
+    },
+    {
+      "id": "zhang-zifeng",
+      "name": "张子枫",
+      "name_en": "Zhang Zifeng",
+      "gender": "female",
+      "birth_year": 2001,
+      "occupations": [
+        "演员"
+      ],
+      "tags": {
+        "运动": 0.4,
+        "户外": 0.45,
+        "科技": 0.35,
+        "健康": 0.7,
+        "时尚": 0.52,
+        "真诚": 0.95,
+        "活力": 0.6,
+        "体验": 0.58,
+        "便利": 0.3,
+        "情绪价值": 0.88
+      },
+      "fan_profile": {
+        "core_age": [
+          16,
+          26
+        ],
+        "age_split": {
+          "18-24": 0.55,
+          "25-28": 0.28,
+          "29-35": 0.17
+        },
+        "interests": [
+          "电影",
+          "校园/成长",
+          "真实生活"
+        ],
+        "engagement": "口碑驱动，抗营销感强",
+        "platforms": [
+          "微博",
+          "豆瓣"
+        ]
+      },
+      "risk": {
+        "score": 0.12,
+        "level": "low",
+        "notes": [
+          "低绯闻；过度硬广可能伤害真诚人设"
+        ]
+      },
+      "heat_mentions": 1,
+      "evidence": [
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-24",
+          "title": "张子枫手臂上好大一个疤"
+        }
+      ],
+      "why_for_coffee": "真诚/情绪价值最高，适合「不打鸡血的冷萃」；运动科技弱。",
+      "today_mentions": 0
+    },
+    {
+      "id": "li-xian",
+      "name": "李现",
+      "name_en": "Li Xian",
+      "gender": "male",
+      "birth_year": 1991,
+      "occupations": [
+        "演员"
+      ],
+      "tags": {
+        "运动": 0.68,
+        "户外": 0.5,
+        "科技": 0.4,
+        "健康": 0.72,
+        "时尚": 0.85,
+        "真诚": 0.78,
+        "活力": 0.58,
+        "体验": 0.48,
+        "便利": 0.22,
+        "情绪价值": 0.55
+      },
+      "fan_profile": {
+        "core_age": [
+          22,
+          32
+        ],
+        "age_split": {
+          "18-24": 0.3,
+          "25-28": 0.4,
+          "29-35": 0.3
+        },
+        "interests": [
+          "跑步",
+          "时尚大刊",
+          "都市剧"
+        ],
+        "engagement": "都市精英感，转化偏品质消费",
+        "platforms": [
+          "微博",
+          "小红书"
+        ]
+      },
+      "risk": {
+        "score": 0.15,
+        "level": "low",
+        "notes": [
+          "形象干净；核心粉略偏 25+"
+        ]
+      },
+      "heat_mentions": 1,
+      "evidence": [
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-22",
+          "title": "Prada李现封面高智感拉满"
+        }
+      ],
+      "why_for_coffee": "健康跑步 + 高智时尚，适合通勤冷萃；18–24 覆盖一般。",
+      "today_mentions": 0
+    },
+    {
+      "id": "zhou-ye",
+      "name": "周也",
+      "name_en": "Zhou Ye",
+      "gender": "female",
+      "birth_year": 1998,
+      "occupations": [
+        "演员"
+      ],
+      "tags": {
+        "运动": 0.35,
+        "户外": 0.58,
+        "科技": 0.25,
+        "健康": 0.5,
+        "时尚": 0.8,
+        "真诚": 0.74,
+        "活力": 0.72,
+        "体验": 0.68,
+        "便利": 0.28,
+        "情绪价值": 0.7
+      },
+      "fan_profile": {
+        "core_age": [
+          18,
+          28
+        ],
+        "age_split": {
+          "18-24": 0.44,
+          "25-28": 0.36,
+          "29-35": 0.2
+        },
+        "interests": [
+          "电影",
+          "红毯造型",
+          "清冷美学"
+        ],
+        "engagement": "造型热搜传播快，品牌调性偏文艺",
+        "platforms": [
+          "微博",
+          "抖音"
+        ]
+      },
+      "risk": {
+        "score": 0.19,
+        "level": "low",
+        "notes": [
+          "热搜以造型/活动为主"
+        ]
+      },
+      "heat_mentions": 10,
+      "evidence": [
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-21",
+          "title": "周也头纱被踩"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-22",
+          "title": "周也王玉雯把陈星旭聊走了"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-21",
+          "title": "周也丞磊 新娘新郎"
+        }
+      ],
+      "why_for_coffee": "热搜活跃、年轻女性粉丝，适合清冷美学冷萃；运动科技弱。",
+      "today_mentions": 0
+    }
+  ],
+  "products": [
+    {
+      "id": "cold-brew",
+      "name": "NITEFLOW 即饮冷萃",
+      "category": "Coffee",
+      "audience": "18-28",
+      "seed_tags": [
+        "运动",
+        "户外",
+        "科技"
+      ],
+      "description": "面向 18–28 岁的即饮冷萃咖啡。初始想法强调运动、户外、科技。"
+    },
+    {
+      "id": "shoes",
+      "name": "AEROSTRIDE 训练跑鞋",
+      "category": "Sports Shoes",
+      "audience": "18-28",
+      "seed_tags": [
+        "运动",
+        "科技",
+        "活力"
+      ],
+      "description": "轻量训练跑鞋，面向日常跑步与健身房的年轻人。"
+    },
+    {
+      "id": "headphones",
+      "name": "PULSE AIR 智能耳机",
+      "category": "Smart Headphones",
+      "audience": "18-28",
+      "seed_tags": [
+        "科技",
+        "体验",
+        "情绪价值"
+      ],
+      "description": "降噪智能耳机，强调通勤体验与情绪陪伴。"
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-09-09T15:42:06+08:00",
+    "source_mtime": "2026-09-09T15:19:11+08:00",
+    "today": "2026-09-09",
+    "total_items": 8277,
+    "today_items": 255,
+    "server_time": "2026-09-09T15:42:06+08:00",
+    "live": false,
+    "public": true
+  }
+}

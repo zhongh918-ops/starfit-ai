@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "cold-brew",
+      "name": "NITEFLOW 即饮冷萃",
+      "category": "Coffee",
+      "audience": "18-28",
+      "seed_tags": ["运动", "户外", "科技"],
+      "description": "面向 18–28 岁的即饮冷萃咖啡。初始想法强调运动、户外、科技。"
+    },
+    {
+      "id": "shoes",
+      "name": "AEROSTRIDE 训练跑鞋",
+      "category": "Sports Shoes",
+      "audience": "18-28",
+      "seed_tags": ["运动", "科技", "活力"],
+      "description": "轻量训练跑鞋，面向日常跑步与健身房的年轻人。"
+    },
+    {
+      "id": "headphones",
+      "name": "PULSE AIR 智能耳机",
+      "category": "Smart Headphones",
+      "audience": "18-28",
+      "seed_tags": ["科技", "体验", "情绪价值"],
+      "description": "降噪智能耳机，强调通勤体验与情绪陪伴。"
+    }
+  ]
+}

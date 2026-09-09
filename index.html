@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StarFit AI · 明星 × 年轻人趋势 × 品牌匹配</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #181b22;
+    --line: #2a2f3a;
+    --text: #f4efe6;
+    --muted: #9aa3b2;
+    --accent: #d4a373;
+    --accent-2: #7dd3c7;
+    --good: #7dcea0;
+    --warn: #f0c14b;
+    --bad: #e07a5f;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang SC", "Noto Sans SC", Inter, sans-serif;
+    background: radial-gradient(1200px 600px at 10% -10%, #243044 0%, var(--bg) 50%);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 28px 20px 80px;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+  header { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 28px; }
+  h1 { font-size: 28px; letter-spacing: .04em; }
+  h1 span { color: var(--accent); }
+  .sub { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .grid { display: grid; grid-template-columns: 340px 1fr; gap: 18px; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    background: color-mix(in srgb, var(--card) 92%, transparent);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px;
+  }
+  label { display: block; font-size: 12px; color: var(--muted); margin: 12px 0 6px; }
+  select, input, textarea {
+    width: 100%; background: #12141a; color: var(--text);
+    border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 14px;
+  }
+  textarea { min-height: 72px; resize: vertical; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .tag {
+    font-size: 12px; padding: 4px 10px; border-radius: 999px;
+    border: 1px solid var(--line); color: var(--muted);
+  }
+  .tag.on { background: #2a2118; border-color: var(--accent); color: var(--accent); }
+  .tag.add { background: #142422; border-color: var(--accent-2); color: var(--accent-2); }
+  .tag.warn { background: #2a2414; border-color: var(--warn); color: var(--warn); }
+  button.run {
+    width: 100%; margin-top: 16px; padding: 12px 14px; border: 0; border-radius: 12px;
+    background: linear-gradient(135deg, #d4a373, #c08552); color: #1a120c;
+    font-weight: 700; cursor: pointer; font-size: 15px;
+  }
+  button.run:hover { filter: brightness(1.08); }
+  button.ghost {
+    width: 100%; margin-top: 8px; padding: 10px 14px; border-radius: 12px;
+    background: transparent; color: var(--accent-2); border: 1px solid #2d4a46; cursor: pointer;
+  }
+  button.ghost:disabled { opacity: .5; cursor: wait; }
+  .livebar {
+    display: flex; align-items: center; gap: 10px; justify-content: flex-end;
+    font-size: 12px; color: var(--muted);
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--good); box-shadow: 0 0 8px var(--good); }
+  .dot.off { background: var(--warn); box-shadow: none; }
+  .flow { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 16px; }
+  .flow b { font-size: 11px; letter-spacing: .08em; color: var(--muted); padding: 6px 10px; border: 1px dashed var(--line); border-radius: 8px; }
+  .rank { display: grid; gap: 12px; }
+  .celeb { display: grid; grid-template-columns: 72px 1fr auto; gap: 12px; align-items: start; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #14171e; }
+  .score { font-size: 28px; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .score small { display: block; font-size: 11px; color: var(--muted); font-weight: 400; }
+  .why { font-size: 13px; color: #d7dde8; line-height: 1.55; margin-top: 6px; }
+  .bars { display: grid; gap: 4px; margin-top: 8px; }
+  .bar { display: grid; grid-template-columns: 64px 1fr 36px; gap: 8px; align-items: center; font-size: 11px; color: var(--muted); }
+  .bar i { display: block; height: 6px; background: #2c3340; border-radius: 99px; overflow: hidden; }
+  .bar i em { display: block; height: 100%; background: var(--accent-2); }
+  .campaign { margin-top: 16px; }
+  .slogan { font-size: 20px; color: var(--accent); margin: 8px 0; }
+  .muted { color: var(--muted); font-size: 12px; }
+  .pill { font-size: 11px; padding: 2px 8px; border-radius: 99px; }
+  .pill.keep { background: #1d3a2c; color: var(--good); }
+  .pill.add { background: #16332f; color: var(--accent-2); }
+  .pill.caution { background: #3a3014; color: var(--warn); }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 10px; }
+  td, th { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--line); color: var(--muted); }
+  th { color: #c5cdd8; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>StarFit <span>AI</span></h1>
+      <p class="sub">实时网站：热榜来自本机 TrendRadar，匹配分数随最新数据重算。</p>
+    </div>
+    <div class="livebar"><span class="dot" id="dot"></span><span id="liveMeta">连接中…</span></div>
+  </header>
+
+  <div class="flow">
+    <b>1 PRODUCT</b><b>2 TREND</b><b>3 TAG</b><b>4 CELEBRITY</b><b>5 CAMPAIGN</b>
+  </div>
+
+  <div class="grid">
+    <aside class="card">
+      <label>产品（可切换 3 个测试品）</label>
+      <select id="product"></select>
+      <label>产品描述</label>
+      <textarea id="desc"></textarea>
+      <label>目标人群</label>
+      <input id="audience" value="18-28">
+      <label>初始 TAG</label>
+      <div class="tags" id="seedTags"></div>
+      <button class="run" id="run">跑通匹配 · 咖啡找代言人</button>
+      <button class="ghost" id="refresh">抓取最新热榜（约 1 分钟）</button>
+      <p class="muted" style="margin-top:10px" id="hint">明星库 8 人；粉丝结构 hybrid。打开本页即自动匹配，热榜可手动刷新。</p>
+    </aside>
+    <main id="out" class="card"><p class="muted">选择产品后点击跑通。系统会用趋势库判断 TAG 是否成立，再匹配 Top 3 明星并生成 slogan。</p></main>
+  </div>
+</div>
+<script>
+const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false };
+
+function setLive() {
+  const m = state.meta || {};
+  const live = !!m.live;
+  const today = m.today_items != null ? `今日 ${m.today_items} 条` : '';
+  const when = (m.source_mtime || m.generated_at || '').replace('T', ' ').slice(0, 19);
+  document.getElementById('liveMeta').textContent = live
+    ? `实时 · ${today} · 热榜更新 ${when || '—'}`
+    : `公开网页 · 快照 ${when || '—'} · ${today}`;
+  document.getElementById('dot').classList.toggle('off', !live);
+  document.querySelector('.sub').textContent = live
+    ? '实时网站：热榜来自本机 TrendRadar，匹配分数随最新数据重算。'
+    : '公开网页：手机、电脑都能打开。热榜是发布时的快照，关机也不失效。';
+  document.getElementById('refresh').hidden = !live;
+  document.getElementById('hint').textContent = live
+    ? '明星库 8 人；粉丝结构 hybrid。打开本页即自动匹配，热榜可手动刷新。'
+    : '这是公开快照，任何人可打开。要刷新热榜请在本机运行 python3 app.py。';
+}
+
+async function fetchState() {
+  try {
+    const r = await fetch('/api/state', { cache: 'no-store' });
+    const ct = r.headers.get('content-type') || '';
+    if (r.ok && ct.includes('application/json')) return r.json();
+  } catch (e) {}
+  const r = await fetch('data/state.json', { cache: 'no-store' });
+  if (!r.ok) throw new Error('无法加载趋势数据');
+  return r.json();
+}
+
+async function load(keepProduct) {
+  const data = await fetchState();
+  state.trends = data.trends;
+  state.celebrities = data.celebrities;
+  state.products = data.products;
+  state.meta = data.meta;
+  setLive();
+  const sel = document.getElementById('product');
+  if (!state.seeded) {
+    sel.innerHTML = '';
+    state.products.forEach((x, i) => {
+      const o = document.createElement('option');
+      o.value = x.id; o.textContent = `${x.category} · ${x.name}`;
+      if (i === 0) o.selected = true;
+      sel.appendChild(o);
+    });
+    state.seeded = true;
+  }
+  if (!keepProduct) fillProduct();
+  render();
+}
+
+function fillProduct() {
+  const p = state.products.find(x => x.id === document.getElementById('product').value);
+  document.getElementById('desc').value = p.description;
+  document.getElementById('audience').value = p.audience;
+  document.getElementById('seedTags').innerHTML = p.seed_tags.map(t => `<span class="tag on">${t}</span>`).join('');
+  document.getElementById('run').textContent = p.id === 'cold-brew' ? '跑通匹配 · 咖啡找代言人' : `跑通匹配 · ${p.category}`;
+}
+
+function optimizeTags(seedTags, trends) {
+  const result = [];
+  const seen = new Set();
+  const push = (tag, origin, weight) => {
+    if (seen.has(tag)) return;
+    const tr = trends[tag] || { heat: 0.4, verdict: 'keep', note: '趋势库暂无独立热度，按人设 TAG 参与匹配。', evidence: [] };
+    seen.add(tag);
+    result.push({
+      tag, origin, weight, heat: tr.heat, verdict: tr.verdict, note: tr.note,
+      evidence: (tr.evidence || []).slice(0, 2),
+      mention_count: tr.mention_count || 0,
+      today_count: tr.today_count || 0
+    });
+  };
+  seedTags.forEach(tag => {
+    const v = trends[tag]?.verdict;
+    const w = v === 'caution' ? 0.55 : 1.15;
+    push(tag, 'seed', w);
+  });
+  ['健康', '便利', '体验', '情绪价值'].forEach(tag => push(tag, 'trend-add', 0.62));
+  return result.sort((a, b) => b.weight * (0.5 + 0.5 * b.heat) - a.weight * (0.5 + 0.5 * a.heat));
+}
+
+function ageFit(celeb) {
+  const s = celeb.fan_profile.age_split;
+  return (s['18-24'] || 0) + (s['25-28'] || 0);
+}
+
+function matchOne(optTags, celeb) {
+  let num = 0, den = 0;
+  const hits = [];
+  optTags.forEach(t => {
+    const cv = celeb.tags[t.tag] || 0;
+    const w = t.weight * (0.5 + 0.5 * t.heat);
+    num += w * cv;
+    den += w;
+    if (cv >= 0.55) hits.push({ tag: t.tag, product: w, celeb: cv });
+  });
+  const tagScore = den ? num / den : 0;
+  const ageScore = ageFit(celeb);
+  const heatScore = Math.min(1, 0.25 + 0.75 * Math.log(1 + celeb.heat_mentions) / Math.log(17));
+  const riskScore = 1 - celeb.risk.score;
+  const final = 0.50 * tagScore + 0.22 * ageScore + 0.08 * heatScore + 0.20 * riskScore;
+  return { celeb, tagScore, ageScore, heatScore, riskScore, final, hits: hits.sort((a,b)=>b.celeb-a.celeb).slice(0,4) };
+}
+
+function campaign(product, tags, top) {
+  const tagStr = tags.slice(0, 4).map(t => t.tag).join(' / ');
+  const name = top.celeb.name;
+  const map = {
+    'cold-brew': {
+      direction: `把冷萃做成 ${name} 的「随身冷静」：训练前后、city walk、机车/通勤都可以开盖。避开高咖啡因焦虑（TrendRadar 上茶饮咖啡因曾上热搜），强调低负担、真材实料。`,
+      slogans: [
+        `${name}同款冷静 · 冷萃即走`,
+        `热的是生活，冷的是你`,
+        `打开罐，比打开社交更轻`
+      ]
+    },
+    'shoes': {
+      direction: `用 ${name} 的运动真实感带训练场景，科技缓震做产品证据，而不是喊口号。`,
+      slogans: [`这一步，被看见`, `轻，是为了再跑一公里`, `${name} · 训练日从落地开始`]
+    },
+    'headphones': {
+      direction: `把降噪做成情绪边界：通勤、图书馆、夜跑。${name} 负责「我需要自己的声音」。`,
+      slogans: [`世界先静一下`, `你的节奏，入耳生效`, `${name} · 把噪音留在舱外`]
+    }
+  };
+  return map[product.id] || { direction: `围绕 ${tagStr} 与 ${name} 的形象交集做内容。`, slogans: [`${name} × ${product.name}`] };
+}
+
+function pct(x) { return Math.round(x * 100); }
+
+function whyLine(product, r) {
+  if (product.id === 'cold-brew' && r.celeb.why_for_coffee) return r.celeb.why_for_coffee;
+  const tags = r.hits.map(h => h.tag).join('、') || '趋势 TAG';
+  return `与「${product.name}」的交集在 ${tags}；用真实人设带 ${product.category} 场景，而不是硬广。`;
+}
+
+function render() {
+  const product = state.products.find(x => x.id === document.getElementById('product').value);
+  const seed = product.seed_tags;
+  const opt = optimizeTags(seed, state.trends);
+  const ranked = state.celebrities.map(c => matchOne(opt, c)).sort((a,b) => b.final - a.final);
+  const top3 = ranked.slice(0, 3);
+  const camp = campaign(product, opt, top3[0]);
+
+  const tagTable = opt.map(t => `
+    <tr>
+      <td>${t.tag}</td>
+      <td><span class="pill ${t.verdict === 'caution' ? 'caution' : (t.origin === 'trend-add' ? 'add' : 'keep')}">${t.origin === 'seed' ? t.verdict : 'add'}</span></td>
+      <td>${t.today_count || 0} 今 / ${t.mention_count || 0} 总</td>
+      <td>${t.note}</td>
+    </tr>`).join('');
+
+  const cards = top3.map((r, i) => `
+    <article class="celeb">
+      <div>
+        <div class="muted">TOP ${i+1}</div>
+        <strong>${r.celeb.name}</strong>
+        <div class="muted">${r.celeb.occupations.join(' · ')}</div>
+      </div>
+      <div>
+        <div class="tags">${r.hits.map(h => `<span class="tag on">${h.tag} ${pct(h.celeb)}</span>`).join('')}</div>
+        <p class="why">${whyLine(product, r)}<br>粉丝 18–28 覆盖 ${pct(r.ageScore)}% · 风险 ${r.celeb.risk.level} · TrendRadar 提及 ${r.celeb.heat_mentions} 次<br>${r.celeb.evidence.map(e => `「${e.title}」`).join(' ')}</p>
+        <div class="bars">
+          ${[['TAG', r.tagScore],['年龄', r.ageScore],['热度', r.heatScore],['低风险', r.riskScore]].map(([k,v]) => `
+            <div class="bar"><span>${k}</span><i><em style="width:${pct(v)}%"></em></i><span>${pct(v)}</span></div>`).join('')}
+        </div>
+      </div>
+      <div class="score">${pct(r.final)}<small>匹配分</small></div>
+    </article>`).join('');
+
+  document.getElementById('out').innerHTML = `
+    <h3 style="margin-bottom:8px">趋势对 TAG 的判断</h3>
+    <p class="muted">种子 TAG「${seed.join('、')}」对照最新热榜。表格中的「今」是今天新抓到的条数，匹配分会随刷新变化。</p>
+    <table>
+      <tr><th>TAG</th><th>动作</th><th>数据</th><th>依据</th></tr>
+      ${tagTable}
+    </table>
+    <div class="tags" style="margin:14px 0">
+      ${opt.map(t => `<span class="tag ${t.verdict==='caution'?'warn':(t.origin==='trend-add'?'add':'on')}">${t.tag}</span>`).join('')}
+    </div>
+    <h3>明星匹配 Top 3</h3>
+    <div class="rank" style="margin-top:10px">${cards}</div>
+    <div class="campaign">
+      <h3>Campaign idea</h3>
+      <p class="why">${camp.direction}</p>
+      ${camp.slogans.map(s => `<div class="slogan">“${s}”</div>`).join('')}
+    </div>
+  `;
+}
+
+document.getElementById('product').addEventListener('change', () => { fillProduct(); render(); });
+document.getElementById('run').addEventListener('click', render);
+document.getElementById('refresh').addEventListener('click', async () => {
+  const btn = document.getElementById('refresh');
+  btn.disabled = true;
+  btn.textContent = '正在抓取热榜…';
+  await fetch('/api/refresh', { method: 'POST' });
+  const tick = setInterval(async () => {
+    const s = await fetch('/api/refresh/status').then(r => r.json());
+    btn.textContent = s.running ? '正在抓取热榜…' : (s.error ? '抓取失败，点击重试' : '热榜已更新');
+    if (!s.running) {
+      clearInterval(tick);
+      btn.disabled = false;
+      if (!s.error) {
+        await load(true);
+        btn.textContent = '抓取最新热榜（约 1 分钟）';
+      }
+    }
+  }, 1500);
+});
+load().catch(err => {
+  document.getElementById('dot').classList.add('off');
+  document.getElementById('out').innerHTML = `<p class="muted">网站未启动。在 starfit-ai 目录运行：<br><code>python3 app.py</code><br>然后打开 http://localhost:8765/<br>${err}</p>`;
+});
+setInterval(() => { if (state.trends && state.meta && state.meta.live) load(true).catch(() => {}); }, 20000);
+</script>
+</body>
+</html>
