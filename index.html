@@ -131,17 +131,18 @@ function setLive() {
   const live = !!m.live;
   const today = m.today_items != null ? `今日 ${m.today_items} 条` : '';
   const when = (m.source_mtime || m.generated_at || '').replace('T', ' ').slice(0, 19);
+  const published = (m.generated_at || '').replace('T', ' ').slice(0, 19);
   document.getElementById('liveMeta').textContent = live
     ? `实时 · ${today} · 热榜更新 ${when || '—'}`
-    : `公开网页 · 快照 ${when || '—'} · ${today}`;
+    : `公开网页 · 热榜 ${when || '—'} · ${today}`;
   document.getElementById('dot').classList.toggle('off', !live);
   document.querySelector('.sub').textContent = live
     ? '实时网站：热榜来自本机 TrendRadar，匹配分数随最新数据重算。'
-    : '公开网页：手机、电脑都能打开。热榜是发布时的快照，关机也不失效。';
+    : '公开网页：github.io 在国内常打不开。热榜由本机每 30 分钟抓一次后自动发布。';
   document.getElementById('refresh').hidden = !live;
   document.getElementById('hint').textContent = live
-    ? '明星库 8 人；粉丝结构 hybrid。打开本页即自动匹配，热榜可手动刷新。'
-    : '这是公开快照，任何人可打开。要刷新热榜请在本机运行 python3 app.py。';
+    ? '明星库 8 人；粉丝结构 hybrid。打开本页即自动匹配，热榜可手动刷新。手机请用同一 Wi-Fi 打开下方局域网地址。'
+    : '国内手机请用 jsDelivr 链接。本页是快照，不是秒级热搜；电脑开机时约每 30 分钟更新一次。';
 }
 
 async function fetchState() {
@@ -150,7 +151,7 @@ async function fetchState() {
     const ct = r.headers.get('content-type') || '';
     if (r.ok && ct.includes('application/json')) return r.json();
   } catch (e) {}
-  const r = await fetch('data/state.json', { cache: 'no-store' });
+  const r = await fetch('data/state.json?t=' + Date.now(), { cache: 'no-store' });
   if (!r.ok) throw new Error('无法加载趋势数据');
   return r.json();
 }
