@@ -168,27 +168,37 @@ def recount_celebrity_heat(celebrities: list[dict], rows: list[dict] | None = No
     return out
 
 
-def optimize_tags(seed_tags: list[str], trends: dict) -> list[dict]:
+def optimize_tags(seed_tags: list[str], trends: dict, category: str = "", description: str = "") -> list[dict]:
     result, seen = [], set()
 
-    def push(tag: str, origin: str, weight: float):
+    def push(tag: str, origin: str, why: str, score: int | None = None):
         if tag in seen:
             return
         seen.add(tag)
         tr = trends.get(tag) or {
-            "heat": 0.4,
+            "heat": 0.25,
             "verdict": "keep",
-            "note": "趋势库暂无独立热度，按人设 TAG 参与匹配。",
+            "note": "趋势库暂无独立热度。",
             "evidence": [],
             "mention_count": 0,
             "today_count": 0,
         }
+        s = round(50 + 48 * float(tr.get("heat", 0)))
+        if origin == "seed":
+            s = min(98, s + 16)
+        if tr.get("verdict") == "caution":
+            s = round(s * 0.7)
+        if score is not None:
+            s = score
+        s = max(8, min(98, s))
         result.append(
             {
                 "tag": tag,
                 "origin": origin,
-                "weight": weight,
-                "heat": tr.get("heat", 0.4),
+                "why": why,
+                "score": s,
+                "weight": s / 100,
+                "heat": tr.get("heat", 0.25),
                 "verdict": tr.get("verdict", "keep"),
                 "note": tr.get("note", ""),
                 "mention_count": tr.get("mention_count", 0),
@@ -197,22 +207,45 @@ def optimize_tags(seed_tags: list[str], trends: dict) -> list[dict]:
         )
 
     for tag in seed_tags:
-        v = (trends.get(tag) or {}).get("verdict")
-        push(tag, "seed", 0.55 if v == "caution" else 1.15)
-    for tag in ("健康", "便利", "体验", "情绪价值"):
-        push(tag, "trend-add", 0.62)
-    return sorted(result, key=lambda t: t["weight"] * (0.5 + 0.5 * t["heat"]), reverse=True)
+        why = "用户选择 / 描述识别，予以保留并按热榜信号校准。"
+        force = None
+        if category == "Coffee":
+            if tag == "户外":
+                force = 72 if (trends.get(tag) or {}).get("verdict") == "caution" else 95
+                why = "即饮场景与轻户外高度相关；若热榜含风险新闻会降权。"
+            if tag == "运动":
+                force, why = 92, "训练/骑行/通勤补给是核心使用场景。"
+            if tag == "科技" and not re.search(r"智能硬件|芯片|传感器|APP", description):
+                force, why = 76, "用户选了科技，但对即饮咖啡偏弱相关，模型降权。"
+        push(tag, "seed", why, force)
+
+    extras: list[tuple] = []
+    if category == "Coffee":
+        extras = [
+            ("便利", 90, "即饮刚需，模型建议补入。"),
+            ("健康", 88, "低糖/清爽定位与健康感相关。"),
+            ("情绪价值", 82, "随身补给可承接陪伴/松弛。"),
+        ]
+    elif category == "Sports Shoes":
+        extras = [("健康", 80, "训练场景常与健康生活方式重叠。")]
+    elif category == "Smart Headphones":
+        extras = [("便利", 78, "通勤降噪属于便利场景。")]
+    for tag, score, why in extras:
+        if tag not in seed_tags:
+            push(tag, "recommend", why, score)
+
+    return sorted(result, key=lambda t: t["score"], reverse=True)
 
 
 def match_product(product: dict, trends: dict, celebrities: list[dict]) -> dict:
-    opt = optimize_tags(product["seed_tags"], trends)
+    opt = optimize_tags(product.get("seed_tags") or [], trends, product.get("category", ""), product.get("description", ""))
     ranked = []
     for celeb in celebrities:
         num = den = 0.0
         hits = []
         for t in opt:
             cv = float(celeb["tags"].get(t["tag"], 0))
-            w = t["weight"] * (0.5 + 0.5 * t["heat"])
+            w = t["score"] / 100
             num += w * cv
             den += w
             if cv >= 0.55:
@@ -220,18 +253,32 @@ def match_product(product: dict, trends: dict, celebrities: list[dict]) -> dict:
         tag_score = num / den if den else 0
         split = celeb["fan_profile"]["age_split"]
         age_score = split.get("18-24", 0) + split.get("25-28", 0)
-        heat_score = min(1.0, 0.25 + 0.75 * math.log(1 + celeb.get("heat_mentions", 0)) / math.log(17))
-        risk_score = 1 - celeb["risk"]["score"]
-        final = 0.50 * tag_score + 0.22 * age_score + 0.08 * heat_score + 0.20 * risk_score
+        core = []
+        for t in opt:
+            cv = float(celeb["tags"].get(t["tag"], 0))
+            if cv < 0.3:
+                continue
+            core.append(cv)
+        market = (sum(core) / len(core)) if core else 0
+        keys = [t["tag"] for t in opt[:4]]
+        brand = sum(float(celeb["tags"].get(k, 0)) for k in keys) / len(keys) if keys else 0.5
+        engagement = min(1.0, 0.25 + 0.75 * math.log(1 + celeb.get("heat_mentions", 0)) / math.log(17))
+        risk_penalty = float(celeb["risk"]["score"]) * 0.12
+        raw = 0.35 * tag_score + 0.20 * market + 0.20 * age_score + 0.15 * brand + 0.10 * engagement
+        final = max(0.0, min(1.0, raw - risk_penalty))
         ranked.append(
             {
                 "celeb": celeb,
                 "tagScore": tag_score,
                 "ageScore": age_score,
-                "heatScore": heat_score,
-                "riskScore": risk_score,
+                "brandScore": brand,
+                "engagement": engagement,
+                "marketScore": market,
+                "heatScore": engagement,
+                "riskScore": 1 - celeb["risk"]["score"],
                 "final": final,
-                "hits": sorted(hits, key=lambda x: x["celeb"], reverse=True)[:4],
+                "label": "Synthetic Demo Score",
+                "hits": sorted(hits, key=lambda x: x["celeb"], reverse=True)[:5],
             }
         )
     ranked.sort(key=lambda x: x["final"], reverse=True)

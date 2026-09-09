@@ -1,7 +1,7 @@
 {
   "version": "0.1-demo",
   "updated": "2026-09-09",
-  "notes": "8 位 Demo 明星。热搜提及来自 TrendRadar（微博/抖音/B站/头条等）；形象 TAG、粉丝结构、风险为 hybrid（公开形象 + synthetic 补全），用于跑通匹配，非正式商业尽调。",
+  "notes": "8 位公开明星（演员/歌手/舞者等），不含 KOL/KOC。热搜标题提及 = TrendRadar 观测数据。形象 TAG、粉丝结构、风险、公众形象文案、代表作品为 hybrid/synthetic Demo，非正式商业尽调，不可当作第三方调研发布分数。以往代言品类与奖项若未收录则显示 unavailable。",
   "celebrities": [
     {
       "id": "wang-yibo",
@@ -9,37 +9,84 @@
       "name_en": "Wang Yibo",
       "gender": "male",
       "birth_year": 1997,
-      "occupations": ["演员", "舞者", "摩托车手"],
+      "occupations": [
+        "演员",
+        "舞者",
+        "摩托车手"
+      ],
       "tags": {
         "运动": 0.93,
         "户外": 0.62,
         "科技": 0.58,
         "健康": 0.45,
         "时尚": 0.82,
-        "真诚": 0.60,
+        "真诚": 0.6,
         "活力": 0.96,
         "体验": 0.55,
-        "便利": 0.20,
+        "便利": 0.2,
         "情绪价值": 0.48
       },
       "fan_profile": {
-        "core_age": [18, 28],
-        "age_split": { "18-24": 0.46, "25-28": 0.34, "29-35": 0.20 },
-        "interests": ["街舞", "机车", "潮流穿搭", "综艺"],
+        "core_age": [
+          18,
+          28
+        ],
+        "age_split": {
+          "18-24": 0.46,
+          "25-28": 0.34,
+          "29-35": 0.2
+        },
+        "interests": [
+          "街舞",
+          "机车",
+          "潮流穿搭",
+          "综艺"
+        ],
         "engagement": "短视频与综艺互动高，粉丝行动力强",
-        "platforms": ["微博", "抖音", "B站"]
+        "platforms": [
+          "微博",
+          "抖音",
+          "B站"
+        ]
       },
       "risk": {
         "score": 0.32,
         "level": "medium",
-        "notes": ["高强度行程导致状态波动上热搜", "机车形象存在安全争议"]
+        "notes": [
+          "高强度行程导致状态波动上热搜",
+          "机车形象存在安全争议"
+        ]
       },
       "heat_mentions": 5,
       "evidence": [
-        { "source": "TrendRadar/weibo", "date": "2025-12-21", "title": "王一博身心疲惫正调整状态" },
-        { "source": "TrendRadar/weibo", "date": "2025-12-25", "title": "王一博 一生要出片的中国男人" }
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-21",
+          "title": "王一博身心疲惫正调整状态"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-25",
+          "title": "王一博 一生要出片的中国男人"
+        }
       ],
-      "why_for_coffee": "运动×潮流×即饮场景：训练前后、机车出行的随身补给。"
+      "why_for_coffee": "运动×潮流×即饮场景：训练前后、机车出行的随身补给。",
+      "public_image": "运动潮流、机车与街舞，行动力强、镜头感足，偏年轻潮流偶像。",
+      "main_audience": "18–28 年轻粉丝，短视频与综艺互动高",
+      "works": [
+        {
+          "type": "TV",
+          "title": "陈情令"
+        },
+        {
+          "type": "Variety",
+          "title": "这！就是街舞"
+        },
+        {
+          "type": "Sports image",
+          "title": "职业摩托车 / 极限运动代言向"
+        }
+      ]
     },
     {
       "id": "wu-lei",
@@ -47,37 +94,80 @@
       "name_en": "Wu Lei / Leo Wu",
       "gender": "male",
       "birth_year": 1999,
-      "occupations": ["演员"],
+      "occupations": [
+        "演员"
+      ],
       "tags": {
         "运动": 0.78,
         "户外": 0.88,
-        "科技": 0.30,
+        "科技": 0.3,
         "健康": 0.62,
         "时尚": 0.55,
         "真诚": 0.86,
-        "活力": 0.80,
-        "体验": 0.70,
+        "活力": 0.8,
+        "体验": 0.7,
         "便利": 0.25,
         "情绪价值": 0.72
       },
       "fan_profile": {
-        "core_age": [18, 28],
-        "age_split": { "18-24": 0.38, "25-28": 0.40, "29-35": 0.22 },
-        "interests": ["旅行", "户外", "剧集", "生活vlog"],
+        "core_age": [
+          18,
+          28
+        ],
+        "age_split": {
+          "18-24": 0.38,
+          "25-28": 0.4,
+          "29-35": 0.22
+        },
+        "interests": [
+          "旅行",
+          "户外",
+          "剧集",
+          "生活vlog"
+        ],
         "engagement": "评论区生活向互动多，亲近感强",
-        "platforms": ["微博", "抖音"]
+        "platforms": [
+          "微博",
+          "抖音"
+        ]
       },
       "risk": {
         "score": 0.18,
         "level": "low",
-        "notes": ["形象稳定，负面热搜少"]
+        "notes": [
+          "形象稳定，负面热搜少"
+        ]
       },
       "heat_mentions": 5,
       "evidence": [
-        { "source": "TrendRadar/weibo", "date": "2025-12-26", "title": "吴磊直播" },
-        { "source": "TrendRadar/weibo", "date": "2025-12-27", "title": "吴磊听到粉丝说外卖被偷了的反应" }
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-26",
+          "title": "吴磊直播"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-27",
+          "title": "吴磊听到粉丝说外卖被偷了的反应"
+        }
       ],
-      "why_for_coffee": "户外轻出行 + 真诚陪伴，适合冷萃「随身、自然、不摆拍」。"
+      "why_for_coffee": "户外轻出行 + 真诚陪伴，适合冷萃「随身、自然、不摆拍」。",
+      "public_image": "真诚陪伴、轻户外与生活感，不摆拍、亲近感强。",
+      "main_audience": "18–28 剧集观众与生活向粉丝",
+      "works": [
+        {
+          "type": "TV",
+          "title": "沙海"
+        },
+        {
+          "type": "Film",
+          "title": "长空之王"
+        },
+        {
+          "type": "TV",
+          "title": "大唐双姝"
+        }
+      ]
     },
     {
       "id": "yi-yang-qianxi",
@@ -85,37 +175,81 @@
       "name_en": "Jackson Yee",
       "gender": "male",
       "birth_year": 2000,
-      "occupations": ["演员", "歌手"],
+      "occupations": [
+        "演员",
+        "歌手"
+      ],
       "tags": {
         "运动": 0.42,
         "户外": 0.35,
         "科技": 0.84,
-        "健康": 0.50,
+        "健康": 0.5,
         "时尚": 0.78,
         "真诚": 0.92,
         "活力": 0.55,
-        "体验": 0.60,
+        "体验": 0.6,
         "便利": 0.22,
-        "情绪价值": 0.80
+        "情绪价值": 0.8
       },
       "fan_profile": {
-        "core_age": [18, 28],
-        "age_split": { "18-24": 0.50, "25-28": 0.32, "29-35": 0.18 },
-        "interests": ["电影", "设计", "科技品牌", "舞台"],
+        "core_age": [
+          18,
+          28
+        ],
+        "age_split": {
+          "18-24": 0.5,
+          "25-28": 0.32,
+          "29-35": 0.18
+        },
+        "interests": [
+          "电影",
+          "设计",
+          "科技品牌",
+          "舞台"
+        ],
         "engagement": "高质量讨论多，品牌调性契合度高",
-        "platforms": ["微博", "抖音"]
+        "platforms": [
+          "微博",
+          "抖音"
+        ]
       },
       "risk": {
         "score": 0.22,
         "level": "low-medium",
-        "notes": ["公众期待高，内容需克制、避免过度娱乐化"]
+        "notes": [
+          "公众期待高，内容需克制、避免过度娱乐化"
+        ]
       },
       "heat_mentions": 6,
       "evidence": [
-        { "source": "TrendRadar/weibo", "date": "2025-12-21", "title": "易烊千玺说和鸿蒙见证了彼此成长" },
-        { "source": "TrendRadar/weibo", "date": "2025-12-21", "title": "易烊千玺演讲" }
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-21",
+          "title": "易烊千玺说和鸿蒙见证了彼此成长"
+        },
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-21",
+          "title": "易烊千玺演讲"
+        }
       ],
-      "why_for_coffee": "科技 TAG 最强背书（鸿蒙），适合把冷萃做成「冷静、克制、新一代」。"
+      "why_for_coffee": "科技 TAG 最强背书（鸿蒙），适合把冷萃做成「冷静、克制、新一代」。",
+      "public_image": "克制、新一代、科技与艺术交叉，高质量讨论多。",
+      "main_audience": "18–28 电影与设计向年轻观众",
+      "works": [
+        {
+          "type": "Film",
+          "title": "少年的你"
+        },
+        {
+          "type": "Film",
+          "title": "长津湖"
+        },
+        {
+          "type": "Music",
+          "title": "TFBOYS / 个人舞台"
+        }
+      ]
     },
     {
       "id": "bai-lu",
@@ -123,37 +257,80 @@
       "name_en": "Bai Lu",
       "gender": "female",
       "birth_year": 1994,
-      "occupations": ["演员"],
+      "occupations": [
+        "演员"
+      ],
       "tags": {
         "运动": 0.38,
-        "户外": 0.50,
+        "户外": 0.5,
         "科技": 0.22,
         "健康": 0.55,
-        "时尚": 0.90,
-        "真诚": 0.70,
+        "时尚": 0.9,
+        "真诚": 0.7,
         "活力": 0.88,
         "体验": 0.75,
-        "便利": 0.40,
+        "便利": 0.4,
         "情绪价值": 0.82
       },
       "fan_profile": {
-        "core_age": [18, 28],
-        "age_split": { "18-24": 0.42, "25-28": 0.36, "29-35": 0.22 },
-        "interests": ["剧集", "穿搭", "生活碎片", "舞蹈"],
+        "core_age": [
+          18,
+          28
+        ],
+        "age_split": {
+          "18-24": 0.42,
+          "25-28": 0.36,
+          "29-35": 0.22
+        },
+        "interests": [
+          "剧集",
+          "穿搭",
+          "生活碎片",
+          "舞蹈"
+        ],
         "engagement": "热搜造型/生活向内容传播快",
-        "platforms": ["微博", "抖音"]
+        "platforms": [
+          "微博",
+          "抖音"
+        ]
       },
       "risk": {
-        "score": 0.20,
+        "score": 0.2,
         "level": "low",
-        "notes": ["娱乐热搜多为造型与剧宣，品牌风险低"]
+        "notes": [
+          "娱乐热搜多为造型与剧宣，品牌风险低"
+        ]
       },
       "heat_mentions": 16,
       "evidence": [
-        { "source": "TrendRadar/weibo", "date": "2025-12-21", "title": "白鹿星光大赏有3套造型" },
-        { "source": "TrendRadar/douyin", "date": "2025-12-21", "title": "白鹿穿睡衣跳ditto" }
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-21",
+          "title": "白鹿星光大赏有3套造型"
+        },
+        {
+          "source": "TrendRadar/douyin",
+          "date": "2025-12-21",
+          "title": "白鹿穿睡衣跳ditto"
+        }
       ],
-      "why_for_coffee": "样本期内热搜最多，活力+情绪价值适合日常即饮，但运动/科技弱于男性运动偶像。"
+      "why_for_coffee": "样本期内热搜最多，活力+情绪价值适合日常即饮，但运动/科技弱于男性运动偶像。",
+      "public_image": "活力、穿搭热搜、生活碎片与情绪价值，传播快。",
+      "main_audience": "18–28 年轻女性为主，剧集与造型向",
+      "works": [
+        {
+          "type": "TV",
+          "title": "周生如故"
+        },
+        {
+          "type": "TV",
+          "title": "长月烬明"
+        },
+        {
+          "type": "Event",
+          "title": "星光大赏多套造型"
+        }
+      ]
     },
     {
       "id": "huang-jingyu",
@@ -161,36 +338,74 @@
       "name_en": "Johnny Huang",
       "gender": "male",
       "birth_year": 1992,
-      "occupations": ["演员"],
+      "occupations": [
+        "演员"
+      ],
       "tags": {
-        "运动": 0.90,
+        "运动": 0.9,
         "户外": 0.72,
         "科技": 0.28,
-        "健康": 0.80,
+        "健康": 0.8,
         "时尚": 0.48,
         "真诚": 0.75,
-        "活力": 0.70,
+        "活力": 0.7,
         "体验": 0.45,
         "便利": 0.18,
-        "情绪价值": 0.40
+        "情绪价值": 0.4
       },
       "fan_profile": {
-        "core_age": [22, 32],
-        "age_split": { "18-24": 0.28, "25-28": 0.38, "29-35": 0.34 },
-        "interests": ["健身", "军旅/动作", "户外"],
+        "core_age": [
+          22,
+          32
+        ],
+        "age_split": {
+          "18-24": 0.28,
+          "25-28": 0.38,
+          "29-35": 0.34
+        },
+        "interests": [
+          "健身",
+          "军旅/动作",
+          "户外"
+        ],
         "engagement": "硬朗人设稳，健身内容信任度高",
-        "platforms": ["微博", "抖音"]
+        "platforms": [
+          "微博",
+          "抖音"
+        ]
       },
       "risk": {
         "score": 0.16,
         "level": "low",
-        "notes": ["人设稳定；粉丝年龄略偏 25+"]
+        "notes": [
+          "人设稳定；粉丝年龄略偏 25+"
+        ]
       },
       "heat_mentions": 4,
       "evidence": [
-        { "source": "TrendRadar/weibo", "date": "2025-12-23", "title": "爱奇艺真把黄景瑜的话当个事办了" }
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-23",
+          "title": "爱奇艺真把黄景瑜的话当个事办了"
+        }
       ],
-      "why_for_coffee": "运动+健康最强，适合训练补给叙事；对 18–24 覆盖弱于王一博/千玺。"
+      "why_for_coffee": "运动+健康最强，适合训练补给叙事；对 18–24 覆盖弱于王一博/千玺。",
+      "public_image": "硬朗运动、健康训练、动作/军旅真实感。",
+      "main_audience": "22–32 健身与动作剧观众，18–24 覆盖略弱",
+      "works": [
+        {
+          "type": "TV",
+          "title": "亲爱的热爱的"
+        },
+        {
+          "type": "TV",
+          "title": "王牌部队"
+        },
+        {
+          "type": "Lifestyle",
+          "title": "健身 / 户外训练人设"
+        }
+      ]
     },
     {
       "id": "zhang-zifeng",
@@ -198,36 +413,74 @@
       "name_en": "Zhang Zifeng",
       "gender": "female",
       "birth_year": 2001,
-      "occupations": ["演员"],
+      "occupations": [
+        "演员"
+      ],
       "tags": {
-        "运动": 0.40,
+        "运动": 0.4,
         "户外": 0.45,
         "科技": 0.35,
-        "健康": 0.70,
+        "健康": 0.7,
         "时尚": 0.52,
         "真诚": 0.95,
-        "活力": 0.60,
+        "活力": 0.6,
         "体验": 0.58,
-        "便利": 0.30,
+        "便利": 0.3,
         "情绪价值": 0.88
       },
       "fan_profile": {
-        "core_age": [16, 26],
-        "age_split": { "18-24": 0.55, "25-28": 0.28, "29-35": 0.17 },
-        "interests": ["电影", "校园/成长", "真实生活"],
+        "core_age": [
+          16,
+          26
+        ],
+        "age_split": {
+          "18-24": 0.55,
+          "25-28": 0.28,
+          "29-35": 0.17
+        },
+        "interests": [
+          "电影",
+          "校园/成长",
+          "真实生活"
+        ],
         "engagement": "口碑驱动，抗营销感强",
-        "platforms": ["微博", "豆瓣"]
+        "platforms": [
+          "微博",
+          "豆瓣"
+        ]
       },
       "risk": {
         "score": 0.12,
         "level": "low",
-        "notes": ["低绯闻；过度硬广可能伤害真诚人设"]
+        "notes": [
+          "低绯闻；过度硬广可能伤害真诚人设"
+        ]
       },
       "heat_mentions": 1,
       "evidence": [
-        { "source": "TrendRadar/weibo", "date": "2025-12-24", "title": "张子枫手臂上好大一个疤" }
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-24",
+          "title": "张子枫手臂上好大一个疤"
+        }
       ],
-      "why_for_coffee": "真诚/情绪价值最高，适合「不打鸡血的冷萃」；运动科技弱。"
+      "why_for_coffee": "真诚/情绪价值最高，适合「不打鸡血的冷萃」；运动科技弱。",
+      "public_image": "真诚、低营销感、成长型演员，情绪价值高。",
+      "main_audience": "16–26 学生与口碑向观众",
+      "works": [
+        {
+          "type": "Film",
+          "title": "唐人街探案系列"
+        },
+        {
+          "type": "Film",
+          "title": "你好，蔡蔡"
+        },
+        {
+          "type": "Public image",
+          "title": "童星成长 / 真实生活向"
+        }
+      ]
     },
     {
       "id": "li-xian",
@@ -235,11 +488,13 @@
       "name_en": "Li Xian",
       "gender": "male",
       "birth_year": 1991,
-      "occupations": ["演员"],
+      "occupations": [
+        "演员"
+      ],
       "tags": {
         "运动": 0.68,
-        "户外": 0.50,
-        "科技": 0.40,
+        "户外": 0.5,
+        "科技": 0.4,
         "健康": 0.72,
         "时尚": 0.85,
         "真诚": 0.78,
@@ -249,22 +504,58 @@
         "情绪价值": 0.55
       },
       "fan_profile": {
-        "core_age": [22, 32],
-        "age_split": { "18-24": 0.30, "25-28": 0.40, "29-35": 0.30 },
-        "interests": ["跑步", "时尚大刊", "都市剧"],
+        "core_age": [
+          22,
+          32
+        ],
+        "age_split": {
+          "18-24": 0.3,
+          "25-28": 0.4,
+          "29-35": 0.3
+        },
+        "interests": [
+          "跑步",
+          "时尚大刊",
+          "都市剧"
+        ],
         "engagement": "都市精英感，转化偏品质消费",
-        "platforms": ["微博", "小红书"]
+        "platforms": [
+          "微博",
+          "小红书"
+        ]
       },
       "risk": {
         "score": 0.15,
         "level": "low",
-        "notes": ["形象干净；核心粉略偏 25+"]
+        "notes": [
+          "形象干净；核心粉略偏 25+"
+        ]
       },
       "heat_mentions": 2,
       "evidence": [
-        { "source": "TrendRadar/weibo", "date": "2025-12-22", "title": "Prada李现封面高智感拉满" }
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-22",
+          "title": "Prada李现封面高智感拉满"
+        }
       ],
-      "why_for_coffee": "健康跑步 + 高智时尚，适合通勤冷萃；18–24 覆盖一般。"
+      "why_for_coffee": "健康跑步 + 高智时尚，适合通勤冷萃；18–24 覆盖一般。",
+      "public_image": "都市精英、跑步健康、高智时尚，品质消费感。",
+      "main_audience": "22–32 都市白领与时尚杂志读者",
+      "works": [
+        {
+          "type": "TV",
+          "title": "亲爱的热爱的"
+        },
+        {
+          "type": "Fashion",
+          "title": "Prada 封面"
+        },
+        {
+          "type": "Lifestyle",
+          "title": "跑步 / 都市通勤人设"
+        }
+      ]
     },
     {
       "id": "zhou-ye",
@@ -272,37 +563,79 @@
       "name_en": "Zhou Ye",
       "gender": "female",
       "birth_year": 1998,
-      "occupations": ["演员"],
+      "occupations": [
+        "演员"
+      ],
       "tags": {
         "运动": 0.35,
         "户外": 0.58,
         "科技": 0.25,
-        "健康": 0.50,
-        "时尚": 0.80,
+        "健康": 0.5,
+        "时尚": 0.8,
         "真诚": 0.74,
         "活力": 0.72,
         "体验": 0.68,
         "便利": 0.28,
-        "情绪价值": 0.70
+        "情绪价值": 0.7
       },
       "fan_profile": {
-        "core_age": [18, 28],
-        "age_split": { "18-24": 0.44, "25-28": 0.36, "29-35": 0.20 },
-        "interests": ["电影", "红毯造型", "清冷美学"],
+        "core_age": [
+          18,
+          28
+        ],
+        "age_split": {
+          "18-24": 0.44,
+          "25-28": 0.36,
+          "29-35": 0.2
+        },
+        "interests": [
+          "电影",
+          "红毯造型",
+          "清冷美学"
+        ],
         "engagement": "造型热搜传播快，品牌调性偏文艺",
-        "platforms": ["微博", "抖音"]
+        "platforms": [
+          "微博",
+          "抖音"
+        ]
       },
       "risk": {
         "score": 0.19,
         "level": "low",
-        "notes": ["热搜以造型/活动为主"]
+        "notes": [
+          "热搜以造型/活动为主"
+        ]
       },
       "heat_mentions": 10,
       "evidence": [
-        { "source": "TrendRadar/weibo", "date": "2025-12-21", "title": "周也头纱被踩" },
-        { "source": "TrendRadar/toutiao", "date": "2025-12-22", "title": "周也王玉雯聊天把陈星旭“聊走了”" }
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2025-12-21",
+          "title": "周也头纱被踩"
+        },
+        {
+          "source": "TrendRadar/toutiao",
+          "date": "2025-12-22",
+          "title": "周也王玉雯聊天把陈星旭“聊走了”"
+        }
       ],
-      "why_for_coffee": "热搜活跃、年轻女性粉丝，适合清冷美学冷萃；运动科技弱。"
+      "why_for_coffee": "热搜活跃、年轻女性粉丝，适合清冷美学冷萃；运动科技弱。",
+      "public_image": "清冷美学、红毯造型、年轻文艺调性。",
+      "main_audience": "18–28 年轻女性，造型与电影向",
+      "works": [
+        {
+          "type": "Film",
+          "title": "我的姐姐"
+        },
+        {
+          "type": "Event",
+          "title": "红毯 / 造型热搜"
+        },
+        {
+          "type": "Public image",
+          "title": "清冷美学品牌调性"
+        }
+      ]
     }
   ]
 }
