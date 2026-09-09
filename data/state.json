@@ -4,7 +4,7 @@
       "tag": "运动",
       "mention_count": 115,
       "today_count": 18,
-      "heat": 0.355,
+      "heat": 0.326,
       "verdict": "keep",
       "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
       "evidence": [
@@ -13,12 +13,6 @@
           "title": "皇马2:1击败国米",
           "platform": "douyin",
           "rank": 1
-        },
-        {
-          "date": "2026-09-09",
-          "title": "深度解析皇马战胜国米",
-          "platform": "bilibili-hot-search",
-          "rank": 3
         },
         {
           "date": "2026-09-09",
@@ -37,6 +31,12 @@
           "title": "郑钦文今晚对阵莱巴金娜",
           "platform": "douyin",
           "rank": 9
+        },
+        {
+          "date": "2026-09-09",
+          "title": "深度解析皇马战胜国米",
+          "platform": "bilibili-hot-search",
+          "rank": 9
         }
       ],
       "sources": [
@@ -47,7 +47,7 @@
       "tag": "户外",
       "mention_count": 34,
       "today_count": 3,
-      "heat": 0.074,
+      "heat": 0.069,
       "verdict": "caution",
       "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
       "evidence": [
@@ -61,7 +61,7 @@
           "date": "2026-09-09",
           "title": "游客自驾大兴安岭遇棕熊趴引擎盖讨食",
           "platform": "toutiao",
-          "rank": 18
+          "rank": 27
         },
         {
           "date": "2026-09-09",
@@ -90,7 +90,7 @@
       "tag": "健康",
       "mention_count": 55,
       "today_count": 6,
-      "heat": 0.135,
+      "heat": 0.125,
       "verdict": "add",
       "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
       "evidence": [
@@ -104,7 +104,7 @@
           "date": "2026-09-09",
           "title": "司美格鲁肽有5大副作用",
           "platform": "weibo",
-          "rank": 5
+          "rank": 4
         },
         {
           "date": "2026-09-09",
@@ -122,7 +122,7 @@
           "date": "2026-09-09",
           "title": "IG是否有机会冲击冠军",
           "platform": "bilibili-hot-search",
-          "rank": 28
+          "rank": 17
         }
       ],
       "sources": [
@@ -131,8 +131,8 @@
     },
     "科技": {
       "tag": "科技",
-      "mention_count": 361,
-      "today_count": 48,
+      "mention_count": 367,
+      "today_count": 54,
       "heat": 1.0,
       "verdict": "keep",
       "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -157,14 +157,14 @@
         },
         {
           "date": "2026-09-09",
-          "title": "美国指责中国AI公司蒸馏美企，外交部回应",
-          "platform": "ifeng",
-          "rank": 2
+          "title": "DeepSeek新模型要来了",
+          "platform": "bilibili-hot-search",
+          "rank": 1
         },
         {
           "date": "2026-09-09",
-          "title": "苹果折叠屏叫iPhone Duo",
-          "platform": "douyin",
+          "title": "美国指责中国AI公司蒸馏美企，外交部回应",
+          "platform": "ifeng",
           "rank": 2
         }
       ],
@@ -174,9 +174,9 @@
     },
     "情绪价值": {
       "tag": "情绪价值",
-      "mention_count": 27,
-      "today_count": 2,
-      "heat": 0.053,
+      "mention_count": 28,
+      "today_count": 3,
+      "heat": 0.063,
       "verdict": "add",
       "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
       "evidence": [
@@ -190,7 +190,13 @@
           "date": "2026-09-09",
           "title": "白鹿穿燕麦系小跳一下",
           "platform": "douyin",
-          "rank": 25
+          "rank": 24
+        },
+        {
+          "date": "2026-09-09",
+          "title": "追星取消低保讨论别只盯穷人的快乐",
+          "platform": "weibo",
+          "rank": 27
         },
         {
           "date": "2025-12-24",
@@ -203,12 +209,6 @@
           "title": "现在，欧洲情绪很不稳定",
           "platform": "ifeng",
           "rank": 4
-        },
-        {
-          "date": "2025-12-21",
-          "title": "斐济旅行治愈所有不快乐",
-          "platform": "douyin",
-          "rank": 7
         }
       ],
       "sources": [
@@ -219,7 +219,7 @@
       "tag": "便利",
       "mention_count": 21,
       "today_count": 2,
-      "heat": 0.047,
+      "heat": 0.044,
       "verdict": "add",
       "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
       "evidence": [
@@ -262,7 +262,7 @@
       "tag": "时尚",
       "mention_count": 27,
       "today_count": 1,
-      "heat": 0.04,
+      "heat": 0.038,
       "verdict": "optional",
       "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
       "evidence": [
@@ -391,7 +391,7 @@
       "tag": "活力",
       "mention_count": 35,
       "today_count": 4,
-      "heat": 0.088,
+      "heat": 0.082,
       "verdict": "optional",
       "note": "青春/燃向内容，适合运动与潮流人设。",
       "evidence": [
@@ -411,7 +411,7 @@
           "date": "2026-09-09",
           "title": "燃油车真卖不动了吗",
           "platform": "baidu",
-          "rank": 7
+          "rank": 21
         },
         {
           "date": "2026-09-09",
@@ -1114,47 +1114,91 @@
     {
       "id": "cold-brew",
       "name": "NITEFLOW 即饮冷萃",
+      "name_en": "Pulse Cold Brew Coffee / NITEFLOW",
       "category": "Coffee",
       "audience": "18-28",
+      "price_level": "Mass / 即饮大众价",
+      "features": [
+        "低糖",
+        "便携",
+        "清爽",
+        "即开即饮"
+      ],
+      "scenarios": [
+        "晨间通勤",
+        "骑行",
+        "健身房",
+        "周末轻户外"
+      ],
+      "desired_image": "Young, energetic, modern",
+      "campaign_objective": "找到最能代表即饮冷萃生活方式的明星代言人，而不是热搜最高的人",
       "seed_tags": [
         "运动",
         "户外",
         "科技"
       ],
-      "description": "面向 18–28 岁的即饮冷萃咖啡。初始想法强调运动、户外、科技。"
+      "description": "面向 18–28 岁的即饮冷萃咖啡。低糖、便携、清爽。场景：晨间通勤、骑行、健身房、周末轻户外。期望形象：年轻、有活力、现代。"
     },
     {
       "id": "shoes",
       "name": "AEROSTRIDE 训练跑鞋",
+      "name_en": "AEROSTRIDE Training Shoes",
       "category": "Sports Shoes",
       "audience": "18-28",
+      "price_level": "Mid / 训练鞋中端",
+      "features": [
+        "轻量",
+        "缓震",
+        "日常训练"
+      ],
+      "scenarios": [
+        "跑步",
+        "健身房",
+        "通勤训练日"
+      ],
+      "desired_image": "Athletic, authentic, energetic",
+      "campaign_objective": "用真实训练感明星带出科技缓震，而不是流量明星空降",
       "seed_tags": [
         "运动",
         "科技",
         "活力"
       ],
-      "description": "轻量训练跑鞋，面向日常跑步与健身房的年轻人。"
+      "description": "轻量训练跑鞋，面向日常跑步与健身房的年轻人。期望形象：运动、真诚、有活力。"
     },
     {
       "id": "headphones",
       "name": "PULSE AIR 智能耳机",
+      "name_en": "PULSE AIR Smart Headphones",
       "category": "Smart Headphones",
       "audience": "18-28",
+      "price_level": "Mid-Premium / 智能硬件中高",
+      "features": [
+        "降噪",
+        "智能",
+        "通勤陪伴"
+      ],
+      "scenarios": [
+        "通勤",
+        "学习",
+        "独处"
+      ],
+      "desired_image": "Modern, calm, emotionally aware",
+      "campaign_objective": "用克制、有情绪边界的明星人设承接降噪与陪伴",
       "seed_tags": [
         "科技",
         "体验",
         "情绪价值"
       ],
-      "description": "降噪智能耳机，强调通勤体验与情绪陪伴。"
+      "description": "降噪智能耳机，强调通勤体验与情绪陪伴。期望形象：现代、冷静、有情绪价值。"
     }
   ],
   "meta": {
-    "generated_at": "2026-09-09T17:34:16+08:00",
-    "source_mtime": "2026-09-09T17:34:12+08:00",
+    "generated_at": "2026-09-09T18:05:24+08:00",
+    "source_mtime": "2026-09-09T18:05:19+08:00",
     "today": "2026-09-09",
-    "total_items": 8452,
-    "today_items": 430,
-    "server_time": "2026-09-09T17:34:16+08:00",
+    "total_items": 8482,
+    "today_items": 460,
+    "server_time": "2026-09-09T18:05:24+08:00",
     "live": false,
     "public": true
   }
