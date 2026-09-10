@@ -2,9 +2,9 @@
   "trends": {
     "运动": {
       "tag": "运动",
-      "mention_count": 145,
-      "today_count": 30,
-      "heat": 0.228,
+      "mention_count": 148,
+      "today_count": 33,
+      "heat": 0.241,
       "verdict": "keep",
       "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
       "evidence": [
@@ -22,21 +22,21 @@
         },
         {
           "date": "2026-09-10",
-          "title": "郑钦文 1-2 不敌莱巴金娜，止步美网八强，如何评价本场比赛？",
-          "platform": "zhihu",
-          "rank": 4
-        },
-        {
-          "date": "2026-09-10",
           "title": "上海体育局通报刘翔安置工作，未来将持续优化退役运动员安置",
           "platform": "thepaper",
-          "rank": 4
+          "rank": 2
         },
         {
           "date": "2026-09-10",
-          "title": "中国女篮晋级世界杯八强",
-          "platform": "bilibili-hot-search",
-          "rank": 5
+          "title": "中国女篮无缘世界杯4强",
+          "platform": "toutiao",
+          "rank": 2
+        },
+        {
+          "date": "2026-09-10",
+          "title": "遭逆转无缘美网四强，状态回暖的郑钦文已看到重返巅峰的曙光",
+          "platform": "thepaper",
+          "rank": 4
         }
       ],
       "sources": [
@@ -131,8 +131,8 @@
     },
     "科技": {
       "tag": "科技",
-      "mention_count": 517,
-      "today_count": 150,
+      "mention_count": 519,
+      "today_count": 152,
       "heat": 1.0,
       "verdict": "keep",
       "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -174,9 +174,9 @@
     },
     "情绪价值": {
       "tag": "情绪价值",
-      "mention_count": 32,
-      "today_count": 4,
-      "heat": 0.039,
+      "mention_count": 33,
+      "today_count": 5,
+      "heat": 0.044,
       "verdict": "add",
       "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
       "evidence": [
@@ -185,6 +185,12 @@
           "title": "燕麦系秋天的神",
           "platform": "douyin",
           "rank": 4
+        },
+        {
+          "date": "2026-09-10",
+          "title": "能源价格重新“点火” 美国8月PPI略超预期 加剧市场焦虑情绪",
+          "platform": "cls-hot",
+          "rank": 7
         },
         {
           "date": "2026-09-10",
@@ -203,12 +209,6 @@
           "title": "贺峻霖穿燕麦系太耐看了",
           "platform": "douyin",
           "rank": 27
-        },
-        {
-          "date": "2025-12-24",
-          "title": "马上测·回顾2025：两位“较真”记者，这一年测评的快乐、震惊和成就",
-          "platform": "thepaper",
-          "rank": 1
         }
       ],
       "sources": [
@@ -274,15 +274,15 @@
         },
         {
           "date": "2026-09-10",
-          "title": "秋日穿搭从秀场找点灵感",
-          "platform": "douyin",
-          "rank": 18
-        },
-        {
-          "date": "2026-09-10",
           "title": "拉夫劳伦2027春季时装秀",
           "platform": "weibo",
           "rank": 19
+        },
+        {
+          "date": "2026-09-10",
+          "title": "秋日穿搭从秀场找点灵感",
+          "platform": "douyin",
+          "rank": 20
         },
         {
           "date": "2026-09-10",
@@ -311,14 +311,14 @@
       "evidence": [
         {
           "date": "2026-09-10",
-          "title": "霓虹博主体验特色石油浴",
-          "platform": "tieba",
-          "rank": 10
+          "title": "iPhone17Pro线下降价",
+          "platform": "weibo",
+          "rank": 8
         },
         {
           "date": "2026-09-10",
-          "title": "iPhone17Pro线下降价",
-          "platform": "weibo",
+          "title": "霓虹博主体验特色石油浴",
+          "platform": "tieba",
           "rank": 10
         },
         {
@@ -348,7 +348,7 @@
       "tag": "咖啡",
       "mention_count": 19,
       "today_count": 2,
-      "heat": 0.022,
+      "heat": 0.021,
       "verdict": "optional",
       "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
       "evidence": [
@@ -389,9 +389,9 @@
     },
     "活力": {
       "tag": "活力",
-      "mention_count": 46,
-      "today_count": 11,
-      "heat": 0.079,
+      "mention_count": 47,
+      "today_count": 12,
+      "heat": 0.083,
       "verdict": "optional",
       "note": "青春/燃向内容，适合运动与潮流人设。",
       "evidence": [
@@ -415,15 +415,15 @@
         },
         {
           "date": "2026-09-10",
-          "title": "如何评价电影《燃烧吧，爸爸》编剧发长文「杀死它的凶手，却连我们的电影都没看过」？",
-          "platform": "zhihu",
-          "rank": 11
+          "title": "通胀忧虑重燃，美股低开，存储芯片股普跌，布油涨破105美元，30年期美债收益率升至2007年6月以来最高",
+          "platform": "wallstreetcn-hot",
+          "rank": 9
         },
         {
           "date": "2026-09-10",
-          "title": "用热血漫打开王者万象棋",
-          "platform": "bilibili-hot-search",
-          "rank": 12
+          "title": "如何评价电影《燃烧吧，爸爸》编剧发长文「杀死它的凶手，却连我们的电影都没看过」？",
+          "platform": "zhihu",
+          "rank": 11
         }
       ],
       "sources": [
@@ -1193,12 +1193,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-10T21:52:11+08:00",
-    "source_mtime": "2026-09-10T21:52:06+08:00",
+    "generated_at": "2026-09-10T22:23:24+08:00",
+    "source_mtime": "2026-09-10T22:23:19+08:00",
     "today": "2026-09-10",
-    "total_items": 9555,
-    "today_items": 1073,
-    "server_time": "2026-09-10T21:52:11+08:00",
+    "total_items": 9585,
+    "today_items": 1103,
+    "server_time": "2026-09-10T22:23:24+08:00",
     "live": false,
     "public": true
   }
