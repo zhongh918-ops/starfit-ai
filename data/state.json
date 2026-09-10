@@ -2,9 +2,9 @@
   "trends": {
     "运动": {
       "tag": "运动",
-      "mention_count": 148,
-      "today_count": 33,
-      "heat": 0.241,
+      "mention_count": 150,
+      "today_count": 35,
+      "heat": 0.248,
       "verdict": "keep",
       "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
       "evidence": [
@@ -16,14 +16,14 @@
         },
         {
           "date": "2026-09-10",
-          "title": "郑钦文止步美网八强",
+          "title": "中国女篮不敌法国无缘世界杯四强",
           "platform": "douyin",
-          "rank": 2
+          "rank": 1
         },
         {
           "date": "2026-09-10",
-          "title": "上海体育局通报刘翔安置工作，未来将持续优化退役运动员安置",
-          "platform": "thepaper",
+          "title": "郑钦文止步美网八强",
+          "platform": "douyin",
           "rank": 2
         },
         {
@@ -34,8 +34,8 @@
         },
         {
           "date": "2026-09-10",
-          "title": "遭逆转无缘美网四强，状态回暖的郑钦文已看到重返巅峰的曙光",
-          "platform": "thepaper",
+          "title": "郑钦文 1-2 不敌莱巴金娜，止步美网八强，如何评价本场比赛？",
+          "platform": "zhihu",
           "rank": 4
         }
       ],
@@ -90,7 +90,7 @@
       "tag": "健康",
       "mention_count": 63,
       "today_count": 8,
-      "heat": 0.077,
+      "heat": 0.076,
       "verdict": "add",
       "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
       "evidence": [
@@ -120,9 +120,9 @@
         },
         {
           "date": "2026-09-10",
-          "title": "白人饭的魅力主要是省时还是健康？",
-          "platform": "zhihu",
-          "rank": 13
+          "title": "马上评｜资助中断就威胁曝光？更该关注受助者的心理成长",
+          "platform": "thepaper",
+          "rank": 16
         }
       ],
       "sources": [
@@ -131,8 +131,8 @@
     },
     "科技": {
       "tag": "科技",
-      "mention_count": 519,
-      "today_count": 152,
+      "mention_count": 521,
+      "today_count": 154,
       "heat": 1.0,
       "verdict": "keep",
       "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -163,8 +163,8 @@
         },
         {
           "date": "2026-09-10",
-          "title": "全球七年共卖出1亿台，苹果会带火折叠屏手机吗",
-          "platform": "thepaper",
+          "title": "【早报】深夜，苹果折叠屏手机发布，起售价15999元；重磅发布会，今日举行，央行、金融监管总局、证监会、外汇局等出席；原油飙升、黄金走强",
+          "platform": "cls-hot",
           "rank": 1
         }
       ],
@@ -176,7 +176,7 @@
       "tag": "情绪价值",
       "mention_count": 33,
       "today_count": 5,
-      "heat": 0.044,
+      "heat": 0.043,
       "verdict": "add",
       "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
       "evidence": [
@@ -274,15 +274,15 @@
         },
         {
           "date": "2026-09-10",
-          "title": "拉夫劳伦2027春季时装秀",
-          "platform": "weibo",
+          "title": "秋日穿搭从秀场找点灵感",
+          "platform": "douyin",
           "rank": 19
         },
         {
           "date": "2026-09-10",
-          "title": "秋日穿搭从秀场找点灵感",
-          "platform": "douyin",
-          "rank": 20
+          "title": "拉夫劳伦2027春季时装秀",
+          "platform": "weibo",
+          "rank": 19
         },
         {
           "date": "2026-09-10",
@@ -305,7 +305,7 @@
       "tag": "体验",
       "mention_count": 38,
       "today_count": 8,
-      "heat": 0.06,
+      "heat": 0.059,
       "verdict": "add",
       "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
       "evidence": [
@@ -356,7 +356,7 @@
           "date": "2026-09-10",
           "title": "冰山冰美式到底怎么喝",
           "platform": "douyin",
-          "rank": 17
+          "rank": 15
         },
         {
           "date": "2026-09-10",
@@ -391,7 +391,7 @@
       "tag": "活力",
       "mention_count": 47,
       "today_count": 12,
-      "heat": 0.083,
+      "heat": 0.082,
       "verdict": "optional",
       "note": "青春/燃向内容，适合运动与潮流人设。",
       "evidence": [
@@ -409,14 +409,14 @@
         },
         {
           "date": "2026-09-10",
-          "title": "如何评价刘翔发言「我希望组织认真考虑每一位运动员的出路…他们搭上整个青春健康，甚至留下永久的伤病」？",
-          "platform": "zhihu",
-          "rank": 9
+          "title": "通胀忧虑重燃，美股低开，存储芯片股普跌，布油涨破105美元，30年期美债收益率升至2007年6月以来最高",
+          "platform": "wallstreetcn-hot",
+          "rank": 8
         },
         {
           "date": "2026-09-10",
-          "title": "通胀忧虑重燃，美股低开，存储芯片股普跌，布油涨破105美元，30年期美债收益率升至2007年6月以来最高",
-          "platform": "wallstreetcn-hot",
+          "title": "如何评价刘翔发言「我希望组织认真考虑每一位运动员的出路…他们搭上整个青春健康，甚至留下永久的伤病」？",
+          "platform": "zhihu",
           "rank": 9
         },
         {
@@ -1193,12 +1193,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-10T22:23:24+08:00",
-    "source_mtime": "2026-09-10T22:23:19+08:00",
+    "generated_at": "2026-09-10T22:54:40+08:00",
+    "source_mtime": "2026-09-10T22:54:35+08:00",
     "today": "2026-09-10",
-    "total_items": 9585,
-    "today_items": 1103,
-    "server_time": "2026-09-10T22:23:24+08:00",
+    "total_items": 9612,
+    "today_items": 1130,
+    "server_time": "2026-09-10T22:54:40+08:00",
     "live": false,
     "public": true
   }
