@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support · 99% match</title>
+<script src="js/public-base.js"></script>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/shell.css">
+<link rel="stylesheet" href="css/marketing.css">
+</head>
+<body data-page="support">
+<div class="page">
+  <div class="app-window" role="application" aria-label="99% match support">
+    <header class="app-chrome marketing">
+      <div class="traffic" aria-hidden="true">
+        <span class="tl close"></span><span class="tl min"></span><span class="tl max"></span>
+      </div>
+      <div class="marketing-head">
+        <p class="chrome-kicker" data-i18n="about.kicker">Decision infrastructure for celebrity–product partnerships.</p>
+        <div class="mnav-row">
+          <nav class="mnav" aria-label="Primary">
+            <a href="work.html" data-nav="work" data-i18n="nav.work">Work</a>
+            <a href="about.html" data-nav="about" data-i18n="nav.about">About</a>
+            <a href="contact.html" data-nav="contact" data-i18n="nav.contact">Contact</a>
+            <a href="support.html" data-nav="support" data-i18n="nav.support">Support</a>
+          </nav>
+          <div data-lang-switch></div>
+        </div>
+      </div>
+    </header>
+    <div class="market-body">
+      <section class="support">
+        <div class="support-hero">
+          <div>
+            <h1 data-i18n="support.h1">Help, without the runaround.</h1>
+            <p class="lede" data-i18n="support.lede">Find the answer, understand the score, or send a detailed support request.</p>
+            <form class="search-bar" id="helpSearch" action="/support" method="get">
+              <input class="field" id="q" name="q" type="search" data-i18n-placeholder="support.searchPh" data-i18n-aria="support.searchPh" placeholder="Search guides and questions" aria-label="Search guides and questions">
+              <button class="btn-primary" type="submit" data-i18n="support.search">Search</button>
+            </form>
+          </div>
+          <figure class="support-hero-img">
+            <img src="assets/support/support-hero-workspace.png" width="642" height="303" data-i18n-alt="support.alt" alt="Person working at a laptop in a studio">
+          </figure>
+        </div>
+
+        <div class="help-grid">
+          <a class="help-card" href="#start">
+            <div class="help-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h10v16H5z"/><path d="M15 7h4v14H9"/></svg></div>
+            <h2><span data-i18n="support.card.start.h">Getting started</span> <span aria-hidden="true">→</span></h2>
+            <p data-i18n="support.card.start">Build a product brief and run your first match.</p>
+          </a>
+          <a class="help-card" href="#scores">
+            <div class="help-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V8l4 3 4-6 4 4 4-3v12z"/></svg></div>
+            <h2><span data-i18n="support.card.scores.h">Understanding scores</span> <span aria-hidden="true">→</span></h2>
+            <p data-i18n="support.card.scores">Read Strategic Fit, confidence and the Risk Gate.</p>
+          </a>
+          <a class="help-card" href="#data">
+            <div class="help-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div>
+            <h2><span data-i18n="support.card.data.h">Data &amp; privacy</span> <span aria-hidden="true">→</span></h2>
+            <p data-i18n="support.card.data">See what is observed, calculated, estimated or unavailable.</p>
+          </a>
+          <a class="help-card" href="#export">
+            <div class="help-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4h8l3 3v13H7z"/><path d="M15 4v4h4"/></svg></div>
+            <h2><span data-i18n="support.card.export.h">Campaign exports</span> <span aria-hidden="true">→</span></h2>
+            <p data-i18n="support.card.export">Prepare outputs for creative and partnership teams.</p>
+          </a>
+        </div>
+
+        <div class="support-split">
+          <div class="faq" id="faq">
+            <p class="eyebrow" data-i18n="support.faq">Frequent questions</p>
+            <details id="scores" open>
+              <summary data-i18n="support.q1">How is Strategic Fit calculated?</summary>
+              <p data-i18n="support.a1">Strategic Fit combines product authenticity, audience relevance, message fit, cultural timing, engagement quality and commercial feasibility. The live workbench still uses the stored model weights (35 / 20 / 20 / 15 / 10 minus risk). Scores are model estimates, not official research.</p>
+            </details>
+            <details>
+              <summary data-i18n="support.q2">What does Conditional Pass mean?</summary>
+              <p data-i18n="support.a2">Risk Gate is separate from fit. Conditional Pass means you may continue only if listed conditions are verified. Unavailable facts are never treated as a pass.</p>
+            </details>
+            <details id="start">
+              <summary data-i18n="support.q3">Can I edit tags before matching?</summary>
+              <p data-i18n="support.a3">Yes. Add tags from Trend Search, then open Tag Profile to pin, exclude, drag lanes, adjust weight, and Recalculate. Caution tags cannot enter Selected.</p>
+            </details>
+            <details>
+              <summary data-i18n="support.q4">How do I compare candidates?</summary>
+              <p data-i18n="support.a4">Run Match returns Top 3 from the ten-person demo library, or the live celebrity database in Live mode. Open a profile with the stable candidate ID. Select 2–3 people on the listing to compare. Shortlist is saved in this analysis session.</p>
+            </details>
+            <details id="data">
+              <summary data-i18n="support.q5">What data is live versus demo?</summary>
+              <p data-i18n="support.a5">Hot-list title hits come from TrendRadar snapshots. Celebrity tags, fans, risk notes and works are hybrid/demo. Fees, exclusivity and verified endorsements are unavailable.</p>
+            </details>
+            <details id="export">
+              <summary data-i18n="support.q6">Can I export a campaign?</summary>
+              <p data-i18n="support.a6">Campaign Studio can export only after fee, availability, rights, and category exclusivity are verified. Those facts are Unavailable in this database, so export stays blocked. AI concept visuals are labeled for visualization only.</p>
+            </details>
+          </div>
+          <aside class="stuck">
+            <h2 data-i18n="support.stuck">Still stuck?</h2>
+            <form data-prototype-form novalidate>
+              <div class="form-field">
+                <label for="topic" data-i18n="support.topic">Topic</label>
+                <select class="field" id="topic" name="topic" data-required>
+                  <option value="" data-i18n="support.topic.empty">Select a topic</option>
+                  <option data-i18n="support.card.start.h">Getting started</option>
+                  <option data-i18n="support.card.scores.h">Understanding scores</option>
+                  <option data-i18n="support.card.data.h">Data and privacy</option>
+                  <option data-i18n="support.card.export.h">Campaign exports</option>
+                </select>
+              </div>
+              <div class="form-field" style="margin-top:10px">
+                <label for="support-msg" data-i18n="support.msg">Message</label>
+                <textarea class="field-area" id="support-msg" name="message" data-i18n-placeholder="support.msgPh" placeholder="Describe what happened and what you expected." data-required></textarea>
+              </div>
+              <button class="btn-primary" type="submit" data-i18n="support.send">Send support request →</button>
+              <p class="form-note">support@99percentmatch.example<br><span data-i18n="support.note">Demo form · no submission is sent.</span></p>
+              <p class="form-error" role="alert"></p>
+              <p class="form-success" role="status"></p>
+            </form>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<script src="js/i18n.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/prototype-form.js"></script>
+<script>
+document.getElementById("helpSearch").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  document.querySelectorAll(".faq details").forEach((d) => {
+    const hit = !q || d.textContent.toLowerCase().includes(q);
+    d.hidden = q ? !hit : false;
+    if (q && hit) d.open = true;
+  });
+});
+</script>
+</body>
+</html>

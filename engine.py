@@ -9,6 +9,14 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+from demo_library import (
+    DATASET_KEY,
+    TREND_SNAPSHOT_ID,
+    demo_celebrities,
+    demo_trends,
+    fixture_bundle,
+)
+
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
 TRENDRADAR_NEWS = Path.home() / "Tools/TrendRadar/output/news"
@@ -303,29 +311,62 @@ def campaign_for(product: dict, top_name: str) -> dict:
     return maps.get(product["id"], {"direction": f"{top_name} × {product['name']}", "slogans": [f"{top_name} × {product['name']}"]})
 
 
-def load_state() -> dict:
+def load_state(mode: str = "demo") -> dict:
+    mode = "live" if mode == "live" else "demo"
     celeb_doc = _load_json(DATA / "celebrities.json")
     products = _load_json(DATA / "products.json")["products"]
     rows = news_rows()
     payload = rebuild_trends(rows)
-    celebs = recount_celebrity_heat(celeb_doc["celebrities"], rows)
+    live_celebs = recount_celebrity_heat(celeb_doc["celebrities"], rows)
+    live_trends = payload["tags"]
+    demo_celebs = demo_celebrities()
+    demo_tag_trends = demo_trends()
+    bundle = fixture_bundle()
+    live_available = bool(rows)
+    if mode == "demo":
+        celebrities = demo_celebs
+        trends = demo_tag_trends
+        trend_mode = "demo"
+        mixed = False
+    else:
+        celebrities = live_celebs
+        if live_available:
+            trends = live_trends
+            trend_mode = "live"
+            mixed = False
+        else:
+            trends = demo_tag_trends
+            trend_mode = "demo"
+            mixed = True
     meta_path = DATA / "meta.json"
     meta = _load_json(meta_path) if meta_path.exists() else {}
+    snap = bundle["trendSnapshot"]
     state = {
-        "trends": payload["tags"],
-        "celebrities": celebs,
+        "mode": mode,
+        "trends": trends,
+        "celebrities": celebrities,
         "products": products,
         "meta": {
             **meta,
             "server_time": datetime.now().astimezone().isoformat(timespec="seconds"),
-            "live": True,
+            "live": live_available and trend_mode == "live",
+            "dataMode": mode,
+            "trendMode": trend_mode,
+            "mixedSource": mixed,
+            "candidateDatasetVersionId": DATASET_KEY if mode == "demo" else "celebrities-on-file",
+            "trendSnapshotId": TREND_SNAPSHOT_ID if trend_mode == "demo" else (meta.get("generated_at") or "live"),
+            "demoDisclaimer": bundle["disclaimer"],
+            "trendUpdatedAt": snap.get("updatedAt") if trend_mode == "demo" else meta.get("generated_at"),
         },
+        "demo": bundle,
     }
     public = {
-        "trends": state["trends"],
-        "celebrities": state["celebrities"],
-        "products": state["products"],
-        "meta": {**state["meta"], "live": False, "public": True},
+        "mode": "demo",
+        "trends": demo_tag_trends,
+        "celebrities": demo_celebs,
+        "products": products,
+        "meta": {**state["meta"], "live": False, "public": True, "dataMode": "demo", "trendMode": "demo"},
+        "demo": bundle,
     }
     (DATA / "state.json").write_text(json.dumps(public, ensure_ascii=False, indent=2), encoding="utf-8")
     return state

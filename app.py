@@ -71,8 +71,18 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_GET(self):
         parsed = urlparse(self.path)
+        if parsed.path != "/" and parsed.path.endswith("/"):
+            loc = parsed.path.rstrip("/")
+            if parsed.query:
+                loc += "?" + parsed.query
+            self.send_response(301)
+            self.send_header("Location", loc)
+            self.end_headers()
+            return
         if parsed.path == "/api/state":
-            _json(self, 200, load_state())
+            qs = parse_qs(parsed.query)
+            mode = (qs.get("mode") or ["demo"])[0]
+            _json(self, 200, load_state(mode))
             return
         if parsed.path == "/api/refresh/status":
             with _lock:
@@ -80,8 +90,9 @@ class Handler(SimpleHTTPRequestHandler):
             return
         if parsed.path == "/api/match":
             qs = parse_qs(parsed.query)
-            pid = (qs.get("product") or ["cold-brew"])[0]
-            state = load_state()
+            pid = (qs.get("product") or ["shoes"])[0]
+            mode = (qs.get("mode") or ["demo"])[0]
+            state = load_state(mode)
             product = next((p for p in state["products"] if p["id"] == pid), state["products"][0])
             result = match_product(product, state["trends"], state["celebrities"])
             top = result["ranked"][0]["celeb"]["name"]
@@ -89,8 +100,27 @@ class Handler(SimpleHTTPRequestHandler):
             result["meta"] = state["meta"]
             _json(self, 200, result)
             return
-        if parsed.path in ("/", "/index.html"):
-            self.path = "/index.html"
+        routes = {
+            "/": "/index.html",
+            "/index.html": "/index.html",
+            "/work": "/work.html",
+            "/work.html": "/work.html",
+            "/about": "/about.html",
+            "/about.html": "/about.html",
+            "/contact": "/contact.html",
+            "/contact.html": "/contact.html",
+            "/support": "/support.html",
+            "/support.html": "/support.html",
+            "/library": "/library.html",
+            "/library.html": "/library.html",
+        }
+        key = parsed.path.rstrip("/") or "/"
+        if key == "/work" or key.startswith("/work/"):
+            self.path = "/work.html"
+        elif key == "/library" or key.startswith("/library/"):
+            self.path = "/library.html"
+        elif key in routes:
+            self.path = routes[key]
         return super().do_GET()
 
     def do_POST(self):

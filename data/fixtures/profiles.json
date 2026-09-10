@@ -1,0 +1,456 @@
+{
+  "datasetId": "candidate_fixture_cn_v1",
+  "fixtureVersion": "1.1.0",
+  "mode": "demo",
+  "generatedAt": "2026-09-10T16:00:00+08:00",
+  "disclaimer": "All people, biographies, commercial details, campaign cases and metrics in this file are fictional and simulated for product demonstration only.",
+  "candidates": [
+    {
+      "id": "cand_demo_001",
+      "slug": "kai-ren",
+      "name": "Kai Ren",
+      "gender": "male",
+      "age": 26,
+      "ageBand": "25-34",
+      "market": "Mainland China",
+      "languages": ["Mandarin", "English"],
+      "roles": ["Actor", "Performer"],
+      "bio": "A disciplined screen performer known for a composed public image and credible relevance across sport, technology and youth culture.",
+      "whyCandidate": "Combines strong sports credibility with a future-facing visual identity and broad urban relevance.",
+      "tradeoff": "Estimated fee is near the upper working limit, and footwear exclusivity remains unverified.",
+      "culturalArchetype": {"id": "performance-culture-lead", "label": "Performance-led cultural multi-hyphenate", "traits": ["controlled public image", "dance and movement literacy", "street and performance culture", "technical-product curiosity"], "signalWeight": 0.78, "directIdentityMapping": false},
+      "assets": {
+        "portrait": "assets/portraits/kai-ren.png",
+        "listing": "assets/portraits/kai-ren.png",
+        "disclosure": "AI-generated demo portrait"
+      },
+      "personaTags": [
+        {"id": "sports", "label": "Sports", "score": 96, "evidenceCount": 31, "direction": "stable"},
+        {"id": "technology", "label": "Technology", "score": 89, "evidenceCount": 24, "direction": "rising"},
+        {"id": "energy", "label": "Energy", "score": 91, "evidenceCount": 28, "direction": "stable"},
+        {"id": "discipline", "label": "Discipline", "score": 88, "evidenceCount": 19, "direction": "stable"},
+        {"id": "urban", "label": "Urban", "score": 76, "evidenceCount": 17, "direction": "rising"}
+      ],
+      "audience": {
+        "ageDistribution": {"13-17": 6, "18-24": 39, "25-34": 34, "35-44": 15, "45+": 6},
+        "genderDistribution": {"female": 52, "male": 46, "other": 2},
+        "topRegions": ["Shanghai", "Beijing", "Guangdong", "Zhejiang"],
+        "interests": ["Fitness", "Consumer technology", "Film", "Streetwear"],
+        "platforms": [
+          {"platform": "Weibo", "followers": 6800000, "engagementRate": 0.041, "qualifiedEngagementRate": 0.035},
+          {"platform": "Douyin", "followers": 4200000, "engagementRate": 0.058, "qualifiedEngagementRate": 0.047}
+        ]
+      },
+      "creativeProfile": {
+        "formats": ["Hero film", "Training diary", "Short-form video", "Editorial stills"],
+        "tone": ["Disciplined", "Modern", "Understated"],
+        "strongScenarios": ["Urban run", "Gym transition", "Technology demonstration"],
+        "weakScenarios": ["Extreme adventure", "High-comedy performance"]
+      },
+      "trendProfile": {
+        "snapshotId": "trend_demo_2026_09_10",
+        "momentum30d": 72,
+        "change30dPct": 18,
+        "volatility": "medium",
+        "keywords": ["training consistency", "urban movement", "performance technology"]
+      },
+      "riskProfile": {
+        "reputationVolatility": "medium",
+        "audienceIntegrity": "low",
+        "categoryConflict": "unverified",
+        "brandSafety": "low",
+        "unverified": ["Footwear exclusivity", "Current availability", "Final talent fee"]
+      },
+      "commercial": {
+        "feeRangeCny": {"min": 8000000, "max": 12000000},
+        "availability": "unverified",
+        "usageWindowWeeks": 8,
+        "markets": ["Mainland China"],
+        "categoryExclusivity": "unverified"
+      },
+      "endorsementCases": [
+        {"id": "case_001_a", "title": "MotionLab Run Series", "category": "Performance footwear", "year": 2025, "metrics": {"awarenessLiftPct": 24, "engagementRatePct": 4.8, "conversionIndex": 1.31}, "imageAsset": null, "status": "illustrative"},
+        {"id": "case_001_b", "title": "NOVA Audio Launch", "category": "Consumer technology", "year": 2025, "metrics": {"considerationLiftPct": 19, "qualifiedViews": 5200000, "targetCohortSharePct": 71}, "imageAsset": null, "status": "illustrative"}
+      ],
+      "provenance": {"mode": "demo", "profileUpdatedAt": "2026-09-10T09:42:00+08:00", "confidence": "medium", "simulated": true}
+    },
+    {
+      "id": "cand_demo_002",
+      "slug": "mina-zhou",
+      "name": "Mina Zhou",
+      "gender": "female",
+      "age": 24,
+      "ageBand": "18-24",
+      "market": "Mainland China",
+      "languages": ["Mandarin", "English"],
+      "roles": ["Actress", "Creator"],
+      "bio": "A rising actress and creator with a highly engaged young audience and an approachable, design-aware public image.",
+      "whyCandidate": "Delivers the strongest youth-audience overlap and adapts naturally to short-form product storytelling.",
+      "tradeoff": "Her performance positioning is softer than the strongest athlete-led candidates.",
+      "culturalArchetype": {"id": "mainstream-youth-actress", "label": "High-energy mainstream actress and creator", "traits": ["broad public warmth", "variety-format adaptability", "youth fashion relevance", "strong female-audience resonance"], "signalWeight": 0.95, "directIdentityMapping": false},
+      "assets": {"portrait": "assets/portraits/mina-zhou.png", "listing": "assets/portraits/mina-zhou.png", "disclosure": "AI-generated demo portrait"},
+      "personaTags": [
+        {"id": "technology", "label": "Technology", "score": 88, "evidenceCount": 26, "direction": "rising"},
+        {"id": "energy", "label": "Energy", "score": 82, "evidenceCount": 24, "direction": "stable"},
+        {"id": "style", "label": "Style", "score": 92, "evidenceCount": 36, "direction": "rising"},
+        {"id": "youth-culture", "label": "Youth culture", "score": 94, "evidenceCount": 41, "direction": "rising"},
+        {"id": "wellness", "label": "Wellness", "score": 74, "evidenceCount": 16, "direction": "stable"}
+      ],
+      "audience": {
+        "ageDistribution": {"13-17": 12, "18-24": 52, "25-34": 25, "35-44": 8, "45+": 3},
+        "genderDistribution": {"female": 68, "male": 30, "other": 2},
+        "topRegions": ["Shanghai", "Guangdong", "Beijing", "Sichuan"],
+        "interests": ["Style", "Entertainment", "Wellness", "Mobile technology"],
+        "platforms": [
+          {"platform": "Douyin", "followers": 5900000, "engagementRate": 0.067, "qualifiedEngagementRate": 0.054},
+          {"platform": "Xiaohongshu", "followers": 2700000, "engagementRate": 0.074, "qualifiedEngagementRate": 0.061}
+        ]
+      },
+      "creativeProfile": {"formats": ["Short-form video", "Behind the scenes", "Editorial stills", "Livestream segment"], "tone": ["Warm", "Contemporary", "Expressive"], "strongScenarios": ["Morning commute", "Social challenge", "Style-led utility"], "weakScenarios": ["Elite competition", "Technical long-form demonstration"]},
+      "trendProfile": {"snapshotId": "trend_demo_2026_09_10", "momentum30d": 78, "change30dPct": 21, "volatility": "low", "keywords": ["everyday energy", "style utility", "young professionals"]},
+      "riskProfile": {"reputationVolatility": "low", "audienceIntegrity": "low", "categoryConflict": "clear", "brandSafety": "low", "unverified": ["Final availability", "Usage-rights cost"]},
+      "commercial": {"feeRangeCny": {"min": 5500000, "max": 8500000}, "availability": "tentative", "usageWindowWeeks": 8, "markets": ["Mainland China"], "categoryExclusivity": "clear"},
+      "endorsementCases": [
+        {"id": "case_002_a", "title": "Luma Everyday Edit", "category": "Lifestyle apparel", "year": 2025, "metrics": {"awarenessLiftPct": 18, "engagementRatePct": 6.2, "conversionIndex": 1.22}, "imageAsset": null, "status": "illustrative"},
+        {"id": "case_002_b", "title": "Pulse Mobile Story", "category": "Consumer technology", "year": 2025, "metrics": {"considerationLiftPct": 17, "qualifiedViews": 6100000, "targetCohortSharePct": 79}, "imageAsset": null, "status": "illustrative"}
+      ],
+      "provenance": {"mode": "demo", "profileUpdatedAt": "2026-09-10T09:42:00+08:00", "confidence": "medium", "simulated": true}
+    },
+    {
+      "id": "cand_demo_003",
+      "slug": "evan-lu",
+      "name": "Evan Lu",
+      "gender": "male",
+      "age": 27,
+      "ageBand": "25-34",
+      "market": "Mainland China",
+      "languages": ["Mandarin", "English"],
+      "roles": ["Athlete", "Host"],
+      "bio": "A competitive athlete and emerging host whose credibility comes from visible training discipline and an accessible off-field personality.",
+      "whyCandidate": "Offers high sports authenticity, low reputational volatility and clear product-in-use credibility.",
+      "tradeoff": "His technology relevance and female-audience reach are lower than the leading alternatives.",
+      "culturalArchetype": {"id": "sunny-athletic-actor", "label": "Sunny athletic actor and host", "traits": ["visible sport participation", "outdoor and cycling energy", "healthy approachable image", "product-in-use credibility"], "signalWeight": 0.76, "directIdentityMapping": false},
+      "assets": {"portrait": "assets/portraits/evan-lu.png", "listing": "assets/portraits/evan-lu.png", "disclosure": "AI-generated demo portrait"},
+      "personaTags": [
+        {"id": "sports", "label": "Sports", "score": 95, "evidenceCount": 44, "direction": "stable"},
+        {"id": "energy", "label": "Energy", "score": 89, "evidenceCount": 32, "direction": "stable"},
+        {"id": "health", "label": "Health", "score": 84, "evidenceCount": 27, "direction": "rising"},
+        {"id": "discipline", "label": "Discipline", "score": 91, "evidenceCount": 35, "direction": "stable"},
+        {"id": "technology", "label": "Technology", "score": 58, "evidenceCount": 11, "direction": "stable"}
+      ],
+      "audience": {
+        "ageDistribution": {"13-17": 8, "18-24": 35, "25-34": 38, "35-44": 14, "45+": 5},
+        "genderDistribution": {"female": 38, "male": 60, "other": 2},
+        "topRegions": ["Guangdong", "Shanghai", "Jiangsu", "Beijing"],
+        "interests": ["Running", "Fitness", "Health", "Sports media"],
+        "platforms": [
+          {"platform": "Douyin", "followers": 3600000, "engagementRate": 0.052, "qualifiedEngagementRate": 0.046},
+          {"platform": "Weibo", "followers": 2900000, "engagementRate": 0.034, "qualifiedEngagementRate": 0.031}
+        ]
+      },
+      "creativeProfile": {"formats": ["Training film", "Tutorial", "Event hosting", "Product test"], "tone": ["Credible", "Direct", "Energetic"], "strongScenarios": ["Track session", "Urban run", "Recovery routine"], "weakScenarios": ["Fashion editorial", "Abstract cultural storytelling"]},
+      "trendProfile": {"snapshotId": "trend_demo_2026_09_10", "momentum30d": 66, "change30dPct": 9, "volatility": "low", "keywords": ["training proof", "fitness routine", "running form"]},
+      "riskProfile": {"reputationVolatility": "low", "audienceIntegrity": "low", "categoryConflict": "clear", "brandSafety": "low", "unverified": ["Event schedule"]},
+      "commercial": {"feeRangeCny": {"min": 4500000, "max": 7000000}, "availability": "tentative", "usageWindowWeeks": 10, "markets": ["Mainland China"], "categoryExclusivity": "clear"},
+      "endorsementCases": [
+        {"id": "case_003_a", "title": "Stride Lab Sessions", "category": "Fitness platform", "year": 2025, "metrics": {"awarenessLiftPct": 16, "engagementRatePct": 4.5, "conversionIndex": 1.27}, "imageAsset": null, "status": "illustrative"},
+        {"id": "case_003_b", "title": "Hydra Recovery Week", "category": "Sports hydration", "year": 2024, "metrics": {"considerationLiftPct": 15, "qualifiedViews": 3900000, "targetCohortSharePct": 66}, "imageAsset": null, "status": "illustrative"}
+      ],
+      "provenance": {"mode": "demo", "profileUpdatedAt": "2026-09-10T09:42:00+08:00", "confidence": "medium", "simulated": true}
+    },
+    {
+      "id": "cand_demo_004",
+      "slug": "tessa-wu",
+      "name": "Tessa Wu",
+      "gender": "female",
+      "age": 32,
+      "ageBand": "25-34",
+      "market": "Mainland China",
+      "languages": ["Mandarin", "English"],
+      "roles": ["Wellness Founder", "Host"],
+      "bio": "A wellness entrepreneur and host with a trusted, practical voice among urban professionals balancing work, movement and recovery.",
+      "whyCandidate": "Strong audience trust and everyday-health relevance make product benefits easy to explain without celebrity excess.",
+      "tradeoff": "Her cultural momentum is steady rather than explosive, limiting a fame-first launch.",
+      "culturalArchetype": {"id": "trusted-urban-lifestyle", "label": "Trusted urban lifestyle communicator", "traits": ["mature audience trust", "natural conversational delivery", "everyday wellness", "low-drama credibility"], "signalWeight": 0.58, "directIdentityMapping": false},
+      "assets": {"portrait": "assets/portraits/tessa-wu.png", "listing": "assets/portraits/tessa-wu.png", "disclosure": "AI-generated demo portrait"},
+      "personaTags": [
+        {"id": "wellness", "label": "Wellness", "score": 94, "evidenceCount": 39, "direction": "stable"},
+        {"id": "health", "label": "Health", "score": 91, "evidenceCount": 35, "direction": "stable"},
+        {"id": "trust", "label": "Trust", "score": 90, "evidenceCount": 28, "direction": "rising"},
+        {"id": "urban", "label": "Urban", "score": 78, "evidenceCount": 20, "direction": "stable"},
+        {"id": "sports", "label": "Sports", "score": 69, "evidenceCount": 14, "direction": "rising"}
+      ],
+      "audience": {
+        "ageDistribution": {"13-17": 2, "18-24": 20, "25-34": 47, "35-44": 24, "45+": 7},
+        "genderDistribution": {"female": 74, "male": 24, "other": 2},
+        "topRegions": ["Shanghai", "Beijing", "Zhejiang", "Jiangsu"],
+        "interests": ["Wellness", "Work-life balance", "Nutrition", "Travel"],
+        "platforms": [
+          {"platform": "Xiaohongshu", "followers": 2100000, "engagementRate": 0.059, "qualifiedEngagementRate": 0.051},
+          {"platform": "Weibo", "followers": 1800000, "engagementRate": 0.032, "qualifiedEngagementRate": 0.029}
+        ]
+      },
+      "creativeProfile": {"formats": ["Expert conversation", "Routine diary", "Livestream", "Editorial stills"], "tone": ["Trusted", "Calm", "Practical"], "strongScenarios": ["Morning routine", "Commute", "Recovery"], "weakScenarios": ["Extreme sport", "Fast-cut youth comedy"]},
+      "trendProfile": {"snapshotId": "trend_demo_2026_09_10", "momentum30d": 65, "change30dPct": 7, "volatility": "low", "keywords": ["sustainable routine", "daily movement", "professional wellbeing"]},
+      "riskProfile": {"reputationVolatility": "low", "audienceIntegrity": "low", "categoryConflict": "clear", "brandSafety": "low", "unverified": ["Final production schedule"]},
+      "commercial": {"feeRangeCny": {"min": 3500000, "max": 6000000}, "availability": "available", "usageWindowWeeks": 12, "markets": ["Mainland China"], "categoryExclusivity": "clear"},
+      "endorsementCases": [
+        {"id": "case_004_a", "title": "Stillpoint Morning Series", "category": "Wellness platform", "year": 2025, "metrics": {"awarenessLiftPct": 14, "engagementRatePct": 5.1, "conversionIndex": 1.18}, "imageAsset": null, "status": "illustrative"},
+        {"id": "case_004_b", "title": "Form Daily Essentials", "category": "Lifestyle equipment", "year": 2024, "metrics": {"considerationLiftPct": 16, "qualifiedViews": 2800000, "targetCohortSharePct": 73}, "imageAsset": null, "status": "illustrative"}
+      ],
+      "provenance": {"mode": "demo", "profileUpdatedAt": "2026-09-10T09:42:00+08:00", "confidence": "medium", "simulated": true}
+    },
+    {
+      "id": "cand_demo_005",
+      "slug": "yuna-fang",
+      "name": "Yuna Fang",
+      "gender": "female",
+      "age": 22,
+      "ageBand": "18-24",
+      "market": "Mainland China",
+      "languages": ["Mandarin", "Korean"],
+      "roles": ["Dancer", "Choreographer"],
+      "bio": "A dancer and choreographer with strong youth-culture momentum, expressive movement credentials and a rapidly growing short-form audience.",
+      "whyCandidate": "Creates immediate visual energy and reaches the core 18–24 cohort with unusually strong engagement.",
+      "tradeoff": "Category authority is movement-led rather than running-specific, and current momentum is more volatile.",
+      "culturalArchetype": {"id": "youth-movement-performer", "label": "Youth movement and performance talent", "traits": ["dance fluency", "street-culture relevance", "visual movement energy", "short-form participation"], "signalWeight": 0.74, "directIdentityMapping": false},
+      "assets": {"portrait": "assets/portraits/yuna-fang.png", "listing": "assets/portraits/yuna-fang.png", "disclosure": "AI-generated demo portrait"},
+      "personaTags": [
+        {"id": "energy", "label": "Energy", "score": 96, "evidenceCount": 43, "direction": "rising"},
+        {"id": "youth-culture", "label": "Youth culture", "score": 95, "evidenceCount": 47, "direction": "rising"},
+        {"id": "movement", "label": "Movement", "score": 93, "evidenceCount": 38, "direction": "rising"},
+        {"id": "style", "label": "Style", "score": 87, "evidenceCount": 31, "direction": "rising"},
+        {"id": "sports", "label": "Sports", "score": 58, "evidenceCount": 12, "direction": "stable"}
+      ],
+      "audience": {
+        "ageDistribution": {"13-17": 19, "18-24": 56, "25-34": 19, "35-44": 5, "45+": 1},
+        "genderDistribution": {"female": 61, "male": 36, "other": 3},
+        "topRegions": ["Shanghai", "Sichuan", "Guangdong", "Beijing"],
+        "interests": ["Dance", "Music", "Street style", "Fitness"],
+        "platforms": [
+          {"platform": "Douyin", "followers": 4800000, "engagementRate": 0.082, "qualifiedEngagementRate": 0.063},
+          {"platform": "Bilibili", "followers": 1900000, "engagementRate": 0.071, "qualifiedEngagementRate": 0.057}
+        ]
+      },
+      "creativeProfile": {"formats": ["Dance film", "Short-form challenge", "Performance cut", "Behind the scenes"], "tone": ["Energetic", "Expressive", "Youthful"], "strongScenarios": ["Movement challenge", "City transition", "Music-led launch"], "weakScenarios": ["Technical tutorial", "Long-form expert interview"]},
+      "trendProfile": {"snapshotId": "trend_demo_2026_09_10", "momentum30d": 84, "change30dPct": 34, "volatility": "medium-high", "keywords": ["movement challenge", "street choreography", "expressive fitness"]},
+      "riskProfile": {"reputationVolatility": "medium", "audienceIntegrity": "low", "categoryConflict": "unverified", "brandSafety": "low", "unverified": ["Footwear exclusivity", "Tour schedule"]},
+      "commercial": {"feeRangeCny": {"min": 4000000, "max": 6500000}, "availability": "unverified", "usageWindowWeeks": 6, "markets": ["Mainland China"], "categoryExclusivity": "unverified"},
+      "endorsementCases": [
+        {"id": "case_005_a", "title": "Motion Loop Challenge", "category": "Music platform", "year": 2025, "metrics": {"awarenessLiftPct": 21, "engagementRatePct": 8.4, "conversionIndex": 1.09}, "imageAsset": null, "status": "illustrative"},
+        {"id": "case_005_b", "title": "Kinetic Street Edit", "category": "Youth apparel", "year": 2025, "metrics": {"considerationLiftPct": 13, "qualifiedViews": 7400000, "targetCohortSharePct": 84}, "imageAsset": null, "status": "illustrative"}
+      ],
+      "provenance": {"mode": "demo", "profileUpdatedAt": "2026-09-10T09:42:00+08:00", "confidence": "medium", "simulated": true}
+    },
+    {
+      "id": "cand_demo_006",
+      "slug": "miles-gu",
+      "name": "Miles Gu",
+      "gender": "male",
+      "age": 31,
+      "ageBand": "25-34",
+      "market": "Mainland China",
+      "languages": ["Mandarin", "English"],
+      "roles": ["Endurance Athlete", "Documentary Creator"],
+      "bio": "An endurance athlete and documentary creator associated with outdoor discipline, long-form credibility and practical equipment knowledge.",
+      "whyCandidate": "Offers the strongest technical-use credibility and a low-risk image for performance-led storytelling.",
+      "tradeoff": "His audience skews older and male, while cultural reach is narrower than entertainment-led candidates.",
+      "culturalArchetype": {"id": "action-outdoor-credibility", "label": "Action and outdoor credibility", "traits": ["physical discipline", "outdoor participation", "practical equipment authority", "mature masculine appeal"], "signalWeight": 0.63, "directIdentityMapping": false},
+      "assets": {"portrait": "assets/portraits/miles-gu.png", "listing": "assets/portraits/miles-gu.png", "disclosure": "AI-generated demo portrait"},
+      "personaTags": [
+        {"id": "sports", "label": "Sports", "score": 97, "evidenceCount": 51, "direction": "stable"},
+        {"id": "outdoor", "label": "Outdoor", "score": 94, "evidenceCount": 46, "direction": "stable"},
+        {"id": "discipline", "label": "Discipline", "score": 95, "evidenceCount": 42, "direction": "stable"},
+        {"id": "technology", "label": "Technology", "score": 73, "evidenceCount": 18, "direction": "rising"},
+        {"id": "style", "label": "Style", "score": 48, "evidenceCount": 8, "direction": "stable"}
+      ],
+      "audience": {
+        "ageDistribution": {"13-17": 2, "18-24": 17, "25-34": 46, "35-44": 27, "45+": 8},
+        "genderDistribution": {"female": 24, "male": 74, "other": 2},
+        "topRegions": ["Beijing", "Guangdong", "Yunnan", "Shanghai"],
+        "interests": ["Running", "Outdoor travel", "Equipment", "Documentary"],
+        "platforms": [
+          {"platform": "Bilibili", "followers": 1700000, "engagementRate": 0.061, "qualifiedEngagementRate": 0.055},
+          {"platform": "Douyin", "followers": 2200000, "engagementRate": 0.044, "qualifiedEngagementRate": 0.039}
+        ]
+      },
+      "creativeProfile": {"formats": ["Documentary film", "Field test", "Training plan", "Long-form interview"], "tone": ["Technical", "Grounded", "Credible"], "strongScenarios": ["Distance run", "Equipment test", "Outdoor route"], "weakScenarios": ["Fashion-led launch", "Celebrity entertainment"]},
+      "trendProfile": {"snapshotId": "trend_demo_2026_09_10", "momentum30d": 58, "change30dPct": 4, "volatility": "low", "keywords": ["endurance training", "equipment testing", "outdoor discipline"]},
+      "riskProfile": {"reputationVolatility": "low", "audienceIntegrity": "low", "categoryConflict": "clear", "brandSafety": "low", "unverified": ["Expedition schedule"]},
+      "commercial": {"feeRangeCny": {"min": 3000000, "max": 5200000}, "availability": "tentative", "usageWindowWeeks": 12, "markets": ["Mainland China"], "categoryExclusivity": "clear"},
+      "endorsementCases": [
+        {"id": "case_006_a", "title": "Long Road Field Notes", "category": "Outdoor equipment", "year": 2025, "metrics": {"awarenessLiftPct": 12, "engagementRatePct": 5.6, "conversionIndex": 1.38}, "imageAsset": null, "status": "illustrative"},
+        {"id": "case_006_b", "title": "Endurance Data Project", "category": "Wearable technology", "year": 2024, "metrics": {"considerationLiftPct": 18, "qualifiedViews": 2600000, "targetCohortSharePct": 64}, "imageAsset": null, "status": "illustrative"}
+      ],
+      "provenance": {"mode": "demo", "profileUpdatedAt": "2026-09-10T09:42:00+08:00", "confidence": "medium", "simulated": true}
+    },
+    {
+      "id": "cand_demo_007",
+      "slug": "nora-lin",
+      "name": "Nora Lin",
+      "gender": "female",
+      "age": 28,
+      "ageBand": "25-34",
+      "market": "Mainland China",
+      "languages": ["Mandarin", "English", "French"],
+      "roles": ["Fashion Model", "Creative Director"],
+      "bio": "A fashion model and creative director with a refined visual signature and credibility among design-conscious urban audiences.",
+      "whyCandidate": "Provides the clearest route to reposition a functional product as a design and lifestyle object.",
+      "tradeoff": "Running authenticity is limited, and premium positioning may narrow mass-market relevance.",
+      "culturalArchetype": {"id": "premium-youth-fashion", "label": "Premium youth fashion actress archetype", "traits": ["editorial presence", "emerging film credibility", "cool visual restraint", "premium brand compatibility"], "signalWeight": 0.84, "directIdentityMapping": false},
+      "assets": {"portrait": "assets/portraits/nora-lin.png", "listing": "assets/portraits/nora-lin.png", "disclosure": "AI-generated demo portrait"},
+      "personaTags": [
+        {"id": "style", "label": "Style", "score": 97, "evidenceCount": 52, "direction": "stable"},
+        {"id": "design", "label": "Design", "score": 94, "evidenceCount": 45, "direction": "rising"},
+        {"id": "urban", "label": "Urban", "score": 85, "evidenceCount": 29, "direction": "stable"},
+        {"id": "technology", "label": "Technology", "score": 70, "evidenceCount": 16, "direction": "rising"},
+        {"id": "sports", "label": "Sports", "score": 43, "evidenceCount": 7, "direction": "stable"}
+      ],
+      "audience": {
+        "ageDistribution": {"13-17": 5, "18-24": 34, "25-34": 43, "35-44": 14, "45+": 4},
+        "genderDistribution": {"female": 72, "male": 25, "other": 3},
+        "topRegions": ["Shanghai", "Beijing", "Zhejiang", "Guangdong"],
+        "interests": ["Fashion", "Design", "Art", "Travel"],
+        "platforms": [
+          {"platform": "Xiaohongshu", "followers": 3300000, "engagementRate": 0.064, "qualifiedEngagementRate": 0.052},
+          {"platform": "Weibo", "followers": 4100000, "engagementRate": 0.029, "qualifiedEngagementRate": 0.025}
+        ]
+      },
+      "creativeProfile": {"formats": ["Fashion film", "Editorial stills", "Design conversation", "Launch event"], "tone": ["Refined", "Conceptual", "Future-facing"], "strongScenarios": ["Style transition", "Architecture", "Design close-up"], "weakScenarios": ["Technical training proof", "Community fitness tutorial"]},
+      "trendProfile": {"snapshotId": "trend_demo_2026_09_10", "momentum30d": 72, "change30dPct": 14, "volatility": "medium", "keywords": ["technical fashion", "design utility", "future minimalism"]},
+      "riskProfile": {"reputationVolatility": "low", "audienceIntegrity": "low", "categoryConflict": "unverified", "brandSafety": "low", "unverified": ["Fashion footwear exclusivity", "Final usage rights"]},
+      "commercial": {"feeRangeCny": {"min": 6500000, "max": 9500000}, "availability": "unverified", "usageWindowWeeks": 6, "markets": ["Mainland China", "Selected APAC"], "categoryExclusivity": "unverified"},
+      "endorsementCases": [
+        {"id": "case_007_a", "title": "Form and Function", "category": "Technical apparel", "year": 2025, "metrics": {"awarenessLiftPct": 20, "engagementRatePct": 5.2, "conversionIndex": 1.12}, "imageAsset": null, "status": "illustrative"},
+        {"id": "case_007_b", "title": "Future Object Study", "category": "Consumer design", "year": 2024, "metrics": {"considerationLiftPct": 22, "qualifiedViews": 4300000, "targetCohortSharePct": 76}, "imageAsset": null, "status": "illustrative"}
+      ],
+      "provenance": {"mode": "demo", "profileUpdatedAt": "2026-09-10T09:42:00+08:00", "confidence": "medium", "simulated": true}
+    },
+    {
+      "id": "cand_demo_008",
+      "slug": "aria-chen",
+      "name": "Aria Chen",
+      "gender": "female",
+      "age": 25,
+      "ageBand": "25-34",
+      "market": "Mainland China",
+      "languages": ["Mandarin", "English"],
+      "roles": ["Musician", "Producer"],
+      "bio": "An independent musician and producer with strong cultural credibility, a thoughtful visual language and an audience concentrated in creative communities.",
+      "whyCandidate": "Can give a functional product cultural depth and a distinctive sound-led campaign platform.",
+      "tradeoff": "Product-use authority is limited and current category evidence is indirect.",
+      "culturalArchetype": {"id": "serious-artistic-multihyphenate", "label": "Serious artistic multi-hyphenate", "traits": ["film-first credibility", "music and movement literacy", "controlled public expression", "creative experimentation"], "signalWeight": 0.72, "directIdentityMapping": false},
+      "assets": {"portrait": "assets/portraits/aria-chen.png", "listing": "assets/portraits/aria-chen.png", "disclosure": "AI-generated demo portrait"},
+      "personaTags": [
+        {"id": "music", "label": "Music", "score": 97, "evidenceCount": 54, "direction": "stable"},
+        {"id": "culture", "label": "Culture", "score": 92, "evidenceCount": 43, "direction": "rising"},
+        {"id": "design", "label": "Design", "score": 86, "evidenceCount": 27, "direction": "stable"},
+        {"id": "energy", "label": "Energy", "score": 76, "evidenceCount": 21, "direction": "rising"},
+        {"id": "sports", "label": "Sports", "score": 39, "evidenceCount": 6, "direction": "stable"}
+      ],
+      "audience": {
+        "ageDistribution": {"13-17": 10, "18-24": 43, "25-34": 35, "35-44": 9, "45+": 3},
+        "genderDistribution": {"female": 57, "male": 40, "other": 3},
+        "topRegions": ["Shanghai", "Beijing", "Chengdu", "Guangzhou"],
+        "interests": ["Music", "Independent culture", "Design", "Nightlife"],
+        "platforms": [
+          {"platform": "Bilibili", "followers": 2500000, "engagementRate": 0.077, "qualifiedEngagementRate": 0.061},
+          {"platform": "Weibo", "followers": 3700000, "engagementRate": 0.036, "qualifiedEngagementRate": 0.031}
+        ]
+      },
+      "creativeProfile": {"formats": ["Music film", "Studio diary", "Live performance", "Editorial stills"], "tone": ["Intelligent", "Expressive", "Independent"], "strongScenarios": ["Sound-led film", "Night city", "Creative studio"], "weakScenarios": ["Technical product test", "Elite sport"]},
+      "trendProfile": {"snapshotId": "trend_demo_2026_09_10", "momentum30d": 82, "change30dPct": 26, "volatility": "medium", "keywords": ["independent sound", "night movement", "creative discipline"]},
+      "riskProfile": {"reputationVolatility": "medium", "audienceIntegrity": "low", "categoryConflict": "clear", "brandSafety": "low", "unverified": ["Tour schedule", "Music licensing scope"]},
+      "commercial": {"feeRangeCny": {"min": 5000000, "max": 7800000}, "availability": "unverified", "usageWindowWeeks": 8, "markets": ["Mainland China"], "categoryExclusivity": "clear"},
+      "endorsementCases": [
+        {"id": "case_008_a", "title": "Night Signal Sessions", "category": "Audio technology", "year": 2025, "metrics": {"awarenessLiftPct": 17, "engagementRatePct": 7.1, "conversionIndex": 1.05}, "imageAsset": null, "status": "illustrative"},
+        {"id": "case_008_b", "title": "Independent Motion", "category": "Lifestyle apparel", "year": 2024, "metrics": {"considerationLiftPct": 16, "qualifiedViews": 4600000, "targetCohortSharePct": 78}, "imageAsset": null, "status": "illustrative"}
+      ],
+      "provenance": {"mode": "demo", "profileUpdatedAt": "2026-09-10T09:42:00+08:00", "confidence": "medium", "simulated": true}
+    },
+    {
+      "id": "cand_demo_009",
+      "slug": "leo-xu",
+      "name": "Leo Xu",
+      "gender": "male",
+      "age": 23,
+      "ageBand": "18-24",
+      "market": "Mainland China",
+      "languages": ["Mandarin", "English"],
+      "roles": ["Technology Creator", "Gaming Host"],
+      "bio": "A consumer-technology creator and gaming host with high publishing consistency, a young male audience and strong product-explanation skills.",
+      "whyCandidate": "Makes cushioning and footwear technology easy to understand through fast, platform-native content.",
+      "tradeoff": "Sports authority and premium brand perception are weaker than the leading candidates.",
+      "culturalArchetype": {"id": "youth-tech-entertainer", "label": "Youth technology entertainer", "traits": ["platform-native communication", "fast product explanation", "gaming culture", "accessible youthful energy"], "signalWeight": 0.55, "directIdentityMapping": false},
+      "assets": {"portrait": "assets/portraits/leo-xu.png", "listing": "assets/portraits/leo-xu.png", "disclosure": "AI-generated demo portrait"},
+      "personaTags": [
+        {"id": "technology", "label": "Technology", "score": 96, "evidenceCount": 61, "direction": "stable"},
+        {"id": "gaming", "label": "Gaming", "score": 95, "evidenceCount": 58, "direction": "stable"},
+        {"id": "youth-culture", "label": "Youth culture", "score": 84, "evidenceCount": 34, "direction": "rising"},
+        {"id": "energy", "label": "Energy", "score": 81, "evidenceCount": 29, "direction": "stable"},
+        {"id": "sports", "label": "Sports", "score": 46, "evidenceCount": 9, "direction": "rising"}
+      ],
+      "audience": {
+        "ageDistribution": {"13-17": 22, "18-24": 49, "25-34": 22, "35-44": 6, "45+": 1},
+        "genderDistribution": {"female": 23, "male": 74, "other": 3},
+        "topRegions": ["Guangdong", "Shanghai", "Sichuan", "Jiangsu"],
+        "interests": ["Gaming", "Mobile technology", "Sneakers", "Entertainment"],
+        "platforms": [
+          {"platform": "Bilibili", "followers": 4300000, "engagementRate": 0.079, "qualifiedEngagementRate": 0.058},
+          {"platform": "Douyin", "followers": 3500000, "engagementRate": 0.069, "qualifiedEngagementRate": 0.051}
+        ]
+      },
+      "creativeProfile": {"formats": ["Product explainer", "Short-form review", "Livestream", "Challenge"], "tone": ["Fast", "Clear", "Playful"], "strongScenarios": ["Technology breakdown", "Daily commute", "Platform challenge"], "weakScenarios": ["Luxury editorial", "Elite training authority"]},
+      "trendProfile": {"snapshotId": "trend_demo_2026_09_10", "momentum30d": 75, "change30dPct": 17, "volatility": "medium", "keywords": ["wearable technology", "everyday performance", "product testing"]},
+      "riskProfile": {"reputationVolatility": "medium", "audienceIntegrity": "medium", "categoryConflict": "clear", "brandSafety": "low", "unverified": ["Suspicious-traffic review", "Final availability"]},
+      "commercial": {"feeRangeCny": {"min": 2800000, "max": 4800000}, "availability": "available", "usageWindowWeeks": 8, "markets": ["Mainland China"], "categoryExclusivity": "clear"},
+      "endorsementCases": [
+        {"id": "case_009_a", "title": "Next Input Lab", "category": "Gaming equipment", "year": 2025, "metrics": {"awarenessLiftPct": 15, "engagementRatePct": 7.8, "conversionIndex": 1.26}, "imageAsset": null, "status": "illustrative"},
+        {"id": "case_009_b", "title": "Everyday Battery Test", "category": "Mobile technology", "year": 2025, "metrics": {"considerationLiftPct": 14, "qualifiedViews": 6800000, "targetCohortSharePct": 82}, "imageAsset": null, "status": "illustrative"}
+      ],
+      "provenance": {"mode": "demo", "profileUpdatedAt": "2026-09-10T09:42:00+08:00", "confidence": "low", "simulated": true}
+    },
+    {
+      "id": "cand_demo_010",
+      "slug": "theo-bai",
+      "name": "Theo Bai",
+      "gender": "male",
+      "age": 29,
+      "ageBand": "25-34",
+      "market": "Mainland China",
+      "languages": ["Mandarin", "English"],
+      "roles": ["Musician", "Actor"],
+      "bio": "A musician and actor with a mature fashion identity, strong editorial presence and a loyal entertainment audience.",
+      "whyCandidate": "Could create a distinctive perception-shift campaign that moves the product beyond conventional sport advertising.",
+      "tradeoff": "Low running authenticity, a high fee band and an unresolved lifestyle-footwear conflict reduce execution confidence.",
+      "culturalArchetype": {"id": "mature-cinematic-lead", "label": "Mature cinematic actor and musician", "traits": ["serious screen presence", "music credibility", "urban fashion", "controlled premium image"], "signalWeight": 0.61, "directIdentityMapping": false},
+      "assets": {"portrait": "assets/portraits/theo-bai.png", "listing": "assets/portraits/theo-bai.png", "disclosure": "AI-generated demo portrait"},
+      "personaTags": [
+        {"id": "music", "label": "Music", "score": 93, "evidenceCount": 48, "direction": "stable"},
+        {"id": "style", "label": "Style", "score": 91, "evidenceCount": 44, "direction": "stable"},
+        {"id": "culture", "label": "Culture", "score": 86, "evidenceCount": 32, "direction": "rising"},
+        {"id": "energy", "label": "Energy", "score": 64, "evidenceCount": 15, "direction": "falling"},
+        {"id": "sports", "label": "Sports", "score": 31, "evidenceCount": 5, "direction": "stable"}
+      ],
+      "audience": {
+        "ageDistribution": {"13-17": 7, "18-24": 32, "25-34": 42, "35-44": 14, "45+": 5},
+        "genderDistribution": {"female": 66, "male": 31, "other": 3},
+        "topRegions": ["Beijing", "Shanghai", "Guangdong", "Zhejiang"],
+        "interests": ["Music", "Film", "Fashion", "Nightlife"],
+        "platforms": [
+          {"platform": "Weibo", "followers": 8900000, "engagementRate": 0.031, "qualifiedEngagementRate": 0.025},
+          {"platform": "Douyin", "followers": 5100000, "engagementRate": 0.049, "qualifiedEngagementRate": 0.037}
+        ]
+      },
+      "creativeProfile": {"formats": ["Music film", "Fashion editorial", "Narrative short", "Launch event"], "tone": ["Cinematic", "Mature", "Expressive"], "strongScenarios": ["Night city", "Fashion transition", "Narrative film"], "weakScenarios": ["Training proof", "Technical product education"]},
+      "trendProfile": {"snapshotId": "trend_demo_2026_09_10", "momentum30d": 65, "change30dPct": -4, "volatility": "medium-high", "keywords": ["cinematic style", "music culture", "night city"]},
+      "riskProfile": {"reputationVolatility": "medium", "audienceIntegrity": "low", "categoryConflict": "hold", "brandSafety": "medium", "unverified": ["Lifestyle-footwear conflict", "Final fee", "Production availability"]},
+      "commercial": {"feeRangeCny": {"min": 9500000, "max": 14000000}, "availability": "unverified", "usageWindowWeeks": 6, "markets": ["Mainland China"], "categoryExclusivity": "hold"},
+      "endorsementCases": [
+        {"id": "case_010_a", "title": "After Dark Film", "category": "Fashion fragrance", "year": 2025, "metrics": {"awarenessLiftPct": 22, "engagementRatePct": 3.9, "conversionIndex": 0.97}, "imageAsset": null, "status": "illustrative"},
+        {"id": "case_010_b", "title": "Scene Shift Collection", "category": "Lifestyle footwear", "year": 2024, "metrics": {"considerationLiftPct": 20, "qualifiedViews": 5700000, "targetCohortSharePct": 69}, "imageAsset": null, "status": "illustrative"}
+      ],
+      "provenance": {"mode": "demo", "profileUpdatedAt": "2026-09-10T09:42:00+08:00", "confidence": "low", "simulated": true}
+    }
+  ]
+}

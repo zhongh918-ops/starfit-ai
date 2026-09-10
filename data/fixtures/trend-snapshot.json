@@ -1,0 +1,73 @@
+{
+  "snapshotId": "trend_demo_2026_09_10",
+  "mode": "demo",
+  "periodStart": "2026-09-04T00:00:00+08:00",
+  "periodEnd": "2026-09-10T09:42:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "updatedAt": "2026-09-10T09:42:00+08:00",
+  "status": "demo_snapshot",
+  "disclaimer": "Fixed simulated trend snapshot for offline demonstration. It is not live market data.",
+  "signals": [
+    {
+      "id": "signal_sports",
+      "label": "Sports",
+      "relativeAttention": 74,
+      "changePct": 12,
+      "direction": "rising",
+      "observedTitleCount": 127,
+      "platformCount": 8,
+      "bestRank": 3,
+      "dailyIndex": [41, 35, 35, 45, 59, 69, 86],
+      "platformShare": {"Weibo": 32, "Douyin": 24, "Bilibili": 18, "Zhihu": 14, "Other": 12}
+    },
+    {
+      "id": "signal_technology",
+      "label": "Technology",
+      "relativeAttention": 68,
+      "changePct": 9,
+      "direction": "rising",
+      "observedTitleCount": 98,
+      "platformCount": 7,
+      "bestRank": 5,
+      "dailyIndex": [46, 45, 49, 51, 58, 63, 68]
+    },
+    {
+      "id": "signal_energy",
+      "label": "Energy",
+      "relativeAttention": 61,
+      "changePct": 3,
+      "direction": "stable",
+      "observedTitleCount": 82,
+      "platformCount": 6,
+      "bestRank": 8,
+      "dailyIndex": [57, 59, 58, 60, 62, 61, 61]
+    },
+    {
+      "id": "signal_health",
+      "label": "Health",
+      "relativeAttention": 58,
+      "changePct": 7,
+      "direction": "rising",
+      "observedTitleCount": 64,
+      "platformCount": 6,
+      "bestRank": 11,
+      "dailyIndex": [48, 49, 51, 52, 54, 56, 58]
+    },
+    {
+      "id": "signal_outdoor",
+      "label": "Outdoor",
+      "relativeAttention": 61,
+      "changePct": 1,
+      "direction": "stable",
+      "observedTitleCount": 57,
+      "platformCount": 5,
+      "bestRank": 12,
+      "dailyIndex": [60, 61, 60, 60, 61, 62, 61]
+    }
+  ],
+  "evidence": [
+    {"id": "trend_evidence_001", "headline": "Morning running challenges drive discussion", "platform": "Douyin", "date": "2026-09-10", "status": "simulated"},
+    {"id": "trend_evidence_002", "headline": "Training routines shift toward everyday consistency", "platform": "Weibo", "date": "2026-09-09", "status": "simulated"},
+    {"id": "trend_evidence_003", "headline": "Lightweight gear gains attention across fitness content", "platform": "Bilibili", "date": "2026-09-08", "status": "simulated"}
+  ]
+}

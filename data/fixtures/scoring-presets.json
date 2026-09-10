@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "components": [
+    "brandProductAuthenticity",
+    "audienceRelevance",
+    "messageCreativeFit",
+    "culturalTiming",
+    "engagementQuality",
+    "commercialFeasibility"
+  ],
+  "presets": [
+    {"id": "balanced", "label": "Balanced fit", "weights": [30, 25, 20, 10, 10, 5]},
+    {"id": "sales", "label": "Drive sales", "weights": [20, 25, 15, 5, 20, 15]},
+    {"id": "fame", "label": "Build fame", "weights": [10, 20, 10, 25, 30, 5]},
+    {"id": "perception", "label": "Shift perception", "weights": [25, 15, 30, 20, 5, 5]}
+  ],
+  "rules": {
+    "totalRequired": 100,
+    "roundFinalScoreOnce": true,
+    "riskGateIsSeparate": true,
+    "missingDataLowersConfidence": true
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "analysisId": "analysis_demo_aerostride_001",
+  "mode": "demo",
+  "createdAt": "2026-09-10T10:00:00+08:00",
+  "productBriefVersionId": "product_aerostride_v1",
+  "trendSnapshotId": "trend_demo_2026_09_10",
+  "tagProfileVersionId": "tag_profile_aerostride_v1",
+  "scoringStrategyVersionId": "scoring_balanced_v1",
+  "candidateDatasetVersionId": "candidate_fixture_cn_v1@1.1.0",
+  "matchModelVersion": "demo-weighted-fit-v1",
+  "productBrief": {
+    "name": "AEROSTRIDE Training Shoes",
+    "category": "Sports shoes",
+    "targetAudience": {"minAge": 18, "maxAge": 28},
+    "priceTier": "Mid",
+    "features": ["Lightweight", "Cushioning", "Daily training"],
+    "useScenarios": ["Running", "Gym", "Commute-to-training"],
+    "desiredImage": ["Athletic", "Authentic", "Energetic"],
+    "objective": "Use credible training authority to communicate cushioning technology, not popularity alone."
+  },
+  "scoringStrategy": {
+    "preset": "Balanced fit",
+    "weights": {
+      "brandProductAuthenticity": 30,
+      "audienceRelevance": 25,
+      "messageCreativeFit": 20,
+      "culturalTiming": 10,
+      "engagementQuality": 10,
+      "commercialFeasibility": 5
+    }
+  },
+  "results": [
+    {
+      "rank": 1,
+      "candidateId": "cand_demo_001",
+      "strategicFit": 83,
+      "rawStrategicFit": 83.0,
+      "components": {"brandProductAuthenticity": 93, "audienceRelevance": 80, "messageCreativeFit": 86, "culturalTiming": 72, "engagementQuality": 76, "commercialFeasibility": 62},
+      "riskAdjustedConfidence": 68,
+      "confidenceRange": {"min": 61, "max": 75},
+      "riskGate": "CONDITIONAL PASS",
+      "conditions": ["Confirm footwear exclusivity", "Verify final fee at or below CNY 12M", "Validate female 18-24 reach"],
+      "reason": "The strongest balance of sports credibility, technology relevance and disciplined public image."
+    },
+    {
+      "rank": 2,
+      "candidateId": "cand_demo_002",
+      "strategicFit": 79,
+      "rawStrategicFit": 79.2,
+      "components": {"brandProductAuthenticity": 84, "audienceRelevance": 86, "messageCreativeFit": 75, "culturalTiming": 70, "engagementQuality": 78, "commercialFeasibility": 54},
+      "riskAdjustedConfidence": 75,
+      "confidenceRange": {"min": 69, "max": 81},
+      "riskGate": "PASS",
+      "conditions": ["Confirm final usage-rights cost"],
+      "reason": "Excellent youth resonance and audience overlap, with slightly softer performance positioning."
+    },
+    {
+      "rank": 3,
+      "candidateId": "cand_demo_003",
+      "strategicFit": 76,
+      "rawStrategicFit": 75.5,
+      "components": {"brandProductAuthenticity": 86, "audienceRelevance": 74, "messageCreativeFit": 70, "culturalTiming": 66, "engagementQuality": 68, "commercialFeasibility": 76},
+      "riskAdjustedConfidence": 82,
+      "confidenceRange": {"min": 77, "max": 87},
+      "riskGate": "PASS",
+      "conditions": ["Confirm event schedule"],
+      "reason": "High sports authenticity and low reputational risk, with more limited technology relevance."
+    },
+    {
+      "rank": 4,
+      "candidateId": "cand_demo_004",
+      "strategicFit": 74,
+      "rawStrategicFit": 74.05,
+      "components": {"brandProductAuthenticity": 69, "audienceRelevance": 82, "messageCreativeFit": 77, "culturalTiming": 65, "engagementQuality": 74, "commercialFeasibility": 71},
+      "riskAdjustedConfidence": 84,
+      "confidenceRange": {"min": 80, "max": 88},
+      "riskGate": "PASS",
+      "conditions": ["Confirm production schedule"],
+      "reason": "Trusted everyday-wellness voice with strong urban professional relevance."
+    },
+    {
+      "rank": 5,
+      "candidateId": "cand_demo_005",
+      "strategicFit": 74,
+      "rawStrategicFit": 73.6,
+      "components": {"brandProductAuthenticity": 52, "audienceRelevance": 88, "messageCreativeFit": 80, "culturalTiming": 84, "engagementQuality": 86, "commercialFeasibility": 60},
+      "riskAdjustedConfidence": 61,
+      "confidenceRange": {"min": 53, "max": 69},
+      "riskGate": "CONDITIONAL PASS",
+      "conditions": ["Confirm footwear exclusivity", "Validate trend durability after current spike"],
+      "reason": "Exceptional youth momentum and movement energy, balanced by weaker running-category authority."
+    },
+    {
+      "rank": 6,
+      "candidateId": "cand_demo_006",
+      "strategicFit": 72,
+      "rawStrategicFit": 72.0,
+      "components": {"brandProductAuthenticity": 90, "audienceRelevance": 64, "messageCreativeFit": 64, "culturalTiming": 58, "engagementQuality": 70, "commercialFeasibility": 68},
+      "riskAdjustedConfidence": 86,
+      "confidenceRange": {"min": 82, "max": 90},
+      "riskGate": "PASS",
+      "conditions": ["Confirm expedition schedule"],
+      "reason": "Excellent technical credibility and low risk, but a narrower and older audience."
+    },
+    {
+      "rank": 7,
+      "candidateId": "cand_demo_007",
+      "strategicFit": 72,
+      "rawStrategicFit": 71.9,
+      "components": {"brandProductAuthenticity": 60, "audienceRelevance": 77, "messageCreativeFit": 84, "culturalTiming": 72, "engagementQuality": 79, "commercialFeasibility": 55},
+      "riskAdjustedConfidence": 66,
+      "confidenceRange": {"min": 59, "max": 73},
+      "riskGate": "CONDITIONAL PASS",
+      "conditions": ["Confirm fashion-footwear exclusivity", "Confirm usage rights"],
+      "reason": "Strongest perception-shift option, with limited evidence of authentic running use."
+    },
+    {
+      "rank": 8,
+      "candidateId": "cand_demo_008",
+      "strategicFit": 72,
+      "rawStrategicFit": 71.5,
+      "components": {"brandProductAuthenticity": 55, "audienceRelevance": 81, "messageCreativeFit": 76, "culturalTiming": 82, "engagementQuality": 85, "commercialFeasibility": 57},
+      "riskAdjustedConfidence": 64,
+      "confidenceRange": {"min": 56, "max": 72},
+      "riskGate": "CONDITIONAL PASS",
+      "conditions": ["Confirm tour schedule", "Define music licensing scope"],
+      "reason": "Culturally distinctive and highly engaging, but the product-use connection is indirect."
+    },
+    {
+      "rank": 9,
+      "candidateId": "cand_demo_009",
+      "strategicFit": 71,
+      "rawStrategicFit": 70.65,
+      "components": {"brandProductAuthenticity": 58, "audienceRelevance": 79, "messageCreativeFit": 68, "culturalTiming": 75, "engagementQuality": 84, "commercialFeasibility": 80},
+      "riskAdjustedConfidence": 58,
+      "confidenceRange": {"min": 49, "max": 67},
+      "riskGate": "CONDITIONAL PASS",
+      "conditions": ["Complete suspicious-traffic review", "Confirm final availability"],
+      "reason": "Strong technology explanation and commercial flexibility, offset by weaker sport credibility."
+    },
+    {
+      "rank": 10,
+      "candidateId": "cand_demo_010",
+      "strategicFit": 63,
+      "rawStrategicFit": 62.75,
+      "components": {"brandProductAuthenticity": 47, "audienceRelevance": 73, "messageCreativeFit": 72, "culturalTiming": 65, "engagementQuality": 70, "commercialFeasibility": 50},
+      "riskAdjustedConfidence": 49,
+      "confidenceRange": {"min": 39, "max": 59},
+      "riskGate": "HOLD",
+      "conditions": ["Resolve lifestyle-footwear conflict", "Verify fee within budget", "Confirm production availability"],
+      "reason": "Distinctive creative potential, but weak sport authority and unresolved commercial conflicts."
+    }
+  ]
+}

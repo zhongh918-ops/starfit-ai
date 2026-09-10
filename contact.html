@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact · 99% match</title>
+<script src="js/public-base.js"></script>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/shell.css">
+<link rel="stylesheet" href="css/marketing.css">
+</head>
+<body data-page="contact">
+<div class="page">
+  <div class="app-window" role="application" aria-label="99% match contact">
+    <header class="app-chrome marketing">
+      <div class="traffic" aria-hidden="true">
+        <span class="tl close"></span><span class="tl min"></span><span class="tl max"></span>
+      </div>
+      <div class="marketing-head">
+        <p class="chrome-kicker" data-i18n="about.kicker">Decision infrastructure for celebrity–product partnerships.</p>
+        <div class="mnav-row">
+          <nav class="mnav" aria-label="Primary">
+            <a href="work.html" data-nav="work" data-i18n="nav.work">Work</a>
+            <a href="about.html" data-nav="about" data-i18n="nav.about">About</a>
+            <a href="contact.html" data-nav="contact" data-i18n="nav.contact">Contact</a>
+            <a href="support.html" data-nav="support" data-i18n="nav.support">Support</a>
+          </nav>
+          <div data-lang-switch></div>
+        </div>
+      </div>
+    </header>
+    <div class="market-body">
+      <section class="contact">
+        <div class="contact-left">
+          <h1 data-i18n="contact.h1">Tell us what you’re trying to match.</h1>
+          <p class="lede" data-i18n="contact.lede">Share the product, market and decision stage. We’ll route the enquiry to the right conversation.</p>
+          <div class="demo-block">
+            <p class="eyebrow" data-i18n="contact.demo">Demo contact</p>
+            <p><a href="mailto:hello@99percentmatch.example">hello@99percentmatch.example</a></p>
+            <p data-i18n="contact.place">Shanghai · Remote</p>
+            <p class="form-note" data-i18n="contact.virtual">Virtual address for prototype use only</p>
+          </div>
+          <p class="contact-topics" data-i18n="contact.topics">Partnerships · Product feedback · Research enquiries</p>
+        </div>
+        <div class="contact-right">
+          <form data-prototype-form novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name" data-i18n="contact.name">Name</label>
+                <input class="field" id="name" name="name" autocomplete="name" data-i18n-placeholder="contact.namePh" placeholder="Your name" data-required>
+              </div>
+              <div class="form-field">
+                <label for="email" data-i18n="contact.email">Work email</label>
+                <input class="field" id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" data-required>
+              </div>
+            </div>
+            <div class="form-row one">
+              <div class="form-field">
+                <label for="company" data-i18n="contact.company">Company</label>
+                <input class="field" id="company" name="company" autocomplete="organization" data-i18n-placeholder="contact.companyPh" placeholder="Company or team" data-required>
+              </div>
+            </div>
+            <div class="form-row one">
+              <div class="form-field">
+                <label for="category" data-i18n="contact.category">Product category</label>
+                <select class="field" id="category" name="category" data-required>
+                  <option value="" data-i18n="contact.cat.empty">Select a category</option>
+                  <option data-i18n="contact.cat.coffee">Coffee / RTD</option>
+                  <option data-i18n="contact.cat.shoes">Sports shoes</option>
+                  <option data-i18n="contact.cat.headphones">Smart headphones</option>
+                  <option data-i18n="contact.cat.other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row one">
+              <div class="form-field">
+                <span id="stage-label" data-i18n="contact.stage">Project stage</span>
+                <div class="stage-pills" role="radiogroup" aria-labelledby="stage-label">
+                  <label><input type="radio" name="stage" value="exploring" data-required> <span data-i18n="contact.stage.exploring">Exploring</span></label>
+                  <label><input type="radio" name="stage" value="shortlisting"> <span data-i18n="contact.stage.shortlisting">Shortlisting</span></label>
+                  <label><input type="radio" name="stage" value="campaign"> <span data-i18n="contact.stage.campaign">Campaign planning</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="form-row one">
+              <div class="form-field">
+                <label for="message" data-i18n="contact.message">Message</label>
+                <textarea class="field-area" id="message" name="message" data-i18n-placeholder="contact.messagePh" placeholder="Tell us what you’re launching and where you need support." data-required></textarea>
+              </div>
+            </div>
+            <label class="consent">
+              <input type="checkbox" name="consent" data-required>
+              <span data-i18n="contact.consent">I understand this prototype does not submit real data.</span>
+            </label>
+            <div class="form-actions">
+              <button class="btn-primary" type="submit" data-i18n="contact.send">Send enquiry →</button>
+              <span class="form-note" data-i18n="contact.note">Demo form · no submission is sent.</span>
+            </div>
+            <p class="form-error" role="alert"></p>
+            <p class="form-success" role="status"></p>
+          </form>
+        </div>
+      </section>
+      <div class="contact-banner" data-i18n="contact.banner">Better briefs lead to better matches.</div>
+    </div>
+  </div>
+</div>
+<script src="js/i18n.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/prototype-form.js"></script>
+</body>
+</html>

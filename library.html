@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talent Library · 99% match</title>
+<script src="js/public-base.js"></script>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/shell.css">
+<link rel="stylesheet" href="css/library.css">
+</head>
+<body data-page="library">
+<div class="page">
+  <div class="app-window" role="application" aria-label="99% match talent library">
+    <header class="app-chrome">
+      <div class="chrome-left">
+        <div class="traffic" aria-hidden="true">
+          <span class="tl close"></span>
+          <span class="tl min"></span>
+          <span class="tl max"></span>
+        </div>
+      </div>
+      <div class="chrome-brand">
+        <a class="wordmark" href="index.html">99% match</a>
+        <span class="chrome-sub" data-i18n="lib.subchrome">Celebrity-product fit agent</span>
+      </div>
+      <div class="chrome-actions">
+        <span class="mode-badge" id="modeBadge">DEMO MODE</span>
+        <div data-lang-switch></div>
+        <a class="btn-secondary" href="work.html" data-i18n="work.new">New analysis</a>
+        <div class="account-wrap">
+          <button type="button" class="avatar-btn" id="accountBtn" aria-haspopup="menu" aria-expanded="false" data-i18n-aria="nav.account" aria-label="账户">J</button>
+          <div class="account-menu" id="accountMenu" hidden role="menu">
+            <a href="library.html" role="menuitem" data-i18n="nav.library">Talent Library</a>
+            <button type="button" role="menuitem" id="modeDemo" data-i18n="mode.demo">Demo data</button>
+            <button type="button" role="menuitem" id="modeLive" data-i18n="mode.live">Live data</button>
+            <a href="work.html" role="menuitem" data-i18n="nav.work">Work</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="library-body">
+      <aside class="library-rail" data-i18n-aria="lib.rail" aria-label="Library">
+        <div class="side-label" data-i18n="lib.rail">LIBRARY</div>
+        <button type="button" class="nav-btn on" data-view="all"><span class="ico" aria-hidden="true">◎</span><span data-i18n="lib.all">All talent</span></button>
+        <button type="button" class="nav-btn" data-view="shortlist"><span class="ico" aria-hidden="true">☆</span><span data-i18n="lib.short">Shortlisted</span></button>
+        <button type="button" class="nav-btn" data-view="added"><span class="ico" aria-hidden="true">☑</span><span data-i18n="lib.added">In analysis</span></button>
+        <button type="button" class="nav-btn" data-view="saved" disabled data-i18n-title="lib.savedTitle" title="Demo: saved views are not persisted yet."><span class="ico" aria-hidden="true">▱</span><span data-i18n="lib.saved">Saved views</span></button>
+        <div class="status"><span class="status-dot"></span><span id="libStatus">10 demo profiles ready</span></div>
+      </aside>
+      <main class="library-main">
+        <div class="lib-topline">
+          <div>
+            <p class="eyebrow" data-i18n="lib.eyebrow">TALENT LIBRARY</p>
+            <h1 data-i18n="lib.h1">A stable profile base for every match.</h1>
+            <p class="lib-sub" data-i18n="lib.lede">Browse candidate evidence before matching. Product-specific scores are calculated only after Run Match.</p>
+          </div>
+          <div class="lib-badges">
+            <div class="lib-badge demo" data-i18n="lib.demo">DEMO DATA</div>
+            <div class="lib-badge count" id="libCount">10 PROFILES</div>
+          </div>
+        </div>
+        <div class="lib-filters">
+          <label class="lib-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="libSearch" type="search" data-i18n-placeholder="lib.search" placeholder="Search name, role or tag" autocomplete="off">
+          </label>
+          <select class="lib-field" id="fRole" data-i18n-aria="lib.role" aria-label="Role"><option value="" data-i18n="lib.role">Role</option></select>
+          <select class="lib-field" id="fAudience" data-i18n-aria="lib.audience" aria-label="Audience">
+            <option value="" data-i18n="lib.audience">Audience</option>
+          </select>
+          <select class="lib-field" id="fMarket" data-i18n-aria="lib.market" aria-label="Market">
+            <option value="" data-i18n="lib.market">Market</option>
+          </select>
+          <select class="lib-field" id="fBudget" data-i18n-aria="lib.budget" aria-label="Budget">
+            <option value="" data-i18n="lib.budget">Budget</option>
+            <option value="under5" data-i18n="lib.budget.under5">Under CNY 5M</option>
+            <option value="5to8" data-i18n="lib.budget.5to8">CNY 5–8M</option>
+            <option value="8to12" data-i18n="lib.budget.8to12">CNY 8–12M</option>
+            <option value="over12" data-i18n="lib.budget.over12">Over CNY 12M</option>
+          </select>
+          <select class="lib-field" id="fRisk" data-i18n-aria="lib.risk" aria-label="Risk">
+            <option value="" data-i18n="lib.risk">Risk</option>
+            <option value="low" data-i18n="lib.risk.low">Low</option>
+            <option value="medium" data-i18n="lib.risk.medium">Medium</option>
+            <option value="high" data-i18n="lib.risk.high">High / Hold</option>
+            <option value="unverified" data-i18n="lib.risk.unverified">Unverified</option>
+          </select>
+          <div class="lib-toggle" role="group" data-i18n-aria="lib.layout" aria-label="Layout">
+            <button type="button" class="on" id="viewGrid" data-i18n="lib.grid">Grid</button>
+            <button type="button" id="viewList" data-i18n="lib.list">List</button>
+          </div>
+          <button type="button" class="lib-clear" id="libClear" data-i18n="lib.clear">Clear all</button>
+        </div>
+        <div class="lib-grid" id="libCards"></div>
+        <p class="lib-empty" id="libEmpty" hidden data-i18n="lib.empty">No profiles match these filters. Clear all to restore the ten-person library.</p>
+        <div class="lib-foot">
+          <span data-i18n="lib.foot">Fictional identities and simulated metrics for product demonstration only. Five women and five men. Identities do not change on refresh.</span>
+          <strong id="libFixture">Fixture candidate_fixture_cn_v1@1.1.0 · Updated 10 Sep 2026</strong>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+<script src="js/i18n.js"></script>
+<script src="js/library.js"></script>
+</body>
+</html>

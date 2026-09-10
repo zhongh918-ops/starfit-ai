@@ -1,0 +1,26 @@
+{
+  "id": "trend_archetype_translation_2026_09_10",
+  "mode": "demo_design_input",
+  "sourceDate": "2026-09-10",
+  "sourceType": "user-provided TrendRadar popularity snapshot",
+  "realNamesStored": false,
+  "directIdentityMapping": false,
+  "note": "Popularity signals were translated into mixed public-image archetypes. These records are not candidate identities, endorsements or verified audience measurements.",
+  "observedArchetypeSignals": [
+    {"id": "pulse_mainstream_actress", "label": "High-energy mainstream actress and variety presence", "attentionSignal": 19, "todayNew": 3, "traits": ["broad warmth", "high format adaptability", "female-audience resonance", "fashion accessibility"]},
+    {"id": "pulse_youth_fashion_actress", "label": "Emerging youth film and fashion actress", "attentionSignal": 10, "todayNew": 0, "traits": ["cool visual restraint", "young audience", "premium fashion compatibility", "film credibility"]},
+    {"id": "pulse_artistic_multihyphenate", "label": "Serious artistic actor musician and dancer", "attentionSignal": 7, "todayNew": 1, "traits": ["film authority", "music literacy", "movement fluency", "controlled public expression"]},
+    {"id": "pulse_performance_subculture", "label": "Performance street and motorsport multi-hyphenate", "attentionSignal": 5, "todayNew": 0, "traits": ["dance and movement", "street culture", "technical curiosity", "cool low-key image"]},
+    {"id": "pulse_sunny_outdoor_actor", "label": "Sunny young actor with outdoor and cycling energy", "attentionSignal": 5, "todayNew": 0, "traits": ["approachability", "visible activity", "healthy image", "travel and outdoor relevance"]},
+    {"id": "pulse_action_fit_actor", "label": "Action and fitness-oriented actor model", "attentionSignal": 4, "todayNew": 0, "traits": ["physical authority", "action roles", "mature masculine appeal", "equipment credibility"]},
+    {"id": "pulse_mature_urban_actor", "label": "Mature urban actor with outdoor interests", "attentionSignal": 1, "todayNew": 0, "traits": ["urban maturity", "professional credibility", "outdoor lifestyle", "measured communication"]},
+    {"id": "pulse_natural_film_actress", "label": "Natural film-first young actress", "attentionSignal": 1, "todayNew": 0, "traits": ["acting credibility", "natural presentation", "youth-to-adult transition", "low-commercial-pressure image"]}
+  ],
+  "mixingRules": [
+    "Use at least two archetype signals when shaping a fictional profile.",
+    "Do not preserve the source ranking as the candidate ranking.",
+    "Do not copy a real biography, endorsement, metric, quote, styling signature or likeness.",
+    "Do not expose the source person behind a profile in UI, code comments or generation prompts.",
+    "Keep non-trending counterweights so the library can demonstrate strategic fit rather than popularity matching."
+  ]
+}

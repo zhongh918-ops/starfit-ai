@@ -1,0 +1,384 @@
+/* Talent Library — visual source: profile-library-mock.png */
+
+.library-body {
+  display: grid;
+  grid-template-columns: 278px 1fr;
+  min-height: 0;
+  flex: 1;
+}
+
+.library-rail {
+  border-right: 1px solid var(--border);
+  background: var(--white);
+  padding: 36px 22px 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.library-rail .side-label {
+  margin: 0 12px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--slate);
+}
+
+.library-rail .nav-btn {
+  height: 58px;
+  border: 0;
+  border-radius: 12px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: 500 17px var(--font);
+  margin-bottom: 8px;
+  color: #4f5665;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.library-rail .nav-btn.on {
+  background: linear-gradient(90deg, var(--lime-300), #e8ffd1);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.library-rail .nav-btn .ico {
+  width: 24px;
+  text-align: center;
+  color: var(--olive-900);
+}
+
+.library-rail .status {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding: 22px 12px 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--slate);
+}
+
+.library-rail .status-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--leaf-600);
+  box-shadow: 0 0 0 6px var(--lime-100);
+}
+
+.library-main {
+  padding: 28px 34px 26px;
+  overflow: auto;
+  min-width: 0;
+}
+
+.lib-topline {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.lib-topline h1 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.lib-topline .eyebrow {
+  color: var(--olive-900);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  margin-bottom: 8px;
+}
+
+.lib-sub {
+  margin-top: 8px;
+  color: var(--slate);
+  font-size: 16px;
+  max-width: 62ch;
+}
+
+.lib-badges {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.lib-badge {
+  height: 34px;
+  border-radius: 18px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.lib-badge.demo {
+  background: var(--lime-300);
+  color: var(--olive-900);
+}
+
+.lib-badge.count {
+  border: 1px solid var(--border);
+  background: var(--white);
+}
+
+.lib-filters {
+  display: grid;
+  grid-template-columns: 1fr 134px 146px 130px 138px 118px auto auto;
+  gap: 10px;
+  margin-top: 22px;
+  align-items: center;
+}
+
+.lib-field,
+.lib-search {
+  height: 50px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  color: #4f5665;
+  font-size: 14px;
+  font-family: inherit;
+  width: 100%;
+}
+
+.lib-search {
+  gap: 10px;
+}
+
+.lib-search input {
+  border: 0;
+  outline: none;
+  flex: 1;
+  min-width: 0;
+  font: 400 14px var(--font);
+  background: transparent;
+}
+
+.lib-toggle {
+  display: flex;
+  height: 50px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lib-toggle button {
+  border: 0;
+  background: var(--white);
+  padding: 0 12px;
+  font: 600 12px var(--font);
+  color: var(--slate);
+  cursor: pointer;
+}
+
+.lib-toggle button.on {
+  background: var(--olive-900);
+  color: var(--white);
+}
+
+.lib-clear {
+  height: 50px;
+  border: 0;
+  background: transparent;
+  color: var(--olive-900);
+  font: 600 13px var(--font);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.lib-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.lib-grid.list {
+  grid-template-columns: 1fr;
+}
+
+.lib-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 292px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lib-grid.list .lib-card {
+  min-height: 0;
+  flex-direction: row;
+  height: 112px;
+}
+
+.lib-photo {
+  height: 126px;
+  position: relative;
+  background: #e9ece5;
+  overflow: hidden;
+  flex: 0 0 126px;
+}
+
+.lib-grid.list .lib-photo {
+  width: 160px;
+  height: 112px;
+  flex-basis: 160px;
+}
+
+.lib-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+  display: block;
+}
+
+.lib-demo-tag {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: rgba(236, 255, 215, 0.94);
+  color: var(--olive-900);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.lib-card-content {
+  padding: 12px 13px 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.lib-name-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.lib-name {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lib-conf {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--leaf-600);
+  padding-top: 3px;
+  white-space: nowrap;
+}
+
+.lib-role {
+  font-size: 12px;
+  color: var(--slate);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lib-tags {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.lib-tag {
+  background: #eff8e7;
+  color: #334121;
+  padding: 5px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.lib-meta {
+  border-top: 1px solid #edf0ea;
+  margin-top: 10px;
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  color: #4f5665;
+  font-size: 10px;
+}
+
+.lib-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.lib-action {
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--olive-900);
+  font: 500 10px var(--font);
+  background: var(--white);
+  color: var(--olive-900);
+  cursor: pointer;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+}
+
+.lib-action.primary {
+  background: var(--olive-900);
+  color: var(--white);
+}
+
+.lib-action:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.lib-foot {
+  margin-top: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #7b8392;
+  font-size: 11px;
+  gap: 16px;
+}
+
+.lib-foot strong {
+  color: var(--olive-900);
+  font-weight: 500;
+}
+
+.lib-empty {
+  margin-top: 28px;
+  color: var(--slate);
+}

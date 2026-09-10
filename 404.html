@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>99% match</title>
+<script>
+(function () {
+  var p = location.pathname || "";
+  var tail = location.search + location.hash;
+  var root = "/starfit-ai";
+  var cut = p.indexOf("/work");
+  if (p.indexOf("/library") >= 0) { location.replace(root + "/library.html" + tail); return; }
+  if (p.indexOf("/about") >= 0) { location.replace(root + "/about.html" + tail); return; }
+  if (p.indexOf("/contact") >= 0) { location.replace(root + "/contact.html" + tail); return; }
+  if (p.indexOf("/support") >= 0) { location.replace(root + "/support.html" + tail); return; }
+  if (cut >= 0) {
+    try { sessionStorage.setItem("match99-public-path", p.slice(cut)); } catch (e) {}
+    location.replace(root + "/work.html" + tail);
+    return;
+  }
+  location.replace(root + "/" + tail);
+})();
+</script>
+</head>
+<body></body>
+</html>
