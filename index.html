@@ -1,221 +1,104 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StarFit AI · 明星 × 年轻人趋势 × 品牌匹配</title>
-<style>
-  :root {
-    --bg: #0f1115;
-    --card: #181b22;
-    --line: #2a2f3a;
-    --text: #f4efe6;
-    --muted: #9aa3b2;
-    --accent: #d4a373;
-    --accent-2: #7dd3c7;
-    --good: #7dcea0;
-    --warn: #f0c14b;
-    --bad: #e07a5f;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: "PingFang SC", "Noto Sans SC", Inter, sans-serif;
-    background: radial-gradient(1200px 600px at 10% -10%, #243044 0%, var(--bg) 50%);
-    color: var(--text);
-    min-height: 100vh;
-    padding: 28px 20px 80px;
-  }
-  .wrap { max-width: 1120px; margin: 0 auto; }
-  header { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 28px; }
-  h1 { font-size: 28px; letter-spacing: .04em; }
-  h1 span { color: var(--accent); }
-  .sub { color: var(--muted); font-size: 13px; margin-top: 6px; }
-  .grid { display: grid; grid-template-columns: 340px 1fr; gap: 18px; }
-  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
-  .card {
-    background: color-mix(in srgb, var(--card) 92%, transparent);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 18px;
-  }
-  label { display: block; font-size: 12px; color: var(--muted); margin: 12px 0 6px; }
-  select, input, textarea {
-    width: 100%; background: #12141a; color: var(--text);
-    border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 14px;
-  }
-  textarea { min-height: 72px; resize: vertical; }
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-  .tag {
-    font-size: 12px; padding: 4px 10px; border-radius: 999px;
-    border: 1px solid var(--line); color: var(--muted);
-  }
-  .tag.on { background: #2a2118; border-color: var(--accent); color: var(--accent); }
-  .tag.add { background: #142422; border-color: var(--accent-2); color: var(--accent-2); }
-  .tag.warn { background: #2a2414; border-color: var(--warn); color: var(--warn); }
-  button.run {
-    width: 100%; margin-top: 16px; padding: 12px 14px; border: 0; border-radius: 12px;
-    background: linear-gradient(135deg, #d4a373, #c08552); color: #1a120c;
-    font-weight: 700; cursor: pointer; font-size: 15px;
-  }
-  button.run:hover { filter: brightness(1.08); }
-  button.ghost {
-    width: 100%; margin-top: 8px; padding: 10px 14px; border-radius: 12px;
-    background: transparent; color: var(--accent-2); border: 1px solid #2d4a46; cursor: pointer;
-  }
-  button.ghost:disabled { opacity: .5; cursor: wait; }
-  .livebar {
-    display: flex; align-items: center; gap: 10px; justify-content: flex-end; flex-wrap: wrap;
-    font-size: 12px; color: var(--muted);
-  }
-  a.share {
-    color: var(--accent-2); text-decoration: none; border: 1px solid #2d4a46;
-    padding: 5px 10px; border-radius: 8px; white-space: nowrap;
-  }
-  a.share:hover { filter: brightness(1.1); }
-  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--good); box-shadow: 0 0 8px var(--good); }
-  .dot.off { background: var(--warn); box-shadow: none; }
-  .flow {
-    display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 16px;
-    position: sticky; top: 8px; z-index: 30; padding: 8px 0;
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter: blur(10px);
-  }
-  .flow button {
-    font: inherit; font-size: 11px; font-weight: 700; letter-spacing: .08em;
-    color: var(--muted); padding: 7px 12px; border: 1px solid var(--line);
-    border-radius: 8px; background: #14171e; cursor: pointer;
-  }
-  .flow button:hover { color: var(--text); border-color: var(--accent-2); }
-  .flow button.on { color: var(--accent); border-color: var(--accent); background: #2a2118; }
-  #panel-product, #trend-explorer, #panel-tags, #panel-tag, #panel-ranking, #panel-campaign, #panel-product-out {
-    scroll-margin-top: 56px;
-  }
-  .search-wrap { position: relative; margin: 10px 0 14px; }
-  .search-drop {
-    display: none; position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 6px);
-    background: #12151c; border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
-  }
-  .search-drop.show { display: block; }
-  .search-item {
-    width: 100%; text-align: left; background: transparent; border: 0; color: var(--text);
-    padding: 10px 12px; cursor: pointer; display: flex; justify-content: space-between; gap: 10px; align-items: center;
-  }
-  .search-item:hover { background: #1c2230; }
-  .trend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; }
-  .trend-card {
-    border: 1px solid var(--line); border-radius: 14px; padding: 12px; background: #14171e; scroll-margin-top: 18px;
-  }
-  .trend-card.hl { border-color: var(--accent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 55%, transparent); }
-  .trend-card h4 { font-size: 14px; margin-bottom: 4px; }
-  .arrow { color: var(--good); font-weight: 700; }
-  .arrow.down { color: var(--bad); }
-  .arrow.flat { color: var(--warn); }
-  .mini { font-size: 11px; color: var(--muted); margin: 4px 0 8px; }
-  button.tiny {
-    width: auto; margin: 0; padding: 6px 10px; font-size: 11px; border-radius: 8px;
-    background: #1b2a28; color: var(--accent-2); border: 1px solid #2d4a46; cursor: pointer;
-  }
-  .celeb { display: grid; grid-template-columns: 72px 1fr auto; gap: 12px; align-items: start; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #14171e; }
-  .celeb.open { grid-template-columns: 1fr; }
-  .celeb-detail {
-    grid-column: 1 / -1; border-top: 1px dashed var(--line); padding-top: 14px; margin-top: 6px;
-    display: grid; gap: 14px;
-  }
-  .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; font-size: 13px; }
-  @media (max-width: 700px) { .profile-grid, .fit-grid { grid-template-columns: 1fr; } }
-  .profile-grid b { display: block; font-size: 11px; color: var(--muted); font-weight: 500; }
-  .fit-grid { display: grid; grid-template-columns: 1fr 200px; gap: 16px; align-items: center; }
-  .match-col h4, .market h4, .works h4 { font-size: 13px; color: var(--accent); margin-bottom: 8px; letter-spacing: .04em; }
-  .pair { display: grid; grid-template-columns: 72px 1fr 40px; gap: 8px; align-items: center; font-size: 11px; color: var(--muted); margin: 5px 0; }
-  .pair i { display: block; height: 7px; background: #2c3340; border-radius: 99px; overflow: hidden; }
-  .pair i em { display: block; height: 100%; background: var(--accent-2); }
-  .pair.strong i em { background: var(--good); }
-  .pair.partial i em { background: var(--warn); }
-  .market-score { font-size: 28px; color: var(--accent-2); font-variant-numeric: tabular-nums; }
-  .market-score small { display: block; font-size: 11px; color: var(--muted); }
-  .note-chip { font-size: 11px; color: var(--warn); border: 1px dashed var(--line); border-radius: 8px; padding: 6px 8px; }
-  .works li { font-size: 13px; color: #d7dde8; margin: 4px 0 4px 16px; }
-  .rank { display: grid; gap: 12px; }
-  .celeb { display: grid; grid-template-columns: 72px 1fr auto; gap: 12px; align-items: start; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #14171e; }
-  .score { font-size: 28px; color: var(--accent); font-variant-numeric: tabular-nums; }
-  .score small { display: block; font-size: 11px; color: var(--muted); font-weight: 400; }
-  .why { font-size: 13px; color: #d7dde8; line-height: 1.55; margin-top: 6px; }
-  .bars { display: grid; gap: 4px; margin-top: 8px; }
-  .bar { display: grid; grid-template-columns: 64px 1fr 36px; gap: 8px; align-items: center; font-size: 11px; color: var(--muted); }
-  .bar i { display: block; height: 6px; background: #2c3340; border-radius: 99px; overflow: hidden; }
-  .bar i em { display: block; height: 100%; background: var(--accent-2); }
-  .campaign { margin-top: 16px; }
-  .slogan { font-size: 20px; color: var(--accent); margin: 8px 0; }
-  .muted { color: var(--muted); font-size: 12px; }
-  .source { font-size: 11px; color: var(--warn); border: 1px dashed #4a3f2a; border-radius: 8px; padding: 8px 10px; margin: 8px 0 14px; line-height: 1.5; }
-  .kv { display: grid; grid-template-columns: 132px 1fr; gap: 6px 12px; font-size: 13px; }
-  .kv b { color: var(--muted); font-weight: 500; font-size: 11px; }
-  .score-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
-  @media (max-width: 700px) { .score-row { grid-template-columns: 1fr 1fr; } .kv { grid-template-columns: 1fr; } }
-  .metric { background: #12151c; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
-  .metric em { font-style: normal; font-size: 18px; color: var(--accent-2); font-variant-numeric: tabular-nums; display: block; }
-  .metric span { display: block; font-size: 10px; color: var(--muted); }
-  .rec { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
-  .kw { font-size: 11px; color: #b7c0cc; }
-  h3.sec { font-size: 15px; margin: 18px 0 8px; letter-spacing: .03em; }
-  .pair.weak i em { background: #5a6270; }
-  .risks li { font-size: 13px; color: #d7dde8; margin: 4px 0 4px 16px; }
-  .pill { font-size: 11px; padding: 2px 8px; border-radius: 99px; }
-  .pill.keep { background: #1d3a2c; color: var(--good); }
-  .pill.add { background: #16332f; color: var(--accent-2); }
-  .pill.caution { background: #3a3014; color: var(--warn); }
-  table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 10px; }
-  td, th { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--line); color: var(--muted); }
-  th { color: #c5cdd8; }
-</style>
+<title>99% match</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/shell.css">
+<link rel="stylesheet" href="css/legacy.css">
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div>
-      <h1>StarFit <span>AI</span></h1>
-      <p class="sub">实时网站：热榜来自本机 TrendRadar，匹配分数随最新数据重算。</p>
-    </div>
-    <div class="livebar">
-      <span class="dot" id="dot"></span><span id="liveMeta">连接中…</span>
-      <a id="shareLink" class="share" href="https://fastly.jsdelivr.net/gh/zhongh918-ops/starfit-ai@main/index.html" target="_blank" rel="noopener">发给同事用这个</a>
-    </div>
-  </header>
+<div class="page">
+  <div class="app-window" role="application" aria-label="99% match">
+    <header class="app-chrome">
+      <div class="traffic" aria-hidden="true">
+        <span class="tl close"></span>
+        <span class="tl min"></span>
+        <span class="tl max"></span>
+      </div>
+      <div class="chrome-brand">
+        <span class="wordmark">99% match</span>
+        <span class="chrome-sub">Celebrity-product fit agent</span>
+      </div>
+      <div class="chrome-actions">
+        <button type="button" class="btn-secondary" id="newAnalysis">New analysis</button>
+        <span class="avatar" aria-hidden="true">J</span>
+      </div>
+    </header>
 
-  <nav class="flow" id="flowNav" aria-label="流程跳转">
-    <button type="button" data-go="panel-product" class="on">1 PRODUCT</button>
-    <button type="button" data-go="trend-explorer">2 TREND SEARCH</button>
-    <button type="button" data-go="panel-tag">3 TAG</button>
-    <button type="button" data-go="panel-ranking">4 CELEBRITY FIT</button>
-    <button type="button" data-go="panel-campaign">5 CAMPAIGN</button>
-  </nav>
+    <div class="app-body">
+      <aside class="workflow" aria-label="Workflow">
+        <div class="workflow-label">Workflow</div>
+        <nav id="flowNav">
+          <button type="button" data-go="panel-product" class="on">
+            <svg class="wf-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h7l3 4v12H7z"/><path d="M14 4v4h3"/></svg>
+            01 Product
+          </button>
+          <button type="button" data-go="trend-explorer">
+            <svg class="wf-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-3.5-3.5"/></svg>
+            02 Trend search
+          </button>
+          <button type="button" data-go="panel-tag">
+            <svg class="wf-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l8-8 8 8-8 8z"/><circle cx="10" cy="10" r="1.2"/></svg>
+            03 Tag profile
+          </button>
+          <button type="button" data-go="panel-ranking">
+            <svg class="wf-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M4 19c1.2-3 8.8-3 10 0"/><circle cx="16" cy="9" r="2"/><path d="M15 19c.4-1.6 2.6-2.4 5-2"/></svg>
+            04 Celebrity fit
+          </button>
+          <button type="button" data-go="panel-campaign">
+            <svg class="wf-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5l16 7z"/></svg>
+            05 Campaign
+          </button>
+        </nav>
+        <div class="workflow-foot">
+          <span class="status-dot" id="dot"></span>
+          <span id="trendStatus">Trend data…</span>
+        </div>
+      </aside>
 
-  <section id="trend-explorer" class="card" style="margin-bottom:18px">
-    <h3>Trend Explorer · TAG 搜索</h3>
-    <p class="muted">搜索趋势 TAG，跳转到对应卡片，并可加入当前产品 TAG Profile。</p>
-    <div class="search-wrap">
-      <input id="tagSearch" placeholder="Search a trend or tag... Outdoor / Sports / Technology / Health / Fashion" autocomplete="off">
-      <div id="tagResults" class="search-drop"></div>
+      <div class="app-main">
+        <div class="app-main-scroll" id="workScroll">
+          <p class="shell-note">Shell only. Existing Product, Trend Search, Tag matching, Top 3, and Campaign stay below with the same APIs and scoring. Inner pages will be rebuilt one screen at a time. Data &amp; assumptions drawer is listed on the right but not wired yet — provenance is still in the match report.</p>
+          <div class="legacy-work">
+            <p class="muted" id="hint">Only celebrities in the database. Scores are Model-Based / Synthetic Demo, not third-party official scores.</p>
+            <section id="trend-explorer" class="card" style="margin-bottom:18px">
+              <h3>Trend Explorer · TAG 搜索</h3>
+              <p class="muted">搜索趋势 TAG，跳转到对应卡片，并可加入当前产品 TAG Profile。</p>
+              <div class="search-wrap">
+                <input id="tagSearch" placeholder="Search a trend or tag... Outdoor / Sports / Technology / Health / Fashion" autocomplete="off">
+                <div id="tagResults" class="search-drop"></div>
+              </div>
+              <div id="trendCards" class="trend-grid"></div>
+            </section>
+
+            <div class="grid">
+              <aside class="card" id="panel-product">
+                <label>产品（可切换 3 个测试品）</label>
+                <select id="product"></select>
+                <label>产品描述 / 关键词</label>
+                <textarea id="desc" placeholder="输入卖点或关键词，例如：时尚、美妆、情绪价值。改完点「跑通匹配」。"></textarea>
+                <label>目标人群</label>
+                <input id="audience" value="18-28">
+                <label>从描述识别出的 TAG</label>
+                <div class="tags" id="seedTags"></div>
+                <span id="panel-tags"></span>
+                <button class="run" id="run">跑通匹配</button>
+                <button class="ghost" id="refresh">抓取最新热榜（约 1 分钟）</button>
+              </aside>
+              <main id="out" class="card"><p class="muted">选择产品后点击跑通。系统会用趋势库判断 TAG 是否成立，再匹配 Top 3 明星并生成 slogan。</p></main>
+            </div>
+          </div>
+        </div>
+        <footer class="app-status">
+          <span id="liveMeta">Connecting…</span>
+          <a id="shareLink" href="https://fastly.jsdelivr.net/gh/zhongh918-ops/starfit-ai@main/index.html" target="_blank" rel="noopener">Public snapshot</a>
+        </footer>
+      </div>
+
+      <button class="data-tab" type="button" id="dataTab" disabled title="Drawer not built yet. Observed vs demo labels remain in the match report below.">Data &amp; assumptions</button>
     </div>
-    <div id="trendCards" class="trend-grid"></div>
-  </section>
-
-  <div class="grid">
-    <aside class="card" id="panel-product">
-      <label>产品（可切换 3 个测试品）</label>
-      <select id="product"></select>
-      <label>产品描述 / 关键词</label>
-      <textarea id="desc" placeholder="输入卖点或关键词，例如：时尚、美妆、情绪价值。改完点「跑通匹配」。"></textarea>
-      <label>目标人群</label>
-      <input id="audience" value="18-28">
-      <label>从描述识别出的 TAG</label>
-      <div class="tags" id="seedTags"></div>
-      <span id="panel-tags"></span>
-      <button class="run" id="run">跑通匹配</button>
-      <button class="ghost" id="refresh">抓取最新热榜（约 1 分钟）</button>
-      <p class="muted" style="margin-top:10px" id="hint">只推荐明星库内的公开明星，不推荐 KOL/KOC。匹配分为 Model-Based / Synthetic Demo Score，不是第三方官方分数。</p>
-    </aside>
-    <main id="out" class="card"><p class="muted">选择产品后点击跑通。系统会用趋势库判断 TAG 是否成立，再匹配 Top 3 明星并生成 slogan。</p></main>
   </div>
 </div>
 <script>
@@ -228,16 +111,19 @@ function setLive() {
   const when = (m.source_mtime || m.generated_at || '').replace('T', ' ').slice(0, 19);
   const clock = new Date().toTimeString().slice(0, 8);
   document.getElementById('liveMeta').textContent = live
-    ? `实时 ${clock} · ${today} · 热榜 ${when || '—'}`
-    : `公开网页 · 热榜 ${when || '—'} · ${today}`;
+    ? `Live ${clock} · ${today} · snapshot ${when || '—'}`
+    : `Public snapshot · ${when || '—'} · ${today}`;
   document.getElementById('dot').classList.toggle('off', !live);
-  document.querySelector('.sub').textContent = live
-    ? '实时网站：热榜来自本机 TrendRadar，匹配分数随最新数据重算。'
-    : '公开网页：github.io 在国内常打不开。热榜由本机每 30 分钟抓一次后自动发布。';
-  document.getElementById('refresh').hidden = !live;
-  document.getElementById('hint').textContent = live
-    ? '本机实时页只有同一 Wi-Fi 能开。发给外网同事请点右上角「发给同事用这个」。'
-    : '这是公开快照。github.io 在国内常打不开；请用 jsDelivr 链接。分数含 Synthetic Demo。';
+  const trendStatus = document.getElementById('trendStatus');
+  if (trendStatus) trendStatus.textContent = live ? 'Trend data ready' : 'Cached snapshot';
+  const refresh = document.getElementById('refresh');
+  if (refresh) refresh.hidden = !live;
+  const hint = document.getElementById('hint');
+  if (hint) {
+    hint.textContent = live
+      ? 'Live TrendRadar on this Mac. Celebrity IDs stay stable; scores are Model-Based / Synthetic Demo.'
+      : 'Cached snapshot. Scores include Synthetic Demo. Use the jsDelivr link if github.io is blocked.';
+  }
 }
 
 async function fetchState() {
@@ -918,6 +804,16 @@ function goStep(id) {
 document.getElementById('flowNav').addEventListener('click', (e) => {
   const btn = e.target.closest('[data-go]');
   if (btn) goStep(btn.getAttribute('data-go'));
+});
+
+document.getElementById('newAnalysis').addEventListener('click', () => {
+  state.pinnedTags = [];
+  state.openCeleb = null;
+  const sel = document.getElementById('product');
+  if (sel && sel.options.length) sel.selectedIndex = 0;
+  fillProduct();
+  render();
+  goStep('panel-product');
 });
 
 document.getElementById('product').addEventListener('change', () => { state.pinnedTags = []; fillProduct(); render(); });

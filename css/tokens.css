@@ -1,0 +1,47 @@
+/* 99% match design tokens — spec §3. Do not add extra brand colors. */
+:root {
+  --olive-900: #304500;
+  --olive-700: #476D00;
+  --leaf-600: #5A970B;
+  --lime-300: #CEFF96;
+  --lime-100: #ECFFD7;
+  --warm-white: #FAFAF6;
+  --white: #FFFFFF;
+  --ink: #151711;
+  --slate: #66708A;
+  --muted: #8C9387;
+  --border: #D9DDD4;
+  --track: #E6E9E3;
+  --warning-bg: #FFF1CD;
+  --warning: #B67713;
+  --risk: #B84B4B;
+  --traffic-close: #FF5F57;
+  --traffic-min: #FEBC2E;
+  --traffic-max: #28C840;
+
+  --font: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  --window-width: 1464px;
+  --window-height: 952px;
+  --window-radius: 30px;
+  --chrome-height: 40px;
+  --sidebar-width: 268px;
+  --rail-width: 452px;
+  --drawer-width: 400px;
+  --space-page: 36px;
+  --shadow-window: 0 18px 48px rgba(35, 45, 20, 0.14);
+
+  --btn-height: 48px;
+  --field-height: 48px;
+  --chip-height: 34px;
+  --sidebar-row: 60px;
+  --radius-btn: 12px;
+  --radius-field: 9px;
+  --radius-card: 16px;
+  --radius-chip: 999px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
