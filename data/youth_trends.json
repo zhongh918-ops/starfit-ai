@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 165,
     "today_count": 14,
-    "heat": 0.308,
+    "heat": 0.299,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -15,12 +15,6 @@
       },
       {
         "date": "2026-09-11",
-        "title": "中国女篮无缘世界杯4强",
-        "platform": "toutiao",
-        "rank": 2
-      },
-      {
-        "date": "2026-09-11",
         "title": "中国女篮不敌法国 无缘世界杯四强",
         "platform": "baidu",
         "rank": 2
@@ -29,7 +23,13 @@
         "date": "2026-09-11",
         "title": "我不明白中国网球一姐郑钦文，为啥前段时间状态低迷，这次美网她就如换了一个人似的？",
         "platform": "zhihu",
-        "rank": 3
+        "rank": 4
+      },
+      {
+        "date": "2026-09-11",
+        "title": "中国女篮无缘世界杯4强",
+        "platform": "toutiao",
+        "rank": 6
       },
       {
         "date": "2026-09-11",
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 39,
     "today_count": 2,
-    "heat": 0.053,
+    "heat": 0.052,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 65,
     "today_count": 2,
-    "heat": 0.069,
+    "heat": 0.068,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -97,7 +97,7 @@
         "date": "2026-09-11",
         "title": "马上评｜资助中断就威胁曝光？更该关注受助者的心理成长",
         "platform": "thepaper",
-        "rank": 19
+        "rank": 17
       },
       {
         "date": "2026-09-11",
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 571,
-    "today_count": 44,
+    "mention_count": 573,
+    "today_count": 46,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -140,12 +140,6 @@
         "date": "2026-09-11",
         "title": "苹果首款折叠屏iPhone来了！中国起售1.6万元，A20 Pro加持Duo与18 Pro",
         "platform": "wallstreetcn-hot",
-        "rank": 1
-      },
-      {
-        "date": "2026-09-11",
-        "title": "女子旧手机号二次放号后支付宝被哈啰盗刷 6551 元，平台仅补 200 元，这合理吗？暴露了哪些问题？",
-        "platform": "zhihu",
         "rank": 1
       },
       {
@@ -162,9 +156,15 @@
       },
       {
         "date": "2026-09-11",
-        "title": "数学已经被 AI 彻底革命了么？",
+        "title": "女子旧手机号二次放号后支付宝被哈啰盗刷 6551 元，平台仅补 200 元，这合理吗？暴露了哪些问题？",
         "platform": "zhihu",
         "rank": 2
+      },
+      {
+        "date": "2026-09-11",
+        "title": "数学已经被 AI 彻底革命了么？",
+        "platform": "zhihu",
+        "rank": 3
       }
     ],
     "sources": [
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 36,
     "today_count": 3,
-    "heat": 0.066,
+    "heat": 0.064,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 41,
     "today_count": 3,
-    "heat": 0.069,
+    "heat": 0.067,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -347,7 +347,7 @@
     "tag": "咖啡",
     "mention_count": 20,
     "today_count": 1,
-    "heat": 0.027,
+    "heat": 0.026,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
@@ -355,7 +355,7 @@
         "date": "2026-09-11",
         "title": "冰山冰美式到底怎么喝",
         "platform": "douyin",
-        "rank": 12
+        "rank": 13
       },
       {
         "date": "2025-12-26",
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 51,
     "today_count": 4,
-    "heat": 0.09,
+    "heat": 0.088,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
