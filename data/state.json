@@ -4,7 +4,7 @@
       "tag": "运动",
       "mention_count": 151,
       "today_count": 36,
-      "heat": 0.25,
+      "heat": 0.247,
       "verdict": "keep",
       "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
       "evidence": [
@@ -55,7 +55,7 @@
           "date": "2026-09-10",
           "title": "旅行青蛙停运,日方吃相太差",
           "platform": "tieba",
-          "rank": 6
+          "rank": 7
         },
         {
           "date": "2026-09-10",
@@ -90,7 +90,7 @@
       "tag": "健康",
       "mention_count": 63,
       "today_count": 8,
-      "heat": 0.075,
+      "heat": 0.074,
       "verdict": "add",
       "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
       "evidence": [
@@ -120,9 +120,9 @@
         },
         {
           "date": "2026-09-10",
-          "title": "马上评｜资助中断就威胁曝光？更该关注受助者的心理成长",
-          "platform": "thepaper",
-          "rank": 15
+          "title": "白人饭的魅力主要是省时还是健康？",
+          "platform": "zhihu",
+          "rank": 14
         }
       ],
       "sources": [
@@ -131,8 +131,8 @@
     },
     "科技": {
       "tag": "科技",
-      "mention_count": 524,
-      "today_count": 157,
+      "mention_count": 527,
+      "today_count": 160,
       "heat": 1.0,
       "verdict": "keep",
       "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -176,7 +176,7 @@
       "tag": "情绪价值",
       "mention_count": 33,
       "today_count": 5,
-      "heat": 0.043,
+      "heat": 0.042,
       "verdict": "add",
       "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
       "evidence": [
@@ -190,7 +190,7 @@
           "date": "2026-09-10",
           "title": "能源价格重新“点火” 美国8月PPI略超预期 加剧市场焦虑情绪",
           "platform": "cls-hot",
-          "rank": 6
+          "rank": 5
         },
         {
           "date": "2026-09-10",
@@ -282,7 +282,7 @@
           "date": "2026-09-10",
           "title": "秋日穿搭从秀场找点灵感",
           "platform": "douyin",
-          "rank": 27
+          "rank": 22
         },
         {
           "date": "2026-09-10",
@@ -305,7 +305,7 @@
       "tag": "体验",
       "mention_count": 38,
       "today_count": 8,
-      "heat": 0.059,
+      "heat": 0.058,
       "verdict": "add",
       "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
       "evidence": [
@@ -319,7 +319,7 @@
           "date": "2026-09-10",
           "title": "霓虹博主体验特色石油浴",
           "platform": "tieba",
-          "rank": 10
+          "rank": 11
         },
         {
           "date": "2026-09-10",
@@ -356,7 +356,7 @@
           "date": "2026-09-10",
           "title": "冰山冰美式到底怎么喝",
           "platform": "douyin",
-          "rank": 15
+          "rank": 14
         },
         {
           "date": "2026-09-10",
@@ -391,7 +391,7 @@
       "tag": "活力",
       "mention_count": 47,
       "today_count": 12,
-      "heat": 0.081,
+      "heat": 0.08,
       "verdict": "optional",
       "note": "青春/燃向内容，适合运动与潮流人设。",
       "evidence": [
@@ -1193,12 +1193,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-10T23:25:53+08:00",
-    "source_mtime": "2026-09-10T23:25:47+08:00",
+    "generated_at": "2026-09-10T23:57:08+08:00",
+    "source_mtime": "2026-09-10T23:57:03+08:00",
     "today": "2026-09-10",
-    "total_items": 9633,
-    "today_items": 1151,
-    "server_time": "2026-09-10T23:25:53+08:00",
+    "total_items": 9650,
+    "today_items": 1168,
+    "server_time": "2026-09-10T23:57:08+08:00",
     "live": false,
     "public": true
   }
