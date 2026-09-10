@@ -4,7 +4,7 @@
       "tag": "运动",
       "mention_count": 143,
       "today_count": 28,
-      "heat": 0.231,
+      "heat": 0.229,
       "verdict": "keep",
       "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
       "evidence": [
@@ -36,7 +36,7 @@
           "date": "2026-09-10",
           "title": "上海体育局通报刘翔安置工作，未来将持续优化退役运动员安置",
           "platform": "thepaper",
-          "rank": 6
+          "rank": 5
         }
       ],
       "sources": [
@@ -47,7 +47,7 @@
       "tag": "户外",
       "mention_count": 37,
       "today_count": 3,
-      "heat": 0.04,
+      "heat": 0.039,
       "verdict": "caution",
       "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
       "evidence": [
@@ -90,7 +90,7 @@
       "tag": "健康",
       "mention_count": 62,
       "today_count": 7,
-      "heat": 0.076,
+      "heat": 0.075,
       "verdict": "add",
       "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
       "evidence": [
@@ -99,6 +99,12 @@
           "title": "起底“神药”直播间①｜年售3.9亿的“养生局”：假专家、假神药，卖货全靠演",
           "platform": "thepaper",
           "rank": 3
+        },
+        {
+          "date": "2026-09-10",
+          "title": "白人饭的魅力主要是省时还是健康？",
+          "platform": "zhihu",
+          "rank": 6
         },
         {
           "date": "2026-09-10",
@@ -117,12 +123,6 @@
           "title": "如何评价刘翔发言「我希望组织认真考虑每一位运动员的出路…他们搭上整个青春健康，甚至留下永久的伤病」？",
           "platform": "zhihu",
           "rank": 9
-        },
-        {
-          "date": "2026-09-10",
-          "title": "白人饭的魅力主要是省时还是健康？",
-          "platform": "zhihu",
-          "rank": 10
         }
       ],
       "sources": [
@@ -131,8 +131,8 @@
     },
     "科技": {
       "tag": "科技",
-      "mention_count": 505,
-      "today_count": 138,
+      "mention_count": 507,
+      "today_count": 140,
       "heat": 1.0,
       "verdict": "keep",
       "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -188,12 +188,6 @@
         },
         {
           "date": "2026-09-10",
-          "title": "贺峻霖穿燕麦系太耐看了",
-          "platform": "douyin",
-          "rank": 22
-        },
-        {
-          "date": "2026-09-10",
           "title": "邓为都快急死了张晚意还在松弛",
           "platform": "weibo",
           "rank": 23
@@ -203,6 +197,12 @@
           "title": "教师节祝福文案这样发更真诚",
           "platform": "douyin",
           "rank": 26
+        },
+        {
+          "date": "2026-09-10",
+          "title": "贺峻霖穿燕麦系太耐看了",
+          "platform": "douyin",
+          "rank": 27
         },
         {
           "date": "2025-12-24",
@@ -305,10 +305,16 @@
       "tag": "体验",
       "mention_count": 37,
       "today_count": 7,
-      "heat": 0.059,
+      "heat": 0.058,
       "verdict": "add",
       "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
       "evidence": [
+        {
+          "date": "2026-09-10",
+          "title": "《王者荣耀》衍生作《王者万象棋》9 月 10 号全平台公测，你的游玩体验如何？",
+          "platform": "zhihu",
+          "rank": 9
+        },
         {
           "date": "2026-09-10",
           "title": "霓虹博主体验特色石油浴",
@@ -319,12 +325,6 @@
           "date": "2026-09-10",
           "title": "iPhone Duo上手体验",
           "platform": "bilibili-hot-search",
-          "rank": 16
-        },
-        {
-          "date": "2026-09-10",
-          "title": "《王者荣耀》衍生作《王者万象棋》9 月 10 号全平台公测，你的游玩体验如何？",
-          "platform": "zhihu",
           "rank": 16
         },
         {
@@ -391,7 +391,7 @@
       "tag": "活力",
       "mention_count": 45,
       "today_count": 10,
-      "heat": 0.078,
+      "heat": 0.077,
       "verdict": "optional",
       "note": "青春/燃向内容，适合运动与潮流人设。",
       "evidence": [
@@ -753,12 +753,12 @@
         {
           "source": "TrendRadar/weibo",
           "date": "2026-09-10",
-          "title": "白鹿直播间被挤爆了"
+          "title": "白鹿常华森吻戏好苏"
         },
         {
           "source": "TrendRadar/weibo",
           "date": "2026-09-10",
-          "title": "白鹿常华森吻戏好苏"
+          "title": "白鹿直播间被挤爆了"
         },
         {
           "source": "TrendRadar/weibo",
@@ -1193,12 +1193,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-10T19:47:16+08:00",
-    "source_mtime": "2026-09-10T19:47:11+08:00",
+    "generated_at": "2026-09-10T20:18:28+08:00",
+    "source_mtime": "2026-09-10T20:18:23+08:00",
     "today": "2026-09-10",
-    "total_items": 9437,
-    "today_items": 955,
-    "server_time": "2026-09-10T19:47:16+08:00",
+    "total_items": 9464,
+    "today_items": 982,
+    "server_time": "2026-09-10T20:18:29+08:00",
     "live": false,
     "public": true
   }
