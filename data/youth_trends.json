@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 165,
     "today_count": 14,
-    "heat": 0.318,
+    "heat": 0.313,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 39,
     "today_count": 2,
-    "heat": 0.055,
+    "heat": 0.054,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 65,
     "today_count": 2,
-    "heat": 0.071,
+    "heat": 0.07,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 569,
-    "today_count": 42,
+    "mention_count": 570,
+    "today_count": 43,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -162,7 +162,7 @@
       },
       {
         "date": "2026-09-11",
-        "title": "通胀忧虑重燃，美股低开，存储芯片股普跌，布油涨破105美元，30年期美债收益率升至2007年6月以来最高",
+        "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
         "platform": "wallstreetcn-hot",
         "rank": 3
       }
@@ -173,9 +173,9 @@
   },
   "情绪价值": {
     "tag": "情绪价值",
-    "mention_count": 34,
-    "today_count": 1,
-    "heat": 0.036,
+    "mention_count": 35,
+    "today_count": 2,
+    "heat": 0.052,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -184,6 +184,12 @@
         "title": "能源价格重新“点火” 美国8月PPI略超预期 加剧市场焦虑情绪",
         "platform": "cls-hot",
         "rank": 3
+      },
+      {
+        "date": "2026-09-11",
+        "title": "为什么阴天的时候人的情绪更容易低落？光照变化会通过怎样的生物通路，影响我们大脑的情绪状态？",
+        "platform": "zhihu",
+        "rank": 19
       },
       {
         "date": "2025-12-24",
@@ -202,12 +208,6 @@
         "title": "燕麦系秋天的神",
         "platform": "douyin",
         "rank": 4
-      },
-      {
-        "date": "2025-12-21",
-        "title": "斐济旅行治愈所有不快乐",
-        "platform": "douyin",
-        "rank": 7
       }
     ],
     "sources": [
@@ -269,7 +269,7 @@
         "date": "2026-09-11",
         "title": "秋日穿搭从秀场找点灵感",
         "platform": "douyin",
-        "rank": 16
+        "rank": 15
       },
       {
         "date": "2025-12-21",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 41,
     "today_count": 3,
-    "heat": 0.072,
+    "heat": 0.071,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -324,7 +324,7 @@
         "date": "2026-09-11",
         "title": "iPhone17Pro线下降价",
         "platform": "weibo",
-        "rank": 26
+        "rank": 24
       },
       {
         "date": "2025-12-22",
@@ -347,7 +347,7 @@
     "tag": "咖啡",
     "mention_count": 20,
     "today_count": 1,
-    "heat": 0.028,
+    "heat": 0.027,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
@@ -355,7 +355,7 @@
         "date": "2026-09-11",
         "title": "冰山冰美式到底怎么喝",
         "platform": "douyin",
-        "rank": 26
+        "rank": 19
       },
       {
         "date": "2025-12-26",
@@ -390,13 +390,13 @@
     "tag": "活力",
     "mention_count": 51,
     "today_count": 4,
-    "heat": 0.093,
+    "heat": 0.092,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
       {
         "date": "2026-09-11",
-        "title": "通胀忧虑重燃，美股低开，存储芯片股普跌，布油涨破105美元，30年期美债收益率升至2007年6月以来最高",
+        "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
         "platform": "wallstreetcn-hot",
         "rank": 3
       },
