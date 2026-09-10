@@ -1,29 +1,29 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 125,
-    "today_count": 10,
-    "heat": 0.241,
+    "mention_count": 134,
+    "today_count": 19,
+    "heat": 0.268,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
       {
         "date": "2026-09-10",
+        "title": "中国女篮3分险胜晋级世界杯八强",
+        "platform": "toutiao",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-10",
         "title": "郑钦文止步美网八强",
-        "platform": "baidu",
+        "platform": "douyin",
         "rank": 2
       },
       {
         "date": "2026-09-10",
-        "title": "中国女篮3分险胜 晋级世界杯八强",
-        "platform": "baidu",
+        "title": "郑钦文 1-2 不敌莱巴金娜，止步美网八强，如何评价本场比赛？",
+        "platform": "zhihu",
         "rank": 4
-      },
-      {
-        "date": "2026-09-10",
-        "title": "郑钦文美网1比2莱巴金娜",
-        "platform": "weibo",
-        "rank": 6
       },
       {
         "date": "2026-09-10",
@@ -33,9 +33,9 @@
       },
       {
         "date": "2026-09-10",
-        "title": "健身人的训练成绩单",
-        "platform": "douyin",
-        "rank": 9
+        "title": "郑钦文美网止步八强",
+        "platform": "weibo",
+        "rank": 7
       }
     ],
     "sources": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 35,
     "today_count": 1,
-    "heat": 0.043,
+    "heat": 0.036,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 58,
     "today_count": 3,
-    "heat": 0.09,
+    "heat": 0.071,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -101,14 +101,14 @@
       },
       {
         "date": "2026-09-10",
-        "title": "被忽视的血管“杀手”：低密度脂蛋白",
-        "platform": "toutiao",
-        "rank": 8
+        "title": "起底“神药”直播间②｜假洋品牌在国外注册转国内销：上架小网店，带货靠主播",
+        "platform": "thepaper",
+        "rank": 7
       },
       {
         "date": "2026-09-10",
-        "title": "起底“神药”直播间②｜假洋品牌在国外注册转国内销：上架小网店，带货靠主播",
-        "platform": "thepaper",
+        "title": "被忽视的血管“杀手”：低密度脂蛋白",
+        "platform": "toutiao",
         "rank": 8
       },
       {
@@ -130,16 +130,28 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 415,
-    "today_count": 48,
+    "mention_count": 443,
+    "today_count": 76,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
     "evidence": [
       {
         "date": "2026-09-10",
+        "title": "2026苹果秋季新品发布会",
+        "platform": "douyin",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-10",
         "title": "苹果秋季发布会",
         "platform": "baidu",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-10",
+        "title": "苹果首款折叠屏iPhone来了！中国起售1.6万元，A20 Pro加持Duo与18 Pro",
+        "platform": "wallstreetcn-hot",
         "rank": 1
       },
       {
@@ -150,21 +162,9 @@
       },
       {
         "date": "2026-09-10",
-        "title": "iPhone折叠屏真机上手",
-        "platform": "douyin",
-        "rank": 1
-      },
-      {
-        "date": "2026-09-10",
         "title": "如何评价 2026 苹果秋季发布会？哪些亮点值得关注？",
         "platform": "zhihu",
         "rank": 1
-      },
-      {
-        "date": "2026-09-10",
-        "title": "如何评价 DeepSeek V4.1 Flash 将于 2026 年 9 月 10 日上线，以及 V4Pro 下架？",
-        "platform": "zhihu",
-        "rank": 2
       }
     ],
     "sources": [
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 29,
     "today_count": 1,
-    "heat": 0.038,
+    "heat": 0.031,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -183,7 +183,7 @@
         "date": "2026-09-10",
         "title": "燕麦系秋天的神",
         "platform": "douyin",
-        "rank": 7
+        "rank": 4
       },
       {
         "date": "2025-12-24",
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 22,
     "today_count": 1,
-    "heat": 0.032,
+    "heat": 0.026,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 28,
     "today_count": 1,
-    "heat": 0.037,
+    "heat": 0.031,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -269,7 +269,7 @@
         "date": "2026-09-10",
         "title": "张国伟来时装周走秀了",
         "platform": "douyin",
-        "rank": 28
+        "rank": 29
       },
       {
         "date": "2025-12-21",
@@ -302,12 +302,18 @@
   },
   "体验": {
     "tag": "体验",
-    "mention_count": 30,
-    "today_count": 0,
-    "heat": 0.025,
+    "mention_count": 31,
+    "today_count": 1,
+    "heat": 0.033,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
+      {
+        "date": "2026-09-10",
+        "title": "iPhone18上手体验",
+        "platform": "bilibili-hot-search",
+        "rank": 11
+      },
       {
         "date": "2025-12-22",
         "title": "老广沉浸式夜生活",
@@ -331,12 +337,6 @@
         "title": "房车里度过暴风雪夜是何体验",
         "platform": "bilibili-hot-search",
         "rank": 15
-      },
-      {
-        "date": "2025-12-25",
-        "title": "glm4.7 发布，实际体验怎样？",
-        "platform": "zhihu",
-        "rank": 15
       }
     ],
     "sources": [
@@ -345,12 +345,18 @@
   },
   "咖啡": {
     "tag": "咖啡",
-    "mention_count": 17,
-    "today_count": 0,
-    "heat": 0.014,
+    "mention_count": 18,
+    "today_count": 1,
+    "heat": 0.023,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
+      {
+        "date": "2026-09-10",
+        "title": "霸王茶姬在上海试卖茶叶蛋，单价 5 元，搭配奶茶半价，为何瞄准早餐市场？你愿意下单吗？",
+        "platform": "zhihu",
+        "rank": 14
+      },
       {
         "date": "2025-12-26",
         "title": "如何评价睡前消息称国产茶类饮品（点名某茶姬）咖啡因含量过高，是准毒品的擦边球？",
@@ -374,12 +380,6 @@
         "title": "美股指开盘涨跌不一，霸王茶姬股价创新低，金属再度狂飙，金银铜齐创新高，沪铜首次站上十万关口",
         "platform": "wallstreetcn-hot",
         "rank": 8
-      },
-      {
-        "date": "2025-12-26",
-        "title": "咖啡因变毒品,马督公又出暴论",
-        "platform": "tieba",
-        "rank": 9
       }
     ],
     "sources": [
@@ -388,12 +388,18 @@
   },
   "活力": {
     "tag": "活力",
-    "mention_count": 39,
-    "today_count": 4,
-    "heat": 0.087,
+    "mention_count": 40,
+    "today_count": 5,
+    "heat": 0.074,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
+      {
+        "date": "2026-09-10",
+        "title": "如何评价电影《燃烧吧，爸爸》编剧发长文「杀死它的凶手，却连我们的电影都没看过」？",
+        "platform": "zhihu",
+        "rank": 13
+      },
       {
         "date": "2026-09-10",
         "title": "8 月新能源车零售 100.5 万辆，同比下降 10.1%，燃油车零售 54 万辆，同比下降 40%，如何解读？",
@@ -417,12 +423,6 @@
         "title": "鸣潮景燃主题曲三叩首",
         "platform": "bilibili-hot-search",
         "rank": 29
-      },
-      {
-        "date": "2025-12-22",
-        "title": "中国人造太阳燃料取自海水",
-        "platform": "weibo",
-        "rank": 3
       }
     ],
     "sources": [
