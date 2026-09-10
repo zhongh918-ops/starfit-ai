@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 145,
     "today_count": 30,
-    "heat": 0.23,
+    "heat": 0.228,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -54,7 +54,7 @@
         "date": "2026-09-10",
         "title": "旅行青蛙停运,日方吃相太差",
         "platform": "tieba",
-        "rank": 5
+        "rank": 6
       },
       {
         "date": "2026-09-10",
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 63,
     "today_count": 8,
-    "heat": 0.078,
+    "heat": 0.077,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -121,7 +121,7 @@
         "date": "2026-09-10",
         "title": "白人饭的魅力主要是省时还是健康？",
         "platform": "zhihu",
-        "rank": 14
+        "rank": 13
       }
     ],
     "sources": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 515,
-    "today_count": 148,
+    "mention_count": 517,
+    "today_count": 150,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 31,
     "today_count": 4,
-    "heat": 0.039,
+    "heat": 0.038,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -273,15 +273,15 @@
       },
       {
         "date": "2026-09-10",
-        "title": "拉夫劳伦2027春季时装秀",
-        "platform": "weibo",
-        "rank": 19
+        "title": "秋日穿搭从秀场找点灵感",
+        "platform": "douyin",
+        "rank": 18
       },
       {
         "date": "2026-09-10",
-        "title": "秋日穿搭从秀场找点灵感",
-        "platform": "douyin",
-        "rank": 22
+        "title": "拉夫劳伦2027春季时装秀",
+        "platform": "weibo",
+        "rank": 19
       },
       {
         "date": "2026-09-10",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 38,
     "today_count": 8,
-    "heat": 0.061,
+    "heat": 0.06,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -312,7 +312,13 @@
         "date": "2026-09-10",
         "title": "霓虹博主体验特色石油浴",
         "platform": "tieba",
-        "rank": 9
+        "rank": 10
+      },
+      {
+        "date": "2026-09-10",
+        "title": "iPhone17Pro线下降价",
+        "platform": "weibo",
+        "rank": 10
       },
       {
         "date": "2026-09-10",
@@ -328,12 +334,6 @@
       },
       {
         "date": "2026-09-10",
-        "title": "iPhone17Pro线下降价",
-        "platform": "weibo",
-        "rank": 19
-      },
-      {
-        "date": "2026-09-10",
         "title": "iPhone新机真实体验",
         "platform": "bilibili-hot-search",
         "rank": 20
@@ -345,12 +345,18 @@
   },
   "咖啡": {
     "tag": "咖啡",
-    "mention_count": 18,
-    "today_count": 1,
-    "heat": 0.017,
+    "mention_count": 19,
+    "today_count": 2,
+    "heat": 0.022,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
+      {
+        "date": "2026-09-10",
+        "title": "冰山冰美式到底怎么喝",
+        "platform": "douyin",
+        "rank": 17
+      },
       {
         "date": "2026-09-10",
         "title": "霸王茶姬在上海试卖茶叶蛋，单价 5 元，搭配奶茶半价，为何瞄准早餐市场？你愿意下单吗？",
@@ -374,12 +380,6 @@
         "title": "霸王茶姬 咖啡因",
         "platform": "weibo",
         "rank": 6
-      },
-      {
-        "date": "2025-12-26",
-        "title": "美股指开盘涨跌不一，霸王茶姬股价创新低，金属再度狂飙，金银铜齐创新高，沪铜首次站上十万关口",
-        "platform": "wallstreetcn-hot",
-        "rank": 8
       }
     ],
     "sources": [
@@ -388,9 +388,9 @@
   },
   "活力": {
     "tag": "活力",
-    "mention_count": 45,
-    "today_count": 10,
-    "heat": 0.075,
+    "mention_count": 46,
+    "today_count": 11,
+    "heat": 0.079,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
@@ -420,9 +420,9 @@
       },
       {
         "date": "2026-09-10",
-        "title": "8 月新能源车零售 100.5 万辆，同比下降 10.1%，燃油车零售 54 万辆，同比下降 40%，如何解读？",
-        "platform": "zhihu",
-        "rank": 16
+        "title": "用热血漫打开王者万象棋",
+        "platform": "bilibili-hot-search",
+        "rank": 12
       }
     ],
     "sources": [
