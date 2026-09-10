@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 141,
-    "today_count": 26,
-    "heat": 0.266,
+    "mention_count": 142,
+    "today_count": 27,
+    "heat": 0.251,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -44,12 +44,18 @@
   },
   "户外": {
     "tag": "户外",
-    "mention_count": 36,
-    "today_count": 2,
-    "heat": 0.039,
+    "mention_count": 37,
+    "today_count": 3,
+    "heat": 0.043,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
+      {
+        "date": "2026-09-10",
+        "title": "旅行青蛙停运,日方吃相太差",
+        "platform": "tieba",
+        "rank": 4
+      },
       {
         "date": "2026-09-10",
         "title": "南太行野线徒步乱象调查：有人仅凭熟悉山路就带团",
@@ -73,12 +79,6 @@
         "title": "23岁硕士川西徒步因高反去世",
         "platform": "toutiao",
         "rank": 5
-      },
-      {
-        "date": "2025-12-22",
-        "title": "23岁硕士徒步去世前已主动返程",
-        "platform": "weibo",
-        "rank": 5
       }
     ],
     "sources": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 60,
     "today_count": 5,
-    "heat": 0.075,
+    "heat": 0.071,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 472,
-    "today_count": 105,
+    "mention_count": 485,
+    "today_count": 118,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -173,9 +173,9 @@
   },
   "情绪价值": {
     "tag": "情绪价值",
-    "mention_count": 31,
-    "today_count": 3,
-    "heat": 0.042,
+    "mention_count": 32,
+    "today_count": 4,
+    "heat": 0.045,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -193,6 +193,12 @@
       },
       {
         "date": "2026-09-10",
+        "title": "贺峻霖穿燕麦系太耐看了",
+        "platform": "douyin",
+        "rank": 15
+      },
+      {
+        "date": "2026-09-10",
         "title": "教师节祝福文案这样发更真诚",
         "platform": "douyin",
         "rank": 27
@@ -202,12 +208,6 @@
         "title": "马上测·回顾2025：两位“较真”记者，这一年测评的快乐、震惊和成就",
         "platform": "thepaper",
         "rank": 1
-      },
-      {
-        "date": "2025-12-25",
-        "title": "现在，欧洲情绪很不稳定",
-        "platform": "ifeng",
-        "rank": 4
       }
     ],
     "sources": [
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 22,
     "today_count": 1,
-    "heat": 0.023,
+    "heat": 0.021,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 29,
     "today_count": 2,
-    "heat": 0.034,
+    "heat": 0.032,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -302,40 +302,40 @@
   },
   "体验": {
     "tag": "体验",
-    "mention_count": 33,
-    "today_count": 3,
-    "heat": 0.043,
+    "mention_count": 34,
+    "today_count": 4,
+    "heat": 0.047,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
       {
         "date": "2026-09-10",
-        "title": "iPhone18上手体验",
+        "title": "iPhone Duo真机体验",
         "platform": "bilibili-hot-search",
-        "rank": 11
+        "rank": 13
+      },
+      {
+        "date": "2026-09-10",
+        "title": "iPhone新机真实体验",
+        "platform": "bilibili-hot-search",
+        "rank": 14
       },
       {
         "date": "2026-09-10",
         "title": "iPhone Duo上手体验",
         "platform": "bilibili-hot-search",
-        "rank": 17
+        "rank": 16
       },
       {
         "date": "2026-09-10",
-        "title": "iPhone Duo真机体验",
+        "title": "iPhone18上手体验",
         "platform": "bilibili-hot-search",
-        "rank": 18
+        "rank": 30
       },
       {
         "date": "2025-12-22",
         "title": "老广沉浸式夜生活",
         "platform": "bilibili-hot-search",
-        "rank": 3
-      },
-      {
-        "date": "2025-12-26",
-        "title": "鸣潮3.0吧友体验实况",
-        "platform": "tieba",
         "rank": 3
       }
     ],
@@ -347,7 +347,7 @@
     "tag": "咖啡",
     "mention_count": 18,
     "today_count": 1,
-    "heat": 0.02,
+    "heat": 0.018,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
@@ -355,7 +355,7 @@
         "date": "2026-09-10",
         "title": "霸王茶姬在上海试卖茶叶蛋，单价 5 元，搭配奶茶半价，为何瞄准早餐市场？你愿意下单吗？",
         "platform": "zhihu",
-        "rank": 17
+        "rank": 14
       },
       {
         "date": "2025-12-26",
@@ -388,8 +388,8 @@
   },
   "活力": {
     "tag": "活力",
-    "mention_count": 43,
-    "today_count": 8,
+    "mention_count": 44,
+    "today_count": 9,
     "heat": 0.081,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
@@ -416,7 +416,7 @@
         "date": "2026-09-10",
         "title": "如何评价电影《燃烧吧，爸爸》编剧发长文「杀死它的凶手，却连我们的电影都没看过」？",
         "platform": "zhihu",
-        "rank": 13
+        "rank": 12
       },
       {
         "date": "2026-09-10",
