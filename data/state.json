@@ -4,7 +4,7 @@
       "tag": "运动",
       "mention_count": 142,
       "today_count": 27,
-      "heat": 0.235,
+      "heat": 0.234,
       "verdict": "keep",
       "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
       "evidence": [
@@ -90,7 +90,7 @@
       "tag": "健康",
       "mention_count": 62,
       "today_count": 7,
-      "heat": 0.079,
+      "heat": 0.078,
       "verdict": "add",
       "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
       "evidence": [
@@ -122,7 +122,7 @@
           "date": "2026-09-10",
           "title": "白人饭的魅力主要是省时还是健康？",
           "platform": "zhihu",
-          "rank": 14
+          "rank": 16
         }
       ],
       "sources": [
@@ -131,8 +131,8 @@
     },
     "科技": {
       "tag": "科技",
-      "mention_count": 497,
-      "today_count": 130,
+      "mention_count": 498,
+      "today_count": 131,
       "heat": 1.0,
       "verdict": "keep",
       "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -176,7 +176,7 @@
       "tag": "情绪价值",
       "mention_count": 32,
       "today_count": 4,
-      "heat": 0.043,
+      "heat": 0.042,
       "verdict": "add",
       "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
       "evidence": [
@@ -202,7 +202,7 @@
           "date": "2026-09-10",
           "title": "贺峻霖穿燕麦系太耐看了",
           "platform": "douyin",
-          "rank": 29
+          "rank": 28
         },
         {
           "date": "2025-12-24",
@@ -260,9 +260,9 @@
     },
     "时尚": {
       "tag": "时尚",
-      "mention_count": 30,
-      "today_count": 3,
-      "heat": 0.036,
+      "mention_count": 31,
+      "today_count": 4,
+      "heat": 0.042,
       "verdict": "optional",
       "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
       "evidence": [
@@ -276,7 +276,13 @@
           "date": "2026-09-10",
           "title": "秋日穿搭从秀场找点灵感",
           "platform": "douyin",
-          "rank": 24
+          "rank": 22
+        },
+        {
+          "date": "2026-09-10",
+          "title": "拉夫劳伦2027春季时装秀",
+          "platform": "weibo",
+          "rank": 28
         },
         {
           "date": "2026-09-10",
@@ -289,12 +295,6 @@
           "title": "普京又“催生”：生育子女应成为一种潮流",
           "platform": "ifeng",
           "rank": 5
-        },
-        {
-          "date": "2025-12-21",
-          "title": "火影鸣佐传说时装技能爆料",
-          "platform": "bilibili-hot-search",
-          "rank": 12
         }
       ],
       "sources": [
@@ -303,12 +303,24 @@
     },
     "体验": {
       "tag": "体验",
-      "mention_count": 36,
-      "today_count": 6,
-      "heat": 0.055,
+      "mention_count": 37,
+      "today_count": 7,
+      "heat": 0.061,
       "verdict": "add",
       "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
       "evidence": [
+        {
+          "date": "2026-09-10",
+          "title": "霓虹博主体验特色石油浴",
+          "platform": "tieba",
+          "rank": 9
+        },
+        {
+          "date": "2026-09-10",
+          "title": "iPhone Duo上手体验",
+          "platform": "bilibili-hot-search",
+          "rank": 16
+        },
         {
           "date": "2026-09-10",
           "title": "iPhone新机真实体验",
@@ -326,18 +338,6 @@
           "title": "iPhone系列新机上手体验",
           "platform": "bilibili-hot-search",
           "rank": 21
-        },
-        {
-          "date": "2026-09-10",
-          "title": "iPhone Duo上手体验",
-          "platform": "bilibili-hot-search",
-          "rank": 22
-        },
-        {
-          "date": "2026-09-10",
-          "title": "iPhone Duo真机体验",
-          "platform": "bilibili-hot-search",
-          "rank": 25
         }
       ],
       "sources": [
@@ -391,7 +391,7 @@
       "tag": "活力",
       "mention_count": 45,
       "today_count": 10,
-      "heat": 0.082,
+      "heat": 0.081,
       "verdict": "optional",
       "note": "青春/燃向内容，适合运动与潮流人设。",
       "evidence": [
@@ -748,8 +748,13 @@
           "娱乐热搜多为造型与剧宣，品牌风险低"
         ]
       },
-      "heat_mentions": 17,
+      "heat_mentions": 18,
       "evidence": [
+        {
+          "source": "TrendRadar/weibo",
+          "date": "2026-09-10",
+          "title": "白鹿直播间被挤爆了"
+        },
         {
           "source": "TrendRadar/weibo",
           "date": "2026-09-10",
@@ -759,11 +764,6 @@
           "source": "TrendRadar/weibo",
           "date": "2025-12-24",
           "title": "白鹿回应自驾开车"
-        },
-        {
-          "source": "TrendRadar/weibo",
-          "date": "2025-12-21",
-          "title": "白鹿星光大赏有3套造型"
         }
       ],
       "why_for_coffee": "样本期内热搜最多，活力+情绪价值适合日常即饮，但运动/科技弱于男性运动偶像。",
@@ -783,7 +783,7 @@
           "title": "星光大赏多套造型"
         }
       ],
-      "today_mentions": 1
+      "today_mentions": 2
     },
     {
       "id": "huang-jingyu",
@@ -1193,12 +1193,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-10T18:13:38+08:00",
-    "source_mtime": "2026-09-10T18:13:31+08:00",
+    "generated_at": "2026-09-10T18:44:51+08:00",
+    "source_mtime": "2026-09-10T18:44:44+08:00",
     "today": "2026-09-10",
-    "total_items": 9343,
-    "today_items": 861,
-    "server_time": "2026-09-10T18:13:38+08:00",
+    "total_items": 9370,
+    "today_items": 888,
+    "server_time": "2026-09-10T18:44:51+08:00",
     "live": false,
     "public": true
   }
