@@ -2,9 +2,9 @@
   "trends": {
     "运动": {
       "tag": "运动",
-      "mention_count": 144,
-      "today_count": 29,
-      "heat": 0.228,
+      "mention_count": 145,
+      "today_count": 30,
+      "heat": 0.23,
       "verdict": "keep",
       "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
       "evidence": [
@@ -28,14 +28,14 @@
         },
         {
           "date": "2026-09-10",
-          "title": "中国女篮晋级世界杯八强",
-          "platform": "bilibili-hot-search",
-          "rank": 5
+          "title": "上海体育局通报刘翔安置工作，未来将持续优化退役运动员安置",
+          "platform": "thepaper",
+          "rank": 4
         },
         {
           "date": "2026-09-10",
-          "title": "上海体育局通报刘翔安置工作，未来将持续优化退役运动员安置",
-          "platform": "thepaper",
+          "title": "中国女篮晋级世界杯八强",
+          "platform": "bilibili-hot-search",
           "rank": 5
         }
       ],
@@ -47,7 +47,7 @@
       "tag": "户外",
       "mention_count": 37,
       "today_count": 3,
-      "heat": 0.039,
+      "heat": 0.038,
       "verdict": "caution",
       "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
       "evidence": [
@@ -88,9 +88,9 @@
     },
     "健康": {
       "tag": "健康",
-      "mention_count": 62,
-      "today_count": 7,
-      "heat": 0.074,
+      "mention_count": 63,
+      "today_count": 8,
+      "heat": 0.078,
       "verdict": "add",
       "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
       "evidence": [
@@ -99,12 +99,6 @@
           "title": "起底“神药”直播间①｜年售3.9亿的“养生局”：假专家、假神药，卖货全靠演",
           "platform": "thepaper",
           "rank": 3
-        },
-        {
-          "date": "2026-09-10",
-          "title": "白人饭的魅力主要是省时还是健康？",
-          "platform": "zhihu",
-          "rank": 5
         },
         {
           "date": "2026-09-10",
@@ -123,6 +117,12 @@
           "title": "如何评价刘翔发言「我希望组织认真考虑每一位运动员的出路…他们搭上整个青春健康，甚至留下永久的伤病」？",
           "platform": "zhihu",
           "rank": 9
+        },
+        {
+          "date": "2026-09-10",
+          "title": "白人饭的魅力主要是省时还是健康？",
+          "platform": "zhihu",
+          "rank": 14
         }
       ],
       "sources": [
@@ -131,8 +131,8 @@
     },
     "科技": {
       "tag": "科技",
-      "mention_count": 512,
-      "today_count": 145,
+      "mention_count": 515,
+      "today_count": 148,
       "heat": 1.0,
       "verdict": "keep",
       "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -163,8 +163,8 @@
         },
         {
           "date": "2026-09-10",
-          "title": "【早报】深夜，苹果折叠屏手机发布，起售价15999元；重磅发布会，今日举行，央行、金融监管总局、证监会、外汇局等出席；原油飙升、黄金走强",
-          "platform": "cls-hot",
+          "title": "全球七年共卖出1亿台，苹果会带火折叠屏手机吗",
+          "platform": "thepaper",
           "rank": 1
         }
       ],
@@ -176,7 +176,7 @@
       "tag": "情绪价值",
       "mention_count": 32,
       "today_count": 4,
-      "heat": 0.04,
+      "heat": 0.039,
       "verdict": "add",
       "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
       "evidence": [
@@ -202,7 +202,7 @@
           "date": "2026-09-10",
           "title": "贺峻霖穿燕麦系太耐看了",
           "platform": "douyin",
-          "rank": 28
+          "rank": 27
         },
         {
           "date": "2025-12-24",
@@ -219,7 +219,7 @@
       "tag": "便利",
       "mention_count": 22,
       "today_count": 1,
-      "heat": 0.02,
+      "heat": 0.019,
       "verdict": "add",
       "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
       "evidence": [
@@ -282,7 +282,7 @@
           "date": "2026-09-10",
           "title": "秋日穿搭从秀场找点灵感",
           "platform": "douyin",
-          "rank": 25
+          "rank": 22
         },
         {
           "date": "2026-09-10",
@@ -303,18 +303,12 @@
     },
     "体验": {
       "tag": "体验",
-      "mention_count": 37,
-      "today_count": 7,
-      "heat": 0.057,
+      "mention_count": 38,
+      "today_count": 8,
+      "heat": 0.061,
       "verdict": "add",
       "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
       "evidence": [
-        {
-          "date": "2026-09-10",
-          "title": "《王者荣耀》衍生作《王者万象棋》9 月 10 号全平台公测，你的游玩体验如何？",
-          "platform": "zhihu",
-          "rank": 7
-        },
         {
           "date": "2026-09-10",
           "title": "霓虹博主体验特色石油浴",
@@ -329,15 +323,21 @@
         },
         {
           "date": "2026-09-10",
-          "title": "iPhone新机真实体验",
-          "platform": "bilibili-hot-search",
-          "rank": 20
+          "title": "《王者荣耀》衍生作《王者万象棋》9 月 10 号全平台公测，你的游玩体验如何？",
+          "platform": "zhihu",
+          "rank": 16
         },
         {
           "date": "2026-09-10",
-          "title": "iPhone系列新机上手体验",
+          "title": "iPhone17Pro线下降价",
+          "platform": "weibo",
+          "rank": 19
+        },
+        {
+          "date": "2026-09-10",
+          "title": "iPhone新机真实体验",
           "platform": "bilibili-hot-search",
-          "rank": 21
+          "rank": 20
         }
       ],
       "sources": [
@@ -391,7 +391,7 @@
       "tag": "活力",
       "mention_count": 45,
       "today_count": 10,
-      "heat": 0.076,
+      "heat": 0.075,
       "verdict": "optional",
       "note": "青春/燃向内容，适合运动与潮流人设。",
       "evidence": [
@@ -1193,12 +1193,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-10T20:49:39+08:00",
-    "source_mtime": "2026-09-10T20:49:34+08:00",
+    "generated_at": "2026-09-10T21:20:54+08:00",
+    "source_mtime": "2026-09-10T21:20:49+08:00",
     "today": "2026-09-10",
-    "total_items": 9495,
-    "today_items": 1013,
-    "server_time": "2026-09-10T20:49:39+08:00",
+    "total_items": 9529,
+    "today_items": 1047,
+    "server_time": "2026-09-10T21:20:54+08:00",
     "live": false,
     "public": true
   }
