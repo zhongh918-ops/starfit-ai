@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 150,
-    "today_count": 35,
-    "heat": 0.248,
+    "mention_count": 151,
+    "today_count": 36,
+    "heat": 0.25,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -33,9 +33,9 @@
       },
       {
         "date": "2026-09-10",
-        "title": "郑钦文 1-2 不敌莱巴金娜，止步美网八强，如何评价本场比赛？",
-        "platform": "zhihu",
-        "rank": 4
+        "title": "中国女篮不敌法国 无缘世界杯四强",
+        "platform": "baidu",
+        "rank": 2
       }
     ],
     "sources": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 37,
     "today_count": 3,
-    "heat": 0.038,
+    "heat": 0.037,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 63,
     "today_count": 8,
-    "heat": 0.076,
+    "heat": 0.075,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -121,7 +121,7 @@
         "date": "2026-09-10",
         "title": "马上评｜资助中断就威胁曝光？更该关注受助者的心理成长",
         "platform": "thepaper",
-        "rank": 16
+        "rank": 15
       }
     ],
     "sources": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 521,
-    "today_count": 154,
+    "mention_count": 524,
+    "today_count": 157,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -189,7 +189,7 @@
         "date": "2026-09-10",
         "title": "能源价格重新“点火” 美国8月PPI略超预期 加剧市场焦虑情绪",
         "platform": "cls-hot",
-        "rank": 7
+        "rank": 6
       },
       {
         "date": "2026-09-10",
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 31,
     "today_count": 4,
-    "heat": 0.038,
+    "heat": 0.037,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -273,15 +273,15 @@
       },
       {
         "date": "2026-09-10",
-        "title": "秋日穿搭从秀场找点灵感",
-        "platform": "douyin",
+        "title": "拉夫劳伦2027春季时装秀",
+        "platform": "weibo",
         "rank": 19
       },
       {
         "date": "2026-09-10",
-        "title": "拉夫劳伦2027春季时装秀",
-        "platform": "weibo",
-        "rank": 19
+        "title": "秋日穿搭从秀场找点灵感",
+        "platform": "douyin",
+        "rank": 27
       },
       {
         "date": "2026-09-10",
@@ -312,7 +312,7 @@
         "date": "2026-09-10",
         "title": "iPhone17Pro线下降价",
         "platform": "weibo",
-        "rank": 8
+        "rank": 9
       },
       {
         "date": "2026-09-10",
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 47,
     "today_count": 12,
-    "heat": 0.082,
+    "heat": 0.081,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
@@ -402,15 +402,15 @@
       },
       {
         "date": "2026-09-10",
-        "title": "七根火柴燃起的星星之火",
-        "platform": "douyin",
-        "rank": 7
+        "title": "通胀忧虑重燃，美股低开，存储芯片股普跌，布油涨破105美元，30年期美债收益率升至2007年6月以来最高",
+        "platform": "wallstreetcn-hot",
+        "rank": 6
       },
       {
         "date": "2026-09-10",
-        "title": "通胀忧虑重燃，美股低开，存储芯片股普跌，布油涨破105美元，30年期美债收益率升至2007年6月以来最高",
-        "platform": "wallstreetcn-hot",
-        "rank": 8
+        "title": "七根火柴燃起的星星之火",
+        "platform": "douyin",
+        "rank": 7
       },
       {
         "date": "2026-09-10",
