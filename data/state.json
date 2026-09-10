@@ -11,21 +11,27 @@
       "evidence": [
         {
           "source": "Demo/Douyin",
+          "platform": "Douyin",
           "date": "2026-09-10",
           "title": "Morning running challenges drive discussion",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-01-running.png"
         },
         {
           "source": "Demo/Weibo",
+          "platform": "Weibo",
           "date": "2026-09-09",
           "title": "Training routines shift toward everyday consistency",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-02-training.png"
         },
         {
           "source": "Demo/Bilibili",
+          "platform": "Bilibili",
           "date": "2026-09-08",
           "title": "Lightweight gear gains attention across fitness content",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-03-footwear.png"
         }
       ],
       "sources": [
@@ -57,21 +63,27 @@
       "evidence": [
         {
           "source": "Demo/Douyin",
+          "platform": "Douyin",
           "date": "2026-09-10",
           "title": "Morning running challenges drive discussion",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-01-running.png"
         },
         {
           "source": "Demo/Weibo",
+          "platform": "Weibo",
           "date": "2026-09-09",
           "title": "Training routines shift toward everyday consistency",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-02-training.png"
         },
         {
           "source": "Demo/Bilibili",
+          "platform": "Bilibili",
           "date": "2026-09-08",
           "title": "Lightweight gear gains attention across fitness content",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-03-footwear.png"
         }
       ],
       "sources": [
@@ -103,21 +115,27 @@
       "evidence": [
         {
           "source": "Demo/Douyin",
+          "platform": "Douyin",
           "date": "2026-09-10",
           "title": "Morning running challenges drive discussion",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-01-running.png"
         },
         {
           "source": "Demo/Weibo",
+          "platform": "Weibo",
           "date": "2026-09-09",
           "title": "Training routines shift toward everyday consistency",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-02-training.png"
         },
         {
           "source": "Demo/Bilibili",
+          "platform": "Bilibili",
           "date": "2026-09-08",
           "title": "Lightweight gear gains attention across fitness content",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-03-footwear.png"
         }
       ],
       "sources": [
@@ -149,21 +167,27 @@
       "evidence": [
         {
           "source": "Demo/Douyin",
+          "platform": "Douyin",
           "date": "2026-09-10",
           "title": "Morning running challenges drive discussion",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-01-running.png"
         },
         {
           "source": "Demo/Weibo",
+          "platform": "Weibo",
           "date": "2026-09-09",
           "title": "Training routines shift toward everyday consistency",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-02-training.png"
         },
         {
           "source": "Demo/Bilibili",
+          "platform": "Bilibili",
           "date": "2026-09-08",
           "title": "Lightweight gear gains attention across fitness content",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-03-footwear.png"
         }
       ],
       "sources": [
@@ -195,21 +219,27 @@
       "evidence": [
         {
           "source": "Demo/Douyin",
+          "platform": "Douyin",
           "date": "2026-09-10",
           "title": "Morning running challenges drive discussion",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-01-running.png"
         },
         {
           "source": "Demo/Weibo",
+          "platform": "Weibo",
           "date": "2026-09-09",
           "title": "Training routines shift toward everyday consistency",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-02-training.png"
         },
         {
           "source": "Demo/Bilibili",
+          "platform": "Bilibili",
           "date": "2026-09-08",
           "title": "Lightweight gear gains attention across fitness content",
-          "status": "simulated"
+          "status": "simulated",
+          "image": "/assets/trends/evidence-03-footwear.png"
         }
       ],
       "sources": [
@@ -2890,12 +2920,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-11T00:59:34+08:00",
-    "source_mtime": "2026-09-11T00:59:29+08:00",
+    "generated_at": "2026-09-11T01:30:50+08:00",
+    "source_mtime": "2026-09-11T01:30:44+08:00",
     "today": "2026-09-11",
-    "total_items": 9928,
-    "today_items": 278,
-    "server_time": "2026-09-11T00:59:34+08:00",
+    "total_items": 9952,
+    "today_items": 302,
+    "server_time": "2026-09-11T01:30:50+08:00",
     "live": false,
     "dataMode": "demo",
     "trendMode": "demo",
