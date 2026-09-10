@@ -4,7 +4,7 @@
       "tag": "运动",
       "mention_count": 142,
       "today_count": 27,
-      "heat": 0.234,
+      "heat": 0.233,
       "verdict": "keep",
       "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
       "evidence": [
@@ -34,9 +34,9 @@
         },
         {
           "date": "2026-09-10",
-          "title": "郑钦文从排名跌到一百名开外到如今一路挺进美网八强，你认为她的状态算重回巅峰了吗？",
-          "platform": "zhihu",
-          "rank": 7
+          "title": "上海体育局通报刘翔安置工作，未来将持续优化退役运动员安置",
+          "platform": "thepaper",
+          "rank": 6
         }
       ],
       "sources": [
@@ -122,7 +122,7 @@
           "date": "2026-09-10",
           "title": "白人饭的魅力主要是省时还是健康？",
           "platform": "zhihu",
-          "rank": 16
+          "rank": 9
         }
       ],
       "sources": [
@@ -131,8 +131,8 @@
     },
     "科技": {
       "tag": "科技",
-      "mention_count": 498,
-      "today_count": 131,
+      "mention_count": 499,
+      "today_count": 132,
       "heat": 1.0,
       "verdict": "keep",
       "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -262,7 +262,7 @@
       "tag": "时尚",
       "mention_count": 31,
       "today_count": 4,
-      "heat": 0.042,
+      "heat": 0.041,
       "verdict": "optional",
       "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
       "evidence": [
@@ -274,14 +274,14 @@
         },
         {
           "date": "2026-09-10",
-          "title": "秋日穿搭从秀场找点灵感",
-          "platform": "douyin",
-          "rank": 22
+          "title": "拉夫劳伦2027春季时装秀",
+          "platform": "weibo",
+          "rank": 19
         },
         {
           "date": "2026-09-10",
-          "title": "拉夫劳伦2027春季时装秀",
-          "platform": "weibo",
+          "title": "秋日穿搭从秀场找点灵感",
+          "platform": "douyin",
           "rank": 28
         },
         {
@@ -305,7 +305,7 @@
       "tag": "体验",
       "mention_count": 37,
       "today_count": 7,
-      "heat": 0.061,
+      "heat": 0.06,
       "verdict": "add",
       "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
       "evidence": [
@@ -323,14 +323,14 @@
         },
         {
           "date": "2026-09-10",
-          "title": "iPhone新机真实体验",
-          "platform": "bilibili-hot-search",
-          "rank": 20
+          "title": "《王者荣耀》衍生作《王者万象棋》9 月 10 号全平台公测，你的游玩体验如何？",
+          "platform": "zhihu",
+          "rank": 19
         },
         {
           "date": "2026-09-10",
-          "title": "《王者荣耀》衍生作《王者万象棋》9 月 10 号全平台公测，你的游玩体验如何？",
-          "platform": "zhihu",
+          "title": "iPhone新机真实体验",
+          "platform": "bilibili-hot-search",
           "rank": 20
         },
         {
@@ -1193,12 +1193,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-10T18:44:51+08:00",
-    "source_mtime": "2026-09-10T18:44:44+08:00",
+    "generated_at": "2026-09-10T19:16:05+08:00",
+    "source_mtime": "2026-09-10T19:15:53+08:00",
     "today": "2026-09-10",
-    "total_items": 9370,
-    "today_items": 888,
-    "server_time": "2026-09-10T18:44:51+08:00",
+    "total_items": 9403,
+    "today_items": 921,
+    "server_time": "2026-09-10T19:16:05+08:00",
     "live": false,
     "public": true
   }
