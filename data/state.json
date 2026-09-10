@@ -2,9 +2,9 @@
   "trends": {
     "运动": {
       "tag": "运动",
-      "mention_count": 142,
-      "today_count": 27,
-      "heat": 0.233,
+      "mention_count": 143,
+      "today_count": 28,
+      "heat": 0.231,
       "verdict": "keep",
       "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
       "evidence": [
@@ -47,7 +47,7 @@
       "tag": "户外",
       "mention_count": 37,
       "today_count": 3,
-      "heat": 0.041,
+      "heat": 0.04,
       "verdict": "caution",
       "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
       "evidence": [
@@ -90,7 +90,7 @@
       "tag": "健康",
       "mention_count": 62,
       "today_count": 7,
-      "heat": 0.078,
+      "heat": 0.076,
       "verdict": "add",
       "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
       "evidence": [
@@ -122,7 +122,7 @@
           "date": "2026-09-10",
           "title": "白人饭的魅力主要是省时还是健康？",
           "platform": "zhihu",
-          "rank": 9
+          "rank": 10
         }
       ],
       "sources": [
@@ -131,8 +131,8 @@
     },
     "科技": {
       "tag": "科技",
-      "mention_count": 499,
-      "today_count": 132,
+      "mention_count": 505,
+      "today_count": 138,
       "heat": 1.0,
       "verdict": "keep",
       "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -176,7 +176,7 @@
       "tag": "情绪价值",
       "mention_count": 32,
       "today_count": 4,
-      "heat": 0.042,
+      "heat": 0.041,
       "verdict": "add",
       "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
       "evidence": [
@@ -188,6 +188,12 @@
         },
         {
           "date": "2026-09-10",
+          "title": "贺峻霖穿燕麦系太耐看了",
+          "platform": "douyin",
+          "rank": 22
+        },
+        {
+          "date": "2026-09-10",
           "title": "邓为都快急死了张晚意还在松弛",
           "platform": "weibo",
           "rank": 23
@@ -196,13 +202,7 @@
           "date": "2026-09-10",
           "title": "教师节祝福文案这样发更真诚",
           "platform": "douyin",
-          "rank": 27
-        },
-        {
-          "date": "2026-09-10",
-          "title": "贺峻霖穿燕麦系太耐看了",
-          "platform": "douyin",
-          "rank": 28
+          "rank": 26
         },
         {
           "date": "2025-12-24",
@@ -262,7 +262,7 @@
       "tag": "时尚",
       "mention_count": 31,
       "today_count": 4,
-      "heat": 0.041,
+      "heat": 0.04,
       "verdict": "optional",
       "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
       "evidence": [
@@ -305,7 +305,7 @@
       "tag": "体验",
       "mention_count": 37,
       "today_count": 7,
-      "heat": 0.06,
+      "heat": 0.059,
       "verdict": "add",
       "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
       "evidence": [
@@ -325,7 +325,7 @@
           "date": "2026-09-10",
           "title": "《王者荣耀》衍生作《王者万象棋》9 月 10 号全平台公测，你的游玩体验如何？",
           "platform": "zhihu",
-          "rank": 19
+          "rank": 16
         },
         {
           "date": "2026-09-10",
@@ -348,7 +348,7 @@
       "tag": "咖啡",
       "mention_count": 18,
       "today_count": 1,
-      "heat": 0.018,
+      "heat": 0.017,
       "verdict": "optional",
       "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
       "evidence": [
@@ -391,7 +391,7 @@
       "tag": "活力",
       "mention_count": 45,
       "today_count": 10,
-      "heat": 0.081,
+      "heat": 0.078,
       "verdict": "optional",
       "note": "青春/燃向内容，适合运动与潮流人设。",
       "evidence": [
@@ -417,7 +417,7 @@
           "date": "2026-09-10",
           "title": "如何评价电影《燃烧吧，爸爸》编剧发长文「杀死它的凶手，却连我们的电影都没看过」？",
           "platform": "zhihu",
-          "rank": 12
+          "rank": 11
         },
         {
           "date": "2026-09-10",
@@ -1193,12 +1193,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-10T19:16:05+08:00",
-    "source_mtime": "2026-09-10T19:15:53+08:00",
+    "generated_at": "2026-09-10T19:47:16+08:00",
+    "source_mtime": "2026-09-10T19:47:11+08:00",
     "today": "2026-09-10",
-    "total_items": 9403,
-    "today_items": 921,
-    "server_time": "2026-09-10T19:16:05+08:00",
+    "total_items": 9437,
+    "today_items": 955,
+    "server_time": "2026-09-10T19:47:16+08:00",
     "live": false,
     "public": true
   }
