@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 142,
     "today_count": 27,
-    "heat": 0.238,
+    "heat": 0.235,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -21,12 +21,6 @@
       },
       {
         "date": "2026-09-10",
-        "title": "中国女篮挺进世界杯八强",
-        "platform": "douyin",
-        "rank": 4
-      },
-      {
-        "date": "2026-09-10",
         "title": "郑钦文 1-2 不敌莱巴金娜，止步美网八强，如何评价本场比赛？",
         "platform": "zhihu",
         "rank": 4
@@ -36,6 +30,12 @@
         "title": "中国女篮晋级世界杯八强",
         "platform": "bilibili-hot-search",
         "rank": 5
+      },
+      {
+        "date": "2026-09-10",
+        "title": "郑钦文从排名跌到一百名开外到如今一路挺进美网八强，你认为她的状态算重回巅峰了吗？",
+        "platform": "zhihu",
+        "rank": 7
       }
     ],
     "sources": [
@@ -121,7 +121,7 @@
         "date": "2026-09-10",
         "title": "白人饭的魅力主要是省时还是健康？",
         "platform": "zhihu",
-        "rank": 15
+        "rank": 14
       }
     ],
     "sources": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 495,
-    "today_count": 128,
+    "mention_count": 497,
+    "today_count": 130,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -189,7 +189,7 @@
         "date": "2026-09-10",
         "title": "邓为都快急死了张晚意还在松弛",
         "platform": "weibo",
-        "rank": 10
+        "rank": 23
       },
       {
         "date": "2026-09-10",
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 22,
     "today_count": 1,
-    "heat": 0.021,
+    "heat": 0.02,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -275,7 +275,7 @@
         "date": "2026-09-10",
         "title": "秋日穿搭从秀场找点灵感",
         "platform": "douyin",
-        "rank": 18
+        "rank": 24
       },
       {
         "date": "2026-09-10",
@@ -304,22 +304,10 @@
     "tag": "体验",
     "mention_count": 36,
     "today_count": 6,
-    "heat": 0.056,
+    "heat": 0.055,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
-      {
-        "date": "2026-09-10",
-        "title": "iPhone Duo上手体验",
-        "platform": "bilibili-hot-search",
-        "rank": 17
-      },
-      {
-        "date": "2026-09-10",
-        "title": "iPhone系列新机上手体验",
-        "platform": "bilibili-hot-search",
-        "rank": 18
-      },
       {
         "date": "2026-09-10",
         "title": "iPhone新机真实体验",
@@ -334,9 +322,21 @@
       },
       {
         "date": "2026-09-10",
-        "title": "iPhone18上手体验",
+        "title": "iPhone系列新机上手体验",
         "platform": "bilibili-hot-search",
-        "rank": 24
+        "rank": 21
+      },
+      {
+        "date": "2026-09-10",
+        "title": "iPhone Duo上手体验",
+        "platform": "bilibili-hot-search",
+        "rank": 22
+      },
+      {
+        "date": "2026-09-10",
+        "title": "iPhone Duo真机体验",
+        "platform": "bilibili-hot-search",
+        "rank": 25
       }
     ],
     "sources": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 45,
     "today_count": 10,
-    "heat": 0.083,
+    "heat": 0.082,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
