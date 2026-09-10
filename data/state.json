@@ -4,7 +4,7 @@
       "tag": "运动",
       "mention_count": 142,
       "today_count": 27,
-      "heat": 0.243,
+      "heat": 0.238,
       "verdict": "keep",
       "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
       "evidence": [
@@ -47,7 +47,7 @@
       "tag": "户外",
       "mention_count": 37,
       "today_count": 3,
-      "heat": 0.042,
+      "heat": 0.041,
       "verdict": "caution",
       "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
       "evidence": [
@@ -88,9 +88,9 @@
     },
     "健康": {
       "tag": "健康",
-      "mention_count": 61,
-      "today_count": 6,
-      "heat": 0.075,
+      "mention_count": 62,
+      "today_count": 7,
+      "heat": 0.079,
       "verdict": "add",
       "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
       "evidence": [
@@ -120,9 +120,9 @@
         },
         {
           "date": "2026-09-10",
-          "title": "马上评｜资助中断就威胁曝光？更该关注受助者的心理成长",
-          "platform": "thepaper",
-          "rank": 20
+          "title": "白人饭的魅力主要是省时还是健康？",
+          "platform": "zhihu",
+          "rank": 15
         }
       ],
       "sources": [
@@ -131,8 +131,8 @@
     },
     "科技": {
       "tag": "科技",
-      "mention_count": 491,
-      "today_count": 124,
+      "mention_count": 495,
+      "today_count": 128,
       "heat": 1.0,
       "verdict": "keep",
       "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -176,7 +176,7 @@
       "tag": "情绪价值",
       "mention_count": 32,
       "today_count": 4,
-      "heat": 0.044,
+      "heat": 0.043,
       "verdict": "add",
       "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
       "evidence": [
@@ -190,7 +190,7 @@
           "date": "2026-09-10",
           "title": "邓为都快急死了张晚意还在松弛",
           "platform": "weibo",
-          "rank": 17
+          "rank": 10
         },
         {
           "date": "2026-09-10",
@@ -262,7 +262,7 @@
       "tag": "时尚",
       "mention_count": 30,
       "today_count": 3,
-      "heat": 0.037,
+      "heat": 0.036,
       "verdict": "optional",
       "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
       "evidence": [
@@ -276,7 +276,7 @@
           "date": "2026-09-10",
           "title": "秋日穿搭从秀场找点灵感",
           "platform": "douyin",
-          "rank": 22
+          "rank": 18
         },
         {
           "date": "2026-09-10",
@@ -305,15 +305,27 @@
       "tag": "体验",
       "mention_count": 36,
       "today_count": 6,
-      "heat": 0.057,
+      "heat": 0.056,
       "verdict": "add",
       "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
       "evidence": [
         {
           "date": "2026-09-10",
-          "title": "iPhone Duo真机体验",
+          "title": "iPhone Duo上手体验",
           "platform": "bilibili-hot-search",
-          "rank": 13
+          "rank": 17
+        },
+        {
+          "date": "2026-09-10",
+          "title": "iPhone系列新机上手体验",
+          "platform": "bilibili-hot-search",
+          "rank": 18
+        },
+        {
+          "date": "2026-09-10",
+          "title": "iPhone新机真实体验",
+          "platform": "bilibili-hot-search",
+          "rank": 20
         },
         {
           "date": "2026-09-10",
@@ -323,21 +335,9 @@
         },
         {
           "date": "2026-09-10",
-          "title": "iPhone系列新机上手体验",
+          "title": "iPhone18上手体验",
           "platform": "bilibili-hot-search",
-          "rank": 21
-        },
-        {
-          "date": "2026-09-10",
-          "title": "iPhone Duo上手体验",
-          "platform": "bilibili-hot-search",
-          "rank": 25
-        },
-        {
-          "date": "2026-09-10",
-          "title": "iPhone新机真实体验",
-          "platform": "bilibili-hot-search",
-          "rank": 26
+          "rank": 24
         }
       ],
       "sources": [
@@ -391,7 +391,7 @@
       "tag": "活力",
       "mention_count": 45,
       "today_count": 10,
-      "heat": 0.084,
+      "heat": 0.083,
       "verdict": "optional",
       "note": "青春/燃向内容，适合运动与潮流人设。",
       "evidence": [
@@ -1193,12 +1193,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-10T17:11:12+08:00",
-    "source_mtime": "2026-09-10T17:11:08+08:00",
+    "generated_at": "2026-09-10T17:42:28+08:00",
+    "source_mtime": "2026-09-10T17:42:21+08:00",
     "today": "2026-09-10",
-    "total_items": 9270,
-    "today_items": 788,
-    "server_time": "2026-09-10T17:11:12+08:00",
+    "total_items": 9307,
+    "today_items": 825,
+    "server_time": "2026-09-10T17:42:28+08:00",
     "live": false,
     "public": true
   }
