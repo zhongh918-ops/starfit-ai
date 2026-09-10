@@ -27,15 +27,15 @@
       },
       {
         "date": "2026-09-11",
-        "title": "我不明白中国网球一姐郑钦文，为啥前段时间状态低迷，这次美网她就如换了一个人似的？",
-        "platform": "zhihu",
-        "rank": 2
-      },
-      {
-        "date": "2026-09-11",
         "title": "上海体育局通报刘翔安置工作，未来将持续优化退役运动员安置",
         "platform": "thepaper",
         "rank": 3
+      },
+      {
+        "date": "2026-09-11",
+        "title": "我不明白中国网球一姐郑钦文，为啥前段时间状态低迷，这次美网她就如换了一个人似的？",
+        "platform": "zhihu",
+        "rank": 4
       }
     ],
     "sources": [
@@ -269,7 +269,7 @@
         "date": "2026-09-11",
         "title": "秋日穿搭从秀场找点灵感",
         "platform": "douyin",
-        "rank": 27
+        "rank": 20
       },
       {
         "date": "2025-12-21",
@@ -316,14 +316,14 @@
       },
       {
         "date": "2026-09-11",
-        "title": "iPhone17Pro线下降价",
-        "platform": "weibo",
-        "rank": 22
+        "title": "iPhone18上手体验",
+        "platform": "bilibili-hot-search",
+        "rank": 21
       },
       {
         "date": "2026-09-11",
-        "title": "iPhone18上手体验",
-        "platform": "bilibili-hot-search",
+        "title": "iPhone17Pro线下降价",
+        "platform": "weibo",
         "rank": 23
       },
       {
@@ -410,7 +410,7 @@
         "date": "2026-09-11",
         "title": "用热血漫打开王者万象棋",
         "platform": "bilibili-hot-search",
-        "rank": 24
+        "rank": 26
       },
       {
         "date": "2026-09-09",
