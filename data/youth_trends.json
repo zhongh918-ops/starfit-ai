@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 177,
     "today_count": 26,
-    "heat": 0.277,
+    "heat": 0.275,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -11,7 +11,7 @@
         "date": "2026-09-11",
         "title": "天下足球 罗贝里十年之约",
         "platform": "bilibili-hot-search",
-        "rank": 3
+        "rank": 2
       },
       {
         "date": "2026-09-11",
@@ -23,7 +23,7 @@
         "date": "2026-09-11",
         "title": "莱巴金娜首进美网决赛",
         "platform": "douyin",
-        "rank": 5
+        "rank": 4
       },
       {
         "date": "2026-09-11",
@@ -44,9 +44,9 @@
   },
   "户外": {
     "tag": "户外",
-    "mention_count": 43,
-    "today_count": 6,
-    "heat": 0.065,
+    "mention_count": 44,
+    "today_count": 7,
+    "heat": 0.072,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 69,
     "today_count": 6,
-    "heat": 0.08,
+    "heat": 0.079,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 622,
-    "today_count": 95,
+    "mention_count": 623,
+    "today_count": 96,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -187,14 +187,20 @@
       },
       {
         "date": "2026-09-11",
-        "title": "为什么阴天的时候人的情绪更容易低落？光照变化会通过怎样的生物通路，影响我们大脑的情绪状态？",
-        "platform": "zhihu",
-        "rank": 19
+        "title": "48小时看完燕麦系穿搭",
+        "platform": "douyin",
+        "rank": 18
       },
       {
         "date": "2026-09-11",
-        "title": "48小时看完燕麦系穿搭",
-        "platform": "douyin",
+        "title": "在爸妈小卖部上班的快乐日常",
+        "platform": "bilibili-hot-search",
+        "rank": 18
+      },
+      {
+        "date": "2026-09-11",
+        "title": "为什么阴天的时候人的情绪更容易低落？光照变化会通过怎样的生物通路，影响我们大脑的情绪状态？",
+        "platform": "zhihu",
         "rank": 19
       },
       {
@@ -202,12 +208,6 @@
         "title": "车间裸奔员工因离职情绪失控",
         "platform": "weibo",
         "rank": 27
-      },
-      {
-        "date": "2026-09-11",
-        "title": "在爸妈小卖部上班的快乐日常",
-        "platform": "bilibili-hot-search",
-        "rank": 28
       }
     ],
     "sources": [
@@ -275,7 +275,7 @@
         "date": "2026-09-11",
         "title": "48小时看完燕麦系穿搭",
         "platform": "douyin",
-        "rank": 19
+        "rank": 18
       },
       {
         "date": "2026-09-11",
@@ -287,7 +287,7 @@
         "date": "2026-09-11",
         "title": "来看纽约时装周的顶级设计表达",
         "platform": "douyin",
-        "rank": 26
+        "rank": 27
       },
       {
         "date": "2026-09-11",
@@ -302,9 +302,9 @@
   },
   "体验": {
     "tag": "体验",
-    "mention_count": 44,
-    "today_count": 6,
-    "heat": 0.066,
+    "mention_count": 45,
+    "today_count": 7,
+    "heat": 0.073,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -312,6 +312,12 @@
         "date": "2026-09-11",
         "title": "9月11日投资避雷针：国际油价大涨超6% 黄金、白银重挫 美股半导体全线下跌",
         "platform": "cls-hot",
+        "rank": 10
+      },
+      {
+        "date": "2026-09-11",
+        "title": "时代峰峻 线下活动",
+        "platform": "weibo",
         "rank": 11
       },
       {
@@ -331,12 +337,6 @@
         "title": "iPhone系列新机上手体验",
         "platform": "bilibili-hot-search",
         "rank": 21
-      },
-      {
-        "date": "2026-09-11",
-        "title": "iPhone17Pro线下降价",
-        "platform": "weibo",
-        "rank": 25
       }
     ],
     "sources": [
