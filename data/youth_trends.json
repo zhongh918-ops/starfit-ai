@@ -3,19 +3,19 @@
     "tag": "运动",
     "mention_count": 176,
     "today_count": 25,
-    "heat": 0.316,
+    "heat": 0.313,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
       {
         "date": "2026-09-11",
-        "title": "莱巴金娜首进美网决赛",
+        "title": "中国女篮不敌法国无缘世界杯四强",
         "platform": "douyin",
         "rank": 4
       },
       {
         "date": "2026-09-11",
-        "title": "中国女篮不敌法国无缘世界杯四强",
+        "title": "莱巴金娜首进美网决赛",
         "platform": "douyin",
         "rank": 5
       },
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 603,
-    "today_count": 76,
+    "mention_count": 604,
+    "today_count": 77,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -173,9 +173,9 @@
   },
   "情绪价值": {
     "tag": "情绪价值",
-    "mention_count": 37,
-    "today_count": 4,
-    "heat": 0.056,
+    "mention_count": 38,
+    "today_count": 5,
+    "heat": 0.064,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -193,6 +193,12 @@
       },
       {
         "date": "2026-09-11",
+        "title": "48小时看完燕麦系穿搭",
+        "platform": "douyin",
+        "rank": 21
+      },
+      {
+        "date": "2026-09-11",
         "title": "车间裸奔员工因离职情绪失控",
         "platform": "weibo",
         "rank": 27
@@ -202,12 +208,6 @@
         "title": "燕麦系秋天的神",
         "platform": "douyin",
         "rank": 30
-      },
-      {
-        "date": "2025-12-24",
-        "title": "马上测·回顾2025：两位“较真”记者，这一年测评的快乐、震惊和成就",
-        "platform": "thepaper",
-        "rank": 1
       }
     ],
     "sources": [
@@ -259,9 +259,9 @@
   },
   "时尚": {
     "tag": "时尚",
-    "mention_count": 34,
-    "today_count": 3,
-    "heat": 0.045,
+    "mention_count": 35,
+    "today_count": 4,
+    "heat": 0.054,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -279,6 +279,12 @@
       },
       {
         "date": "2026-09-11",
+        "title": "48小时看完燕麦系穿搭",
+        "platform": "douyin",
+        "rank": 21
+      },
+      {
+        "date": "2026-09-11",
         "title": "刘雯纽约时装周开场",
         "platform": "weibo",
         "rank": 29
@@ -288,12 +294,6 @@
         "title": "普京又“催生”：生育子女应成为一种潮流",
         "platform": "ifeng",
         "rank": 5
-      },
-      {
-        "date": "2025-12-21",
-        "title": "火影鸣佐传说时装技能爆料",
-        "platform": "bilibili-hot-search",
-        "rank": 12
       }
     ],
     "sources": [
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 44,
     "today_count": 6,
-    "heat": 0.077,
+    "heat": 0.076,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -330,7 +330,7 @@
         "date": "2026-09-11",
         "title": "iPhone17官方涨价线下降价",
         "platform": "baidu",
-        "rank": 22
+        "rank": 24
       },
       {
         "date": "2026-09-11",
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 53,
     "today_count": 6,
-    "heat": 0.082,
+    "heat": 0.081,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
@@ -399,6 +399,12 @@
         "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
         "platform": "wallstreetcn-hot",
         "rank": 1
+      },
+      {
+        "date": "2026-09-11",
+        "title": "燃油车卖不动了加油站怎么办",
+        "platform": "weibo",
+        "rank": 7
       },
       {
         "date": "2026-09-11",
@@ -416,12 +422,6 @@
         "date": "2026-09-11",
         "title": "用热血漫打开王者万象棋",
         "platform": "bilibili-hot-search",
-        "rank": 24
-      },
-      {
-        "date": "2026-09-11",
-        "title": "燃油车卖不动了加油站怎么办",
-        "platform": "weibo",
         "rank": 26
       }
     ],
