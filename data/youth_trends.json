@@ -3,21 +3,21 @@
     "tag": "运动",
     "mention_count": 177,
     "today_count": 26,
-    "heat": 0.286,
+    "heat": 0.277,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
       {
         "date": "2026-09-11",
-        "title": "中国女篮不敌法国无缘世界杯四强",
-        "platform": "douyin",
-        "rank": 2
-      },
-      {
-        "date": "2026-09-11",
         "title": "天下足球 罗贝里十年之约",
         "platform": "bilibili-hot-search",
         "rank": 3
+      },
+      {
+        "date": "2026-09-11",
+        "title": "中国女篮不敌法国无缘世界杯四强",
+        "platform": "douyin",
+        "rank": 4
       },
       {
         "date": "2026-09-11",
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 43,
     "today_count": 6,
-    "heat": 0.067,
+    "heat": 0.065,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -72,7 +72,7 @@
         "date": "2026-09-11",
         "title": "旅行青蛙停运,日方吃相太差",
         "platform": "tieba",
-        "rank": 14
+        "rank": 15
       },
       {
         "date": "2026-09-11",
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 69,
     "today_count": 6,
-    "heat": 0.082,
+    "heat": 0.08,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -107,12 +107,6 @@
       },
       {
         "date": "2026-09-11",
-        "title": "厨房里的6个习惯正拖垮全家人的健康",
-        "platform": "toutiao",
-        "rank": 16
-      },
-      {
-        "date": "2026-09-11",
         "title": "白人饭的魅力主要是省时还是健康？",
         "platform": "zhihu",
         "rank": 19
@@ -122,6 +116,12 @@
         "title": "日常吃什么对肝脏健康更有帮助",
         "platform": "toutiao",
         "rank": 21
+      },
+      {
+        "date": "2026-09-11",
+        "title": "不同人群补充蛋白质该吃哪些食物",
+        "platform": "toutiao",
+        "rank": 22
       }
     ],
     "sources": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 618,
-    "today_count": 91,
+    "mention_count": 622,
+    "today_count": 95,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 39,
     "today_count": 6,
-    "heat": 0.065,
+    "heat": 0.063,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -187,27 +187,27 @@
       },
       {
         "date": "2026-09-11",
-        "title": "48小时看完燕麦系穿搭",
-        "platform": "douyin",
-        "rank": 18
-      },
-      {
-        "date": "2026-09-11",
         "title": "为什么阴天的时候人的情绪更容易低落？光照变化会通过怎样的生物通路，影响我们大脑的情绪状态？",
         "platform": "zhihu",
         "rank": 19
       },
       {
         "date": "2026-09-11",
-        "title": "在爸妈小卖部上班的快乐日常",
-        "platform": "bilibili-hot-search",
-        "rank": 23
+        "title": "48小时看完燕麦系穿搭",
+        "platform": "douyin",
+        "rank": 19
       },
       {
         "date": "2026-09-11",
         "title": "车间裸奔员工因离职情绪失控",
         "platform": "weibo",
         "rank": 27
+      },
+      {
+        "date": "2026-09-11",
+        "title": "在爸妈小卖部上班的快乐日常",
+        "platform": "bilibili-hot-search",
+        "rank": 28
       }
     ],
     "sources": [
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 36,
     "today_count": 5,
-    "heat": 0.056,
+    "heat": 0.054,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -275,7 +275,7 @@
         "date": "2026-09-11",
         "title": "48小时看完燕麦系穿搭",
         "platform": "douyin",
-        "rank": 18
+        "rank": 19
       },
       {
         "date": "2026-09-11",
@@ -287,7 +287,7 @@
         "date": "2026-09-11",
         "title": "来看纽约时装周的顶级设计表达",
         "platform": "douyin",
-        "rank": 28
+        "rank": 26
       },
       {
         "date": "2026-09-11",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 44,
     "today_count": 6,
-    "heat": 0.068,
+    "heat": 0.066,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -312,13 +312,13 @@
         "date": "2026-09-11",
         "title": "9月11日投资避雷针：国际油价大涨超6% 黄金、白银重挫 美股半导体全线下跌",
         "platform": "cls-hot",
-        "rank": 10
+        "rank": 11
       },
       {
         "date": "2026-09-11",
         "title": "霓虹博主体验特色石油浴",
         "platform": "tieba",
-        "rank": 18
+        "rank": 19
       },
       {
         "date": "2026-09-11",
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 54,
     "today_count": 7,
-    "heat": 0.081,
+    "heat": 0.078,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
