@@ -1,18 +1,12 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 180,
-    "today_count": 29,
-    "heat": 0.27,
+    "mention_count": 181,
+    "today_count": 30,
+    "heat": 0.275,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
-      {
-        "date": "2026-09-11",
-        "title": "天下足球 罗贝里十年之约",
-        "platform": "bilibili-hot-search",
-        "rank": 3
-      },
       {
         "date": "2026-09-11",
         "title": "中国女篮不敌法国无缘世界杯四强",
@@ -23,18 +17,24 @@
         "date": "2026-09-11",
         "title": "莱巴金娜首进美网决赛",
         "platform": "douyin",
+        "rank": 4
+      },
+      {
+        "date": "2026-09-11",
+        "title": "皇马巴萨为何是国家德比",
+        "platform": "bilibili-hot-search",
         "rank": 5
+      },
+      {
+        "date": "2026-09-11",
+        "title": "天下足球 罗贝里十年之约",
+        "platform": "bilibili-hot-search",
+        "rank": 6
       },
       {
         "date": "2026-09-11",
         "title": "中国女篮不敌法国 无缘世界杯四强",
         "platform": "baidu",
-        "rank": 7
-      },
-      {
-        "date": "2026-09-11",
-        "title": "上海体育局通报刘翔安置工作，未来将持续优化退役运动员安置",
-        "platform": "thepaper",
         "rank": 7
       }
     ],
@@ -44,9 +44,9 @@
   },
   "户外": {
     "tag": "户外",
-    "mention_count": 44,
-    "today_count": 7,
-    "heat": 0.066,
+    "mention_count": 45,
+    "today_count": 8,
+    "heat": 0.072,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 637,
-    "today_count": 110,
+    "mention_count": 638,
+    "today_count": 111,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -195,7 +195,7 @@
         "date": "2026-09-11",
         "title": "48小时看完燕麦系穿搭",
         "platform": "douyin",
-        "rank": 15
+        "rank": 16
       },
       {
         "date": "2026-09-11",
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 23,
     "today_count": 1,
-    "heat": 0.019,
+    "heat": 0.018,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -275,7 +275,7 @@
         "date": "2026-09-11",
         "title": "48小时看完燕麦系穿搭",
         "platform": "douyin",
-        "rank": 15
+        "rank": 16
       },
       {
         "date": "2026-09-11",
@@ -287,7 +287,7 @@
         "date": "2026-09-11",
         "title": "来看纽约时装周的顶级设计表达",
         "platform": "douyin",
-        "rank": 28
+        "rank": 27
       },
       {
         "date": "2026-09-11",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 46,
     "today_count": 8,
-    "heat": 0.073,
+    "heat": 0.072,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -336,7 +336,7 @@
         "date": "2026-09-11",
         "title": "iPhone系列新机上手体验",
         "platform": "bilibili-hot-search",
-        "rank": 23
+        "rank": 22
       }
     ],
     "sources": [
