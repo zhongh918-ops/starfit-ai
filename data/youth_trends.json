@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 168,
     "today_count": 17,
-    "heat": 0.306,
+    "heat": 0.298,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 40,
     "today_count": 3,
-    "heat": 0.06,
+    "heat": 0.059,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 65,
     "today_count": 2,
-    "heat": 0.063,
+    "heat": 0.062,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 581,
-    "today_count": 54,
+    "mention_count": 583,
+    "today_count": 56,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -139,6 +139,12 @@
       {
         "date": "2026-09-11",
         "title": "苹果首款折叠屏iPhone来了！中国起售1.6万元，A20 Pro加持Duo与18 Pro",
+        "platform": "wallstreetcn-hot",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-11",
+        "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
         "platform": "wallstreetcn-hot",
         "rank": 1
       },
@@ -156,12 +162,6 @@
       },
       {
         "date": "2026-09-11",
-        "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
-        "platform": "wallstreetcn-hot",
-        "rank": 2
-      },
-      {
-        "date": "2026-09-11",
         "title": "学妹干不过AI,翻译专业太严峻",
         "platform": "tieba",
         "rank": 2
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 37,
     "today_count": 4,
-    "heat": 0.07,
+    "heat": 0.069,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -189,7 +189,7 @@
         "date": "2026-09-11",
         "title": "车间裸奔员工因离职情绪失控",
         "platform": "weibo",
-        "rank": 12
+        "rank": 13
       },
       {
         "date": "2026-09-11",
@@ -269,7 +269,7 @@
         "date": "2026-09-11",
         "title": "秋日穿搭从秀场找点灵感",
         "platform": "douyin",
-        "rank": 19
+        "rank": 21
       },
       {
         "date": "2025-12-21",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 43,
     "today_count": 5,
-    "heat": 0.086,
+    "heat": 0.084,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -322,21 +322,21 @@
       },
       {
         "date": "2026-09-11",
-        "title": "iPhone系列新机上手体验",
-        "platform": "bilibili-hot-search",
-        "rank": 21
-      },
-      {
-        "date": "2026-09-11",
         "title": "iPhone17官方涨价线下降价",
         "platform": "baidu",
-        "rank": 23
+        "rank": 21
       },
       {
         "date": "2026-09-11",
         "title": "iPhone17Pro线下降价",
         "platform": "weibo",
         "rank": 25
+      },
+      {
+        "date": "2026-09-11",
+        "title": "iPhone系列新机上手体验",
+        "platform": "bilibili-hot-search",
+        "rank": 26
       }
     ],
     "sources": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 52,
     "today_count": 5,
-    "heat": 0.092,
+    "heat": 0.089,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
@@ -398,7 +398,7 @@
         "date": "2026-09-11",
         "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
         "platform": "wallstreetcn-hot",
-        "rank": 2
+        "rank": 1
       },
       {
         "date": "2026-09-11",
@@ -408,21 +408,21 @@
       },
       {
         "date": "2026-09-11",
+        "title": "燃油车卖不动 加油站怎么办",
+        "platform": "baidu",
+        "rank": 12
+      },
+      {
+        "date": "2026-09-11",
         "title": "鸣潮景燃上线",
         "platform": "douyin",
         "rank": 13
       },
       {
         "date": "2026-09-11",
-        "title": "燃油车卖不动 加油站怎么办",
-        "platform": "baidu",
-        "rank": 19
-      },
-      {
-        "date": "2026-09-11",
         "title": "用热血漫打开王者万象棋",
         "platform": "bilibili-hot-search",
-        "rank": 23
+        "rank": 30
       }
     ],
     "sources": [
