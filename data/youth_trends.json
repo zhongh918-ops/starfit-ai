@@ -3,16 +3,10 @@
     "tag": "运动",
     "mention_count": 177,
     "today_count": 26,
-    "heat": 0.275,
+    "heat": 0.272,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
-      {
-        "date": "2026-09-11",
-        "title": "天下足球 罗贝里十年之约",
-        "platform": "bilibili-hot-search",
-        "rank": 2
-      },
       {
         "date": "2026-09-11",
         "title": "中国女篮不敌法国无缘世界杯四强",
@@ -24,6 +18,12 @@
         "title": "莱巴金娜首进美网决赛",
         "platform": "douyin",
         "rank": 4
+      },
+      {
+        "date": "2026-09-11",
+        "title": "天下足球 罗贝里十年之约",
+        "platform": "bilibili-hot-search",
+        "rank": 5
       },
       {
         "date": "2026-09-11",
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 44,
     "today_count": 7,
-    "heat": 0.072,
+    "heat": 0.071,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 69,
     "today_count": 6,
-    "heat": 0.079,
+    "heat": 0.078,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 623,
-    "today_count": 96,
+    "mention_count": 625,
+    "today_count": 98,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 39,
     "today_count": 6,
-    "heat": 0.063,
+    "heat": 0.062,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -189,7 +189,7 @@
         "date": "2026-09-11",
         "title": "48小时看完燕麦系穿搭",
         "platform": "douyin",
-        "rank": 18
+        "rank": 17
       },
       {
         "date": "2026-09-11",
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 36,
     "today_count": 5,
-    "heat": 0.054,
+    "heat": 0.053,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -275,19 +275,19 @@
         "date": "2026-09-11",
         "title": "48小时看完燕麦系穿搭",
         "platform": "douyin",
-        "rank": 18
+        "rank": 17
       },
       {
         "date": "2026-09-11",
         "title": "秋日穿搭从秀场找点灵感",
         "platform": "douyin",
-        "rank": 20
+        "rank": 22
       },
       {
         "date": "2026-09-11",
         "title": "来看纽约时装周的顶级设计表达",
         "platform": "douyin",
-        "rank": 27
+        "rank": 28
       },
       {
         "date": "2026-09-11",
@@ -302,9 +302,9 @@
   },
   "体验": {
     "tag": "体验",
-    "mention_count": 45,
-    "today_count": 7,
-    "heat": 0.073,
+    "mention_count": 46,
+    "today_count": 8,
+    "heat": 0.079,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -312,7 +312,13 @@
         "date": "2026-09-11",
         "title": "9月11日投资避雷针：国际油价大涨超6% 黄金、白银重挫 美股半导体全线下跌",
         "platform": "cls-hot",
-        "rank": 10
+        "rank": 7
+      },
+      {
+        "date": "2026-09-11",
+        "title": "油价短线下挫！伊朗将与海湾六国会晤、红海西海岸停火，中东局势现缓和信号",
+        "platform": "wallstreetcn-hot",
+        "rank": 9
       },
       {
         "date": "2026-09-11",
@@ -329,12 +335,6 @@
       {
         "date": "2026-09-11",
         "title": "iPhone18上手体验",
-        "platform": "bilibili-hot-search",
-        "rank": 21
-      },
-      {
-        "date": "2026-09-11",
-        "title": "iPhone系列新机上手体验",
         "platform": "bilibili-hot-search",
         "rank": 21
       }
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 54,
     "today_count": 7,
-    "heat": 0.078,
+    "heat": 0.077,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
