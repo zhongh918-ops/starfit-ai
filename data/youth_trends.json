@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 184,
     "today_count": 33,
-    "heat": 0.277,
+    "heat": 0.273,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -15,6 +15,12 @@
       },
       {
         "date": "2026-09-11",
+        "title": "止步世界杯八强，中国女篮须在失利中看清方向",
+        "platform": "thepaper",
+        "rank": 5
+      },
+      {
+        "date": "2026-09-11",
         "title": "莱巴金娜首进美网决赛",
         "platform": "douyin",
         "rank": 5
@@ -23,12 +29,6 @@
         "date": "2026-09-11",
         "title": "天下足球 罗贝里十年之约",
         "platform": "bilibili-hot-search",
-        "rank": 5
-      },
-      {
-        "date": "2026-09-11",
-        "title": "奥运冠军巩立姣退役后减重60斤",
-        "platform": "baidu",
         "rank": 6
       },
       {
@@ -46,21 +46,21 @@
     "tag": "户外",
     "mention_count": 46,
     "today_count": 9,
-    "heat": 0.073,
+    "heat": 0.072,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
       {
         "date": "2026-09-11",
-        "title": "4次考公失败后花2万2旅行6国",
-        "platform": "baidu",
-        "rank": 2
+        "title": "川西的秋天美得没轻没重",
+        "platform": "douyin",
+        "rank": 1
       },
       {
         "date": "2026-09-11",
-        "title": "川西的秋天美得没轻没重",
-        "platform": "douyin",
-        "rank": 4
+        "title": "4次考公失败后花2万2旅行6国",
+        "platform": "baidu",
+        "rank": 2
       },
       {
         "date": "2026-09-11",
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 648,
-    "today_count": 121,
+    "mention_count": 650,
+    "today_count": 123,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -156,14 +156,14 @@
       },
       {
         "date": "2026-09-11",
-        "title": "美国AI天才：巨头拿我们的命在赌",
-        "platform": "toutiao",
+        "title": "年销量预计1400万台！机构看好苹果折叠屏手机，但取决于产能和组装良率",
+        "platform": "thepaper",
         "rank": 1
       },
       {
         "date": "2026-09-11",
-        "title": "手机厂商不能把用户逼向险境",
-        "platform": "baidu",
+        "title": "美国AI天才：巨头拿我们的命在赌",
+        "platform": "toutiao",
         "rank": 1
       }
     ],
@@ -269,7 +269,7 @@
         "date": "2026-09-11",
         "title": "速来领取可可系穿搭说明书",
         "platform": "douyin",
-        "rank": 2
+        "rank": 4
       },
       {
         "date": "2026-09-11",
@@ -302,9 +302,9 @@
   },
   "体验": {
     "tag": "体验",
-    "mention_count": 47,
-    "today_count": 9,
-    "heat": 0.074,
+    "mention_count": 48,
+    "today_count": 10,
+    "heat": 0.079,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -334,9 +334,9 @@
       },
       {
         "date": "2026-09-11",
-        "title": "iPhone18上手体验",
+        "title": "在港中文上学是种什么体验",
         "platform": "bilibili-hot-search",
-        "rank": 21
+        "rank": 20
       }
     ],
     "sources": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 55,
     "today_count": 8,
-    "heat": 0.073,
+    "heat": 0.072,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
