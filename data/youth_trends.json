@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 188,
-    "today_count": 3,
-    "heat": 0.166,
+    "mention_count": 190,
+    "today_count": 5,
+    "heat": 0.206,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -21,21 +21,21 @@
       },
       {
         "date": "2026-09-12",
+        "title": "运动是秋天的主线任务",
+        "platform": "douyin",
+        "rank": 23
+      },
+      {
+        "date": "2026-09-12",
+        "title": "NBA新赛季哪些老将还在打",
+        "platform": "bilibili-hot-search",
+        "rank": 24
+      },
+      {
+        "date": "2026-09-12",
         "title": "申请李昀锐当我的足球教练",
         "platform": "douyin",
         "rank": 28
-      },
-      {
-        "date": "2026-09-09",
-        "title": "皇马2:1击败国米",
-        "platform": "douyin",
-        "rank": 1
-      },
-      {
-        "date": "2026-09-10",
-        "title": "回顾郑钦文美网之路",
-        "platform": "bilibili-hot-search",
-        "rank": 1
       }
     ],
     "sources": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 48,
     "today_count": 2,
-    "heat": 0.071,
+    "heat": 0.068,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 71,
     "today_count": 1,
-    "heat": 0.06,
+    "heat": 0.058,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -97,7 +97,7 @@
         "date": "2026-09-12",
         "title": "厨房里的6个习惯正拖垮全家人的健康",
         "platform": "weibo",
-        "rank": 26
+        "rank": 27
       },
       {
         "date": "2025-12-22",
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 682,
-    "today_count": 28,
+    "mention_count": 684,
+    "today_count": 30,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -173,12 +173,18 @@
   },
   "情绪价值": {
     "tag": "情绪价值",
-    "mention_count": 41,
-    "today_count": 1,
-    "heat": 0.044,
+    "mention_count": 42,
+    "today_count": 2,
+    "heat": 0.065,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
+      {
+        "date": "2026-09-12",
+        "title": "48小时看完燕麦系穿搭",
+        "platform": "douyin",
+        "rank": 26
+      },
       {
         "date": "2026-09-12",
         "title": "在爸妈小卖部上班的快乐日常",
@@ -201,12 +207,6 @@
         "date": "2025-12-25",
         "title": "现在，欧洲情绪很不稳定",
         "platform": "ifeng",
-        "rank": 4
-      },
-      {
-        "date": "2026-09-09",
-        "title": "燕麦系秋天的神",
-        "platform": "douyin",
         "rank": 4
       }
     ],
@@ -259,9 +259,9 @@
   },
   "时尚": {
     "tag": "时尚",
-    "mention_count": 38,
-    "today_count": 1,
-    "heat": 0.043,
+    "mention_count": 39,
+    "today_count": 2,
+    "heat": 0.063,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -270,6 +270,12 @@
         "title": "速来领取可可系穿搭说明书",
         "platform": "douyin",
         "rank": 4
+      },
+      {
+        "date": "2026-09-12",
+        "title": "48小时看完燕麦系穿搭",
+        "platform": "douyin",
+        "rank": 26
       },
       {
         "date": "2025-12-21",
@@ -288,12 +294,6 @@
         "title": "火影鸣佐传说时装技能爆料",
         "platform": "bilibili-hot-search",
         "rank": 12
-      },
-      {
-        "date": "2025-12-21",
-        "title": "田曦薇造型师审美",
-        "platform": "weibo",
-        "rank": 12
       }
     ],
     "sources": [
@@ -302,9 +302,9 @@
   },
   "体验": {
     "tag": "体验",
-    "mention_count": 53,
-    "today_count": 4,
-    "heat": 0.12,
+    "mention_count": 54,
+    "today_count": 5,
+    "heat": 0.136,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -333,10 +333,10 @@
         "rank": 27
       },
       {
-        "date": "2025-12-22",
-        "title": "老广沉浸式夜生活",
+        "date": "2026-09-12",
+        "title": "在港中文上学是种什么体验",
         "platform": "bilibili-hot-search",
-        "rank": 3
+        "rank": 29
       }
     ],
     "sources": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 59,
     "today_count": 3,
-    "heat": 0.1,
+    "heat": 0.095,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
