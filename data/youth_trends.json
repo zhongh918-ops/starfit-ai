@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 177,
     "today_count": 26,
-    "heat": 0.272,
+    "heat": 0.264,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -23,7 +23,7 @@
         "date": "2026-09-11",
         "title": "天下足球 罗贝里十年之约",
         "platform": "bilibili-hot-search",
-        "rank": 5
+        "rank": 6
       },
       {
         "date": "2026-09-11",
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 44,
     "today_count": 7,
-    "heat": 0.071,
+    "heat": 0.069,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -70,15 +70,15 @@
       },
       {
         "date": "2026-09-11",
-        "title": "旅行青蛙停运,日方吃相太差",
-        "platform": "tieba",
-        "rank": 15
-      },
-      {
-        "date": "2026-09-11",
         "title": "胡塞领导人亲自驾驶缴获美制装甲车",
         "platform": "toutiao",
         "rank": 17
+      },
+      {
+        "date": "2026-09-11",
+        "title": "旅行青蛙停运,日方吃相太差",
+        "platform": "tieba",
+        "rank": 18
       }
     ],
     "sources": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 69,
     "today_count": 6,
-    "heat": 0.078,
+    "heat": 0.077,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 625,
-    "today_count": 98,
+    "mention_count": 629,
+    "today_count": 102,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 39,
     "today_count": 6,
-    "heat": 0.062,
+    "heat": 0.06,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -187,15 +187,15 @@
       },
       {
         "date": "2026-09-11",
-        "title": "48小时看完燕麦系穿搭",
-        "platform": "douyin",
-        "rank": 17
+        "title": "在爸妈小卖部上班的快乐日常",
+        "platform": "bilibili-hot-search",
+        "rank": 11
       },
       {
         "date": "2026-09-11",
-        "title": "在爸妈小卖部上班的快乐日常",
-        "platform": "bilibili-hot-search",
-        "rank": 18
+        "title": "48小时看完燕麦系穿搭",
+        "platform": "douyin",
+        "rank": 17
       },
       {
         "date": "2026-09-11",
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 23,
     "today_count": 1,
-    "heat": 0.02,
+    "heat": 0.019,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 36,
     "today_count": 5,
-    "heat": 0.053,
+    "heat": 0.052,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -281,7 +281,7 @@
         "date": "2026-09-11",
         "title": "秋日穿搭从秀场找点灵感",
         "platform": "douyin",
-        "rank": 22
+        "rank": 26
       },
       {
         "date": "2026-09-11",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 46,
     "today_count": 8,
-    "heat": 0.079,
+    "heat": 0.077,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -318,7 +318,7 @@
         "date": "2026-09-11",
         "title": "油价短线下挫！伊朗将与海湾六国会晤、红海西海岸停火，中东局势现缓和信号",
         "platform": "wallstreetcn-hot",
-        "rank": 9
+        "rank": 8
       },
       {
         "date": "2026-09-11",
@@ -328,15 +328,15 @@
       },
       {
         "date": "2026-09-11",
-        "title": "霓虹博主体验特色石油浴",
-        "platform": "tieba",
-        "rank": 19
-      },
-      {
-        "date": "2026-09-11",
         "title": "iPhone18上手体验",
         "platform": "bilibili-hot-search",
         "rank": 21
+      },
+      {
+        "date": "2026-09-11",
+        "title": "霓虹博主体验特色石油浴",
+        "platform": "tieba",
+        "rank": 22
       }
     ],
     "sources": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 54,
     "today_count": 7,
-    "heat": 0.077,
+    "heat": 0.075,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
