@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 174,
-    "today_count": 23,
-    "heat": 0.319,
+    "mention_count": 176,
+    "today_count": 25,
+    "heat": 0.329,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -11,7 +11,19 @@
         "date": "2026-09-11",
         "title": "中国女篮不敌法国无缘世界杯四强",
         "platform": "douyin",
-        "rank": 4
+        "rank": 5
+      },
+      {
+        "date": "2026-09-11",
+        "title": "萨巴伦卡莱巴金娜美网争冠",
+        "platform": "weibo",
+        "rank": 6
+      },
+      {
+        "date": "2026-09-11",
+        "title": "莱巴金娜首进美网决赛",
+        "platform": "douyin",
+        "rank": 6
       },
       {
         "date": "2026-09-11",
@@ -24,18 +36,6 @@
         "title": "上海体育局通报刘翔安置工作，未来将持续优化退役运动员安置",
         "platform": "thepaper",
         "rank": 7
-      },
-      {
-        "date": "2026-09-11",
-        "title": "2026 女篮世界杯 1/4 决赛，中国女篮 61 比 90 不敌法国女篮，止步八强，如何评价本场比赛？",
-        "platform": "zhihu",
-        "rank": 8
-      },
-      {
-        "date": "2026-09-11",
-        "title": "遭逆转无缘美网四强，状态回暖的郑钦文已看到重返巅峰的曙光",
-        "platform": "thepaper",
-        "rank": 9
       }
     ],
     "sources": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 42,
     "today_count": 5,
-    "heat": 0.072,
+    "heat": 0.07,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -66,13 +66,13 @@
         "date": "2026-09-11",
         "title": "旅行青蛙停运,日方吃相太差",
         "platform": "tieba",
-        "rank": 10
+        "rank": 11
       },
       {
         "date": "2026-09-11",
         "title": "胡塞领导人亲自驾驶缴获美制装甲车",
         "platform": "toutiao",
-        "rank": 18
+        "rank": 13
       },
       {
         "date": "2025-12-24",
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 66,
     "today_count": 3,
-    "heat": 0.067,
+    "heat": 0.066,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 596,
-    "today_count": 69,
+    "mention_count": 599,
+    "today_count": 72,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 37,
     "today_count": 4,
-    "heat": 0.059,
+    "heat": 0.058,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -193,14 +193,14 @@
       },
       {
         "date": "2026-09-11",
-        "title": "车间裸奔员工因离职情绪失控",
-        "platform": "weibo",
-        "rank": 24
+        "title": "燕麦系秋天的神",
+        "platform": "douyin",
+        "rank": 30
       },
       {
         "date": "2026-09-11",
-        "title": "燕麦系秋天的神",
-        "platform": "douyin",
+        "title": "车间裸奔员工因离职情绪失控",
+        "platform": "weibo",
         "rank": 30
       },
       {
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 23,
     "today_count": 1,
-    "heat": 0.023,
+    "heat": 0.022,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -261,21 +261,21 @@
     "tag": "时尚",
     "mention_count": 33,
     "today_count": 2,
-    "heat": 0.038,
+    "heat": 0.037,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
       {
         "date": "2026-09-11",
-        "title": "刘雯纽约时装周开场",
-        "platform": "weibo",
-        "rank": 18
-      },
-      {
-        "date": "2026-09-11",
         "title": "秋日穿搭从秀场找点灵感",
         "platform": "douyin",
         "rank": 20
+      },
+      {
+        "date": "2026-09-11",
+        "title": "刘雯纽约时装周开场",
+        "platform": "weibo",
+        "rank": 23
       },
       {
         "date": "2025-12-21",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 44,
     "today_count": 6,
-    "heat": 0.082,
+    "heat": 0.08,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -318,7 +318,7 @@
         "date": "2026-09-11",
         "title": "霓虹博主体验特色石油浴",
         "platform": "tieba",
-        "rank": 14
+        "rank": 15
       },
       {
         "date": "2026-09-11",
@@ -355,7 +355,7 @@
         "date": "2026-09-11",
         "title": "冰山冰美式到底怎么喝",
         "platform": "douyin",
-        "rank": 18
+        "rank": 24
       },
       {
         "date": "2025-12-26",
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 53,
     "today_count": 6,
-    "heat": 0.088,
+    "heat": 0.085,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
@@ -399,12 +399,6 @@
         "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
         "platform": "wallstreetcn-hot",
         "rank": 1
-      },
-      {
-        "date": "2026-09-11",
-        "title": "燃油车卖不动了加油站怎么办",
-        "platform": "weibo",
-        "rank": 6
       },
       {
         "date": "2026-09-11",
@@ -420,9 +414,15 @@
       },
       {
         "date": "2026-09-11",
+        "title": "燃油车卖不动了加油站怎么办",
+        "platform": "weibo",
+        "rank": 25
+      },
+      {
+        "date": "2026-09-11",
         "title": "燃油车卖不动 加油站怎么办",
         "platform": "baidu",
-        "rank": 18
+        "rank": 28
       }
     ],
     "sources": [
