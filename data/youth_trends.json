@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 166,
-    "today_count": 15,
-    "heat": 0.309,
+    "mention_count": 168,
+    "today_count": 17,
+    "heat": 0.328,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -33,9 +33,9 @@
       },
       {
         "date": "2026-09-11",
-        "title": "我不明白中国网球一姐郑钦文，为啥前段时间状态低迷，这次美网她就如换了一个人似的？",
+        "title": "2026 女篮世界杯 1/4 决赛，中国女篮 61 比 90 不敌法国女篮，止步八强，如何评价本场比赛？",
         "platform": "zhihu",
-        "rank": 7
+        "rank": 8
       }
     ],
     "sources": [
@@ -44,9 +44,9 @@
   },
   "户外": {
     "tag": "户外",
-    "mention_count": 39,
-    "today_count": 2,
-    "heat": 0.051,
+    "mention_count": 40,
+    "today_count": 3,
+    "heat": 0.064,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 65,
     "today_count": 2,
-    "heat": 0.067,
+    "heat": 0.066,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 574,
-    "today_count": 47,
+    "mention_count": 576,
+    "today_count": 49,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -162,9 +162,9 @@
       },
       {
         "date": "2026-09-11",
-        "title": "数学已经被 AI 彻底革命了么？",
-        "platform": "zhihu",
-        "rank": 4
+        "title": "【早报】油价大涨，黄金、白银大跌；美股存储板块，集体回落；燧原科技，今日上市；甲骨文，业绩超预期",
+        "platform": "cls-hot",
+        "rank": 3
       }
     ],
     "sources": [
@@ -173,9 +173,9 @@
   },
   "情绪价值": {
     "tag": "情绪价值",
-    "mention_count": 36,
-    "today_count": 3,
-    "heat": 0.063,
+    "mention_count": 37,
+    "today_count": 4,
+    "heat": 0.076,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -184,6 +184,12 @@
         "title": "能源价格重新“点火” 美国8月PPI略超预期 加剧市场焦虑情绪",
         "platform": "cls-hot",
         "rank": 2
+      },
+      {
+        "date": "2026-09-11",
+        "title": "车间裸奔员工因离职情绪失控",
+        "platform": "weibo",
+        "rank": 14
       },
       {
         "date": "2026-09-11",
@@ -202,12 +208,6 @@
         "title": "马上测·回顾2025：两位“较真”记者，这一年测评的快乐、震惊和成就",
         "platform": "thepaper",
         "rank": 1
-      },
-      {
-        "date": "2025-12-25",
-        "title": "现在，欧洲情绪很不稳定",
-        "platform": "ifeng",
-        "rank": 4
       }
     ],
     "sources": [
@@ -302,12 +302,18 @@
   },
   "体验": {
     "tag": "体验",
-    "mention_count": 41,
-    "today_count": 3,
-    "heat": 0.066,
+    "mention_count": 42,
+    "today_count": 4,
+    "heat": 0.079,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
+      {
+        "date": "2026-09-11",
+        "title": "iPhone17官方涨价线下降价",
+        "platform": "baidu",
+        "rank": 2
+      },
       {
         "date": "2026-09-11",
         "title": "霓虹博主体验特色石油浴",
@@ -331,12 +337,6 @@
         "title": "老广沉浸式夜生活",
         "platform": "bilibili-hot-search",
         "rank": 3
-      },
-      {
-        "date": "2025-12-26",
-        "title": "鸣潮3.0吧友体验实况",
-        "platform": "tieba",
-        "rank": 3
       }
     ],
     "sources": [
@@ -347,7 +347,7 @@
     "tag": "咖啡",
     "mention_count": 20,
     "today_count": 1,
-    "heat": 0.026,
+    "heat": 0.025,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 51,
     "today_count": 4,
-    "heat": 0.086,
+    "heat": 0.084,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
