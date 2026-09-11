@@ -17,7 +17,7 @@
         "date": "2026-09-12",
         "title": "皇马巴萨为何是国家德比",
         "platform": "bilibili-hot-search",
-        "rank": 6
+        "rank": 10
       },
       {
         "date": "2026-09-12",
@@ -97,7 +97,7 @@
         "date": "2026-09-12",
         "title": "厨房里的6个习惯正拖垮全家人的健康",
         "platform": "weibo",
-        "rank": 27
+        "rank": 23
       },
       {
         "date": "2025-12-22",
@@ -183,7 +183,7 @@
         "date": "2026-09-12",
         "title": "48小时看完燕麦系穿搭",
         "platform": "douyin",
-        "rank": 26
+        "rank": 29
       },
       {
         "date": "2026-09-12",
@@ -259,9 +259,9 @@
   },
   "时尚": {
     "tag": "时尚",
-    "mention_count": 39,
-    "today_count": 2,
-    "heat": 0.063,
+    "mention_count": 40,
+    "today_count": 3,
+    "heat": 0.085,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -273,9 +273,15 @@
       },
       {
         "date": "2026-09-12",
+        "title": "来看纽约时装周的顶级设计表达",
+        "platform": "douyin",
+        "rank": 27
+      },
+      {
+        "date": "2026-09-12",
         "title": "48小时看完燕麦系穿搭",
         "platform": "douyin",
-        "rank": 26
+        "rank": 29
       },
       {
         "date": "2025-12-21",
@@ -288,12 +294,6 @@
         "title": "井柏然Luke穿搭爆火",
         "platform": "baidu",
         "rank": 10
-      },
-      {
-        "date": "2025-12-21",
-        "title": "火影鸣佐传说时装技能爆料",
-        "platform": "bilibili-hot-search",
-        "rank": 12
       }
     ],
     "sources": [
