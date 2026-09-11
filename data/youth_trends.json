@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 184,
     "today_count": 33,
-    "heat": 0.273,
+    "heat": 0.269,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -11,6 +11,12 @@
         "date": "2026-09-11",
         "title": "中国女篮不敌法国无缘世界杯四强",
         "platform": "douyin",
+        "rank": 4
+      },
+      {
+        "date": "2026-09-11",
+        "title": "天下足球 罗贝里十年之约",
+        "platform": "bilibili-hot-search",
         "rank": 4
       },
       {
@@ -27,12 +33,6 @@
       },
       {
         "date": "2026-09-11",
-        "title": "天下足球 罗贝里十年之约",
-        "platform": "bilibili-hot-search",
-        "rank": 6
-      },
-      {
-        "date": "2026-09-11",
         "title": "中国女篮不敌法国 无缘世界杯四强",
         "platform": "baidu",
         "rank": 7
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 46,
     "today_count": 9,
-    "heat": 0.072,
+    "heat": 0.071,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 70,
     "today_count": 7,
-    "heat": 0.075,
+    "heat": 0.074,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 650,
-    "today_count": 123,
+    "mention_count": 653,
+    "today_count": 126,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 40,
     "today_count": 7,
-    "heat": 0.059,
+    "heat": 0.058,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 23,
     "today_count": 1,
-    "heat": 0.018,
+    "heat": 0.017,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 37,
     "today_count": 6,
-    "heat": 0.052,
+    "heat": 0.051,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 48,
     "today_count": 10,
-    "heat": 0.079,
+    "heat": 0.077,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -388,9 +388,9 @@
   },
   "活力": {
     "tag": "活力",
-    "mention_count": 55,
-    "today_count": 8,
-    "heat": 0.072,
+    "mention_count": 56,
+    "today_count": 9,
+    "heat": 0.076,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
