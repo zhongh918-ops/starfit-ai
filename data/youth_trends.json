@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 176,
     "today_count": 25,
-    "heat": 0.322,
+    "heat": 0.316,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 43,
     "today_count": 6,
-    "heat": 0.078,
+    "heat": 0.076,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -66,7 +66,7 @@
         "date": "2026-09-11",
         "title": "为什么非洲旅行这么贵",
         "platform": "bilibili-hot-search",
-        "rank": 8
+        "rank": 9
       },
       {
         "date": "2026-09-11",
@@ -78,7 +78,7 @@
         "date": "2026-09-11",
         "title": "胡塞领导人亲自驾驶缴获美制装甲车",
         "platform": "toutiao",
-        "rank": 16
+        "rank": 17
       }
     ],
     "sources": [
@@ -87,12 +87,24 @@
   },
   "健康": {
     "tag": "健康",
-    "mention_count": 67,
-    "today_count": 4,
-    "heat": 0.074,
+    "mention_count": 68,
+    "today_count": 5,
+    "heat": 0.082,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
+      {
+        "date": "2026-09-11",
+        "title": "厨房里的6个习惯正拖垮全家人的健康",
+        "platform": "toutiao",
+        "rank": 13
+      },
+      {
+        "date": "2026-09-11",
+        "title": "日常吃什么对肝脏健康更有帮助",
+        "platform": "toutiao",
+        "rank": 14
+      },
       {
         "date": "2026-09-11",
         "title": "马上评｜资助中断就威胁曝光？更该关注受助者的心理成长",
@@ -107,21 +119,9 @@
       },
       {
         "date": "2026-09-11",
-        "title": "日常吃什么对肝脏健康更有帮助",
-        "platform": "toutiao",
-        "rank": 20
-      },
-      {
-        "date": "2026-09-11",
         "title": "不同人群补充蛋白质该吃哪些食物",
         "platform": "toutiao",
         "rank": 22
-      },
-      {
-        "date": "2025-12-22",
-        "title": "抗癌药平替有效成分为0",
-        "platform": "weibo",
-        "rank": 2
       }
     ],
     "sources": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 601,
-    "today_count": 74,
+    "mention_count": 603,
+    "today_count": 76,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -156,9 +156,9 @@
       },
       {
         "date": "2026-09-11",
-        "title": "OpenAI或再推进数学七大难题",
-        "platform": "bilibili-hot-search",
-        "rank": 2
+        "title": "库克 华为",
+        "platform": "weibo",
+        "rank": 1
       },
       {
         "date": "2026-09-11",
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 37,
     "today_count": 4,
-    "heat": 0.057,
+    "heat": 0.056,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 34,
     "today_count": 3,
-    "heat": 0.046,
+    "heat": 0.045,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -281,7 +281,7 @@
         "date": "2026-09-11",
         "title": "刘雯纽约时装周开场",
         "platform": "weibo",
-        "rank": 23
+        "rank": 29
       },
       {
         "date": "2025-12-21",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 44,
     "today_count": 6,
-    "heat": 0.078,
+    "heat": 0.077,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -330,7 +330,7 @@
         "date": "2026-09-11",
         "title": "iPhone17官方涨价线下降价",
         "platform": "baidu",
-        "rank": 23
+        "rank": 22
       },
       {
         "date": "2026-09-11",
@@ -355,7 +355,7 @@
         "date": "2026-09-11",
         "title": "冰山冰美式到底怎么喝",
         "platform": "douyin",
-        "rank": 23
+        "rank": 25
       },
       {
         "date": "2025-12-26",
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 53,
     "today_count": 6,
-    "heat": 0.084,
+    "heat": 0.082,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
@@ -414,15 +414,15 @@
       },
       {
         "date": "2026-09-11",
-        "title": "燃油车卖不动了加油站怎么办",
-        "platform": "weibo",
-        "rank": 26
+        "title": "用热血漫打开王者万象棋",
+        "platform": "bilibili-hot-search",
+        "rank": 24
       },
       {
         "date": "2026-09-11",
-        "title": "燃油车卖不动 加油站怎么办",
-        "platform": "baidu",
-        "rank": 28
+        "title": "燃油车卖不动了加油站怎么办",
+        "platform": "weibo",
+        "rank": 26
       }
     ],
     "sources": [
