@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 177,
     "today_count": 26,
-    "heat": 0.295,
+    "heat": 0.286,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -12,6 +12,12 @@
         "title": "中国女篮不敌法国无缘世界杯四强",
         "platform": "douyin",
         "rank": 2
+      },
+      {
+        "date": "2026-09-11",
+        "title": "天下足球 罗贝里十年之约",
+        "platform": "bilibili-hot-search",
+        "rank": 3
       },
       {
         "date": "2026-09-11",
@@ -30,12 +36,6 @@
         "title": "上海体育局通报刘翔安置工作，未来将持续优化退役运动员安置",
         "platform": "thepaper",
         "rank": 7
-      },
-      {
-        "date": "2026-09-11",
-        "title": "2026 女篮世界杯 1/4 决赛，中国女篮 61 比 90 不敌法国女篮，止步八强，如何评价本场比赛？",
-        "platform": "zhihu",
-        "rank": 8
       }
     ],
     "sources": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 43,
     "today_count": 6,
-    "heat": 0.069,
+    "heat": 0.067,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -72,7 +72,7 @@
         "date": "2026-09-11",
         "title": "旅行青蛙停运,日方吃相太差",
         "platform": "tieba",
-        "rank": 13
+        "rank": 14
       },
       {
         "date": "2026-09-11",
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 69,
     "today_count": 6,
-    "heat": 0.084,
+    "heat": 0.082,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -113,15 +113,15 @@
       },
       {
         "date": "2026-09-11",
-        "title": "日常吃什么对肝脏健康更有帮助",
-        "platform": "toutiao",
-        "rank": 17
-      },
-      {
-        "date": "2026-09-11",
         "title": "白人饭的魅力主要是省时还是健康？",
         "platform": "zhihu",
         "rank": 19
+      },
+      {
+        "date": "2026-09-11",
+        "title": "日常吃什么对肝脏健康更有帮助",
+        "platform": "toutiao",
+        "rank": 21
       }
     ],
     "sources": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 614,
-    "today_count": 87,
+    "mention_count": 618,
+    "today_count": 91,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 39,
     "today_count": 6,
-    "heat": 0.067,
+    "heat": 0.065,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -184,12 +184,6 @@
         "title": "能源价格重新“点火” 美国8月PPI略超预期 加剧市场焦虑情绪",
         "platform": "cls-hot",
         "rank": 2
-      },
-      {
-        "date": "2026-09-11",
-        "title": "在爸妈小卖部上班的快乐日常",
-        "platform": "bilibili-hot-search",
-        "rank": 15
       },
       {
         "date": "2026-09-11",
@@ -202,6 +196,12 @@
         "title": "为什么阴天的时候人的情绪更容易低落？光照变化会通过怎样的生物通路，影响我们大脑的情绪状态？",
         "platform": "zhihu",
         "rank": 19
+      },
+      {
+        "date": "2026-09-11",
+        "title": "在爸妈小卖部上班的快乐日常",
+        "platform": "bilibili-hot-search",
+        "rank": 23
       },
       {
         "date": "2026-09-11",
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 23,
     "today_count": 1,
-    "heat": 0.021,
+    "heat": 0.02,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 36,
     "today_count": 5,
-    "heat": 0.058,
+    "heat": 0.056,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -287,7 +287,7 @@
         "date": "2026-09-11",
         "title": "来看纽约时装周的顶级设计表达",
         "platform": "douyin",
-        "rank": 25
+        "rank": 28
       },
       {
         "date": "2026-09-11",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 44,
     "today_count": 6,
-    "heat": 0.07,
+    "heat": 0.068,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -312,13 +312,13 @@
         "date": "2026-09-11",
         "title": "9月11日投资避雷针：国际油价大涨超6% 黄金、白银重挫 美股半导体全线下跌",
         "platform": "cls-hot",
-        "rank": 11
+        "rank": 10
       },
       {
         "date": "2026-09-11",
         "title": "霓虹博主体验特色石油浴",
         "platform": "tieba",
-        "rank": 17
+        "rank": 18
       },
       {
         "date": "2026-09-11",
@@ -328,14 +328,14 @@
       },
       {
         "date": "2026-09-11",
-        "title": "iPhone17Pro线下降价",
-        "platform": "weibo",
-        "rank": 25
+        "title": "iPhone系列新机上手体验",
+        "platform": "bilibili-hot-search",
+        "rank": 21
       },
       {
         "date": "2026-09-11",
-        "title": "iPhone系列新机上手体验",
-        "platform": "bilibili-hot-search",
+        "title": "iPhone17Pro线下降价",
+        "platform": "weibo",
         "rank": 25
       }
     ],
@@ -347,7 +347,7 @@
     "tag": "咖啡",
     "mention_count": 20,
     "today_count": 1,
-    "heat": 0.019,
+    "heat": 0.018,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
@@ -388,9 +388,9 @@
   },
   "活力": {
     "tag": "活力",
-    "mention_count": 53,
-    "today_count": 6,
-    "heat": 0.075,
+    "mention_count": 54,
+    "today_count": 7,
+    "heat": 0.081,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
@@ -404,7 +404,7 @@
         "date": "2026-09-11",
         "title": "燃油车卖不动了加油站怎么办",
         "platform": "weibo",
-        "rank": 7
+        "rank": 9
       },
       {
         "date": "2026-09-11",
@@ -420,9 +420,9 @@
       },
       {
         "date": "2026-09-11",
-        "title": "用热血漫打开王者万象棋",
-        "platform": "bilibili-hot-search",
-        "rank": 18
+        "title": "燃油车卖不动 加油站怎么办",
+        "platform": "toutiao",
+        "rank": 16
       }
     ],
     "sources": [
