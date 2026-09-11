@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 176,
-    "today_count": 25,
-    "heat": 0.302,
+    "mention_count": 177,
+    "today_count": 26,
+    "heat": 0.295,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -17,7 +17,7 @@
         "date": "2026-09-11",
         "title": "莱巴金娜首进美网决赛",
         "platform": "douyin",
-        "rank": 4
+        "rank": 5
       },
       {
         "date": "2026-09-11",
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 43,
     "today_count": 6,
-    "heat": 0.073,
+    "heat": 0.069,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 69,
     "today_count": 6,
-    "heat": 0.088,
+    "heat": 0.084,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -113,15 +113,15 @@
       },
       {
         "date": "2026-09-11",
-        "title": "白人饭的魅力主要是省时还是健康？",
-        "platform": "zhihu",
-        "rank": 19
+        "title": "日常吃什么对肝脏健康更有帮助",
+        "platform": "toutiao",
+        "rank": 17
       },
       {
         "date": "2026-09-11",
-        "title": "不同人群补充蛋白质该吃哪些食物",
-        "platform": "toutiao",
-        "rank": 22
+        "title": "白人饭的魅力主要是省时还是健康？",
+        "platform": "zhihu",
+        "rank": 19
       }
     ],
     "sources": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 608,
-    "today_count": 81,
+    "mention_count": 614,
+    "today_count": 87,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -156,15 +156,15 @@
       },
       {
         "date": "2026-09-11",
-        "title": "库克 华为",
-        "platform": "weibo",
+        "title": "美国AI天才：巨头拿我们的命在赌",
+        "platform": "toutiao",
         "rank": 1
       },
       {
         "date": "2026-09-11",
-        "title": "美国AI天才：巨头拿我们的命在赌",
-        "platform": "toutiao",
-        "rank": 2
+        "title": "美股收盘：美油破百三大指数四连跌 芯片、存储、光通信集体回落",
+        "platform": "cls-hot",
+        "rank": 3
       }
     ],
     "sources": [
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 39,
     "today_count": 6,
-    "heat": 0.071,
+    "heat": 0.067,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -189,7 +189,7 @@
         "date": "2026-09-11",
         "title": "在爸妈小卖部上班的快乐日常",
         "platform": "bilibili-hot-search",
-        "rank": 3
+        "rank": 15
       },
       {
         "date": "2026-09-11",
@@ -259,9 +259,9 @@
   },
   "时尚": {
     "tag": "时尚",
-    "mention_count": 35,
-    "today_count": 4,
-    "heat": 0.052,
+    "mention_count": 36,
+    "today_count": 5,
+    "heat": 0.058,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -285,15 +285,15 @@
       },
       {
         "date": "2026-09-11",
+        "title": "来看纽约时装周的顶级设计表达",
+        "platform": "douyin",
+        "rank": 25
+      },
+      {
+        "date": "2026-09-11",
         "title": "刘雯纽约时装周开场",
         "platform": "weibo",
         "rank": 29
-      },
-      {
-        "date": "2025-12-21",
-        "title": "普京又“催生”：生育子女应成为一种潮流",
-        "platform": "ifeng",
-        "rank": 5
       }
     ],
     "sources": [
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 44,
     "today_count": 6,
-    "heat": 0.073,
+    "heat": 0.07,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -334,8 +334,8 @@
       },
       {
         "date": "2026-09-11",
-        "title": "iPhone17官方涨价线下降价",
-        "platform": "baidu",
+        "title": "iPhone系列新机上手体验",
+        "platform": "bilibili-hot-search",
         "rank": 25
       }
     ],
@@ -347,7 +347,7 @@
     "tag": "咖啡",
     "mention_count": 20,
     "today_count": 1,
-    "heat": 0.02,
+    "heat": 0.019,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 53,
     "today_count": 6,
-    "heat": 0.079,
+    "heat": 0.075,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
