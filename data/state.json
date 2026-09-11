@@ -2920,12 +2920,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-12T01:00:24+08:00",
-    "source_mtime": "2026-09-12T01:00:06+08:00",
+    "generated_at": "2026-09-12T01:31:38+08:00",
+    "source_mtime": "2026-09-12T01:31:33+08:00",
     "today": "2026-09-12",
-    "total_items": 11270,
-    "today_items": 283,
-    "server_time": "2026-09-12T01:00:24+08:00",
+    "total_items": 11287,
+    "today_items": 300,
+    "server_time": "2026-09-12T01:31:38+08:00",
     "live": false,
     "dataMode": "demo",
     "trendMode": "demo",
