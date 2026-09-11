@@ -1,41 +1,41 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 185,
-    "today_count": 34,
-    "heat": 0.273,
+    "mention_count": 187,
+    "today_count": 2,
+    "heat": 0.153,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
       {
-        "date": "2026-09-11",
-        "title": "中国女篮不敌法国无缘世界杯四强",
-        "platform": "douyin",
-        "rank": 4
-      },
-      {
-        "date": "2026-09-11",
+        "date": "2026-09-12",
         "title": "止步世界杯八强，中国女篮须在失利中看清方向",
         "platform": "thepaper",
-        "rank": 4
-      },
-      {
-        "date": "2026-09-11",
-        "title": "莱巴金娜首进美网决赛",
-        "platform": "douyin",
         "rank": 5
       },
       {
-        "date": "2026-09-11",
-        "title": "中国女篮不敌法国 无缘世界杯四强",
-        "platform": "baidu",
-        "rank": 7
+        "date": "2026-09-12",
+        "title": "申请李昀锐当我的足球教练",
+        "platform": "douyin",
+        "rank": 28
       },
       {
-        "date": "2026-09-11",
-        "title": "上海体育局通报刘翔安置工作，未来将持续优化退役运动员安置",
-        "platform": "thepaper",
-        "rank": 7
+        "date": "2026-09-09",
+        "title": "皇马2:1击败国米",
+        "platform": "douyin",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-10",
+        "title": "回顾郑钦文美网之路",
+        "platform": "bilibili-hot-search",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-10",
+        "title": "中国女篮不敌法国无缘世界杯四强",
+        "platform": "douyin",
+        "rank": 1
       }
     ],
     "sources": [
@@ -44,17 +44,29 @@
   },
   "户外": {
     "tag": "户外",
-    "mention_count": 46,
-    "today_count": 9,
-    "heat": 0.071,
+    "mention_count": 48,
+    "today_count": 2,
+    "heat": 0.081,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
       {
-        "date": "2026-09-11",
+        "date": "2026-09-12",
         "title": "川西的秋天美得没轻没重",
         "platform": "douyin",
         "rank": 1
+      },
+      {
+        "date": "2026-09-12",
+        "title": "旅行青蛙停运,日方吃相太差",
+        "platform": "tieba",
+        "rank": 21
+      },
+      {
+        "date": "2025-12-24",
+        "title": "2025我的旅行特别鸣谢",
+        "platform": "douyin",
+        "rank": 2
       },
       {
         "date": "2026-09-11",
@@ -63,22 +75,10 @@
         "rank": 2
       },
       {
-        "date": "2026-09-11",
-        "title": "男生4次考公失败后花2万2旅行6国",
+        "date": "2025-12-22",
+        "title": "23岁硕士川西徒步因高反去世",
         "platform": "toutiao",
-        "rank": 8
-      },
-      {
-        "date": "2026-09-11",
-        "title": "为什么非洲旅行这么贵",
-        "platform": "bilibili-hot-search",
-        "rank": 9
-      },
-      {
-        "date": "2026-09-11",
-        "title": "胡塞领导人亲自驾驶缴获美制装甲车",
-        "platform": "toutiao",
-        "rank": 17
+        "rank": 5
       }
     ],
     "sources": [
@@ -88,40 +88,40 @@
   "健康": {
     "tag": "健康",
     "mention_count": 70,
-    "today_count": 7,
-    "heat": 0.073,
+    "today_count": 0,
+    "heat": 0.036,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
       {
-        "date": "2026-09-11",
-        "title": "萨巴伦卡称仍有机会夺回世界第一",
+        "date": "2025-12-22",
+        "title": "抗癌药平替有效成分为0",
         "platform": "weibo",
-        "rank": 10
+        "rank": 2
       },
       {
-        "date": "2026-09-11",
-        "title": "马上评｜资助中断就威胁曝光？更该关注受助者的心理成长",
-        "platform": "thepaper",
-        "rank": 15
-      },
-      {
-        "date": "2026-09-11",
-        "title": "白人饭的魅力主要是省时还是健康？",
+        "date": "2025-12-23",
+        "title": "大脑消耗糖分这么多，为什么没有动脑减肥法？",
         "platform": "zhihu",
-        "rank": 19
+        "rank": 2
       },
       {
-        "date": "2026-09-11",
-        "title": "日常吃什么对肝脏健康更有帮助",
-        "platform": "toutiao",
-        "rank": 21
+        "date": "2025-12-21",
+        "title": "冬至时节如何养生",
+        "platform": "weibo",
+        "rank": 3
       },
       {
-        "date": "2026-09-11",
-        "title": "不同人群补充蛋白质该吃哪些食物",
+        "date": "2025-12-21",
+        "title": "持续加码医保投入 夯实健康中国",
         "platform": "toutiao",
-        "rank": 22
+        "rank": 3
+      },
+      {
+        "date": "2026-09-10",
+        "title": "起底“神药”直播间①｜年售3.9亿的“养生局”：假专家、假神药，卖货全靠演",
+        "platform": "thepaper",
+        "rank": 3
       }
     ],
     "sources": [
@@ -130,41 +130,41 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 654,
-    "today_count": 127,
+    "mention_count": 677,
+    "today_count": 23,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
     "evidence": [
       {
-        "date": "2026-09-11",
-        "title": "苹果首款折叠屏iPhone来了！中国起售1.6万元，A20 Pro加持Duo与18 Pro",
-        "platform": "wallstreetcn-hot",
-        "rank": 1
-      },
-      {
-        "date": "2026-09-11",
+        "date": "2026-09-12",
         "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
         "platform": "wallstreetcn-hot",
         "rank": 1
       },
       {
-        "date": "2026-09-11",
-        "title": "【早报】油价大涨，黄金、白银大跌；美股存储板块，集体回落；燧原科技，今日上市；甲骨文，业绩超预期",
+        "date": "2026-09-12",
+        "title": "“10台手机卖不出1台折叠屏”",
+        "platform": "baidu",
+        "rank": 2
+      },
+      {
+        "date": "2026-09-12",
+        "title": "上市仅5天，天博智能股价“破发”",
         "platform": "cls-hot",
-        "rank": 1
+        "rank": 4
       },
       {
-        "date": "2026-09-11",
-        "title": "年销量预计1400万台！机构看好苹果折叠屏手机，但取决于产能和组装良率",
-        "platform": "thepaper",
-        "rank": 1
+        "date": "2026-09-12",
+        "title": "网友称把前置摄像头关掉刷手机可以保护眼睛，这是真的吗？如果属实，是因为哪些原理？",
+        "platform": "zhihu",
+        "rank": 4
       },
       {
-        "date": "2026-09-11",
-        "title": "美国AI天才：巨头拿我们的命在赌",
-        "platform": "toutiao",
-        "rank": 1
+        "date": "2026-09-12",
+        "title": "配苹果不配鸿蒙,网易UU挨喷",
+        "platform": "tieba",
+        "rank": 6
       }
     ],
     "sources": [
@@ -173,12 +173,24 @@
   },
   "情绪价值": {
     "tag": "情绪价值",
-    "mention_count": 40,
-    "today_count": 7,
-    "heat": 0.057,
+    "mention_count": 41,
+    "today_count": 1,
+    "heat": 0.049,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
+      {
+        "date": "2026-09-12",
+        "title": "在爸妈小卖部上班的快乐日常",
+        "platform": "bilibili-hot-search",
+        "rank": 30
+      },
+      {
+        "date": "2025-12-24",
+        "title": "马上测·回顾2025：两位“较真”记者，这一年测评的快乐、震惊和成就",
+        "platform": "thepaper",
+        "rank": 1
+      },
       {
         "date": "2026-09-11",
         "title": "能源价格重新“点火” 美国8月PPI略超预期 加剧市场焦虑情绪",
@@ -186,28 +198,16 @@
         "rank": 2
       },
       {
-        "date": "2026-09-11",
-        "title": "专家：市场情绪接近冰点随时等待反攻",
-        "platform": "toutiao",
-        "rank": 9
+        "date": "2025-12-25",
+        "title": "现在，欧洲情绪很不稳定",
+        "platform": "ifeng",
+        "rank": 4
       },
       {
-        "date": "2026-09-11",
-        "title": "为什么阴天的时候人的情绪更容易低落？光照变化会通过怎样的生物通路，影响我们大脑的情绪状态？",
-        "platform": "zhihu",
-        "rank": 19
-      },
-      {
-        "date": "2026-09-11",
-        "title": "48小时看完燕麦系穿搭",
+        "date": "2026-09-09",
+        "title": "燕麦系秋天的神",
         "platform": "douyin",
-        "rank": 19
-      },
-      {
-        "date": "2026-09-11",
-        "title": "在爸妈小卖部上班的快乐日常",
-        "platform": "bilibili-hot-search",
-        "rank": 23
+        "rank": 4
       }
     ],
     "sources": [
@@ -217,17 +217,11 @@
   "便利": {
     "tag": "便利",
     "mention_count": 23,
-    "today_count": 1,
-    "heat": 0.017,
+    "today_count": 0,
+    "heat": 0.012,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
-      {
-        "date": "2026-09-11",
-        "title": "安徽合肥：外卖员连续送单超4小时，20分钟内将不再派单",
-        "platform": "ifeng",
-        "rank": 11
-      },
       {
         "date": "2025-12-26",
         "title": "贾国龙预制菜风波后发声，称靠吃安眠药入睡，如果能重来坚决不硬刚，如何看待西贝未来的发展？",
@@ -251,6 +245,12 @@
         "title": "外卖骑手在家中猝死被保险公司拒赔",
         "platform": "baidu",
         "rank": 7
+      },
+      {
+        "date": "2026-09-09",
+        "title": "副部长赵世堂点赞一名外卖小哥",
+        "platform": "baidu",
+        "rank": 9
       }
     ],
     "sources": [
@@ -259,17 +259,23 @@
   },
   "时尚": {
     "tag": "时尚",
-    "mention_count": 37,
-    "today_count": 6,
-    "heat": 0.051,
+    "mention_count": 38,
+    "today_count": 1,
+    "heat": 0.048,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
       {
-        "date": "2026-09-11",
+        "date": "2026-09-12",
         "title": "速来领取可可系穿搭说明书",
         "platform": "douyin",
         "rank": 4
+      },
+      {
+        "date": "2025-12-21",
+        "title": "普京又“催生”：生育子女应成为一种潮流",
+        "platform": "ifeng",
+        "rank": 5
       },
       {
         "date": "2026-09-11",
@@ -278,22 +284,16 @@
         "rank": 10
       },
       {
-        "date": "2026-09-11",
-        "title": "48小时看完燕麦系穿搭",
-        "platform": "douyin",
-        "rank": 19
+        "date": "2025-12-21",
+        "title": "火影鸣佐传说时装技能爆料",
+        "platform": "bilibili-hot-search",
+        "rank": 12
       },
       {
-        "date": "2026-09-11",
-        "title": "秋日穿搭从秀场找点灵感",
-        "platform": "douyin",
-        "rank": 23
-      },
-      {
-        "date": "2026-09-11",
-        "title": "刘雯纽约时装周开场",
+        "date": "2025-12-21",
+        "title": "田曦薇造型师审美",
         "platform": "weibo",
-        "rank": 29
+        "rank": 12
       }
     ],
     "sources": [
@@ -302,41 +302,41 @@
   },
   "体验": {
     "tag": "体验",
-    "mention_count": 49,
-    "today_count": 11,
-    "heat": 0.083,
+    "mention_count": 53,
+    "today_count": 4,
+    "heat": 0.14,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
       {
-        "date": "2026-09-11",
+        "date": "2026-09-12",
+        "title": "勇哥线下食堂定价到底算不算贵",
+        "platform": "bilibili-hot-search",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-12",
         "title": "油价短线下挫！伊朗将与海湾六国会晤、红海西海岸停火，中东局势现缓和信号",
         "platform": "wallstreetcn-hot",
         "rank": 5
       },
       {
-        "date": "2026-09-11",
-        "title": "勇哥线下食堂定价到底算不算贵",
+        "date": "2026-09-12",
+        "title": "iPhone系列新机上手体验",
         "platform": "bilibili-hot-search",
-        "rank": 6
+        "rank": 25
       },
       {
-        "date": "2026-09-11",
-        "title": "9月11日投资避雷针：国际油价大涨超6% 黄金、白银重挫 美股半导体全线下跌",
-        "platform": "cls-hot",
-        "rank": 7
+        "date": "2026-09-12",
+        "title": "霓虹博主体验特色石油浴",
+        "platform": "tieba",
+        "rank": 25
       },
       {
-        "date": "2026-09-11",
-        "title": "时代峰峻 线下活动",
-        "platform": "weibo",
-        "rank": 11
-      },
-      {
-        "date": "2026-09-11",
-        "title": "Apple Watch S12上手体验",
-        "platform": "weibo",
-        "rank": 18
+        "date": "2025-12-22",
+        "title": "老广沉浸式夜生活",
+        "platform": "bilibili-hot-search",
+        "rank": 3
       }
     ],
     "sources": [
@@ -346,23 +346,11 @@
   "咖啡": {
     "tag": "咖啡",
     "mention_count": 21,
-    "today_count": 2,
-    "heat": 0.021,
+    "today_count": 0,
+    "heat": 0.011,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
-      {
-        "date": "2026-09-11",
-        "title": "从看展喝咖啡到研究菜市场打折，年轻人为何开始流行「纯过日子」了？背后反映了怎样的心态变化？",
-        "platform": "zhihu",
-        "rank": 15
-      },
-      {
-        "date": "2026-09-11",
-        "title": "冰山冰美式到底怎么喝",
-        "platform": "douyin",
-        "rank": 25
-      },
       {
         "date": "2025-12-26",
         "title": "如何评价睡前消息称国产茶类饮品（点名某茶姬）咖啡因含量过高，是准毒品的擦边球？",
@@ -380,6 +368,18 @@
         "title": "霸王茶姬 咖啡因",
         "platform": "weibo",
         "rank": 6
+      },
+      {
+        "date": "2025-12-26",
+        "title": "美股指开盘涨跌不一，霸王茶姬股价创新低，金属再度狂飙，金银铜齐创新高，沪铜首次站上十万关口",
+        "platform": "wallstreetcn-hot",
+        "rank": 8
+      },
+      {
+        "date": "2025-12-26",
+        "title": "咖啡因变毒品,马督公又出暴论",
+        "platform": "tieba",
+        "rank": 9
       }
     ],
     "sources": [
@@ -388,41 +388,41 @@
   },
   "活力": {
     "tag": "活力",
-    "mention_count": 56,
-    "today_count": 9,
-    "heat": 0.076,
+    "mention_count": 59,
+    "today_count": 3,
+    "heat": 0.115,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
       {
-        "date": "2026-09-11",
+        "date": "2026-09-12",
         "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
         "platform": "wallstreetcn-hot",
         "rank": 1
       },
       {
-        "date": "2026-09-11",
+        "date": "2026-09-12",
         "title": "燃油车也要“通电”试试拯救销量",
         "platform": "toutiao",
-        "rank": 4
+        "rank": 8
       },
       {
-        "date": "2026-09-11",
-        "title": "燃油车卖不动了加油站怎么办",
-        "platform": "weibo",
-        "rank": 9
-      },
-      {
-        "date": "2026-09-11",
-        "title": "鸣潮景燃攻略",
-        "platform": "bilibili-hot-search",
-        "rank": 11
-      },
-      {
-        "date": "2026-09-11",
-        "title": "鸣潮景燃上线",
+        "date": "2026-09-12",
+        "title": "生逢其时拍出了青春生长痛",
         "platform": "douyin",
-        "rank": 13
+        "rank": 29
+      },
+      {
+        "date": "2026-09-09",
+        "title": "8 月新能源车零售 100.5 万辆，同比下降 10.1%，燃油车零售 54 万辆，同比下降 40%，如何解读？",
+        "platform": "zhihu",
+        "rank": 2
+      },
+      {
+        "date": "2025-12-22",
+        "title": "中国人造太阳燃料取自海水",
+        "platform": "weibo",
+        "rank": 3
       }
     ],
     "sources": [
