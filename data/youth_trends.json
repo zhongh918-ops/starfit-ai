@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 192,
     "today_count": 7,
-    "heat": 0.191,
+    "heat": 0.185,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 48,
     "today_count": 2,
-    "heat": 0.051,
+    "heat": 0.049,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -60,7 +60,7 @@
         "date": "2026-09-12",
         "title": "旅行青蛙停运,日方吃相太差",
         "platform": "tieba",
-        "rank": 24
+        "rank": 25
       },
       {
         "date": "2025-12-24",
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 72,
     "today_count": 2,
-    "heat": 0.063,
+    "heat": 0.061,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -97,7 +97,7 @@
         "date": "2026-09-12",
         "title": "前妻曝马斯克居高临下心理操控自己",
         "platform": "weibo",
-        "rank": 13
+        "rank": 6
       },
       {
         "date": "2026-09-12",
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 702,
-    "today_count": 48,
+    "mention_count": 705,
+    "today_count": 51,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 42,
     "today_count": 2,
-    "heat": 0.048,
+    "heat": 0.046,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -189,7 +189,7 @@
         "date": "2026-09-12",
         "title": "在爸妈小卖部上班的快乐日常",
         "platform": "bilibili-hot-search",
-        "rank": 30
+        "rank": 29
       },
       {
         "date": "2025-12-24",
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 24,
     "today_count": 1,
-    "heat": 0.026,
+    "heat": 0.025,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 42,
     "today_count": 5,
-    "heat": 0.089,
+    "heat": 0.085,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 54,
     "today_count": 5,
-    "heat": 0.095,
+    "heat": 0.091,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -322,21 +322,21 @@
       },
       {
         "date": "2026-09-12",
-        "title": "在港中文上学是种什么体验",
-        "platform": "bilibili-hot-search",
-        "rank": 19
-      },
-      {
-        "date": "2026-09-12",
         "title": "iPhone系列新机上手体验",
         "platform": "bilibili-hot-search",
         "rank": 25
       },
       {
         "date": "2026-09-12",
+        "title": "在港中文上学是种什么体验",
+        "platform": "bilibili-hot-search",
+        "rank": 27
+      },
+      {
+        "date": "2026-09-12",
         "title": "霓虹博主体验特色石油浴",
         "platform": "tieba",
-        "rank": 28
+        "rank": 29
       }
     ],
     "sources": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 59,
     "today_count": 3,
-    "heat": 0.07,
+    "heat": 0.068,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
