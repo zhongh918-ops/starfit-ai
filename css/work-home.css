@@ -229,28 +229,40 @@
   color: var(--slate);
   max-width: 62ch;
 }
-.home-trend-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
+.home-trend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
-.home-trend-table th {
-  text-align: left;
+.home-trend-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 1.1fr) 88px 120px 88px minmax(140px, 1.3fr);
+  gap: 12px;
+  align-items: center;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--track);
+  font-size: 13px;
+  color: var(--ink);
+}
+.home-trend-row.head {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--olive-700);
-  padding: 8px 8px 8px 0;
   border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
 }
-.home-trend-table td {
-  padding: 10px 8px 10px 0;
-  border-bottom: 1px solid var(--track);
-  color: var(--ink);
-  vertical-align: middle;
+.home-trend-row.on-brief {
+  background: var(--lime-100);
+  border-radius: 10px;
 }
-.home-trend-table tr.on-brief td { background: var(--lime-100); }
+.home-trend-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
 .home-trend-tag {
   display: inline-flex;
   align-items: center;
@@ -261,8 +273,8 @@
   font-weight: 600;
   font-size: 12px;
 }
-.home-trend-table tr.on-brief .home-trend-tag { background: var(--lime-300); }
-.home-trend-table small {
+.home-trend-row.on-brief .home-trend-tag { background: var(--lime-300); }
+.home-trend-name small {
   color: var(--olive-700);
   font-size: 11px;
   font-weight: 600;
@@ -270,21 +282,34 @@
 .home-trend-dir { font-weight: 600; color: var(--olive-700); }
 .home-trend-dir.flat { color: var(--slate); }
 .home-trend-dir.down { color: var(--warning); }
+.home-trend-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-variant-numeric: tabular-nums;
+}
 .home-trend-bar {
   display: inline-block;
   width: 72px;
   height: 6px;
-  margin-right: 8px;
   border-radius: 99px;
   background: var(--track);
   overflow: hidden;
-  vertical-align: middle;
 }
 .home-trend-bar i {
   display: block;
   height: 100%;
   background: var(--olive-700);
   border-radius: 99px;
+}
+.home-trend-count { font-variant-numeric: tabular-nums; color: var(--slate); }
+.home-trend-note { color: var(--slate); }
+@media (max-width: 900px) {
+  .home-trend-row,
+  .home-trend-row.head {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 12px;
+  }
 }
 
 .home-points {

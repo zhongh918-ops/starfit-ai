@@ -17,7 +17,7 @@
 <script src="js/public-base.js"></script>
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/shell.css">
-<link rel="stylesheet" href="css/work-home.css">
+<link rel="stylesheet" href="css/work-home.css?v=trends2">
 <link rel="stylesheet" href="css/product.css">
 <link rel="stylesheet" href="css/trends.css">
 <link rel="stylesheet" href="css/tags.css">
@@ -2279,28 +2279,28 @@ function renderHomeTrends() {
     if (sa !== sb) return sb - sa;
     return (Number(trends[b].heat) || 0) - (Number(trends[a].heat) || 0);
   });
-  box.innerHTML = `<table class="home-trend-table">
-    <thead><tr>
-      <th>${escHtml(t('home.trends.tag'))}</th>
-      <th>${escHtml(t('home.trends.dir'))}</th>
-      <th>${escHtml(t('home.trends.score'))}</th>
-      <th>${escHtml(t('home.trends.count'))}</th>
-      <th>${escHtml(t('home.trends.confirm'))}</th>
-    </tr></thead>
-    <tbody>${tags.map(tag => {
+  box.innerHTML = `<div class="home-trend-list">
+    <div class="home-trend-row head">
+      <span>${escHtml(t('home.trends.tag'))}</span>
+      <span>${escHtml(t('home.trends.dir'))}</span>
+      <span>${escHtml(t('home.trends.score'))}</span>
+      <span>${escHtml(t('home.trends.count'))}</span>
+      <span>${escHtml(t('home.trends.confirm'))}</span>
+    </div>
+    ${tags.map(tag => {
       const row = trends[tag] || {};
       const a = trendArrow(tag);
       const ok = trendConfirmed(row);
       const on = seed.has(tag);
-      return `<tr class="${on ? 'on-brief' : ''}">
-        <td><span class="home-trend-tag">${escHtml(chipLabel(tag))}</span>${on ? ' <small>' + escHtml(t('home.trends.on')) + '</small>' : ''}</td>
-        <td><span class="home-trend-dir ${escHtml(a.cls || '')}">${escHtml(a.mark)} ${escHtml(trendDirLabel(a))}</span></td>
-        <td><span class="home-trend-bar"><i style="width:${pct(row.heat)}%"></i></span> ${pct(row.heat)}</td>
-        <td>${row.today_count || 0} / ${row.mention_count || 0}</td>
-        <td>${escHtml(ok ? t('home.trends.ok') : t('home.trends.weak'))}</td>
-      </tr>`;
-    }).join('')}</tbody>
-  </table>`;
+      return `<div class="home-trend-row${on ? ' on-brief' : ''}">
+        <span class="home-trend-name"><span class="home-trend-tag">${escHtml(chipLabel(tag))}</span>${on ? '<small>' + escHtml(t('home.trends.on')) + '</small>' : ''}</span>
+        <span class="home-trend-dir ${escHtml(a.cls || '')}">${escHtml(a.mark)} ${escHtml(trendDirLabel(a))}</span>
+        <span class="home-trend-score"><span class="home-trend-bar"><i style="width:${pct(row.heat)}%"></i></span>${pct(row.heat)}</span>
+        <span class="home-trend-count">${row.today_count || 0} / ${row.mention_count || 0}</span>
+        <span class="home-trend-note">${escHtml(ok ? t('home.trends.ok') : t('home.trends.weak'))}</span>
+      </div>`;
+    }).join('')}
+  </div>`;
   sec.hidden = false;
 }
 
