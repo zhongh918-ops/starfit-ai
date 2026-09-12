@@ -68,6 +68,72 @@
   margin-bottom: 12px;
   min-height: 0;
 }
+.cs-hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.cs-visual.scene-photo {
+  height: 48vh;
+  max-height: 520px;
+  background: #ece7de;
+}
+.cs-visual.scene-photo img {
+  inset: 0;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.cs-visual.scene-photo::after { display: none; }
+.cs-scene-label {
+  margin: 2px 0 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--olive-700);
+}
+.cs-scene-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.cs-scene-strip button {
+  position: relative;
+  height: 72px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111;
+  cursor: pointer;
+}
+.cs-scene-strip button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cs-scene-strip button span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 6px 5px;
+  background: linear-gradient(transparent, rgba(17,17,17,.78));
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+}
+.cs-scene-strip button.on {
+  border-color: var(--olive-900);
+  box-shadow: 0 0 0 2px var(--lime-300);
+}
 .cs-visual {
   position: relative;
   border-radius: 16px;
@@ -234,4 +300,6 @@
 @media (max-width: 1280px) {
   .cs-hero, .cs-cards { grid-template-columns: 1fr; }
   .cs-visual { height: 220px; }
+  .cs-visual.scene-photo { height: 240px; }
+  .cs-scene-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

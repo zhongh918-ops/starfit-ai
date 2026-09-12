@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>99% match</title>
+<script>
+(function () {
+  var gh = /github\.io$/.test(location.hostname);
+  if (!document.querySelector("base")) {
+    var el = document.createElement("base");
+    el.href = gh ? "/starfit-ai/" : "/";
+    document.head.appendChild(el);
+  }
+})();
+</script>
 <script src="js/public-base.js"></script>
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/shell.css">
@@ -14,7 +24,7 @@
 <link rel="stylesheet" href="css/scoring.css">
 <link rel="stylesheet" href="css/listing.css">
 <link rel="stylesheet" href="css/candidate.css">
-<link rel="stylesheet" href="css/campaign.css">
+<link rel="stylesheet" href="css/campaign.css?v=scenes2">
 <link rel="stylesheet" href="css/legacy.css">
 </head>
 <body data-page="work">
@@ -123,10 +133,18 @@
                 </button>
                 <a class="btn-secondary" href="/work/product" data-i18n="home.pu">Product Understanding</a>
                 <a class="btn-secondary" href="/work/scoring" data-i18n="home.scoring">Scoring Strategy</a>
-                <button type="button" class="btn-primary" id="run" disabled data-i18n="home.run">Run match →</button>
+                <button type="button" class="btn-primary" id="run" data-i18n="home.run">Run match →</button>
               </div>
             </div>
-            <p class="ready-line"><span class="status-dot" id="readyDot"></span><span id="readyText" data-i18n="home.ready">Confirm Product Understanding to unlock Run Match.</span></p>
+            <p class="ready-line"><span class="status-dot" id="readyDot"></span><span id="readyText" data-i18n="home.ready">Ready to match with the current brief and default scoring.</span></p>
+            <section class="home-trends" id="homeTrends" hidden>
+              <div class="home-trends-head">
+                <p class="eyebrow" data-i18n="home.trends.eyebrow">Word trends</p>
+                <h2 data-i18n="home.trends.h2">Current tag signals</h2>
+                <p class="lede" data-i18n="home.trends.lede">Repeated headline hits only. A single hot word is not treated as a confirmed trend.</p>
+              </div>
+              <div id="homeTrendBody"></div>
+            </section>
             <div class="home-points">
               <div>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V8l4 3 4-6 4 4 4-3v12z"/></svg>
@@ -196,6 +214,10 @@
                     <option value="Premium" data-i18n="pu.price.premium">Premium</option>
                     <option value="Unavailable" data-i18n="common.unavailable">Unavailable</option>
                   </select>
+                </div>
+                <div class="pu-row">
+                  <span data-i18n="pu.budget">Talent budget</span>
+                  <input class="field" id="puBudget" type="number" min="0" step="0.5" inputmode="decimal" data-i18n-aria="pu.budgetHint" aria-label="CNY millions">
                 </div>
                 <div class="pu-row">
                   <span data-i18n="pu.features">Key features</span>
@@ -408,15 +430,24 @@
     </div>
   </div>
 </div>
-<script src="js/i18n.js"></script>
+<script src="js/i18n.js?v=camp-scenes1"></script>
 <script>
-const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
+const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, campaignScene: 'hero', drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
 const SESSION_KEY = 'match99-work';
 const HIST_KEY = 'match99-work-hist';
 const MODE_KEY = 'match99-data-mode';
 const CONSIDER_KEY = 'match99-consider';
 const STANDARD_CONCEPT = '/assets/concepts/candidate-standard-ai-concept.png';
 const CAMPAIGN_HERO = '/assets/campaign/campaign-direction-hero.png';
+const CAMPAIGN_SCENES = [
+  { key: 'hero', src: CAMPAIGN_HERO },
+  { key: 'lobby', src: '/assets/campaign/scene-lobby-poster.png' },
+  { key: 'metro', src: '/assets/campaign/scene-metro-hang.png' },
+  { key: 'phone', src: '/assets/campaign/scene-phone-feed.png' }
+];
+function campaignSceneList() {
+  return CAMPAIGN_SCENES.map(s => Object.assign({}, s, { label: t('camp.scene.' + s.key) }));
+}
 function withBase(path) {
   return window.Match99Base ? Match99Base.withBase(path) : path;
 }
@@ -591,6 +622,61 @@ function feeLabelOf(celeb) {
   const b = (Number(r.max) / 1000000);
   const fmt = (n) => (Math.round(n * 10) / 10).toString();
   return t('lib.feeFmt', { a: fmt(a), b: fmt(b) });
+}
+const DEFAULT_TALENT_BUDGET = { shoes: 10000000, 'cold-brew': 6000000, headphones: 8000000 };
+const DEFAULT_PROD_BUDGET = { shoes: 3500000, 'cold-brew': 2000000, headphones: 2500000 };
+function moneyMillions(n) {
+  const m = Number(n) / 1000000;
+  if (!Number.isFinite(m) || m <= 0) return '';
+  return (Math.round(m * 10) / 10).toString();
+}
+function currentProductId() {
+  return ((document.getElementById('product') || {}).value) || ((state.matchPack && state.matchPack.productId) || '');
+}
+function catalogBudgetCny(kind) {
+  const pid = currentProductId();
+  const p = (state.products || []).find(x => x.id === pid) || {};
+  const key = kind === 'prod' ? 'productionBudgetCny' : 'talentBudgetCny';
+  const fallback = kind === 'prod' ? DEFAULT_PROD_BUDGET[pid] : DEFAULT_TALENT_BUDGET[pid];
+  const n = Number(p[key] != null ? p[key] : fallback);
+  return n > 0 ? n : 0;
+}
+function productTalentBudgetCny() {
+  const fromU = Number(state.understanding && state.understanding.talentBudgetCny);
+  if (fromU > 0) return fromU;
+  const fixture = state.demoAnalysis && state.demoAnalysis.productBrief && state.demoAnalysis.productBrief.workingBudget;
+  const fromFix = Number(fixture && fixture.talentCny);
+  if (currentProductId() === 'shoes' && fromFix > 0) return fromFix;
+  return catalogBudgetCny('talent');
+}
+function productProductionBudgetCny() {
+  const fromU = Number(state.understanding && state.understanding.productionBudgetCny);
+  if (fromU > 0) return fromU;
+  const fixture = state.demoAnalysis && state.demoAnalysis.productBrief && state.demoAnalysis.productBrief.workingBudget;
+  const fromFix = Number(fixture && fixture.productionCny);
+  if (currentProductId() === 'shoes' && fromFix > 0) return fromFix;
+  return catalogBudgetCny('prod');
+}
+function workingBudgetLabel() {
+  const cap = productTalentBudgetCny();
+  return cap ? t('money.talentM', { n: moneyMillions(cap) }) : t('common.unavailable');
+}
+function productionBudgetLabel() {
+  const n = productProductionBudgetCny();
+  return n ? t('money.prodM', { n: moneyMillions(n) }) : t('common.unavailable');
+}
+function feeRangeOf(celebOrRow) {
+  const id = celebOrRow && celebOrRow.id;
+  const celeb = id ? ((state.celebrities || []).find(c => c.id === id) || celebOrRow) : celebOrRow;
+  return celeb && celeb.commercial && celeb.commercial.feeRangeCny;
+}
+function budgetFitOf(celebOrRow) {
+  const cap = productTalentBudgetCny();
+  const r = feeRangeOf(celebOrRow);
+  if (!cap || !r || r.min == null) return { code: 'na', label: t('common.unavailable') };
+  if (Number(r.max) <= cap) return { code: 'within', label: t('cmp.budget.within') };
+  if (Number(r.min) <= cap) return { code: 'near', label: t('cmp.budget.near') };
+  return { code: 'over', label: t('cmp.budget.over') };
 }
 function fixtureWeightScore(components, w) {
   if (!components || !w) return 0;
@@ -797,19 +883,36 @@ function readSession() {
   try { return JSON.parse(sessionStorage.getItem(SESSION_KEY) || 'null'); } catch (e) { return null; }
 }
 
+function ensureDefaultBrief() {
+  const pid = (document.getElementById('product') || {}).value;
+  const p = (state.products || []).find(x => x.id === pid) || {};
+  if (!state.understanding || state.understanding.productId !== p.id) {
+    state.understanding = Object.assign({ productId: p.id }, defaultUnderstanding(p));
+    state.minAge = state.understanding.minAge || state.minAge || 18;
+    state.maxAge = state.understanding.maxAge || state.maxAge || 28;
+  }
+  state.briefConfirmed = true;
+  state.hadConfirmedBrief = true;
+  if (!state.briefVersion) state.briefVersion = 1;
+  if (!state.scoringApplied) {
+    state.scoringApplied = cloneScore(SCORE_PRESETS.balanced);
+    state.scoringSaved = cloneScore(SCORE_PRESETS.balanced);
+    state.scoringDraft = cloneScore(SCORE_PRESETS.balanced);
+    state.scoringValid = true;
+    state.scoringVersion = state.scoringVersion || 'scoring_balanced_v1';
+    state.scoringPreset = state.scoringPreset || 'balanced';
+  }
+}
+
 function updateMatchGate() {
   const run = document.getElementById('run');
   const ready = document.getElementById('readyText');
-  const ok = !!(state.briefConfirmed && state.scoringValid);
+  const ok = !!state.scoringValid;
   if (run) {
     run.disabled = !ok;
-    run.title = ok ? t('gate.runOk') : t('gate.runNeed');
+    run.title = ok ? t('gate.runOk') : t('gate.scoringBad');
   }
-  if (ready) {
-    ready.textContent = ok
-      ? t('gate.ready')
-      : (state.briefConfirmed ? t('gate.scoringBad') : t('home.ready'));
-  }
+  if (ready) ready.textContent = ok ? t('gate.ready') : t('gate.scoringBad');
 }
 
 let productViewFilled = false;
@@ -832,7 +935,8 @@ function applyView() {
   if (listing) listing.hidden = v !== 'fit';
   if (candidate) candidate.hidden = v !== 'candidate';
   if (campaign) campaign.hidden = v !== 'campaign';
-  if (results) results.hidden = v !== 'home' || !results.dataset.hasResult;
+  if (results) results.hidden = true;
+  if (v === 'home') renderHomeTrends();
   const body = document.querySelector('.app-body');
   const rail = document.getElementById('candidateRail');
   if (body) {
@@ -1369,7 +1473,9 @@ function defaultUnderstanding(p) {
     features: splitChips(p.features),
     scenarios: splitChips(p.scenarios),
     imageChips: splitChips(p.desired_image).map(titleChip),
-    objective: localizedObjective(p, OBJECTIVE_EN[p.id] || p.campaign_objective || '')
+    objective: localizedObjective(p, OBJECTIVE_EN[p.id] || p.campaign_objective || ''),
+    talentBudgetCny: Number(p.talentBudgetCny) || DEFAULT_TALENT_BUDGET[p.id] || 0,
+    productionBudgetCny: Number(p.productionBudgetCny) || DEFAULT_PROD_BUDGET[p.id] || 0
   };
 }
 
@@ -1383,7 +1489,8 @@ function understandingSnapshot() {
     features: state.understanding?.features,
     scenarios: state.understanding?.scenarios,
     imageChips: state.understanding?.imageChips,
-    objective: document.getElementById('puObjective')?.value
+    objective: document.getElementById('puObjective')?.value,
+    talentBudgetCny: document.getElementById('puBudget')?.value
   });
 }
 
@@ -1395,6 +1502,9 @@ function readUnderstandingFromForm() {
   u.maxAge = state.maxAge;
   u.priceTier = document.getElementById('puPrice').value;
   u.objective = document.getElementById('puObjective').value.trim();
+  const budgetEl = document.getElementById('puBudget');
+  const millions = budgetEl ? Number(budgetEl.value) : 0;
+  u.talentBudgetCny = millions > 0 ? Math.round(millions * 1000000) : 0;
   state.understanding = u;
   document.getElementById('audience').value = `${u.minAge}-${u.maxAge}`;
   const pill = document.getElementById('agePill');
@@ -1406,7 +1516,7 @@ function countExtracted() {
   const u = state.understanding || {};
   const fields = [
     u.name, u.category, u.minAge && u.maxAge, u.priceTier && u.priceTier !== 'Unavailable',
-    u.features?.length, u.scenarios?.length, u.imageChips?.length, u.objective
+    u.talentBudgetCny, u.features?.length, u.scenarios?.length, u.imageChips?.length, u.objective
   ];
   return fields.filter(Boolean).length;
 }
@@ -1481,11 +1591,7 @@ function clampAgeHandles(which) {
 }
 
 function markBriefStale() {
-  if (state.briefConfirmed) {
-    state.hadConfirmedBrief = true;
-    state.briefConfirmed = false;
-    updateMatchGate();
-  }
+  if (state.matchPack) state.rankingStale = true;
 }
 
 function fillProductUnderstanding() {
@@ -1512,6 +1618,14 @@ function fillProductUnderstanding() {
   const price = document.getElementById('puPrice');
   if ([...price.options].some(o => o.value === u.priceTier)) price.value = u.priceTier;
   else price.value = 'Unavailable';
+  if (u.talentBudgetCny == null || Number(u.talentBudgetCny) <= 0) {
+    u.talentBudgetCny = Number(p.talentBudgetCny) || DEFAULT_TALENT_BUDGET[p.id] || 0;
+  }
+  if (u.productionBudgetCny == null || Number(u.productionBudgetCny) <= 0) {
+    u.productionBudgetCny = Number(p.productionBudgetCny) || DEFAULT_PROD_BUDGET[p.id] || 0;
+  }
+  const budgetEl = document.getElementById('puBudget');
+  if (budgetEl) budgetEl.value = moneyMillions(u.talentBudgetCny) || '';
   document.getElementById('puObjective').value = u.objective || '';
   state.minAge = u.minAge;
   state.maxAge = u.maxAge;
@@ -1791,9 +1905,11 @@ async function load(keepProduct) {
     state.scoringPreset = 'balanced';
   }
   markPackSnapshotStale();
+  ensureDefaultBrief();
   state.boot = 'ok';
   state.loadError = null;
   renderTrends();
+  renderHomeTrends();
   applyView();
 }
 
@@ -1855,6 +1971,7 @@ function fillProduct() {
     state.understanding = Object.assign({ productId: p.id }, defaultUnderstanding(p));
   }
   syncTagsFromDesc();
+  ensureDefaultBrief();
   updateMatchGate();
 }
 
@@ -2112,6 +2229,56 @@ function trendArrow(tag) {
   return { mark: '→', cls: 'flat', status: 'Stable' };
 }
 
+function trendDirLabel(a) {
+  if (!a) return t('home.trends.stable');
+  if (a.cls === 'down') return t('home.trends.caution');
+  if (a.mark === '↑') return t('home.trends.rising');
+  return t('home.trends.stable');
+}
+
+function renderHomeTrends() {
+  const box = document.getElementById('homeTrendBody');
+  const sec = document.getElementById('homeTrends');
+  if (!box || !sec) return;
+  const trends = state.trends || {};
+  const tags = Object.keys(trends);
+  if (!tags.length) {
+    sec.hidden = false;
+    box.innerHTML = '<p class="form-note">' + escHtml(t('home.trends.empty')) + '</p>';
+    return;
+  }
+  const seed = new Set(typeof currentSeed === 'function' ? currentSeed() : []);
+  tags.sort((a, b) => {
+    const sa = seed.has(a) ? 1 : 0;
+    const sb = seed.has(b) ? 1 : 0;
+    if (sa !== sb) return sb - sa;
+    return (Number(trends[b].heat) || 0) - (Number(trends[a].heat) || 0);
+  });
+  box.innerHTML = `<table class="home-trend-table">
+    <thead><tr>
+      <th>${escHtml(t('home.trends.tag'))}</th>
+      <th>${escHtml(t('home.trends.dir'))}</th>
+      <th>${escHtml(t('home.trends.score'))}</th>
+      <th>${escHtml(t('home.trends.count'))}</th>
+      <th>${escHtml(t('home.trends.confirm'))}</th>
+    </tr></thead>
+    <tbody>${tags.map(tag => {
+      const row = trends[tag] || {};
+      const a = trendArrow(tag);
+      const ok = trendConfirmed(row);
+      const on = seed.has(tag);
+      return `<tr class="${on ? 'on-brief' : ''}">
+        <td><span class="home-trend-tag">${escHtml(chipLabel(tag))}</span>${on ? ' <small>' + escHtml(t('home.trends.on')) + '</small>' : ''}</td>
+        <td><span class="home-trend-dir ${escHtml(a.cls || '')}">${escHtml(a.mark)} ${escHtml(trendDirLabel(a))}</span></td>
+        <td><span class="home-trend-bar"><i style="width:${pct(row.heat)}%"></i></span> ${pct(row.heat)}</td>
+        <td>${row.today_count || 0} / ${row.mention_count || 0}</td>
+        <td>${escHtml(ok ? t('home.trends.ok') : t('home.trends.weak'))}</td>
+      </tr>`;
+    }).join('')}</tbody>
+  </table>`;
+  sec.hidden = false;
+}
+
 function renderTrends() {
   const box = document.getElementById('trendCards');
   if (!box || !state.trends) return;
@@ -2169,7 +2336,6 @@ function showSearchResults(q) {
 function addProductTag(tag) {
   if (!tag) return;
   if (!state.pinnedTags.includes(tag)) state.pinnedTags.push(tag);
-  if (state.briefConfirmed) state.briefConfirmed = false;
   if (state.tagDraft) {
     const row = state.tagDraft.find(r => r.tag === tag);
     const tr = (state.trends || {})[tag] || {};
@@ -2187,6 +2353,7 @@ function addProductTag(tag) {
   syncTagsFromDesc();
   updateMatchGate();
   saveSession();
+  renderHomeTrends();
   if (workView() === 'trends') renderTrendSearch();
   if (workView() === 'tags') renderTagProfile();
 }
@@ -3225,7 +3392,7 @@ function renderListing() {
       <div>
         <p class="eyebrow">${escHtml(t('fit.eyebrow'))}</p>
         <h1>${escHtml(t('fit.h1', { n: String(n), product: productShort }))}</h1>
-        <p class="lede">${escHtml(t('fit.lede'))}</p>
+        <p class="lede">${escHtml(productTalentBudgetCny() ? t('fit.ledeBudget', { n: moneyMillions(productTalentBudgetCny()) }) : t('fit.lede'))}</p>
       </div>
       <div class="cl-tools">
         <select class="field" id="clSort" aria-label="${escHtml(t('fit.sort'))}">
@@ -3242,7 +3409,7 @@ function renderListing() {
       <span>${escHtml(t('cl.audience'))}</span>
       <span class="chip">${escHtml(pack.audience)}</span>
       <span>${escHtml(t('cl.budget'))}</span>
-      <span class="chip">${escHtml(t('common.unavailable'))}</span>
+      <span class="chip">${escHtml(workingBudgetLabel())}</span>
       <span>${escHtml(liveTrendCopy())}</span>
       <span>${escHtml(t('cl.scoring', { v: pack.scoringVersion }))}</span>
     </div>
@@ -3273,7 +3440,7 @@ function renderListing() {
             <div><b>${row.audience}</b><span>${escHtml(t('cl.audFit'))}</span></div>
             <div><b>${row.confidence}</b><span>${escHtml(t('cl.riskConf'))}</span></div>
           </div>
-          <p class="cl-budget">${escHtml(t('fit.budget'))} <b>${escHtml(row.feeLabel || t('common.unavailable'))}</b></p>
+          <p class="cl-budget">${escHtml(t('fit.budget'))} <b>${escHtml(budgetFitOf(row).label)}</b> · ${escHtml(row.feeLabel || t('common.unavailable'))}</p>
           <p class="cl-gate ${row.gateCls}">${escHtml(t('cl.gate'))} <b>${escHtml(gateLabelOf(row))}</b></p>
           <div class="cl-actions">
             <a class="btn-primary" href="/work/candidate/${encodeURIComponent(row.id)}">${escHtml(t('fit.profile'))}</a>
@@ -3764,6 +3931,15 @@ function renderCampaignStudio() {
   const alts = (rec.alts || []).map(s => `<li>${escHtml(s)}</li>`).join('') || '<li>' + escHtml(t('common.unavailable')) + '</li>';
   const keys = (rec.keywords || []).map(keywordLabel).join(' · ') || t('common.unavailable');
   const scenes = ((rec.scenarios || []).map(chipLabel)).join(' · ') || t('common.unavailable');
+  const sceneList = campaignSceneList();
+  const sceneKey = sceneList.some(s => s.key === state.campaignScene) ? state.campaignScene : 'hero';
+  const activeScene = sceneList.find(s => s.key === sceneKey) || sceneList[0];
+  const isPhotoScene = activeScene.key !== 'hero';
+  const sceneThumbs = sceneList.map(s => `
+      <button type="button" data-cs-scene="${s.key}" class="${s.key === sceneKey ? 'on' : ''}" aria-pressed="${s.key === sceneKey ? 'true' : 'false'}">
+        <img src="${escHtml(withBase(s.src))}" alt="">
+        <span>${escHtml(s.label)}</span>
+      </button>`).join('');
   el.innerHTML = `
     <div class="cs-head">
       <p class="eyebrow">${escHtml(t('camp.eyebrow'))}</p>
@@ -3778,14 +3954,18 @@ function renderCampaignStudio() {
     <p class="lede">${escHtml(t('camp.dirLede', { product: productShort, name: name, label: t('studio.' + rec.key) }))}</p>
     <div class="cs-tabs" role="tablist">${tabs}</div>
     <div class="cs-hero">
-      <figure class="cs-visual ${rec.visualSrc ? 'has-asset' : ''}" aria-label="${escHtml(rec.visualNote)}">
-        ${rec.visualSrc ? `<img src="${escHtml(withBase(rec.visualSrc))}" alt="">` : ''}
+      <div class="cs-hero-visual">
+      <figure class="cs-visual ${isPhotoScene ? 'scene-photo' : (rec.visualSrc ? 'has-asset' : '')}" aria-label="${escHtml(rec.visualNote)}">
+        <img src="${escHtml(withBase(activeScene.src))}" alt="">
         <span class="cd-ai-mark">${escHtml(t('ai.markViz'))}</span>
-        <div class="cs-visual-copy">
+        ${isPhotoScene ? '' : `<div class="cs-visual-copy">
           <p class="brand">${escHtml(rec.productShort)}</p>
           <p class="head">${escHtml(rec.slogan)}</p>
-        </div>
+        </div>`}
       </figure>
+      <p class="cs-scene-label">${escHtml(t('camp.sceneStrip'))}</p>
+      <div class="cs-scene-strip" role="tablist">${sceneThumbs}</div>
+      </div>
       <div class="cs-copy">
         <p class="sub">${escHtml(t('camp.pos'))}</p>
         <p class="pos">${escHtml(rec.positioning)}</p>
@@ -4001,8 +4181,8 @@ function conceptScopeHtml(row, pack) {
   return `<div class="cd-ctx">
     <div class="kicker">${escHtml(t('cd.concept.scope'))}</div>
     <dl>
-      <dt>${escHtml(t('cd.plan.budget'))}</dt><dd>${escHtml(t('common.unavailable'))}</dd>
-      <dt>${escHtml(t('cd.plan.prod'))}</dt><dd>${escHtml(t('common.unavailable'))}</dd>
+      <dt>${escHtml(t('cd.plan.budget'))}</dt><dd>${escHtml(workingBudgetLabel())}</dd>
+      <dt>${escHtml(t('cd.plan.prod'))}</dt><dd>${escHtml(productionBudgetLabel())}</dd>
       <dt>${escHtml(t('cd.plan.market'))}</dt><dd>${escHtml(t('common.unavailable'))}</dd>
       <dt>${escHtml(t('cd.plan.usage'))}</dt><dd>${escHtml(t('common.unavailable'))}</dd>
       <dt>${escHtml(t('cd.plan.deliver'))}</dt><dd>${escHtml(rec ? t('cd.plan.template') : t('common.unavailable'))}</dd>
@@ -4238,7 +4418,7 @@ function workingPlanHtml(row, pack) {
   return `<div class="cd-ctx">
     <div class="kicker">${escHtml(t('cd.plan'))}</div>
     <dl>
-      <dt>${escHtml(t('cd.plan.budget'))}</dt><dd>${escHtml(t('common.unavailable'))}</dd>
+      <dt>${escHtml(t('cd.plan.budget'))}</dt><dd>${escHtml(workingBudgetLabel())}</dd>
       <dt>${escHtml(t('cd.plan.market'))}</dt><dd>${escHtml(t('common.unavailable'))}</dd>
       <dt>${escHtml(t('cd.plan.window'))}</dt><dd>${escHtml(t('common.unavailable'))}</dd>
       <dt>${escHtml(t('cd.plan.audience'))}</dt><dd>${escHtml(pack.audience || formatAge(state.minAge, state.maxAge))}</dd>
@@ -4256,7 +4436,7 @@ function decisionContextHtml(row, pack) {
     <div class="kicker">${escHtml(t('cd.ctx'))}</div>
     <dl>
       <dt>${escHtml(t('cd.ctx.tol'))}</dt><dd>${escHtml(riskTol)}</dd>
-      <dt>${escHtml(t('cd.ctx.budget'))}</dt><dd>${escHtml(t('common.unavailable'))}</dd>
+      <dt>${escHtml(t('cd.ctx.budget'))}</dt><dd>${escHtml(workingBudgetLabel())}</dd>
       <dt>${escHtml(t('cd.plan.audience'))}</dt><dd>${escHtml(pack.audience || formatAge(state.minAge, state.maxAge))}</dd>
       <dt>${escHtml(t('cd.ctx.conf'))}</dt><dd>${conf}</dd>
     </dl>
@@ -4522,8 +4702,9 @@ function renderCandidateRisk(row, celeb) {
         ${ico.cost}
         <h3>${escHtml(t('cd.cost.h'))} <span class="lvl warn">${escHtml(t('lvl.unverified'))}</span></h3>
         <p class="sub">${escHtml(t('cd.cost.sub'))}</p>
-        <div class="cd-na-chart">${escHtml(t('cd.cost.na'))}</div>
-        <p class="cd-cap">${escHtml(t('cd.cost.cap'))}</p>
+        ${budgetFitOf(row).code === 'na'
+          ? '<div class="cd-na-chart">' + escHtml(t('cd.cost.na')) + '</div><p class="cd-cap">' + escHtml(t('cd.cost.cap')) + '</p>'
+          : '<p>' + escHtml(t('cd.cost.has', { budget: moneyMillions(productTalentBudgetCny()), fee: (row && row.feeLabel) || feeLabelOf(row) || t('common.unavailable') })) + '</p><p><b>' + escHtml(budgetFitOf(row).label) + '</b></p><p class="cd-cap">' + escHtml(t('cd.cost.capHas')) + '</p>'}
       </article>
     </div>
     <div class="cd-split">
@@ -4535,14 +4716,14 @@ function renderCandidateRisk(row, celeb) {
       <article class="cd-card">
         <p class="cd-if">${escHtml(t('cd.if.choose', { name: name }))}</p>
         <ul class="cd-if-list">
-          <li><span class="mark"></span> ${escHtml(t('cd.if.fee'))}</li>
+          <li><span class="mark"></span> ${escHtml(productTalentBudgetCny() ? t('cd.if.feeHas', { n: moneyMillions(productTalentBudgetCny()) }) : t('cd.if.fee'))}</li>
           <li><span class="mark"></span> ${escHtml(t('cd.if.risk', { n: vol }))}</li>
           <li><span class="mark"></span> ${escHtml(t('cd.if.age', { n: String(row ? row.audience : '—'), age: formatAge(minAge, maxAge) }))}</li>
         </ul>
         <p class="cd-if">${escHtml(t('cd.if.other'))}</p>
         <ul class="cd-if-list">
           <li><span class="mark no">×</span> ${escHtml(t('cd.if.lowRiskNeed') + (isLowestRisk ? t('cd.if.alreadyLow') : (lowestRisk ? t('cd.if.lowerRisk', { name: liveName(lowestRisk) }) : '.')))}</li>
-          <li><span class="mark no">×</span> ${escHtml(t('cd.if.feeCap'))}</li>
+          <li><span class="mark no">×</span> ${escHtml(productTalentBudgetCny() ? t('cd.if.feeCapOn', { n: moneyMillions(productTalentBudgetCny()) }) : t('cd.if.feeCap'))}</li>
           <li><span class="mark no">×</span> ${escHtml(riskFirstOther && tables[1].top ? t('cd.if.riskFirst', { name: tables[1].top.name }) : t('cd.if.riskKeep'))}</li>
         </ul>
         <p><a href="/work/fit">${escHtml(t('cd.if.compare'))}</a></p>
@@ -4661,7 +4842,8 @@ function renderCompareModal() {
     <tr><th>${escHtml(t('cmp.aud'))}</th>${rows.map(r => `<td>${r.audience}</td>`).join('')}</tr>
     <tr><th>${escHtml(t('cmp.conf'))}</th>${rows.map(r => `<td>${r.confidence}</td>`).join('')}</tr>
     <tr><th>${escHtml(t('cmp.gate'))}</th>${rows.map(r => `<td>${escHtml(gateLabelOf(r))}</td>`).join('')}</tr>
-    <tr><th>${escHtml(t('cmp.budget'))}</th>${rows.map(() => '<td>' + escHtml(t('common.unavailable')) + '</td>').join('')}</tr>
+    <tr><th>${escHtml(t('cmp.budget'))}</th>${rows.map(r => '<td>' + escHtml(budgetFitOf(r).label) + '</td>').join('')}</tr>
+    <tr><th>${escHtml(t('cmp.fee'))}</th>${rows.map(r => '<td>' + escHtml(r.feeLabel || feeLabelOf(r) || t('common.unavailable')) + '</td>').join('')}</tr>
   </table>
   <p class="form-note" style="margin-top:12px">${escHtml(t('cmp.note'))}</p>`;
   modal.hidden = false;
@@ -4676,125 +4858,19 @@ function render(opts) {
   const desc = computed.desc;
   const audience = computed.audience;
   if (!seed.length) {
-    document.getElementById('out').innerHTML = '<p class="muted">Add tags from the brief or the + picker, confirm Product Understanding, then Run Match.</p>';
     const wrap = document.getElementById('resultsWrap');
-    if (wrap) { wrap.hidden = false; wrap.dataset.hasResult = '1'; }
+    if (wrap) { wrap.hidden = true; delete wrap.dataset.hasResult; }
+    renderHomeTrends();
     return;
   }
-  const brief = understandProduct(product, desc, audience, seed);
   const opt = computed.opt;
   const ranked = computed.ranked;
   if (opts && opts.persist) persistMatchPack(ranked, product, opt);
   const top3 = ranked.slice(0, 3);
   if (opts && opts.openTop && top3[0]) state.openCeleb = top3[0].celeb.id;
-  const rec = top3[0];
-  const camp = rec ? campaign(product, opt, rec, brief) : null;
-
-  const youthRows = Object.keys(state.trends).map(tag => {
-    const t = state.trends[tag];
-    const a = trendArrow(tag);
-    const ok = trendConfirmed(t);
-    return `<tr>
-      <td>${tag} / ${TAG_EN[tag] || ''}</td>
-      <td><span class="arrow ${a.cls}">${a.mark}</span> ${a.status}</td>
-      <td>${pct(t.heat)}</td>
-      <td>${t.today_count || 0} / ${t.mention_count || 0}</td>
-      <td>${ok ? '重复信号，可作趋势参考' : '孤立或过弱，不单独当作已确认趋势'}</td>
-    </tr>`;
-  }).join('');
-
-  const profileBars = opt.map(t => `
-    <div class="bar"><span>${t.tag}</span><i><em style="width:${t.score}%"></em></i><span>${t.score}</span></div>
-    <p class="mini">${t.origin === 'recommend' ? '模型建议补入' : '用户 TAG'} · ${t.why}</p>`).join('');
-
-  const cards = top3.map((r, i) => `
-    <article class="celeb ${state.openCeleb === r.celeb.id ? 'open' : ''} ${i===0 ? 'rec' : ''}" id="celeb-${r.celeb.id}">
-      <div>
-        <div class="muted">${i===0 ? 'RECOMMENDED' : 'TOP ' + (i+1)}</div>
-        <strong>${r.celeb.name}</strong>
-        <div class="muted">${(r.celeb.occupations || []).join(' · ')}</div>
-      </div>
-      <div>
-        <div class="tags">${(r.hits || []).map(h => `<span class="tag on">${h.tag} ${pct(h.celeb)}</span>`).join('')}</div>
-        <p class="why">${whyLine(product, r)}</p>
-        <div class="score-row">
-          <div class="metric"><em>${pct(r.tagScore)}</em><span>Product TAG Fit</span></div>
-          <div class="metric"><em>${r.market.score}</em><span>Market Demand Fit</span></div>
-          <div class="metric"><em>${pct(r.ageScore)}</em><span>Audience Fit</span></div>
-          <div class="metric"><em>${pct(r.brandScore)}</em><span>Brand Image Fit</span></div>
-          <div class="metric"><em>${pct(r.engagement)}</em><span>Engagement (estimate)</span></div>
-          <div class="metric"><em>${r.celeb.risk.level}</em><span>Risk</span></div>
-        </div>
-        <p class="mini">Synthetic Demo Score · ${scoringFormulaLabel()}. Not an official statistic. Risk Gate is a separate 0.12 × risk penalty.</p>
-        <button class="tiny" data-open-celeb="${r.celeb.id}" style="margin-top:10px">${state.openCeleb === r.celeb.id ? '收起详情' : '展开 Celebrity Detail'}</button>
-      </div>
-      <div class="score">${pct(r.final)}<small>Fit /100</small></div>
-      ${state.openCeleb === r.celeb.id ? celebDetailHTML(r, opt, product) : ''}
-    </article>`).join('');
-
-  document.getElementById('out').innerHTML = `
-    <p class="source">数据分级：热榜标题条数为 TrendRadar 观测数据。TAG 分数、粉丝结构、Fit Score 为 Model-Based / Synthetic Demo Score，不是第三方调研机构发布的官方分数。只推荐明星库内的公开明星，不推荐 KOL/KOC。</p>
-
-    <section id="panel-product-out">
-      <h3 class="sec">1. Product Understanding</h3>
-      <div class="kv">
-        <b>Product</b><span>${brief.name_zh} · ${brief.name}</span>
-        <b>Category</b><span>${brief.category}</span>
-        <b>Target age</b><span>${brief.audience}</span>
-        <b>Price level</b><span>${brief.price}</span>
-        <b>Features</b><span>${(brief.features || []).join(' · ') || '未提供'}</span>
-        <b>Scenarios</b><span>${(brief.scenarios || []).join(' · ') || '未提供'}</span>
-        <b>Desired image</b><span>${brief.image}</span>
-        <b>Campaign objective</b><span>${brief.objective}</span>
-        <b>User-selected TAGs</b><span>${seed.join(' · ')}</span>
-      </div>
-    </section>
-
-    <section>
-      <h3 class="sec">2. Current Youth Trend Analysis</h3>
-      <p class="muted">不把单条热词当成已确认趋势。优先看重复信号、跨平台标题、近期方向。此处无 QuestMobile / 百度指数，只有热榜标题代理。</p>
-      <table>
-        <tr><th>TAG</th><th>方向</th><th>Score</th><th>今日/总</th><th>是否确认</th></tr>
-        ${youthRows}
-      </table>
-    </section>
-
-    <section id="panel-tag">
-      <h3 class="sec">3. Recommended Product TAGs</h3>
-      <div class="tags" style="margin:8px 0 12px">
-        ${opt.map(t => `<span class="tag ${t.origin==='recommend'?'add':(t.verdict==='caution'?'warn':'on')}">${t.tag} ${t.score}</span>`).join('')}
-      </div>
-      <h3 class="sec">4. Product Trend Profile</h3>
-      <p class="muted">模型会保留、加权、降权或补 TAG，并说明原因。分数为模型匹配分。</p>
-      ${profileBars}
-    </section>
-
-    <section id="panel-ranking">
-      <h3 class="sec">5. Celebrity Candidate Ranking</h3>
-      <p class="muted">仅当前明星库。Fit ≠ Popularity。</p>
-      <h3 class="sec">6. Recommended Celebrity</h3>
-      <p class="why">${rec.celeb.name} · Synthetic Demo Score ${pct(rec.final)} / 100 · 展开详情看作品、契合、风险与 Why。</p>
-      <div class="rank" style="margin-top:10px">${cards}</div>
-    </section>
-
-    ${camp ? `<section class="campaign" id="panel-campaign">
-      <h3 class="sec">15. Campaign Positioning</h3>
-      <p class="why">${camp.positioning}</p>
-      <p class="muted">${camp.concept}</p>
-      <h3 class="sec">16. Main Slogan</h3>
-      <div class="slogan">“${camp.main}”</div>
-      <h3 class="sec">17. Alternative Slogans</h3>
-      ${camp.alts.map(s => `<div class="slogan" style="font-size:16px">“${s}”</div>`).join('')}
-      <h3 class="sec">18. Campaign Keywords</h3>
-      <div class="tags">${camp.visual.map(k => `<span class="tag on">${k}</span>`).join('')}</div>
-      <p class="mini" style="margin-top:8px">Recommended scenarios: ${camp.scenarios.join(' · ')}</p>
-    </section>` : ''}
-  `;
   const wrap = document.getElementById('resultsWrap');
-  if (wrap && workView() === 'home') {
-    wrap.hidden = false;
-    wrap.dataset.hasResult = '1';
-  }
+  if (wrap) { wrap.hidden = true; delete wrap.dataset.hasResult; }
+  renderHomeTrends();
 }
 
 function setFlowStep(id) {
@@ -4913,13 +4989,14 @@ document.getElementById('product').addEventListener('change', () => {
   saveSession();
 });
 document.getElementById('run').addEventListener('click', () => {
-  if (!state.briefConfirmed || !state.scoringValid) return;
+  if (!state.scoringValid) return;
+  ensureDefaultBrief();
   if (state.tagDraft) applyTagProfile();
   try { render({ openTop: false, persist: true }); } catch (err) { console.error(err); }
   if (state.matchPack && state.matchPack.rows && state.matchPack.rows.length) goWork('/work/fit');
 });
 document.getElementById('desc').addEventListener('input', () => {
-  if (state.briefConfirmed) state.briefConfirmed = false;
+  if (state.matchPack) state.rankingStale = true;
   syncTagsFromDesc();
   updateMatchGate();
   saveSession();
@@ -5263,7 +5340,7 @@ document.getElementById('view-product').addEventListener('click', (e) => {
     markBriefStale();
   }
 });
-['puName','puCategory','puPrice','puObjective'].forEach(id => {
+['puName','puCategory','puPrice','puBudget','puObjective'].forEach(id => {
   document.getElementById(id).addEventListener('input', () => {
     readUnderstandingFromForm();
     document.getElementById('puCount').textContent = t('pu.fields', { n: String(countExtracted()) });
@@ -5473,6 +5550,12 @@ document.getElementById('view-candidate').addEventListener('change', (e) => {
 });
 document.getElementById('view-campaign').addEventListener('click', (e) => {
   const pack = state.matchPack;
+  const sceneBtn = e.target.closest('[data-cs-scene]');
+  if (sceneBtn) {
+    state.campaignScene = sceneBtn.getAttribute('data-cs-scene') || 'hero';
+    renderCampaignStudio();
+    return;
+  }
   const dirBtn = e.target.closest('[data-cs-dir]');
   if (dirBtn && pack && pack.selectedId && pack.studios && pack.studios[pack.selectedId]) {
     pack.studios[pack.selectedId].activeKey = dirBtn.getAttribute('data-cs-dir');
