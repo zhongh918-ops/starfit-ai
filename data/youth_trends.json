@@ -183,13 +183,13 @@
         "date": "2026-09-12",
         "title": "文韬全程陪伴佳佳生产vlog",
         "platform": "weibo",
-        "rank": 12
+        "rank": 17
       },
       {
         "date": "2026-09-12",
         "title": "48小时看完燕麦系穿搭",
         "platform": "douyin",
-        "rank": 26
+        "rank": 28
       },
       {
         "date": "2026-09-12",
@@ -285,15 +285,15 @@
       },
       {
         "date": "2026-09-12",
-        "title": "48小时看完燕麦系穿搭",
-        "platform": "douyin",
-        "rank": 26
-      },
-      {
-        "date": "2026-09-12",
         "title": "来看纽约时装周的顶级设计表达",
         "platform": "douyin",
         "rank": 27
+      },
+      {
+        "date": "2026-09-12",
+        "title": "48小时看完燕麦系穿搭",
+        "platform": "douyin",
+        "rank": 28
       }
     ],
     "sources": [
@@ -316,12 +316,6 @@
       },
       {
         "date": "2026-09-12",
-        "title": "勇哥线下食堂定价到底算不算贵",
-        "platform": "bilibili-hot-search",
-        "rank": 19
-      },
-      {
-        "date": "2026-09-12",
         "title": "iPhone系列新机上手体验",
         "platform": "bilibili-hot-search",
         "rank": 25
@@ -330,7 +324,13 @@
         "date": "2026-09-12",
         "title": "在港中文上学是种什么体验",
         "platform": "bilibili-hot-search",
-        "rank": 27
+        "rank": 29
+      },
+      {
+        "date": "2026-09-12",
+        "title": "勇哥线下食堂定价到底算不算贵",
+        "platform": "bilibili-hot-search",
+        "rank": 30
       },
       {
         "date": "2026-09-12",
