@@ -76,8 +76,10 @@
   width: 100%;
 }
 .cs-visual.scene-photo {
-  height: 48vh;
-  max-height: 520px;
+  width: 100%;
+  height: 56vh;
+  max-height: 640px;
+  min-height: 360px;
   background: #ece7de;
 }
 .cs-visual.scene-photo img {
