@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 195,
-    "today_count": 10,
-    "heat": 0.2,
+    "mention_count": 196,
+    "today_count": 11,
+    "heat": 0.209,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -97,7 +97,7 @@
         "date": "2026-09-12",
         "title": "“减肥神药”获批国内脂肪肝适应症后，GLP-1还有哪些潜能？",
         "platform": "cls-hot",
-        "rank": 11
+        "rank": 10
       },
       {
         "date": "2026-09-12",
@@ -130,22 +130,22 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 716,
-    "today_count": 62,
+    "mention_count": 717,
+    "today_count": 63,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
     "evidence": [
       {
         "date": "2026-09-12",
-        "title": "25位菲尔兹奖得主警告：AI正毁掉数学",
-        "platform": "baidu",
+        "title": "陶哲轩、邓煜等菲奖得主联合抗议 AI 公司数学军备竞赛，AI 是否在毁掉数学？",
+        "platform": "zhihu",
         "rank": 1
       },
       {
         "date": "2026-09-12",
-        "title": "陶哲轩、邓煜等菲奖得主联合抗议 AI 公司数学军备竞赛，AI 是否在毁掉数学？",
-        "platform": "zhihu",
+        "title": "25位菲尔兹奖得主警告：AI正毁掉数学",
+        "platform": "baidu",
         "rank": 2
       },
       {
@@ -156,15 +156,15 @@
       },
       {
         "date": "2026-09-12",
-        "title": "数学家为何抵制AI数学黑客松",
-        "platform": "bilibili-hot-search",
+        "title": "美企称伊朗试图利用AI大模型攻击美国军舰，详情披露",
+        "platform": "ifeng",
         "rank": 3
       },
       {
         "date": "2026-09-12",
-        "title": "美企称伊朗试图利用AI大模型攻击美国军舰，详情披露",
-        "platform": "ifeng",
-        "rank": 3
+        "title": "如何看待华为麒麟芯片 9050pro？",
+        "platform": "zhihu",
+        "rank": 4
       }
     ],
     "sources": [
@@ -183,13 +183,13 @@
         "date": "2026-09-12",
         "title": "文韬全程陪伴佳佳生产vlog",
         "platform": "weibo",
-        "rank": 12
+        "rank": 15
       },
       {
         "date": "2026-09-12",
         "title": "48小时看完燕麦系穿搭",
         "platform": "douyin",
-        "rank": 23
+        "rank": 26
       },
       {
         "date": "2026-09-12",
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 42,
     "today_count": 5,
-    "heat": 0.073,
+    "heat": 0.072,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -270,12 +270,6 @@
         "title": "秋日穿搭从秀场找点灵感",
         "platform": "douyin",
         "rank": 21
-      },
-      {
-        "date": "2026-09-12",
-        "title": "48小时看完燕麦系穿搭",
-        "platform": "douyin",
-        "rank": 23
       },
       {
         "date": "2026-09-12",
@@ -288,6 +282,12 @@
         "title": "速来领取可可系穿搭说明书",
         "platform": "douyin",
         "rank": 25
+      },
+      {
+        "date": "2026-09-12",
+        "title": "48小时看完燕麦系穿搭",
+        "platform": "douyin",
+        "rank": 26
       },
       {
         "date": "2026-09-12",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 54,
     "today_count": 5,
-    "heat": 0.079,
+    "heat": 0.078,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -313,12 +313,6 @@
         "title": "油价短线下挫！伊朗将与海湾六国会晤、红海西海岸停火，中东局势现缓和信号",
         "platform": "wallstreetcn-hot",
         "rank": 3
-      },
-      {
-        "date": "2026-09-12",
-        "title": "勇哥线下食堂定价到底算不算贵",
-        "platform": "bilibili-hot-search",
-        "rank": 22
       },
       {
         "date": "2026-09-12",
@@ -331,6 +325,12 @@
         "title": "在港中文上学是种什么体验",
         "platform": "bilibili-hot-search",
         "rank": 27
+      },
+      {
+        "date": "2026-09-12",
+        "title": "勇哥线下食堂定价到底算不算贵",
+        "platform": "bilibili-hot-search",
+        "rank": 28
       },
       {
         "date": "2026-09-12",
