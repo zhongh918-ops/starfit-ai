@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 190,
     "today_count": 5,
-    "heat": 0.199,
+    "heat": 0.184,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -11,19 +11,13 @@
         "date": "2026-09-12",
         "title": "止步世界杯八强，中国女篮须在失利中看清方向",
         "platform": "thepaper",
-        "rank": 9
+        "rank": 8
       },
       {
         "date": "2026-09-12",
         "title": "皇马巴萨为何是国家德比",
         "platform": "bilibili-hot-search",
         "rank": 10
-      },
-      {
-        "date": "2026-09-12",
-        "title": "运动是秋天的主线任务",
-        "platform": "douyin",
-        "rank": 20
       },
       {
         "date": "2026-09-12",
@@ -36,6 +30,12 @@
         "title": "申请李昀锐当我的足球教练",
         "platform": "douyin",
         "rank": 28
+      },
+      {
+        "date": "2026-09-12",
+        "title": "运动是秋天的主线任务",
+        "platform": "douyin",
+        "rank": 29
       }
     ],
     "sources": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 48,
     "today_count": 2,
-    "heat": 0.065,
+    "heat": 0.059,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 71,
     "today_count": 1,
-    "heat": 0.057,
+    "heat": 0.054,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,24 +130,12 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 686,
-    "today_count": 32,
+    "mention_count": 691,
+    "today_count": 37,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
     "evidence": [
-      {
-        "date": "2026-09-12",
-        "title": "苹果高管称折叠屏比例泄密很遗憾",
-        "platform": "weibo",
-        "rank": 1
-      },
-      {
-        "date": "2026-09-12",
-        "title": "“10台手机卖不出1台折叠屏”",
-        "platform": "baidu",
-        "rank": 2
-      },
       {
         "date": "2026-09-12",
         "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
@@ -162,8 +150,20 @@
       },
       {
         "date": "2026-09-12",
-        "title": "「魔法画报」当事人称事件与荣耀手机无关，当时正常对外拨打了求救电话，误解为没拨通，哪些信息值得关注？",
-        "platform": "zhihu",
+        "title": "美股收盘：三大指数止跌反弹 芯片股走强费城指数涨近2%",
+        "platform": "cls-hot",
+        "rank": 5
+      },
+      {
+        "date": "2026-09-12",
+        "title": "“10台手机卖不出1台折叠屏”",
+        "platform": "baidu",
+        "rank": 6
+      },
+      {
+        "date": "2026-09-12",
+        "title": "研究员要失业了？OpenAI推出金融版ChatGPT，研究、建模、PPT一站式完成",
+        "platform": "wallstreetcn-hot",
         "rank": 6
       }
     ],
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 42,
     "today_count": 2,
-    "heat": 0.062,
+    "heat": 0.056,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -259,18 +259,12 @@
   },
   "时尚": {
     "tag": "时尚",
-    "mention_count": 41,
-    "today_count": 4,
-    "heat": 0.102,
+    "mention_count": 42,
+    "today_count": 5,
+    "heat": 0.109,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
-      {
-        "date": "2026-09-12",
-        "title": "速来领取可可系穿搭说明书",
-        "platform": "douyin",
-        "rank": 4
-      },
       {
         "date": "2026-09-12",
         "title": "秋日穿搭从秀场找点灵感",
@@ -285,15 +279,21 @@
       },
       {
         "date": "2026-09-12",
+        "title": "微胖女生入秋的第一件藏肉穿搭",
+        "platform": "douyin",
+        "rank": 24
+      },
+      {
+        "date": "2026-09-12",
+        "title": "速来领取可可系穿搭说明书",
+        "platform": "douyin",
+        "rank": 25
+      },
+      {
+        "date": "2026-09-12",
         "title": "来看纽约时装周的顶级设计表达",
         "platform": "douyin",
         "rank": 27
-      },
-      {
-        "date": "2025-12-21",
-        "title": "普京又“催生”：生育子女应成为一种潮流",
-        "platform": "ifeng",
-        "rank": 5
       }
     ],
     "sources": [
@@ -304,21 +304,27 @@
     "tag": "体验",
     "mention_count": 54,
     "today_count": 5,
-    "heat": 0.129,
+    "heat": 0.115,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
       {
         "date": "2026-09-12",
-        "title": "勇哥线下食堂定价到底算不算贵",
-        "platform": "bilibili-hot-search",
-        "rank": 1
+        "title": "油价短线下挫！伊朗将与海湾六国会晤、红海西海岸停火，中东局势现缓和信号",
+        "platform": "wallstreetcn-hot",
+        "rank": 3
       },
       {
         "date": "2026-09-12",
-        "title": "油价短线下挫！伊朗将与海湾六国会晤、红海西海岸停火，中东局势现缓和信号",
-        "platform": "wallstreetcn-hot",
-        "rank": 4
+        "title": "勇哥线下食堂定价到底算不算贵",
+        "platform": "bilibili-hot-search",
+        "rank": 3
+      },
+      {
+        "date": "2026-09-12",
+        "title": "在港中文上学是种什么体验",
+        "platform": "bilibili-hot-search",
+        "rank": 21
       },
       {
         "date": "2026-09-12",
@@ -331,12 +337,6 @@
         "title": "霓虹博主体验特色石油浴",
         "platform": "tieba",
         "rank": 27
-      },
-      {
-        "date": "2026-09-12",
-        "title": "在港中文上学是种什么体验",
-        "platform": "bilibili-hot-search",
-        "rank": 29
       }
     ],
     "sources": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 59,
     "today_count": 3,
-    "heat": 0.091,
+    "heat": 0.083,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
