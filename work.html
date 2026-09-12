@@ -439,14 +439,35 @@ const MODE_KEY = 'match99-data-mode';
 const CONSIDER_KEY = 'match99-consider';
 const STANDARD_CONCEPT = '/assets/concepts/candidate-standard-ai-concept.png';
 const CAMPAIGN_HERO = '/assets/campaign/campaign-direction-hero.png';
-const CAMPAIGN_SCENES = [
-  { key: 'hero', src: CAMPAIGN_HERO },
-  { key: 'lobby', src: '/assets/campaign/scene-lobby-poster.png' },
-  { key: 'metro', src: '/assets/campaign/scene-metro-hang.png' },
-  { key: 'phone', src: '/assets/campaign/scene-phone-feed.png' }
-];
-function campaignSceneList() {
-  return CAMPAIGN_SCENES.map(s => Object.assign({}, s, { label: t('camp.scene.' + s.key) }));
+const CAMPAIGN_FACE_SLUG = {
+  cand_demo_001: 'kai-ren',
+  cand_demo_002: 'mina-zhou',
+  cand_demo_003: 'evan-lu',
+  cand_demo_004: 'tessa-wu',
+  cand_demo_005: 'yuna-fang',
+  cand_demo_006: 'miles-gu',
+  cand_demo_007: 'nora-lin',
+  cand_demo_008: 'aria-chen',
+  cand_demo_009: 'leo-xu',
+  cand_demo_010: 'theo-bai'
+};
+const CAMPAIGN_SCENE_KEYS = ['hero', 'lobby', 'metro', 'phone'];
+function campaignFaceSlug(row) {
+  const id = row && row.id;
+  return (id && CAMPAIGN_FACE_SLUG[id]) || null;
+}
+function campaignSceneList(row) {
+  const slug = campaignFaceSlug(row);
+  const portrait = candidatePhotoSrc(row || {}, 'profile') || CAMPAIGN_HERO;
+  if (!slug) {
+    return [{ key: 'hero', src: portrait, label: t('camp.scene.hero') }];
+  }
+  const base = '/assets/campaign/faces/' + slug;
+  return CAMPAIGN_SCENE_KEYS.map(key => ({
+    key,
+    src: key === 'hero' ? (base + '/hero.png') : (base + '/' + key + '.png'),
+    label: t('camp.scene.' + key)
+  }));
 }
 function withBase(path) {
   return window.Match99Base ? Match99Base.withBase(path) : path;
@@ -3931,10 +3952,12 @@ function renderCampaignStudio() {
   const alts = (rec.alts || []).map(s => `<li>${escHtml(s)}</li>`).join('') || '<li>' + escHtml(t('common.unavailable')) + '</li>';
   const keys = (rec.keywords || []).map(keywordLabel).join(' · ') || t('common.unavailable');
   const scenes = ((rec.scenarios || []).map(chipLabel)).join(' · ') || t('common.unavailable');
-  const sceneList = campaignSceneList();
+  const sceneList = campaignSceneList(row);
   const sceneKey = sceneList.some(s => s.key === state.campaignScene) ? state.campaignScene : 'hero';
   const activeScene = sceneList.find(s => s.key === sceneKey) || sceneList[0];
-  const isPhotoScene = activeScene.key !== 'hero';
+  const faceSlug = campaignFaceSlug(row);
+  const keyVisualFaces = { 'kai-ren': 1, 'mina-zhou': 1, 'evan-lu': 1 };
+  const isPhotoScene = activeScene.key !== 'hero' || !keyVisualFaces[faceSlug];
   const sceneThumbs = sceneList.map(s => `
       <button type="button" data-cs-scene="${s.key}" class="${s.key === sceneKey ? 'on' : ''}" aria-pressed="${s.key === sceneKey ? 'true' : 'false'}">
         <img src="${escHtml(withBase(s.src))}" alt="">
