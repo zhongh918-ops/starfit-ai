@@ -208,6 +208,85 @@
   color: var(--slate);
 }
 
+.home-trends {
+  margin: 28px 0 0;
+  padding: 20px 22px 12px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+.home-trends[hidden] { display: none !important; }
+.home-trends-head .eyebrow { margin: 0 0 6px; }
+.home-trends-head h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.home-trends-head .lede {
+  margin: 0 0 14px;
+  font-size: 14px;
+  color: var(--slate);
+  max-width: 62ch;
+}
+.home-trend-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.home-trend-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--olive-700);
+  padding: 8px 8px 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.home-trend-table td {
+  padding: 10px 8px 10px 0;
+  border-bottom: 1px solid var(--track);
+  color: var(--ink);
+  vertical-align: middle;
+}
+.home-trend-table tr.on-brief td { background: var(--lime-100); }
+.home-trend-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--lime-100);
+  font-weight: 600;
+  font-size: 12px;
+}
+.home-trend-table tr.on-brief .home-trend-tag { background: var(--lime-300); }
+.home-trend-table small {
+  color: var(--olive-700);
+  font-size: 11px;
+  font-weight: 600;
+}
+.home-trend-dir { font-weight: 600; color: var(--olive-700); }
+.home-trend-dir.flat { color: var(--slate); }
+.home-trend-dir.down { color: var(--warning); }
+.home-trend-bar {
+  display: inline-block;
+  width: 72px;
+  height: 6px;
+  margin-right: 8px;
+  border-radius: 99px;
+  background: var(--track);
+  overflow: hidden;
+  vertical-align: middle;
+}
+.home-trend-bar i {
+  display: block;
+  height: 100%;
+  background: var(--olive-700);
+  border-radius: 99px;
+}
+
 .home-points {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -305,9 +384,7 @@
   clip: rect(0 0 0 0);
 }
 
-.results-wrap {
-  margin-top: 28px;
-}
+.results-wrap,
 .results-wrap[hidden] { display: none !important; }
 .work-placeholder[hidden],
 .agent-home[hidden],

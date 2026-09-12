@@ -16,7 +16,12 @@
     "features": ["Lightweight", "Cushioning", "Daily training"],
     "useScenarios": ["Running", "Gym", "Commute-to-training"],
     "desiredImage": ["Athletic", "Authentic", "Energetic"],
-    "objective": "Use credible training authority to communicate cushioning technology, not popularity alone."
+    "objective": "Use credible training authority to communicate cushioning technology, not popularity alone.",
+    "workingBudget": {
+      "talentCny": 10000000,
+      "productionCny": 3500000,
+      "currency": "CNY"
+    }
   },
   "scoringStrategy": {
     "preset": "Balanced fit",

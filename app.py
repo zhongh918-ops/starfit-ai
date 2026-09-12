@@ -16,8 +16,8 @@ from engine import campaign_for, load_state, match_product
 ROOT = Path(__file__).resolve().parent
 TRENDRADAR = Path.home() / "Tools/TrendRadar"
 UV = Path("/Library/Frameworks/Python.framework/Versions/3.13/bin/uv")
-PORT = int(os.environ.get("STARFIT_PORT", "8765"))
-HOST = os.environ.get("STARFIT_HOST", "127.0.0.1")
+PORT = int(os.environ.get("PORT") or os.environ.get("STARFIT_PORT", "8765"))
+HOST = os.environ.get("STARFIT_HOST", "0.0.0.0")
 
 _lock = threading.Lock()
 _refresh = {"running": False, "log": "", "started_at": None, "error": None}
@@ -68,6 +68,10 @@ class Handler(SimpleHTTPRequestHandler):
 
     def log_message(self, fmt, *args):
         print(f"[starfit] {self.address_string()} {fmt % args}")
+
+    def end_headers(self):
+        self.send_header("Cache-Control", "no-store, max-age=0")
+        super().end_headers()
 
     def do_GET(self):
         parsed = urlparse(self.path)

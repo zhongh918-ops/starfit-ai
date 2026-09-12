@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="css/scoring.css">
 <link rel="stylesheet" href="css/listing.css">
 <link rel="stylesheet" href="css/candidate.css">
-<link rel="stylesheet" href="css/campaign.css?v=poster1">
+<link rel="stylesheet" href="css/campaign.css?v=scenes4">
 <link rel="stylesheet" href="css/legacy.css">
 </head>
 <body data-page="work">
@@ -431,9 +431,9 @@
   </div>
 </div>
 <script src="js/i18n.js?v=camp-fusion1"></script>
-<script src="js/campaign-poster.js?v=fusion1"></script>
+<script src="js/campaign-poster.js?v=scenes4"></script>
 <script>
-const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, campaignScene: 'hero', drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
+const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, campaignScene: 'lobby', drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
 const SESSION_KEY = 'match99-work';
 const HIST_KEY = 'match99-work-hist';
 const MODE_KEY = 'match99-data-mode';
@@ -452,7 +452,7 @@ const CAMPAIGN_FACE_SLUG = {
   cand_demo_009: 'leo-xu',
   cand_demo_010: 'theo-bai'
 };
-const CAMPAIGN_SCENE_KEYS = ['hero', 'hold', 'feature'];
+const CAMPAIGN_SCENE_KEYS = ['lobby', 'metro', 'phone'];
 function campaignFaceSlug(row) {
   const id = row && row.id;
   return (id && CAMPAIGN_FACE_SLUG[id]) || null;
@@ -462,22 +462,10 @@ function liveProductId(pack) {
     || (pack && pack.productId)
     || 'shoes';
 }
-function campaignFusionBase(row, pack) {
-  const slug = campaignFaceSlug(row);
-  const productId = liveProductId(pack);
-  if (!slug) return null;
-  return '/assets/campaign/fusion/' + productId + '/' + slug;
-}
 function campaignSceneList(row, pack) {
-  const slug = campaignFaceSlug(row);
-  const portrait = candidatePhotoSrc(row || {}, 'profile') || CAMPAIGN_HERO;
-  const base = campaignFusionBase(row, pack);
-  if (!slug || !base) {
-    return [{ key: 'hero', src: portrait, label: t('camp.scene.hero') }];
-  }
   return CAMPAIGN_SCENE_KEYS.map(key => ({
     key,
-    src: base + '/' + key + '.png',
+    src: '/assets/campaign/mockups/' + key + '.png',
     label: t('camp.scene.' + key)
   }));
 }
@@ -3969,7 +3957,7 @@ function renderCampaignStudio() {
   const keys = (rec.keywords || []).map(keywordLabel).join(' · ') || t('common.unavailable');
   const scenes = ((rec.scenarios || []).map(chipLabel)).join(' · ') || t('common.unavailable');
   const sceneList = campaignSceneList(row, pack);
-  const sceneKey = sceneList.some(s => s.key === state.campaignScene) ? state.campaignScene : 'hero';
+  const sceneKey = sceneList.some(s => s.key === state.campaignScene) ? state.campaignScene : 'lobby';
   const activeScene = sceneList.find(s => s.key === sceneKey) || sceneList[0];
   const sceneThumbs = sceneList.map(s => `
       <button type="button" data-cs-scene="${s.key}" class="${s.key === sceneKey ? 'on' : ''}" aria-pressed="${s.key === sceneKey ? 'true' : 'false'}">
@@ -3989,26 +3977,22 @@ function renderCampaignStudio() {
     <h1>${escHtml(rec.title)}</h1>
     <p class="lede">${escHtml(t('camp.dirLede', { product: productShort, name: name, label: t('studio.' + rec.key) }))}</p>
     <div class="cs-tabs" role="tablist">${tabs}</div>
-    <div class="cs-hero">
-      <div class="cs-hero-visual">
-      <figure class="cs-visual scene-photo" aria-label="${escHtml(rec.visualNote)}">
-        <img src="${escHtml(withBase(activeScene.src))}" alt="">
-        <span class="cd-ai-mark">${escHtml(t('ai.markViz'))}</span>
-        <div class="cs-visual-badge">
-          <p class="brand">${escHtml(productShort)} × ${escHtml(name)}</p>
-          <p class="head">${escHtml(rec.slogan)}</p>
-        </div>
-      </figure>
-      <p class="cs-scene-label">${escHtml(t('camp.sceneStrip'))}</p>
-      <div class="cs-scene-strip" role="tablist">${sceneThumbs}</div>
+    <div class="cs-stage">
+      <div class="cs-preview-col">
+        <figure class="cs-preview" data-scene="${escHtml(sceneKey)}" aria-label="${escHtml(rec.visualNote)}">
+          <img src="${escHtml(withBase(activeScene.src))}" alt="">
+          <span class="cs-preview-mark">${escHtml(t('ai.markViz'))}</span>
+        </figure>
+        <p class="cs-caption"><b>${escHtml(productShort)} × ${escHtml(name)}</b><span>${escHtml(activeScene.label)}</span></p>
+        <div class="cs-scene-strip" role="tablist">${sceneThumbs}</div>
       </div>
-      <div class="cs-copy">
+      <aside class="cs-copy">
         <p class="sub">${escHtml(t('camp.pos'))}</p>
         <p class="pos">${escHtml(rec.positioning)}</p>
-        <p class="why">${escHtml(rec.rationale)}</p>
         <p class="sub">${escHtml(t('camp.slogan'))}</p>
         <p class="cs-slogan">${escHtml(rec.slogan)}</p>
-      </div>
+        <p class="why">${escHtml(rec.rationale)}</p>
+      </aside>
     </div>
     <div class="cs-cards">
       <article>
@@ -4041,7 +4025,7 @@ function renderCampaignStudio() {
 function refreshCampaignPosters(row, rec, pack) {
   if (!row || !rec || !pack) return;
   const productId = liveProductId(pack);
-  const key = [productId, row.id || '', rec.slogan || '', rec.key || ''].join('|');
+  const key = ['scenes3', productId, row.id || '', rec.slogan || '', rec.key || ''].join('|');
   if (state.campaignPosterKey === key && state.campaignPosterUrls) {
     if (window.Match99Poster) Match99Poster.apply(state.campaignPosterUrls);
     return;
@@ -4054,12 +4038,12 @@ function refreshCampaignPosters(row, rec, pack) {
     Match99Poster.apply(urls);
   };
   if (useFusion) {
-    Match99Poster.resolveFusion(productId, slug).then((urls) => {
-      if (urls && urls.hero) {
-        applyFusion(urls);
+    Match99Poster.resolveFusionArt(productId, slug).then((src) => {
+      if (!src) {
+        composeFallbackPoster(row, rec, pack, key);
         return;
       }
-      composeFallbackPoster(row, rec, pack, key);
+      return Match99Poster.composeFromArt(src).then(applyFusion);
     }).catch(() => composeFallbackPoster(row, rec, pack, key));
     return;
   }
@@ -5636,7 +5620,7 @@ document.getElementById('view-campaign').addEventListener('click', (e) => {
   const pack = state.matchPack;
   const sceneBtn = e.target.closest('[data-cs-scene]');
   if (sceneBtn) {
-    state.campaignScene = sceneBtn.getAttribute('data-cs-scene') || 'hero';
+    state.campaignScene = sceneBtn.getAttribute('data-cs-scene') || 'lobby';
     renderCampaignStudio();
     return;
   }

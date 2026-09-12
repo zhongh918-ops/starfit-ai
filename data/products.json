@@ -11,6 +11,8 @@
       "scenarios": ["跑步", "健身房", "通勤训练日"],
       "desired_image": "Athletic, authentic, energetic",
       "campaign_objective": "用真实训练感明星带出科技缓震，而不是流量明星空降",
+      "talentBudgetCny": 10000000,
+      "productionBudgetCny": 3500000,
       "seed_tags": ["运动", "科技", "活力"],
       "description": "轻量训练跑鞋，面向日常跑步与健身房的年轻人。期望形象：运动、真诚、有活力。"
     },
@@ -25,6 +27,8 @@
       "scenarios": ["晨间通勤", "骑行", "健身房", "周末轻户外"],
       "desired_image": "Young, energetic, modern",
       "campaign_objective": "找到最能代表即饮冷萃生活方式的明星代言人，而不是热搜最高的人",
+      "talentBudgetCny": 6000000,
+      "productionBudgetCny": 2000000,
       "seed_tags": ["运动", "户外", "科技"],
       "description": "面向 18–28 岁的即饮冷萃咖啡。低糖、便携、清爽。场景：晨间通勤、骑行、健身房、周末轻户外。期望形象：年轻、有活力、现代。"
     },
@@ -39,6 +43,8 @@
       "scenarios": ["通勤", "学习", "独处"],
       "desired_image": "Modern, calm, emotionally aware",
       "campaign_objective": "用克制、有情绪边界的明星人设承接降噪与陪伴",
+      "talentBudgetCny": 8000000,
+      "productionBudgetCny": 2500000,
       "seed_tags": ["科技", "体验", "情绪价值"],
       "description": "降噪智能耳机，强调通勤体验与情绪陪伴。期望形象：现代、冷静、有情绪价值。"
     }

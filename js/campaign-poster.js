@@ -4,9 +4,9 @@
     return global.Match99Base && global.Match99Base.withBase ? global.Match99Base.withBase(path) : path;
   }
   const MOCKUPS = {
-    lobby: { src: '/assets/campaign/mockups/lobby.png', x: 0.388, y: 0.072, w: 0.226, h: 0.856 },
-    metro: { src: '/assets/campaign/mockups/metro.png', x: 0.186, y: 0.208, w: 0.236, h: 0.588 },
-    phone: { src: '/assets/campaign/mockups/phone.png', x: 0.318, y: 0.332, w: 0.364, h: 0.392 }
+    lobby: { src: '/assets/campaign/mockups/lobby.png', x: 0.367, y: 0.090, w: 0.275, h: 0.820 },
+    metro: { src: '/assets/campaign/mockups/metro.png', x: 0.119, y: 0.285, w: 0.400, h: 0.530, radius: 0.016 },
+    phone: { src: '/assets/campaign/mockups/phone.png', x: 0.358, y: 0.434, w: 0.298, h: 0.348, radius: 0.055 }
   };
 
   function loadImage(src) {
@@ -135,10 +135,30 @@
     const y = Math.round(slot.y * plate.height);
     const w = Math.round(slot.w * plate.width);
     const h = Math.round(slot.h * plate.height);
+    const radius = slot.radius ? Math.round(Math.min(w, h) * slot.radius) : 0;
+    ctx.save();
+    ctx.beginPath();
+    if (radius && ctx.roundRect) ctx.roundRect(x, y, w, h, radius);
+    else ctx.rect(x, y, w, h);
+    ctx.clip();
     ctx.fillStyle = '#111';
     ctx.fillRect(x, y, w, h);
-    ctx.drawImage(poster, x, y, w, h);
+    cover(ctx, poster, x, y, w, h, 0.18);
+    ctx.restore();
     return c;
+  }
+
+  async function composeScenes(art) {
+    const [lobby, metro, phone] = await Promise.all([
+      placeOnMockup('lobby', art),
+      placeOnMockup('metro', art),
+      placeOnMockup('phone', art)
+    ]);
+    return {
+      lobby: lobby.toDataURL('image/jpeg', 0.92),
+      metro: metro.toDataURL('image/jpeg', 0.92),
+      phone: phone.toDataURL('image/jpeg', 0.92)
+    };
   }
 
   async function compose(spec) {
@@ -154,17 +174,9 @@
       portraitImg,
       productImg
     });
-    const [lobby, metro, phone] = await Promise.all([
-      placeOnMockup('lobby', poster),
-      placeOnMockup('metro', poster),
-      placeOnMockup('phone', poster)
-    ]);
-    return {
-      hero: poster.toDataURL('image/jpeg', 0.92),
-      lobby: lobby.toDataURL('image/jpeg', 0.9),
-      metro: metro.toDataURL('image/jpeg', 0.9),
-      phone: phone.toDataURL('image/jpeg', 0.9)
-    };
+    const scenes = await composeScenes(poster);
+    scenes.hero = poster.toDataURL('image/jpeg', 0.92);
+    return scenes;
   }
 
   function apply(urls) {
@@ -174,9 +186,9 @@
       const img = btn.querySelector('img');
       if (img && urls[key]) img.src = urls[key];
     });
-    const main = document.querySelector('.cs-visual img');
+    const main = document.querySelector('.cs-preview img');
     const active = document.querySelector('[data-cs-scene].on');
-    const key = (active && active.getAttribute('data-cs-scene')) || 'hero';
+    const key = (active && active.getAttribute('data-cs-scene')) || 'lobby';
     if (main && urls[key]) main.src = urls[key];
   }
 
@@ -184,18 +196,15 @@
     return loadImage(src).then(() => src).catch(() => '');
   }
 
-  async function resolveFusion(productId, slug) {
-    const keys = ['hero', 'hold', 'feature'];
-    const urls = {};
-    for (const key of keys) {
-      const src = asset('/assets/campaign/fusion/' + productId + '/' + slug + '/' + key + '.png');
-      urls[key] = await probe(src);
-    }
-    if (!urls.hero) return null;
-    urls.hold = urls.hold || urls.hero;
-    urls.feature = urls.feature || urls.hold || urls.hero;
-    return urls;
+  async function resolveFusionArt(productId, slug) {
+    const src = asset('/assets/campaign/fusion/' + productId + '/' + slug + '/hero.png');
+    return probe(src);
   }
 
-  global.Match99Poster = { compose, apply, resolveFusion };
+  async function composeFromArt(src) {
+    const art = await loadImage(src);
+    return composeScenes(art);
+  }
+
+  global.Match99Poster = { compose, composeScenes, composeFromArt, apply, resolveFusionArt, loadImage };
 })(window);
