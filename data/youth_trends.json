@@ -1,23 +1,23 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 197,
-    "today_count": 12,
-    "heat": 0.214,
+    "mention_count": 198,
+    "today_count": 13,
+    "heat": 0.222,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
       {
         "date": "2026-09-12",
-        "title": "止步世界杯八强，中国女篮须在失利中看清方向",
-        "platform": "thepaper",
-        "rank": 8
+        "title": "皇马 姆巴佩",
+        "platform": "weibo",
+        "rank": 6
       },
       {
         "date": "2026-09-12",
-        "title": "兹维列夫击败卡恰诺夫进美网决赛",
-        "platform": "douyin",
-        "rank": 9
+        "title": "止步世界杯八强，中国女篮须在失利中看清方向",
+        "platform": "thepaper",
+        "rank": 8
       },
       {
         "date": "2026-09-12",
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 720,
-    "today_count": 66,
+    "mention_count": 721,
+    "today_count": 67,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -150,12 +150,6 @@
       },
       {
         "date": "2026-09-12",
-        "title": "25位菲尔兹奖得主警告：AI正毁掉数学",
-        "platform": "baidu",
-        "rank": 2
-      },
-      {
-        "date": "2026-09-12",
         "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
         "platform": "wallstreetcn-hot",
         "rank": 3
@@ -165,6 +159,12 @@
         "title": "美企称伊朗试图利用AI大模型攻击美国军舰，详情披露",
         "platform": "ifeng",
         "rank": 3
+      },
+      {
+        "date": "2026-09-12",
+        "title": "如何看待华为麒麟芯片 9050pro？",
+        "platform": "zhihu",
+        "rank": 4
       }
     ],
     "sources": [
@@ -183,7 +183,7 @@
         "date": "2026-09-12",
         "title": "文韬全程陪伴佳佳生产vlog",
         "platform": "weibo",
-        "rank": 17
+        "rank": 15
       },
       {
         "date": "2026-09-12",
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 42,
     "today_count": 5,
-    "heat": 0.07,
+    "heat": 0.069,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
