@@ -3,16 +3,10 @@
     "tag": "运动",
     "mention_count": 192,
     "today_count": 7,
-    "heat": 0.185,
+    "heat": 0.181,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
-      {
-        "date": "2026-09-12",
-        "title": "16岁孙心然美网决赛冲冠",
-        "platform": "weibo",
-        "rank": 7
-      },
       {
         "date": "2026-09-12",
         "title": "止步世界杯八强，中国女篮须在失利中看清方向",
@@ -23,6 +17,12 @@
         "date": "2026-09-12",
         "title": "皇马巴萨为何是国家德比",
         "platform": "bilibili-hot-search",
+        "rank": 10
+      },
+      {
+        "date": "2026-09-12",
+        "title": "16岁孙心然美网决赛冲冠",
+        "platform": "weibo",
         "rank": 10
       },
       {
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 48,
     "today_count": 2,
-    "heat": 0.049,
+    "heat": 0.048,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -60,7 +60,7 @@
         "date": "2026-09-12",
         "title": "旅行青蛙停运,日方吃相太差",
         "platform": "tieba",
-        "rank": 25
+        "rank": 26
       },
       {
         "date": "2025-12-24",
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 72,
     "today_count": 2,
-    "heat": 0.061,
+    "heat": 0.06,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -97,7 +97,7 @@
         "date": "2026-09-12",
         "title": "前妻曝马斯克居高临下心理操控自己",
         "platform": "weibo",
-        "rank": 6
+        "rank": 5
       },
       {
         "date": "2026-09-12",
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 705,
-    "today_count": 51,
+    "mention_count": 707,
+    "today_count": 53,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -139,12 +139,6 @@
       {
         "date": "2026-09-12",
         "title": "数学家为何抵制AI数学黑客松",
-        "platform": "bilibili-hot-search",
-        "rank": 1
-      },
-      {
-        "date": "2026-09-12",
-        "title": "AirPods 5升级在哪",
         "platform": "bilibili-hot-search",
         "rank": 2
       },
@@ -162,8 +156,14 @@
       },
       {
         "date": "2026-09-12",
-        "title": "DeepSeek 开口说话",
-        "platform": "baidu",
+        "title": "如何看待华为麒麟芯片 9050pro？",
+        "platform": "zhihu",
+        "rank": 4
+      },
+      {
+        "date": "2026-09-12",
+        "title": "陶哲轩发文称「AI 正杀死数学百年开放传统」，你如何看待这一观点？",
+        "platform": "zhihu",
         "rank": 4
       }
     ],
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 42,
     "today_count": 2,
-    "heat": 0.046,
+    "heat": 0.045,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -216,17 +216,29 @@
   },
   "便利": {
     "tag": "便利",
-    "mention_count": 24,
-    "today_count": 1,
-    "heat": 0.025,
+    "mention_count": 26,
+    "today_count": 3,
+    "heat": 0.05,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
       {
         "date": "2026-09-12",
+        "title": "记者暗访月销千单外卖烤鸡店",
+        "platform": "bilibili-hot-search",
+        "rank": 10
+      },
+      {
+        "date": "2026-09-12",
         "title": "外卖员往饮料里加百草枯？假的",
         "platform": "toutiao",
         "rank": 11
+      },
+      {
+        "date": "2026-09-12",
+        "title": "外卖明厨亮灶摄像头对着天花板",
+        "platform": "weibo",
+        "rank": 30
       },
       {
         "date": "2025-12-26",
@@ -239,18 +251,6 @@
         "title": "小区歧视外卖员,百名骑手集结抗议",
         "platform": "tieba",
         "rank": 4
-      },
-      {
-        "date": "2026-09-09",
-        "title": "自费买可乐的外卖骑手被奖励一年骑手餐",
-        "platform": "weibo",
-        "rank": 4
-      },
-      {
-        "date": "2025-12-27",
-        "title": "外卖骑手在家中猝死被保险公司拒赔",
-        "platform": "baidu",
-        "rank": 7
       }
     ],
     "sources": [
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 42,
     "today_count": 5,
-    "heat": 0.085,
+    "heat": 0.082,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 54,
     "today_count": 5,
-    "heat": 0.091,
+    "heat": 0.088,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -318,7 +318,7 @@
         "date": "2026-09-12",
         "title": "勇哥线下食堂定价到底算不算贵",
         "platform": "bilibili-hot-search",
-        "rank": 14
+        "rank": 18
       },
       {
         "date": "2026-09-12",
@@ -336,7 +336,7 @@
         "date": "2026-09-12",
         "title": "霓虹博主体验特色石油浴",
         "platform": "tieba",
-        "rank": 29
+        "rank": 30
       }
     ],
     "sources": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 59,
     "today_count": 3,
-    "heat": 0.068,
+    "heat": 0.066,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
