@@ -180,5 +180,22 @@
     if (main && urls[key]) main.src = urls[key];
   }
 
-  global.Match99Poster = { compose, apply };
+  function probe(src) {
+    return loadImage(src).then(() => src).catch(() => '');
+  }
+
+  async function resolveFusion(productId, slug) {
+    const keys = ['hero', 'hold', 'feature'];
+    const urls = {};
+    for (const key of keys) {
+      const src = asset('/assets/campaign/fusion/' + productId + '/' + slug + '/' + key + '.png');
+      urls[key] = await probe(src);
+    }
+    if (!urls.hero) return null;
+    urls.hold = urls.hold || urls.hero;
+    urls.feature = urls.feature || urls.hold || urls.hero;
+    return urls;
+  }
+
+  global.Match99Poster = { compose, apply, resolveFusion };
 })(window);

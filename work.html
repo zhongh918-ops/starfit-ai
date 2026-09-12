@@ -430,8 +430,8 @@
     </div>
   </div>
 </div>
-<script src="js/i18n.js?v=camp-scenes1"></script>
-<script src="js/campaign-poster.js?v=poster1"></script>
+<script src="js/i18n.js?v=camp-fusion1"></script>
+<script src="js/campaign-poster.js?v=fusion1"></script>
 <script>
 const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, campaignScene: 'hero', drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
 const SESSION_KEY = 'match99-work';
@@ -452,21 +452,32 @@ const CAMPAIGN_FACE_SLUG = {
   cand_demo_009: 'leo-xu',
   cand_demo_010: 'theo-bai'
 };
-const CAMPAIGN_SCENE_KEYS = ['hero', 'lobby', 'metro', 'phone'];
+const CAMPAIGN_SCENE_KEYS = ['hero', 'hold', 'feature'];
 function campaignFaceSlug(row) {
   const id = row && row.id;
   return (id && CAMPAIGN_FACE_SLUG[id]) || null;
 }
-function campaignSceneList(row) {
+function liveProductId(pack) {
+  return ((document.getElementById('product') || {}).value)
+    || (pack && pack.productId)
+    || 'shoes';
+}
+function campaignFusionBase(row, pack) {
+  const slug = campaignFaceSlug(row);
+  const productId = liveProductId(pack);
+  if (!slug) return null;
+  return '/assets/campaign/fusion/' + productId + '/' + slug;
+}
+function campaignSceneList(row, pack) {
   const slug = campaignFaceSlug(row);
   const portrait = candidatePhotoSrc(row || {}, 'profile') || CAMPAIGN_HERO;
-  if (!slug) {
+  const base = campaignFusionBase(row, pack);
+  if (!slug || !base) {
     return [{ key: 'hero', src: portrait, label: t('camp.scene.hero') }];
   }
-  const base = '/assets/campaign/faces/' + slug;
   return CAMPAIGN_SCENE_KEYS.map(key => ({
     key,
-    src: key === 'hero' ? (base + '/hero.png') : (base + '/' + key + '.png'),
+    src: base + '/' + key + '.png',
     label: t('camp.scene.' + key)
   }));
 }
@@ -606,7 +617,11 @@ const FEATURE_EN = {
   '跑步': 'Running', '通勤训练日': 'Commute-to-training', '通勤': 'Commute', '学习': 'Study', '独处': 'Solo time'
 };
 const CATEGORY_EN = { Coffee: 'Coffee', 'Sports Shoes': 'Sports shoes', 'Smart Headphones': 'Smart headphones' };
-const PRODUCT_IMAGES = { shoes: '/assets/product/product-training-shoe.png' };
+const PRODUCT_IMAGES = {
+  shoes: '/assets/product/product-training-shoe.png',
+  'cold-brew': '/assets/product/product-niteflow-can.png',
+  headphones: '/assets/product/product-pulse-air.png'
+};
 function readDataMode() {
   try {
     const m = localStorage.getItem(MODE_KEY);
@@ -3953,7 +3968,7 @@ function renderCampaignStudio() {
   const alts = (rec.alts || []).map(s => `<li>${escHtml(s)}</li>`).join('') || '<li>' + escHtml(t('common.unavailable')) + '</li>';
   const keys = (rec.keywords || []).map(keywordLabel).join(' · ') || t('common.unavailable');
   const scenes = ((rec.scenarios || []).map(chipLabel)).join(' · ') || t('common.unavailable');
-  const sceneList = campaignSceneList(row);
+  const sceneList = campaignSceneList(row, pack);
   const sceneKey = sceneList.some(s => s.key === state.campaignScene) ? state.campaignScene : 'hero';
   const activeScene = sceneList.find(s => s.key === sceneKey) || sceneList[0];
   const sceneThumbs = sceneList.map(s => `
@@ -4024,21 +4039,45 @@ function renderCampaignStudio() {
 }
 
 function refreshCampaignPosters(row, rec, pack) {
-  if (!window.Match99Poster || !row || !rec || !pack) return;
-  const key = [pack.productId || '', row.id || '', rec.slogan || '', rec.key || ''].join('|');
+  if (!row || !rec || !pack) return;
+  const productId = liveProductId(pack);
+  const key = [productId, row.id || '', rec.slogan || '', rec.key || ''].join('|');
   if (state.campaignPosterKey === key && state.campaignPosterUrls) {
-    Match99Poster.apply(state.campaignPosterUrls);
+    if (window.Match99Poster) Match99Poster.apply(state.campaignPosterUrls);
     return;
   }
-  const product = (state.products || []).find(p => p.id === pack.productId);
+  const slug = campaignFaceSlug(row);
+  const useFusion = !!(window.Match99Poster && slug);
+  const applyFusion = (urls) => {
+    state.campaignPosterKey = key;
+    state.campaignPosterUrls = urls;
+    Match99Poster.apply(urls);
+  };
+  if (useFusion) {
+    Match99Poster.resolveFusion(productId, slug).then((urls) => {
+      if (urls && urls.hero) {
+        applyFusion(urls);
+        return;
+      }
+      composeFallbackPoster(row, rec, pack, key);
+    }).catch(() => composeFallbackPoster(row, rec, pack, key));
+    return;
+  }
+  composeFallbackPoster(row, rec, pack, key);
+}
+
+function composeFallbackPoster(row, rec, pack, key) {
+  if (!window.Match99Poster) return;
+  const productId = liveProductId(pack);
+  const product = (state.products || []).find(p => p.id === productId);
   const productLine = product ? (isZh() ? product.name : (product.name_en || product.name)) : rec.productShort;
   Match99Poster.compose({
-    product: rec.productShort || liveProductShort(pack),
+    product: product ? liveProductShort(product) : (rec.productShort || liveProductShort(pack)),
     name: liveName(row),
     slogan: rec.slogan,
     productLine: productLine,
     portrait: candidatePhotoSrc(row, 'profile'),
-    productImg: PRODUCT_IMAGES[pack.productId] ? withBase(PRODUCT_IMAGES[pack.productId]) : ''
+    productImg: PRODUCT_IMAGES[productId] ? withBase(PRODUCT_IMAGES[productId]) : ''
   }).then((urls) => {
     state.campaignPosterKey = key;
     state.campaignPosterUrls = urls;
