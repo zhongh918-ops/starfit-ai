@@ -16,16 +16,15 @@ cd "$TR"
 "$UV" run python -m trendradar
 cd "$ROOT"
 /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 -c "from engine import load_state; load_state()"
-(
-  flock 9
+"$ROOT/scripts/with-git-lock.sh" bash -c '
   git add data/state.json data/youth_trends.json data/meta.json
   if git diff --cached --quiet; then
     echo "no snapshot change"
     exit 0
   fi
-  git commit -m "Update TrendRadar snapshot $(date '+%Y-%m-%d %H:%M')"
+  git commit -m "Update TrendRadar snapshot $(date "+%Y-%m-%d %H:%M")"
   git push origin main
   curl -fsS "https://purge.jsdelivr.net/gh/zhongh918-ops/starfit-ai@main/index.html" || true
   curl -fsS "https://purge.jsdelivr.net/gh/zhongh918-ops/starfit-ai@main/data/state.json" || true
   echo "published"
-) 9>"$ROOT/output/git.lock"
+'

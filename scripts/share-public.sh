@@ -7,6 +7,7 @@ export http_proxy="" https_proxy="" HTTP_PROXY="" HTTPS_PROXY="" ALL_PROXY="" al
 export no_proxy="*" NO_PROXY="*"
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+export ROOT
 BIN="$ROOT/.tools/cloudflared"
 LOG="$ROOT/output/tunnel.log"
 URL_FILE="$ROOT/output/public-url.txt"
@@ -46,8 +47,7 @@ data = {
 }
 p.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 PY
-  (
-    flock 9
+  "$ROOT/scripts/with-git-lock.sh" bash -c '
     cd "$ROOT"
     git add -- live-url.json
     if git diff --cached --quiet -- live-url.json; then
@@ -57,7 +57,7 @@ PY
     git push origin main
     curl -fsS "https://purge.jsdelivr.net/gh/zhongh918-ops/starfit-ai@main/live-url.json" >/dev/null || true
     curl -fsS "https://purge.jsdelivr.net/gh/zhongh918-ops/starfit-ai@main/live.html" >/dev/null || true
-  ) 9>"$ROOT/output/git.lock" || true
+  ' || true
 }
 
 : > "$LOG"
