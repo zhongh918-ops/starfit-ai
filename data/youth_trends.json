@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 191,
     "today_count": 6,
-    "heat": 0.187,
+    "heat": 0.178,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -21,12 +21,6 @@
       },
       {
         "date": "2026-09-12",
-        "title": "莱巴金娜进美网决赛：新旧天后对决",
-        "platform": "toutiao",
-        "rank": 19
-      },
-      {
-        "date": "2026-09-12",
         "title": "NBA新赛季哪些老将还在打",
         "platform": "bilibili-hot-search",
         "rank": 24
@@ -35,6 +29,12 @@
         "date": "2026-09-12",
         "title": "申请李昀锐当我的足球教练",
         "platform": "douyin",
+        "rank": 28
+      },
+      {
+        "date": "2026-09-12",
+        "title": "莱巴金娜进美网决赛：新旧天后对决",
+        "platform": "toutiao",
         "rank": 28
       }
     ],
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 48,
     "today_count": 2,
-    "heat": 0.054,
+    "heat": 0.052,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 71,
     "today_count": 1,
-    "heat": 0.051,
+    "heat": 0.049,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,16 +130,28 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 697,
-    "today_count": 43,
+    "mention_count": 701,
+    "today_count": 47,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
     "evidence": [
       {
         "date": "2026-09-12",
+        "title": "数学家为何抵制AI数学黑客松",
+        "platform": "bilibili-hot-search",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-12",
         "title": "DeepSeek 开口说话",
         "platform": "baidu",
+        "rank": 2
+      },
+      {
+        "date": "2026-09-12",
+        "title": "AirPods 5升级在哪",
+        "platform": "bilibili-hot-search",
         "rank": 2
       },
       {
@@ -150,21 +162,9 @@
       },
       {
         "date": "2026-09-12",
-        "title": "如何看待华为麒麟芯片 9050pro？",
-        "platform": "zhihu",
-        "rank": 4
-      },
-      {
-        "date": "2026-09-12",
-        "title": "研究员要失业了？OpenAI推出金融版ChatGPT，研究、建模、PPT一站式完成",
-        "platform": "wallstreetcn-hot",
-        "rank": 5
-      },
-      {
-        "date": "2026-09-12",
-        "title": "上市仅5天，天博智能股价“破发”",
-        "platform": "cls-hot",
-        "rank": 5
+        "title": "美企称伊朗试图利用AI大模型攻击美国军舰，详情披露",
+        "platform": "ifeng",
+        "rank": 3
       }
     ],
     "sources": [
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 42,
     "today_count": 2,
-    "heat": 0.051,
+    "heat": 0.049,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -216,12 +216,18 @@
   },
   "便利": {
     "tag": "便利",
-    "mention_count": 23,
-    "today_count": 0,
-    "heat": 0.012,
+    "mention_count": 24,
+    "today_count": 1,
+    "heat": 0.026,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
+      {
+        "date": "2026-09-12",
+        "title": "外卖员往饮料里加百草枯？假的",
+        "platform": "toutiao",
+        "rank": 11
+      },
       {
         "date": "2025-12-26",
         "title": "贾国龙预制菜风波后发声，称靠吃安眠药入睡，如果能重来坚决不硬刚，如何看待西贝未来的发展？",
@@ -245,12 +251,6 @@
         "title": "外卖骑手在家中猝死被保险公司拒赔",
         "platform": "baidu",
         "rank": 7
-      },
-      {
-        "date": "2026-09-09",
-        "title": "副部长赵世堂点赞一名外卖小哥",
-        "platform": "baidu",
-        "rank": 9
       }
     ],
     "sources": [
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 42,
     "today_count": 5,
-    "heat": 0.097,
+    "heat": 0.09,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 54,
     "today_count": 5,
-    "heat": 0.103,
+    "heat": 0.096,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -318,7 +318,7 @@
         "date": "2026-09-12",
         "title": "勇哥线下食堂定价到底算不算贵",
         "platform": "bilibili-hot-search",
-        "rank": 3
+        "rank": 13
       },
       {
         "date": "2026-09-12",
@@ -347,7 +347,7 @@
     "tag": "咖啡",
     "mention_count": 21,
     "today_count": 0,
-    "heat": 0.011,
+    "heat": 0.01,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 59,
     "today_count": 3,
-    "heat": 0.075,
+    "heat": 0.071,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
