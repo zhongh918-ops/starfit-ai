@@ -2857,6 +2857,8 @@
       ],
       "desired_image": "Athletic, authentic, energetic",
       "campaign_objective": "用真实训练感明星带出科技缓震，而不是流量明星空降",
+      "talentBudgetCny": 10000000,
+      "productionBudgetCny": 3500000,
       "seed_tags": [
         "运动",
         "科技",
@@ -2885,6 +2887,8 @@
       ],
       "desired_image": "Young, energetic, modern",
       "campaign_objective": "找到最能代表即饮冷萃生活方式的明星代言人，而不是热搜最高的人",
+      "talentBudgetCny": 6000000,
+      "productionBudgetCny": 2000000,
       "seed_tags": [
         "运动",
         "户外",
@@ -2911,6 +2915,8 @@
       ],
       "desired_image": "Modern, calm, emotionally aware",
       "campaign_objective": "用克制、有情绪边界的明星人设承接降噪与陪伴",
+      "talentBudgetCny": 8000000,
+      "productionBudgetCny": 2500000,
       "seed_tags": [
         "科技",
         "体验",
@@ -2920,12 +2926,12 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-09-12T09:53:12+08:00",
-    "source_mtime": "2026-09-12T09:53:07+08:00",
+    "generated_at": "2026-09-12T10:24:21+08:00",
+    "source_mtime": "2026-09-12T10:24:15+08:00",
     "today": "2026-09-12",
-    "total_items": 11510,
-    "today_items": 523,
-    "server_time": "2026-09-12T09:53:12+08:00",
+    "total_items": 11539,
+    "today_items": 552,
+    "server_time": "2026-09-12T10:24:21+08:00",
     "live": false,
     "dataMode": "demo",
     "trendMode": "demo",
@@ -5011,7 +5017,12 @@
           "Authentic",
           "Energetic"
         ],
-        "objective": "Use credible training authority to communicate cushioning technology, not popularity alone."
+        "objective": "Use credible training authority to communicate cushioning technology, not popularity alone.",
+        "workingBudget": {
+          "talentCny": 10000000,
+          "productionCny": 3500000,
+          "currency": "CNY"
+        }
       },
       "scoringStrategy": {
         "preset": "Balanced fit",
