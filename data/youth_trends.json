@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 214,
-    "today_count": 14,
-    "heat": 0.403,
+    "mention_count": 215,
+    "today_count": 15,
+    "heat": 0.414,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -12,6 +12,12 @@
         "title": "2026哈尔滨马拉松",
         "platform": "douyin",
         "rank": 1
+      },
+      {
+        "date": "2026-09-13",
+        "title": "皇马4-1巴列卡诺",
+        "platform": "bilibili-hot-search",
+        "rank": 5
       },
       {
         "date": "2026-09-13",
@@ -30,12 +36,6 @@
         "title": "孙心然美网青少年冠军",
         "platform": "weibo",
         "rank": 9
-      },
-      {
-        "date": "2026-09-13",
-        "title": "罗纳尔多现场观看美网女单决赛",
-        "platform": "toutiao",
-        "rank": 10
       }
     ],
     "sources": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 74,
     "today_count": 1,
-    "heat": 0.056,
+    "heat": 0.055,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 753,
-    "today_count": 30,
+    "mention_count": 754,
+    "today_count": 31,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -144,12 +144,6 @@
       },
       {
         "date": "2026-09-13",
-        "title": "爆了!苹果18首批开售秒空",
-        "platform": "tieba",
-        "rank": 2
-      },
-      {
-        "date": "2026-09-13",
         "title": "陶哲轩、邓煜等菲奖得主联合抗议 AI 公司数学军备竞赛，AI 是否在毁掉数学？",
         "platform": "zhihu",
         "rank": 2
@@ -158,6 +152,12 @@
         "date": "2026-09-13",
         "title": "如何看待 25 位菲奖得主发布联合声明《AI 在数学领域的严重错位》？是否意味着传统数学研究模式的崩溃？",
         "platform": "zhihu",
+        "rank": 2
+      },
+      {
+        "date": "2026-09-13",
+        "title": "爆了!苹果18首批开售秒空",
+        "platform": "tieba",
         "rank": 3
       },
       {
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 28,
     "today_count": 2,
-    "heat": 0.056,
+    "heat": 0.055,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 45,
     "today_count": 2,
-    "heat": 0.064,
+    "heat": 0.063,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -275,7 +275,7 @@
         "date": "2026-09-13",
         "title": "我的穿搭思路有点野",
         "platform": "douyin",
-        "rank": 22
+        "rank": 28
       },
       {
         "date": "2026-09-11",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 57,
     "today_count": 3,
-    "heat": 0.091,
+    "heat": 0.089,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -318,7 +318,7 @@
         "date": "2026-09-13",
         "title": "勇哥餐饮事件，博主线下调查发现火锅店实为两班倒，并非员工单人工作 17 小时，这一调查结果能否平息争议？",
         "platform": "zhihu",
-        "rank": 6
+        "rank": 8
       },
       {
         "date": "2026-09-13",
@@ -347,7 +347,7 @@
     "tag": "咖啡",
     "mention_count": 22,
     "today_count": 1,
-    "heat": 0.032,
+    "heat": 0.031,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
