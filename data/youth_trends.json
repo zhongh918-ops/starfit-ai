@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 215,
-    "today_count": 15,
-    "heat": 0.395,
+    "mention_count": 217,
+    "today_count": 17,
+    "heat": 0.435,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -15,12 +15,6 @@
       },
       {
         "date": "2026-09-13",
-        "title": "皇马4-1巴列卡诺",
-        "platform": "bilibili-hot-search",
-        "rank": 3
-      },
-      {
-        "date": "2026-09-13",
         "title": "莱巴金娜2:1萨巴伦卡夺美网冠军",
         "platform": "douyin",
         "rank": 7
@@ -29,6 +23,12 @@
         "date": "2026-09-13",
         "title": "孙心然闯入美网青少年决赛",
         "platform": "douyin",
+        "rank": 8
+      },
+      {
+        "date": "2026-09-13",
+        "title": "皇马4-1巴列卡诺",
+        "platform": "bilibili-hot-search",
         "rank": 8
       },
       {
@@ -97,7 +97,7 @@
         "date": "2026-09-13",
         "title": "“减肥神药”获批国内脂肪肝适应症后，GLP-1还有哪些潜能？",
         "platform": "cls-hot",
-        "rank": 5
+        "rank": 4
       },
       {
         "date": "2025-12-22",
@@ -150,15 +150,15 @@
       },
       {
         "date": "2026-09-13",
-        "title": "傅园慧喜提“五折叠”笑得停不下来",
-        "platform": "toutiao",
+        "title": "如何看待 25 位菲奖得主发布联合声明《AI 在数学领域的严重错位》？是否意味着传统数学研究模式的崩溃？",
+        "platform": "zhihu",
         "rank": 2
       },
       {
         "date": "2026-09-13",
-        "title": "如何看待 25 位菲奖得主发布联合声明《AI 在数学领域的严重错位》？是否意味着传统数学研究模式的崩溃？",
-        "platform": "zhihu",
-        "rank": 2
+        "title": "美股收盘：三大指数止跌反弹 芯片股走强费城指数涨近2%",
+        "platform": "cls-hot",
+        "rank": 3
       },
       {
         "date": "2026-09-13",
@@ -275,7 +275,7 @@
         "date": "2026-09-13",
         "title": "我的穿搭思路有点野",
         "platform": "douyin",
-        "rank": 28
+        "rank": 24
       },
       {
         "date": "2026-09-11",
