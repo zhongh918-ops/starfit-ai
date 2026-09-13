@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 218,
-    "today_count": 18,
-    "heat": 0.359,
+    "mention_count": 219,
+    "today_count": 19,
+    "heat": 0.374,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -21,14 +21,14 @@
       },
       {
         "date": "2026-09-13",
-        "title": "莱巴金娜2:1萨巴伦卡夺美网冠军",
-        "platform": "douyin",
-        "rank": 8
+        "title": "孙心然美网青少年冠军",
+        "platform": "weibo",
+        "rank": 9
       },
       {
         "date": "2026-09-13",
-        "title": "孙心然美网青少年冠军",
-        "platform": "weibo",
+        "title": "莱巴金娜2:1萨巴伦卡夺美网冠军",
+        "platform": "douyin",
         "rank": 9
       },
       {
@@ -54,7 +54,7 @@
         "date": "2026-09-13",
         "title": "旅行了很多次才知道的事",
         "platform": "weibo",
-        "rank": 23
+        "rank": 26
       },
       {
         "date": "2026-09-11",
@@ -103,7 +103,7 @@
         "date": "2026-09-13",
         "title": "鱼油是养生神器还是智商税",
         "platform": "baidu",
-        "rank": 9
+        "rank": 30
       },
       {
         "date": "2025-12-22",
@@ -183,7 +183,7 @@
         "date": "2026-09-13",
         "title": "来重庆的快乐从一碗小面开始",
         "platform": "douyin",
-        "rank": 10
+        "rank": 11
       },
       {
         "date": "2025-12-24",
