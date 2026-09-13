@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 218,
     "today_count": 18,
-    "heat": 0.408,
+    "heat": 0.4,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -35,7 +35,7 @@
         "date": "2026-09-13",
         "title": "皇马4-1巴列卡诺",
         "platform": "bilibili-hot-search",
-        "rank": 9
+        "rank": 12
       }
     ],
     "sources": [
@@ -130,16 +130,28 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 761,
-    "today_count": 38,
+    "mention_count": 762,
+    "today_count": 39,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
     "evidence": [
       {
         "date": "2026-09-13",
+        "title": "一部手机看金砖国家合作前景",
+        "platform": "bilibili-hot-search",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-13",
         "title": "陶哲轩、邓煜等菲奖得主联合抗议 AI 公司数学军备竞赛，AI 是否在毁掉数学？",
         "platform": "zhihu",
+        "rank": 2
+      },
+      {
+        "date": "2026-09-13",
+        "title": "傅园慧喜提“五折叠”笑得停不下来",
+        "platform": "toutiao",
         "rank": 2
       },
       {
@@ -153,18 +165,6 @@
         "title": "美股收盘：三大指数止跌反弹 芯片股走强费城指数涨近2%",
         "platform": "cls-hot",
         "rank": 3
-      },
-      {
-        "date": "2026-09-13",
-        "title": "一部手机看金砖国家合作前景",
-        "platform": "bilibili-hot-search",
-        "rank": 3
-      },
-      {
-        "date": "2026-09-13",
-        "title": "雷军为首批小米澎程车主开车门",
-        "platform": "toutiao",
-        "rank": 4
       }
     ],
     "sources": [
@@ -216,9 +216,9 @@
   },
   "便利": {
     "tag": "便利",
-    "mention_count": 28,
-    "today_count": 2,
-    "heat": 0.047,
+    "mention_count": 29,
+    "today_count": 3,
+    "heat": 0.063,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -235,6 +235,12 @@
         "rank": 15
       },
       {
+        "date": "2026-09-13",
+        "title": "蔡磊回忆敬一丹到家中看望",
+        "platform": "weibo",
+        "rank": 25
+      },
+      {
         "date": "2025-12-26",
         "title": "贾国龙预制菜风波后发声，称靠吃安眠药入睡，如果能重来坚决不硬刚，如何看待西贝未来的发展？",
         "platform": "zhihu",
@@ -244,12 +250,6 @@
         "date": "2025-12-27",
         "title": "小区歧视外卖员,百名骑手集结抗议",
         "platform": "tieba",
-        "rank": 4
-      },
-      {
-        "date": "2026-09-09",
-        "title": "自费买可乐的外卖骑手被奖励一年骑手餐",
-        "platform": "weibo",
         "rank": 4
       }
     ],
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 46,
     "today_count": 3,
-    "heat": 0.072,
+    "heat": 0.071,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -275,7 +275,7 @@
         "date": "2026-09-13",
         "title": "73岁赵雅芝首度登临高定秀场",
         "platform": "toutiao",
-        "rank": 21
+        "rank": 14
       },
       {
         "date": "2026-09-13",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 58,
     "today_count": 4,
-    "heat": 0.095,
+    "heat": 0.093,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -318,7 +318,7 @@
         "date": "2026-09-13",
         "title": "勇哥餐饮事件，博主线下调查发现火锅店实为两班倒，并非员工单人工作 17 小时，这一调查结果能否平息争议？",
         "platform": "zhihu",
-        "rank": 5
+        "rank": 4
       },
       {
         "date": "2026-09-13",
