@@ -2,11 +2,29 @@
   "运动": {
     "tag": "运动",
     "mention_count": 233,
-    "today_count": 14,
-    "heat": 0.426,
+    "today_count": 0,
+    "heat": 0.101,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
+      {
+        "date": "2026-09-09",
+        "title": "皇马2:1击败国米",
+        "platform": "douyin",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-10",
+        "title": "回顾郑钦文美网之路",
+        "platform": "bilibili-hot-search",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-10",
+        "title": "中国女篮不敌法国无缘世界杯四强",
+        "platform": "douyin",
+        "rank": 1
+      },
       {
         "date": "2026-09-14",
         "title": "中国足球小将西班牙捧杯",
@@ -14,28 +32,10 @@
         "rank": 1
       },
       {
-        "date": "2026-09-14",
-        "title": "兹维列夫夺得美网男单冠军",
-        "platform": "douyin",
+        "date": "2025-12-21",
+        "title": "健身房教练说不报课自己练会练废，到底是为了卖课还是真的这样？",
+        "platform": "zhihu",
         "rank": 2
-      },
-      {
-        "date": "2026-09-14",
-        "title": "2026哈尔滨马拉松",
-        "platform": "douyin",
-        "rank": 10
-      },
-      {
-        "date": "2026-09-14",
-        "title": "克拉克赛后更推：世界杯金牌得主",
-        "platform": "toutiao",
-        "rank": 12
-      },
-      {
-        "date": "2026-09-14",
-        "title": "兹维列夫首夺美网冠军",
-        "platform": "weibo",
-        "rank": 14
       }
     ],
     "sources": [
@@ -45,17 +45,11 @@
   "户外": {
     "tag": "户外",
     "mention_count": 50,
-    "today_count": 1,
-    "heat": 0.045,
+    "today_count": 0,
+    "heat": 0.022,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
-      {
-        "date": "2026-09-14",
-        "title": "阿里代理的《旅行青蛙》因授权到期将停止运营，如何评价？你对它有哪些回忆？",
-        "platform": "zhihu",
-        "rank": 7
-      },
       {
         "date": "2026-09-11",
         "title": "川西的秋天美得没轻没重",
@@ -79,6 +73,12 @@
         "title": "23岁硕士川西徒步因高反去世",
         "platform": "toutiao",
         "rank": 5
+      },
+      {
+        "date": "2025-12-22",
+        "title": "23岁硕士徒步去世前已主动返程",
+        "platform": "weibo",
+        "rank": 5
       }
     ],
     "sources": [
@@ -88,23 +88,11 @@
   "健康": {
     "tag": "健康",
     "mention_count": 77,
-    "today_count": 2,
-    "heat": 0.08,
+    "today_count": 0,
+    "heat": 0.033,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
-      {
-        "date": "2026-09-14",
-        "title": "起床后做这3个动作测测身体健康度",
-        "platform": "toutiao",
-        "rank": 15
-      },
-      {
-        "date": "2026-09-14",
-        "title": "多地辟谣：所谓“安全健康教育网”培训活动并非由官方组织",
-        "platform": "thepaper",
-        "rank": 18
-      },
       {
         "date": "2025-12-22",
         "title": "抗癌药平替有效成分为0",
@@ -122,6 +110,18 @@
         "title": "冬至时节如何养生",
         "platform": "weibo",
         "rank": 3
+      },
+      {
+        "date": "2025-12-21",
+        "title": "持续加码医保投入 夯实健康中国",
+        "platform": "toutiao",
+        "rank": 3
+      },
+      {
+        "date": "2026-09-10",
+        "title": "起底“神药”直播间①｜年售3.9亿的“养生局”：假专家、假神药，卖货全靠演",
+        "platform": "thepaper",
+        "rank": 3
       }
     ],
     "sources": [
@@ -131,40 +131,40 @@
   "科技": {
     "tag": "科技",
     "mention_count": 805,
-    "today_count": 28,
-    "heat": 1.0,
+    "today_count": 0,
+    "heat": 0.35,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
     "evidence": [
       {
-        "date": "2026-09-14",
-        "title": "死敌罕见联手！马斯克、Altman支持Dario Amodei“全球放缓AI”呼吁",
+        "date": "2025-12-21",
+        "title": "高盛2026年全球股市展望：更广泛的牛市，更宽泛的AI受益者",
         "platform": "wallstreetcn-hot",
         "rank": 1
       },
       {
-        "date": "2026-09-14",
-        "title": "【早报】AI巨头呼吁，放缓前沿模型研发；沙特输油管道中断，油价大幅拉升；两场重磅发布会，今日举行",
-        "platform": "cls-hot",
-        "rank": 2
-      },
-      {
-        "date": "2026-09-14",
-        "title": "“AI交易”周一要遭暴击？三巨头支持“放缓”、OpenAI推迟IPO引热议",
+        "date": "2025-12-21",
+        "title": "摩尔线程重磅发布：新一代GPU架构“花港”能效提升10倍，系列芯片明年量产上市，推出AI算力笔记本",
         "platform": "wallstreetcn-hot",
-        "rank": 3
+        "rank": 1
       },
       {
-        "date": "2026-09-14",
-        "title": "AI正成为危险是危言耸听吗",
-        "platform": "bilibili-hot-search",
-        "rank": 3
+        "date": "2025-12-21",
+        "title": "火线解析智谱AI招股书：年营收3亿增速130%，“中国版OpenAI”率先冲刺全球大模型第一股",
+        "platform": "wallstreetcn-hot",
+        "rank": 1
       },
       {
-        "date": "2026-09-14",
-        "title": "“AI会在2030年前毁灭人类”，美AI巨头呼吁减速",
-        "platform": "ifeng",
-        "rank": 3
+        "date": "2025-12-21",
+        "title": "付鹏：决定2026全球资产涨跌的关键—AI“高速路”上，真有车跑吗? | Alpha峰会",
+        "platform": "wallstreetcn-hot",
+        "rank": 1
+      },
+      {
+        "date": "2025-12-24",
+        "title": "科技股助标普收创新高，金银铜再新高，人民币强势逼近7.0，GDP强劲打击美债",
+        "platform": "wallstreetcn-hot",
+        "rank": 1
       }
     ],
     "sources": [
@@ -174,23 +174,11 @@
   "情绪价值": {
     "tag": "情绪价值",
     "mention_count": 46,
-    "today_count": 2,
-    "heat": 0.066,
+    "today_count": 0,
+    "heat": 0.02,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
-      {
-        "date": "2026-09-14",
-        "title": "准备礼物的快乐总是先到一步",
-        "platform": "douyin",
-        "rank": 4
-      },
-      {
-        "date": "2026-09-14",
-        "title": "男子花两万买公路车骑行锻炼解压",
-        "platform": "toutiao",
-        "rank": 28
-      },
       {
         "date": "2025-12-24",
         "title": "马上测·回顾2025：两位“较真”记者，这一年测评的快乐、震惊和成就",
@@ -207,6 +195,18 @@
         "date": "2025-12-25",
         "title": "现在，欧洲情绪很不稳定",
         "platform": "ifeng",
+        "rank": 4
+      },
+      {
+        "date": "2026-09-09",
+        "title": "燕麦系秋天的神",
+        "platform": "douyin",
+        "rank": 4
+      },
+      {
+        "date": "2026-09-14",
+        "title": "准备礼物的快乐总是先到一步",
+        "platform": "douyin",
         "rank": 4
       }
     ],
@@ -260,23 +260,11 @@
   "时尚": {
     "tag": "时尚",
     "mention_count": 49,
-    "today_count": 2,
-    "heat": 0.068,
+    "today_count": 0,
+    "heat": 0.021,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
-      {
-        "date": "2026-09-14",
-        "title": "73岁赵雅芝首度登临高定秀场",
-        "platform": "toutiao",
-        "rank": 19
-      },
-      {
-        "date": "2026-09-14",
-        "title": "一代人有一代人的呆毛潮流",
-        "platform": "douyin",
-        "rank": 27
-      },
       {
         "date": "2026-09-11",
         "title": "速来领取可可系穿搭说明书",
@@ -294,6 +282,18 @@
         "title": "微胖女生入秋的第一件藏肉穿搭",
         "platform": "douyin",
         "rank": 8
+      },
+      {
+        "date": "2026-09-11",
+        "title": "井柏然Luke穿搭爆火",
+        "platform": "baidu",
+        "rank": 10
+      },
+      {
+        "date": "2025-12-21",
+        "title": "火影鸣佐传说时装技能爆料",
+        "platform": "bilibili-hot-search",
+        "rank": 12
       }
     ],
     "sources": [
@@ -303,29 +303,11 @@
   "体验": {
     "tag": "体验",
     "mention_count": 61,
-    "today_count": 3,
-    "heat": 0.096,
+    "today_count": 0,
+    "heat": 0.027,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
-      {
-        "date": "2026-09-14",
-        "title": "如何评价极客湾说华为麒麟 9050Pro 性能体验小幅超过骁龙 8Elite？",
-        "platform": "zhihu",
-        "rank": 10
-      },
-      {
-        "date": "2026-09-14",
-        "title": "勇哥餐饮事件，博主线下调查发现火锅店实为两班倒，并非员工单人工作 17 小时，这一调查结果能否平息争议？",
-        "platform": "zhihu",
-        "rank": 19
-      },
-      {
-        "date": "2026-09-14",
-        "title": "香飘飘筹备开9家线下门店",
-        "platform": "baidu",
-        "rank": 21
-      },
       {
         "date": "2025-12-22",
         "title": "老广沉浸式夜生活",
@@ -337,6 +319,24 @@
         "title": "鸣潮3.0吧友体验实况",
         "platform": "tieba",
         "rank": 3
+      },
+      {
+        "date": "2026-09-12",
+        "title": "油价短线下挫！伊朗将与海湾六国会晤、红海西海岸停火，中东局势现缓和信号",
+        "platform": "wallstreetcn-hot",
+        "rank": 3
+      },
+      {
+        "date": "2026-09-13",
+        "title": "沉浸式体验新德里的金砖元素",
+        "platform": "douyin",
+        "rank": 3
+      },
+      {
+        "date": "2026-09-11",
+        "title": "勇哥线下食堂定价到底算不算贵",
+        "platform": "bilibili-hot-search",
+        "rank": 6
       }
     ],
     "sources": [
@@ -389,17 +389,11 @@
   "活力": {
     "tag": "活力",
     "mention_count": 61,
-    "today_count": 1,
-    "heat": 0.05,
+    "today_count": 0,
+    "heat": 0.027,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
-      {
-        "date": "2026-09-14",
-        "title": "上海电气斩获马来西亚大单：一场被低估的国产燃气轮机出海突围",
-        "platform": "thepaper",
-        "rank": 15
-      },
       {
         "date": "2026-09-11",
         "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
@@ -422,6 +416,12 @@
         "date": "2025-12-22",
         "title": "从多领域成就感受中国经济活力",
         "platform": "baidu",
+        "rank": 3
+      },
+      {
+        "date": "2025-12-24",
+        "title": "消费有“数”活力无界",
+        "platform": "douyin",
         "rank": 3
       }
     ],
