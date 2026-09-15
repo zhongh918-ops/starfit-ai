@@ -486,8 +486,6 @@
   object-fit: cover;
   display: block;
 }
-  font-size: 13px;
-}
 .cd-case h3 { margin: 0 0 4px; font-size: 18px; }
 .cd-kpis {
   display: grid;

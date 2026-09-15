@@ -6,24 +6,31 @@
 <title>99% match</title>
 <script>
 (function () {
-  var gh = /github\.io$/.test(location.hostname);
+  var host = location.hostname || "";
+  var path = location.pathname || "";
+  var root = "";
+  if (/github\.io$/.test(host)) root = "/starfit-ai";
+  else {
+    var m = path.match(/^\/gh\/([^/]+\/[^/@]+)@([^/]+)/);
+    if (/jsdelivr\.net$/.test(host) && m) root = "/gh/" + m[1] + "@" + m[2];
+  }
   if (!document.querySelector("base")) {
     var el = document.createElement("base");
-    el.href = gh ? "/starfit-ai/" : "/";
+    el.href = root ? root + "/" : "/";
     document.head.appendChild(el);
   }
 })();
 </script>
-<script src="js/public-base.js"></script>
+<script src="js/public-base.js?v=evimg2"></script>
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/shell.css?v=backcenter">
 <link rel="stylesheet" href="css/work-home.css?v=trends2">
 <link rel="stylesheet" href="css/product.css?v=lang1">
-<link rel="stylesheet" href="css/trends.css">
+<link rel="stylesheet" href="css/trends.css?v=evimg2">
 <link rel="stylesheet" href="css/tags.css">
 <link rel="stylesheet" href="css/scoring.css?v=custom2">
 <link rel="stylesheet" href="css/listing.css">
-<link rel="stylesheet" href="css/candidate.css?v=evidence1">
+<link rel="stylesheet" href="css/candidate.css?v=evidence2">
 <link rel="stylesheet" href="css/campaign.css?v=scenes4">
 <link rel="stylesheet" href="css/legacy.css">
 </head>
@@ -490,6 +497,21 @@ function withBase(path) {
 }
 function publicRoot() {
   return (window.Match99Base && Match99Base.root) || '';
+}
+const DEMO_EVIDENCE_THUMBS = [
+  '/assets/trends/evidence-01-running.png',
+  '/assets/trends/evidence-02-training.png',
+  '/assets/trends/evidence-03-footwear.png'
+];
+function evidenceThumbSrc(entry, index) {
+  const raw = (entry && entry.image)
+    || ((state.dataMode || 'demo') === 'demo' ? DEMO_EVIDENCE_THUMBS[(index || 0) % DEMO_EVIDENCE_THUMBS.length] : '');
+  return raw ? withBase(raw) : '';
+}
+function evidenceThumbImg(entry, index, wide) {
+  const src = evidenceThumbSrc(entry, index);
+  if (!src) return '<span class="na">' + escHtml(t('ts.imgNa')) + '</span>';
+  return '<img src="' + escHtml(src) + '" alt=""' + (wide ? '' : ' width="64" height="48"') + '>';
 }
 const DEMO_WEIGHTS = [
   ['TAG overlap', 35],
@@ -3053,18 +3075,9 @@ function renderTrendSearch() {
       <button type="button" class="${added ? 'btn-primary' : 'btn-secondary'}" data-add-tag="${escHtml(r.tag)}" ${added ? 'disabled' : ''}>${escHtml(added ? t('ts.added') : t('ts.add'))}</button>
     </div>`;
   }).join('') || '<p class="form-note">' + escHtml(t('ts.noRelated')) + '</p>';
-  const demoThumbs = [
-    '/assets/trends/evidence-01-running.png',
-    '/assets/trends/evidence-02-training.png',
-    '/assets/trends/evidence-03-footwear.png'
-  ];
   const evRows = ev.slice(0, 3).map((e, i) => {
-    const src = e.image || ((state.dataMode || 'demo') === 'demo' ? demoThumbs[i] : '');
-    const thumb = src
-      ? `<img src="${escHtml(src)}" alt="" width="64" height="48">`
-      : escHtml(t('ts.imgNa'));
     return `<button type="button" class="ts-ev-row" data-open-sources="1">
-    <span class="ts-thumb">${thumb}</span>
+    <span class="ts-thumb">${evidenceThumbImg(e, i)}</span>
     <span><strong>${escHtml(e.title)}</strong><small>${escHtml(platformBucket(e.platform))} · ${escHtml(formatShortDate(e.date))}</small></span>
     <span class="chev">›</span>
   </button>`;
@@ -3115,7 +3128,7 @@ function openTrendSources() {
   document.getElementById('tsSourcesNote').textContent =
     `${ev.length} representative titles from snapshot ${ins.snapshotId}. ${ins.record.mention_count || 0} matching hot-list titles were counted (Observed). Permitted excerpts only — articles are not copied.`;
   document.getElementById('tsSourcesList').innerHTML = ev.length
-    ? ev.map(e => `<li><strong>${escHtml(e.title)}</strong><br><span class="form-note">${escHtml(platformBucket(e.platform))} · ${escHtml(e.date || t('common.unavailable'))} · ${escHtml(t('ts.rank', { n: String(e.rank == null ? t('common.unavailable') : e.rank) }))}</span></li>`).join('')
+    ? ev.map((e, i) => `<li class="ts-src-item">${evidenceThumbImg(e, i, true)}<div><strong>${escHtml(e.title)}</strong><br><span class="form-note">${escHtml(platformBucket(e.platform))} · ${escHtml(e.date || t('common.unavailable'))} · ${escHtml(t('ts.rank', { n: String(e.rank == null ? t('common.unavailable') : e.rank) }))}</span></div></li>`).join('')
     : '<li>' + escHtml(t('ts.noEvWindow')) + '</li>';
   modal.hidden = false;
 }
@@ -3417,7 +3430,7 @@ function openTagEvidence(tag) {
   document.getElementById('tpSourcesNote').textContent =
     t('tp.evNote', { n: String(ev.length), m: String(tr.mention_count || 0) });
   document.getElementById('tpSourcesList').innerHTML = ev.length
-    ? ev.map(e => `<li><strong>${escHtml(e.title)}</strong><br><span class="form-note">${escHtml(platformBucket(e.platform))} · ${escHtml(e.date || t('common.unavailable'))} · ${escHtml(t('ts.rank', { n: String(e.rank == null ? t('common.unavailable') : e.rank) }))}</span></li>`).join('')
+    ? ev.map((e, i) => `<li class="ts-src-item">${evidenceThumbImg(e, i, true)}<div><strong>${escHtml(e.title)}</strong><br><span class="form-note">${escHtml(platformBucket(e.platform))} · ${escHtml(e.date || t('common.unavailable'))} · ${escHtml(t('ts.rank', { n: String(e.rank == null ? t('common.unavailable') : e.rank) }))}</span></div></li>`).join('')
     : '<li>' + escHtml(t('tp.noEv')) + '</li>';
   modal.hidden = false;
 }

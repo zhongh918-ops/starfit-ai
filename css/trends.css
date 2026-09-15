@@ -445,6 +445,22 @@
 
 .ts-modal-card li { margin: 0 0 10px; font-size: 14px; }
 
+.ts-src-item {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.ts-src-item img {
+  width: 96px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--track);
+  display: block;
+}
+
 @media (max-width: 1280px) {
   .ts-grid, .ts-bottom { grid-template-columns: 1fr; }
   .ts-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
