@@ -529,11 +529,49 @@
       },
       "heat_mentions": 72,
       "today_mentions": 0,
-      "evidence": [],
+      "evidence": [
+        {
+          "source": "Weibo",
+          "date": "2026-09-10",
+          "title": "Kai Ren dawn-run clips trend after a training diary drop",
+          "title_zh": "Kai Ren 训练日记放出后，晨跑片段登上热搜"
+        },
+        {
+          "source": "Douyin",
+          "date": "2026-09-09",
+          "title": "Gym-to-street transition video with Kai Ren circulates",
+          "title_zh": "Kai Ren 健身房到街头的过渡视频在抖音流传"
+        },
+        {
+          "source": "Bilibili",
+          "date": "2026-09-08",
+          "title": "Kai Ren on movement, gadgets and controlled energy",
+          "title_zh": "Kai Ren 谈动作、设备和克制的能量感"
+        }
+      ],
       "why_for_coffee": "Combines strong sports credibility with a future-facing visual identity and broad urban relevance.",
       "public_image": "A disciplined screen performer known for a composed public image and credible relevance across sport, technology and youth culture.",
       "main_audience": "25-34 · Mainland China",
-      "works": [],
+      "works": [
+        {
+          "type": "film",
+          "title": "North Circuit",
+          "title_zh": "北线",
+          "year": 2025
+        },
+        {
+          "type": "series",
+          "title": "After Practice",
+          "title_zh": "练后",
+          "year": 2024
+        },
+        {
+          "type": "performance",
+          "title": "City Heat Stage",
+          "title_zh": "城热现场",
+          "year": 2025
+        }
+      ],
       "portrait": "/assets/portraits/kai-ren.png",
       "listingImage": "/assets/candidates/listing-kai-ren.png",
       "profilePortrait": "/assets/candidates/profile-kai-ren.png",
@@ -589,6 +627,38 @@
           "training consistency",
           "urban movement",
           "performance technology"
+        ],
+        "series30d": [
+          63.1,
+          56.8,
+          58.3,
+          67.3,
+          65.8,
+          60.2,
+          64.6,
+          65.5,
+          66.1,
+          62.7,
+          59.8,
+          68.9,
+          65.7,
+          69.4,
+          64.9,
+          67.0,
+          69.0,
+          69.1,
+          74.5,
+          69.2,
+          63.8,
+          72.0,
+          73.9,
+          74.7,
+          65.9,
+          68.8,
+          70.1,
+          75.3,
+          74.4,
+          72.0
         ]
       },
       "culturalArchetype": {
@@ -773,11 +843,49 @@
       },
       "heat_mentions": 78,
       "today_mentions": 0,
-      "evidence": [],
+      "evidence": [
+        {
+          "source": "Douyin",
+          "date": "2026-09-10",
+          "title": "Mina Zhou commute look-book clips keep looping",
+          "title_zh": "Mina Zhou 通勤穿搭片段持续循环"
+        },
+        {
+          "source": "Xiaohongshu",
+          "date": "2026-09-09",
+          "title": "Young professionals quote Mina Zhou on everyday energy",
+          "title_zh": "年轻职场人转述 Mina Zhou 的日常能量"
+        },
+        {
+          "source": "Weibo",
+          "date": "2026-09-07",
+          "title": "Mina Zhou variety recap hits the entertainment list",
+          "title_zh": "Mina Zhou 综艺回顾登上娱乐热榜"
+        }
+      ],
       "why_for_coffee": "Delivers the strongest youth-audience overlap and adapts naturally to short-form product storytelling.",
       "public_image": "A rising actress and creator with a highly engaged young audience and an approachable, design-aware public image.",
       "main_audience": "18-24 · Mainland China",
-      "works": [],
+      "works": [
+        {
+          "type": "series",
+          "title": "Daylight Edit",
+          "title_zh": "日光剪辑",
+          "year": 2025
+        },
+        {
+          "type": "variety",
+          "title": "Weekend Warm-up",
+          "title_zh": "周末热身",
+          "year": 2024
+        },
+        {
+          "type": "film",
+          "title": "Soft Launch",
+          "title_zh": "轻发布",
+          "year": 2025
+        }
+      ],
       "portrait": "/assets/portraits/mina-zhou.png",
       "listingImage": "/assets/candidates/listing-mina-zhou.png",
       "profilePortrait": "/assets/portraits/mina-zhou.png",
@@ -833,6 +941,38 @@
           "everyday energy",
           "style utility",
           "young professionals"
+        ],
+        "series30d": [
+          64.6,
+          65.3,
+          65.4,
+          66.7,
+          69.1,
+          67.8,
+          69.1,
+          67.6,
+          69.1,
+          70.5,
+          68.9,
+          70.1,
+          71.6,
+          69.9,
+          72.5,
+          71.0,
+          73.2,
+          73.3,
+          72.3,
+          74.2,
+          74.0,
+          74.6,
+          76.4,
+          76.2,
+          74.7,
+          76.3,
+          76.1,
+          76.2,
+          77.6,
+          78.0
         ]
       },
       "culturalArchetype": {
@@ -858,7 +998,7 @@
             "engagementRatePct": 6.2,
             "conversionIndex": 1.22
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-lifestyle.png",
           "status": "illustrative"
         },
         {
@@ -871,7 +1011,7 @@
             "qualifiedViews": 6100000,
             "targetCohortSharePct": 79
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-nova-audio.png",
           "status": "illustrative"
         }
       ],
@@ -1015,11 +1155,49 @@
       },
       "heat_mentions": 66,
       "today_mentions": 0,
-      "evidence": [],
+      "evidence": [
+        {
+          "source": "Douyin",
+          "date": "2026-09-10",
+          "title": "Evan Lu interval session is used as a form reference",
+          "title_zh": "Evan Lu 间歇训练被当作跑姿参考"
+        },
+        {
+          "source": "Weibo",
+          "date": "2026-09-08",
+          "title": "Sports desk recaps Evan Lu's hosting debut",
+          "title_zh": "体育板块回顾 Evan Lu 主持首秀"
+        },
+        {
+          "source": "Bilibili",
+          "date": "2026-09-06",
+          "title": "Evan Lu recovery routine explained in a training cut",
+          "title_zh": "Evan Lu 恢复流程被剪进训练切片"
+        }
+      ],
       "why_for_coffee": "Offers high sports authenticity, low reputational volatility and clear product-in-use credibility.",
       "public_image": "A competitive athlete and emerging host whose credibility comes from visible training discipline and an accessible off-field personality.",
       "main_audience": "25-34 · Mainland China",
-      "works": [],
+      "works": [
+        {
+          "type": "sport",
+          "title": "East Open Invitational",
+          "title_zh": "东部公开邀请赛",
+          "year": 2025
+        },
+        {
+          "type": "hosting",
+          "title": "Trackside Live",
+          "title_zh": "跑道直播",
+          "year": 2025
+        },
+        {
+          "type": "documentary",
+          "title": "Form Check",
+          "title_zh": "动作核对",
+          "year": 2024
+        }
+      ],
       "portrait": "/assets/portraits/evan-lu.png",
       "listingImage": "/assets/candidates/listing-evan-lu.png",
       "profilePortrait": "/assets/portraits/evan-lu.png",
@@ -1075,6 +1253,38 @@
           "training proof",
           "fitness routine",
           "running form"
+        ],
+        "series30d": [
+          61.9,
+          62.7,
+          61.5,
+          61.5,
+          60.2,
+          62.6,
+          61.8,
+          62.8,
+          60.8,
+          63.2,
+          63.2,
+          64.5,
+          64.0,
+          62.0,
+          62.7,
+          61.9,
+          63.6,
+          64.6,
+          63.0,
+          62.3,
+          65.9,
+          64.4,
+          63.5,
+          66.7,
+          63.9,
+          65.6,
+          65.9,
+          67.6,
+          67.3,
+          66.0
         ]
       },
       "culturalArchetype": {
@@ -1100,7 +1310,7 @@
             "engagementRatePct": 4.5,
             "conversionIndex": 1.27
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-motionlab-run.png",
           "status": "illustrative"
         },
         {
@@ -1113,7 +1323,7 @@
             "qualifiedViews": 3900000,
             "targetCohortSharePct": 66
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-motionlab-run.png",
           "status": "illustrative"
         }
       ],
@@ -1257,11 +1467,49 @@
       },
       "heat_mentions": 65,
       "today_mentions": 0,
-      "evidence": [],
+      "evidence": [
+        {
+          "source": "Xiaohongshu",
+          "date": "2026-09-10",
+          "title": "Tessa Wu morning routine notes get saved in wellness folders",
+          "title_zh": "Tessa Wu 晨间流程笔记被收藏进养生文件夹"
+        },
+        {
+          "source": "Weibo",
+          "date": "2026-09-08",
+          "title": "Urban professionals cite Tessa Wu on sustainable movement",
+          "title_zh": "都市职场人引用 Tessa Wu 谈可持续运动"
+        },
+        {
+          "source": "Douyin",
+          "date": "2026-09-05",
+          "title": "Tessa Wu commute stretch clip stays in recommended",
+          "title_zh": "Tessa Wu 通勤拉伸片段持续出现在推荐"
+        }
+      ],
       "why_for_coffee": "Strong audience trust and everyday-health relevance make product benefits easy to explain without celebrity excess.",
       "public_image": "A wellness entrepreneur and host with a trusted, practical voice among urban professionals balancing work, movement and recovery.",
       "main_audience": "25-34 · Mainland China",
-      "works": [],
+      "works": [
+        {
+          "type": "show",
+          "title": "Still Morning",
+          "title_zh": "静晨",
+          "year": 2025
+        },
+        {
+          "type": "hosting",
+          "title": "Work-Life Desk",
+          "title_zh": "工作生活席",
+          "year": 2024
+        },
+        {
+          "type": "documentary",
+          "title": "Daily Reset",
+          "title_zh": "每日重置",
+          "year": 2024
+        }
+      ],
       "portrait": "/assets/portraits/tessa-wu.png",
       "listingImage": "/assets/portraits/tessa-wu.png",
       "profilePortrait": "/assets/portraits/tessa-wu.png",
@@ -1317,6 +1565,38 @@
           "sustainable routine",
           "daily movement",
           "professional wellbeing"
+        ],
+        "series30d": [
+          62.6,
+          59.9,
+          62.2,
+          63.6,
+          60.9,
+          60.7,
+          60.2,
+          62.9,
+          63.6,
+          63.7,
+          62.7,
+          61.0,
+          63.2,
+          64.1,
+          63.1,
+          61.9,
+          64.2,
+          62.5,
+          63.6,
+          62.8,
+          65.6,
+          66.0,
+          63.3,
+          65.5,
+          62.5,
+          63.8,
+          64.1,
+          64.5,
+          65.7,
+          65.0
         ]
       },
       "culturalArchetype": {
@@ -1342,7 +1622,7 @@
             "engagementRatePct": 5.1,
             "conversionIndex": 1.18
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-wellness.png",
           "status": "illustrative"
         },
         {
@@ -1355,7 +1635,7 @@
             "qualifiedViews": 2800000,
             "targetCohortSharePct": 73
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-lifestyle.png",
           "status": "illustrative"
         }
       ],
@@ -1500,11 +1780,49 @@
       },
       "heat_mentions": 84,
       "today_mentions": 0,
-      "evidence": [],
+      "evidence": [
+        {
+          "source": "Douyin",
+          "date": "2026-09-10",
+          "title": "Yuna Fang movement challenge jumps the youth list",
+          "title_zh": "Yuna Fang 动作挑战冲上青年热榜"
+        },
+        {
+          "source": "Bilibili",
+          "date": "2026-09-09",
+          "title": "Street choreography cut of Yuna Fang keeps looping",
+          "title_zh": "Yuna Fang 街头编舞切片持续循环"
+        },
+        {
+          "source": "Weibo",
+          "date": "2026-09-07",
+          "title": "Yuna Fang rehearsal clip trends with dance accounts",
+          "title_zh": "Yuna Fang 排练片段在舞蹈账号间传播"
+        }
+      ],
       "why_for_coffee": "Creates immediate visual energy and reaches the core 18–24 cohort with unusually strong engagement.",
       "public_image": "A dancer and choreographer with strong youth-culture momentum, expressive movement credentials and a rapidly growing short-form audience.",
       "main_audience": "18-24 · Mainland China",
-      "works": [],
+      "works": [
+        {
+          "type": "choreography",
+          "title": "Loop City",
+          "title_zh": "循环城市",
+          "year": 2025
+        },
+        {
+          "type": "performance",
+          "title": "Kinetic Night",
+          "title_zh": "动能之夜",
+          "year": 2025
+        },
+        {
+          "type": "series",
+          "title": "Street Count",
+          "title_zh": "街头计数",
+          "year": 2024
+        }
+      ],
       "portrait": "/assets/portraits/yuna-fang.png",
       "listingImage": "/assets/portraits/yuna-fang.png",
       "profilePortrait": "/assets/portraits/yuna-fang.png",
@@ -1560,6 +1878,38 @@
           "movement challenge",
           "street choreography",
           "expressive fitness"
+        ],
+        "series30d": [
+          67.2,
+          70.8,
+          66.2,
+          78.3,
+          59.5,
+          64.1,
+          65.5,
+          64.0,
+          65.3,
+          64.6,
+          66.9,
+          71.3,
+          72.9,
+          74.9,
+          77.8,
+          69.7,
+          76.2,
+          78.0,
+          72.3,
+          73.3,
+          73.8,
+          84.3,
+          70.7,
+          70.4,
+          80.0,
+          94.0,
+          79.0,
+          96.7,
+          78.5,
+          84.0
         ]
       },
       "culturalArchetype": {
@@ -1585,7 +1935,7 @@
             "engagementRatePct": 8.4,
             "conversionIndex": 1.09
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-lifestyle.png",
           "status": "illustrative"
         },
         {
@@ -1598,7 +1948,7 @@
             "qualifiedViews": 7400000,
             "targetCohortSharePct": 84
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-lifestyle.png",
           "status": "illustrative"
         }
       ],
@@ -1742,11 +2092,49 @@
       },
       "heat_mentions": 58,
       "today_mentions": 0,
-      "evidence": [],
+      "evidence": [
+        {
+          "source": "Bilibili",
+          "date": "2026-09-10",
+          "title": "Miles Gu equipment field notes get quoted by outdoor boards",
+          "title_zh": "Miles Gu 装备实测笔记被户外板块引用"
+        },
+        {
+          "source": "Douyin",
+          "date": "2026-09-08",
+          "title": "Miles Gu ridge session used as endurance reference",
+          "title_zh": "Miles Gu 山脊训练被当作耐力参考"
+        },
+        {
+          "source": "Weibo",
+          "date": "2026-09-06",
+          "title": "Sports media recaps Miles Gu's documentary drop",
+          "title_zh": "体育媒体回顾 Miles Gu 纪录片上线"
+        }
+      ],
       "why_for_coffee": "Offers the strongest technical-use credibility and a low-risk image for performance-led storytelling.",
       "public_image": "An endurance athlete and documentary creator associated with outdoor discipline, long-form credibility and practical equipment knowledge.",
       "main_audience": "25-34 · Mainland China",
-      "works": [],
+      "works": [
+        {
+          "type": "documentary",
+          "title": "Long Road Notes",
+          "title_zh": "长路笔记",
+          "year": 2025
+        },
+        {
+          "type": "sport",
+          "title": "Ridge 100",
+          "title_zh": "山脊一百",
+          "year": 2024
+        },
+        {
+          "type": "show",
+          "title": "Field Test Hours",
+          "title_zh": "场地测试时数",
+          "year": 2025
+        }
+      ],
       "portrait": "/assets/portraits/miles-gu.png",
       "listingImage": "/assets/portraits/miles-gu.png",
       "profilePortrait": "/assets/portraits/miles-gu.png",
@@ -1802,6 +2190,38 @@
           "endurance training",
           "equipment testing",
           "outdoor discipline"
+        ],
+        "series30d": [
+          57.3,
+          54.2,
+          56.6,
+          57.4,
+          56.5,
+          57.2,
+          56.3,
+          57.2,
+          57.7,
+          57.3,
+          55.4,
+          57.1,
+          58.1,
+          56.6,
+          55.5,
+          58.9,
+          58.9,
+          57.2,
+          58.8,
+          58.6,
+          57.1,
+          57.1,
+          57.2,
+          56.8,
+          58.0,
+          58.5,
+          59.2,
+          58.7,
+          57.8,
+          58.0
         ]
       },
       "culturalArchetype": {
@@ -1827,7 +2247,7 @@
             "engagementRatePct": 5.6,
             "conversionIndex": 1.38
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-motionlab-run.png",
           "status": "illustrative"
         },
         {
@@ -1840,7 +2260,7 @@
             "qualifiedViews": 2600000,
             "targetCohortSharePct": 64
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-nova-audio.png",
           "status": "illustrative"
         }
       ],
@@ -1986,11 +2406,49 @@
       },
       "heat_mentions": 72,
       "today_mentions": 0,
-      "evidence": [],
+      "evidence": [
+        {
+          "source": "Xiaohongshu",
+          "date": "2026-09-10",
+          "title": "Nora Lin editorial stills lead design-utility posts",
+          "title_zh": "Nora Lin 形象大片带动设计实用帖"
+        },
+        {
+          "source": "Weibo",
+          "date": "2026-09-09",
+          "title": "Nora Lin launch look is saved across fashion boards",
+          "title_zh": "Nora Lin 发布造型在时装板块被收藏"
+        },
+        {
+          "source": "Douyin",
+          "date": "2026-09-07",
+          "title": "Nora Lin architecture-walk film clip circulates",
+          "title_zh": "Nora Lin 建筑漫步影片片段在流传"
+        }
+      ],
       "why_for_coffee": "Provides the clearest route to reposition a functional product as a design and lifestyle object.",
       "public_image": "A fashion model and creative director with a refined visual signature and credibility among design-conscious urban audiences.",
       "main_audience": "25-34 · Mainland China",
-      "works": [],
+      "works": [
+        {
+          "type": "fashion",
+          "title": "Form Study 09",
+          "title_zh": "形态研究 09",
+          "year": 2025
+        },
+        {
+          "type": "film",
+          "title": "Future Object",
+          "title_zh": "未来物件",
+          "year": 2024
+        },
+        {
+          "type": "show",
+          "title": "Atelier Hours",
+          "title_zh": "工作室时数",
+          "year": 2025
+        }
+      ],
       "portrait": "/assets/portraits/nora-lin.png",
       "listingImage": "/assets/portraits/nora-lin.png",
       "profilePortrait": "/assets/portraits/nora-lin.png",
@@ -2048,6 +2506,38 @@
           "technical fashion",
           "design utility",
           "future minimalism"
+        ],
+        "series30d": [
+          65.7,
+          63.5,
+          60.7,
+          60.4,
+          64.3,
+          70.7,
+          70.0,
+          67.7,
+          72.0,
+          67.4,
+          68.0,
+          64.5,
+          67.0,
+          66.1,
+          72.7,
+          64.3,
+          71.4,
+          64.7,
+          71.3,
+          65.8,
+          73.2,
+          72.7,
+          72.0,
+          68.8,
+          67.1,
+          70.1,
+          75.0,
+          77.3,
+          67.0,
+          72.0
         ]
       },
       "culturalArchetype": {
@@ -2073,7 +2563,7 @@
             "engagementRatePct": 5.2,
             "conversionIndex": 1.12
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-nova-audio.png",
           "status": "illustrative"
         },
         {
@@ -2086,7 +2576,7 @@
             "qualifiedViews": 4300000,
             "targetCohortSharePct": 76
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-lifestyle.png",
           "status": "illustrative"
         }
       ],
@@ -2232,11 +2722,49 @@
       },
       "heat_mentions": 82,
       "today_mentions": 0,
-      "evidence": [],
+      "evidence": [
+        {
+          "source": "Bilibili",
+          "date": "2026-09-10",
+          "title": "Aria Chen night-session film is clipped by music accounts",
+          "title_zh": "Aria Chen 夜间录音影片被音乐账号切片"
+        },
+        {
+          "source": "Weibo",
+          "date": "2026-09-08",
+          "title": "Aria Chen new single talk hits culture lists",
+          "title_zh": "Aria Chen 新单曲对谈登上文化热榜"
+        },
+        {
+          "source": "Douyin",
+          "date": "2026-09-05",
+          "title": "Aria Chen studio diary loop keeps returning in recommended",
+          "title_zh": "Aria Chen 录音室日记在推荐里反复出现"
+        }
+      ],
       "why_for_coffee": "Can give a functional product cultural depth and a distinctive sound-led campaign platform.",
       "public_image": "An independent musician and producer with strong cultural credibility, a thoughtful visual language and an audience concentrated in creative communities.",
       "main_audience": "25-34 · Mainland China",
-      "works": [],
+      "works": [
+        {
+          "type": "album",
+          "title": "Night Signal",
+          "title_zh": "夜信号",
+          "year": 2025
+        },
+        {
+          "type": "film",
+          "title": "Independent Motion",
+          "title_zh": "独立运动",
+          "year": 2024
+        },
+        {
+          "type": "performance",
+          "title": "Studio Live 12",
+          "title_zh": "录音室现场 12",
+          "year": 2025
+        }
+      ],
       "portrait": "/assets/portraits/aria-chen.png",
       "listingImage": "/assets/portraits/aria-chen.png",
       "profilePortrait": "/assets/portraits/aria-chen.png",
@@ -2292,6 +2820,38 @@
           "independent sound",
           "night movement",
           "creative discipline"
+        ],
+        "series30d": [
+          67.6,
+          68.5,
+          71.1,
+          64.2,
+          66.0,
+          65.1,
+          70.2,
+          66.7,
+          69.7,
+          70.8,
+          70.9,
+          70.5,
+          74.3,
+          77.9,
+          78.4,
+          77.6,
+          71.9,
+          74.1,
+          78.6,
+          79.0,
+          75.4,
+          78.6,
+          79.3,
+          77.8,
+          83.2,
+          79.2,
+          86.2,
+          78.3,
+          77.1,
+          82.0
         ]
       },
       "culturalArchetype": {
@@ -2317,7 +2877,7 @@
             "engagementRatePct": 7.1,
             "conversionIndex": 1.05
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-nova-audio.png",
           "status": "illustrative"
         },
         {
@@ -2330,7 +2890,7 @@
             "qualifiedViews": 4600000,
             "targetCohortSharePct": 78
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-lifestyle.png",
           "status": "illustrative"
         }
       ],
@@ -2475,11 +3035,49 @@
       },
       "heat_mentions": 75,
       "today_mentions": 0,
-      "evidence": [],
+      "evidence": [
+        {
+          "source": "Bilibili",
+          "date": "2026-09-10",
+          "title": "Leo Xu wearable teardown stays on the tech list",
+          "title_zh": "Leo Xu 可穿戴拆解留在科技热榜"
+        },
+        {
+          "source": "Douyin",
+          "date": "2026-09-09",
+          "title": "Leo Xu product-test challenge is remixed overnight",
+          "title_zh": "Leo Xu 产品测试挑战一夜被二创"
+        },
+        {
+          "source": "Weibo",
+          "date": "2026-09-07",
+          "title": "Gaming desks quote Leo Xu on everyday performance kit",
+          "title_zh": "游戏板块引用 Leo Xu 谈日常性能装备"
+        }
+      ],
       "why_for_coffee": "Makes cushioning and footwear technology easy to understand through fast, platform-native content.",
       "public_image": "A consumer-technology creator and gaming host with high publishing consistency, a young male audience and strong product-explanation skills.",
       "main_audience": "18-24 · Mainland China",
-      "works": [],
+      "works": [
+        {
+          "type": "show",
+          "title": "Input Lab",
+          "title_zh": "输入实验室",
+          "year": 2025
+        },
+        {
+          "type": "hosting",
+          "title": "Queue Night",
+          "title_zh": "队列之夜",
+          "year": 2025
+        },
+        {
+          "type": "series",
+          "title": "Everyday Battery",
+          "title_zh": "日常电量",
+          "year": 2024
+        }
+      ],
       "portrait": "/assets/portraits/leo-xu.png",
       "listingImage": "/assets/portraits/leo-xu.png",
       "profilePortrait": "/assets/portraits/leo-xu.png",
@@ -2535,6 +3133,38 @@
           "wearable technology",
           "everyday performance",
           "product testing"
+        ],
+        "series30d": [
+          62.5,
+          67.7,
+          70.4,
+          67.8,
+          62.7,
+          67.9,
+          67.4,
+          65.5,
+          63.3,
+          68.8,
+          65.0,
+          65.8,
+          72.5,
+          73.4,
+          69.8,
+          73.1,
+          67.6,
+          67.8,
+          72.7,
+          74.0,
+          66.2,
+          72.1,
+          70.5,
+          74.7,
+          77.4,
+          74.8,
+          72.3,
+          70.2,
+          71.9,
+          75.0
         ]
       },
       "culturalArchetype": {
@@ -2560,7 +3190,7 @@
             "engagementRatePct": 7.8,
             "conversionIndex": 1.26
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-nova-audio.png",
           "status": "illustrative"
         },
         {
@@ -2573,7 +3203,7 @@
             "qualifiedViews": 6800000,
             "targetCohortSharePct": 82
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-nova-audio.png",
           "status": "illustrative"
         }
       ],
@@ -2721,11 +3351,49 @@
       },
       "heat_mentions": 65,
       "today_mentions": 0,
-      "evidence": [],
+      "evidence": [
+        {
+          "source": "Weibo",
+          "date": "2026-09-10",
+          "title": "Theo Bai after-dark stills lead entertainment roundups",
+          "title_zh": "Theo Bai 入夜剧照出现在娱乐盘点"
+        },
+        {
+          "source": "Douyin",
+          "date": "2026-09-08",
+          "title": "Theo Bai music-film cut loops on night-city tags",
+          "title_zh": "Theo Bai 音乐短片在夜城标签下循环"
+        },
+        {
+          "source": "Xiaohongshu",
+          "date": "2026-09-06",
+          "title": "Theo Bai tailoring look-book is saved in style folders",
+          "title_zh": "Theo Bai 剪裁造型被收藏进风格文件夹"
+        }
+      ],
       "why_for_coffee": "Could create a distinctive perception-shift campaign that moves the product beyond conventional sport advertising.",
       "public_image": "A musician and actor with a mature fashion identity, strong editorial presence and a loyal entertainment audience.",
       "main_audience": "25-34 · Mainland China",
-      "works": [],
+      "works": [
+        {
+          "type": "film",
+          "title": "After Dark",
+          "title_zh": "入夜之后",
+          "year": 2025
+        },
+        {
+          "type": "album",
+          "title": "Scene Shift",
+          "title_zh": "场景切换",
+          "year": 2024
+        },
+        {
+          "type": "fashion",
+          "title": "Night Tailoring",
+          "title_zh": "夜间剪裁",
+          "year": 2025
+        }
+      ],
       "portrait": "/assets/portraits/theo-bai.png",
       "listingImage": "/assets/portraits/theo-bai.png",
       "profilePortrait": "/assets/portraits/theo-bai.png",
@@ -2781,6 +3449,38 @@
           "cinematic style",
           "music culture",
           "night city"
+        ],
+        "series30d": [
+          73.8,
+          63.2,
+          69.6,
+          74.2,
+          76.1,
+          63.3,
+          68.0,
+          68.0,
+          67.6,
+          68.4,
+          71.4,
+          63.9,
+          73.0,
+          64.3,
+          69.7,
+          69.2,
+          75.8,
+          69.3,
+          67.8,
+          66.3,
+          72.3,
+          65.0,
+          66.8,
+          71.6,
+          60.6,
+          73.4,
+          62.3,
+          60.6,
+          58.1,
+          65.0
         ]
       },
       "culturalArchetype": {
@@ -2806,7 +3506,7 @@
             "engagementRatePct": 3.9,
             "conversionIndex": 0.97
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-lifestyle.png",
           "status": "illustrative"
         },
         {
@@ -2819,7 +3519,7 @@
             "qualifiedViews": 5700000,
             "targetCohortSharePct": 69
           },
-          "imageAsset": null,
+          "imageAsset": "/assets/evidence/evidence-motionlab-run.png",
           "status": "illustrative"
         }
       ],
@@ -2864,7 +3564,8 @@
         "科技",
         "活力"
       ],
-      "description": "轻量训练跑鞋，面向日常跑步与健身房的年轻人。期望形象：运动、真诚、有活力。"
+      "description": "轻量训练跑鞋，面向日常跑步与健身房的年轻人。期望形象：运动、真诚、有活力。",
+      "description_en": "Lightweight training shoes for everyday running and gym sessions. Desired image: athletic, authentic, energetic."
     },
     {
       "id": "cold-brew",
@@ -2894,7 +3595,8 @@
         "户外",
         "科技"
       ],
-      "description": "面向 18–28 岁的即饮冷萃咖啡。低糖、便携、清爽。场景：晨间通勤、骑行、健身房、周末轻户外。期望形象：年轻、有活力、现代。"
+      "description": "面向 18–28 岁的即饮冷萃咖啡。低糖、便携、清爽。场景：晨间通勤、骑行、健身房、周末轻户外。期望形象：年轻、有活力、现代。",
+      "description_en": "Ready-to-drink cold brew for ages 18–28. Low sugar, portable, refreshing. Scenes: morning commute, cycling, gym, light weekend outdoors. Desired image: young, energetic, modern."
     },
     {
       "id": "headphones",
@@ -2922,16 +3624,17 @@
         "体验",
         "情绪价值"
       ],
-      "description": "降噪智能耳机，强调通勤体验与情绪陪伴。期望形象：现代、冷静、有情绪价值。"
+      "description": "降噪智能耳机，强调通勤体验与情绪陪伴。期望形象：现代、冷静、有情绪价值。",
+      "description_en": "Noise-cancelling smart headphones for commute and companionship. Desired image: modern, calm, emotionally aware."
     }
   ],
   "meta": {
-    "generated_at": "2026-09-15T10:09:17+08:00",
-    "source_mtime": "2026-09-15T10:09:12+08:00",
+    "generated_at": "2026-09-15T10:40:27+08:00",
+    "source_mtime": "2026-09-15T10:40:22+08:00",
     "today": "2026-09-15",
-    "total_items": 13330,
-    "today_items": 276,
-    "server_time": "2026-09-15T10:09:17+08:00",
+    "total_items": 13374,
+    "today_items": 320,
+    "server_time": "2026-09-15T10:40:27+08:00",
     "live": false,
     "dataMode": "demo",
     "trendMode": "demo",
