@@ -14,7 +14,8 @@
       "talentBudgetCny": 10000000,
       "productionBudgetCny": 3500000,
       "seed_tags": ["运动", "科技", "活力"],
-      "description": "轻量训练跑鞋，面向日常跑步与健身房的年轻人。期望形象：运动、真诚、有活力。"
+      "description": "轻量训练跑鞋，面向日常跑步与健身房的年轻人。期望形象：运动、真诚、有活力。",
+      "description_en": "Lightweight training shoes for everyday running and gym sessions. Desired image: athletic, authentic, energetic."
     },
     {
       "id": "cold-brew",
@@ -30,7 +31,8 @@
       "talentBudgetCny": 6000000,
       "productionBudgetCny": 2000000,
       "seed_tags": ["运动", "户外", "科技"],
-      "description": "面向 18–28 岁的即饮冷萃咖啡。低糖、便携、清爽。场景：晨间通勤、骑行、健身房、周末轻户外。期望形象：年轻、有活力、现代。"
+      "description": "面向 18–28 岁的即饮冷萃咖啡。低糖、便携、清爽。场景：晨间通勤、骑行、健身房、周末轻户外。期望形象：年轻、有活力、现代。",
+      "description_en": "Ready-to-drink cold brew for ages 18–28. Low sugar, portable, refreshing. Scenes: morning commute, cycling, gym, light weekend outdoors. Desired image: young, energetic, modern."
     },
     {
       "id": "headphones",
@@ -46,7 +48,8 @@
       "talentBudgetCny": 8000000,
       "productionBudgetCny": 2500000,
       "seed_tags": ["科技", "体验", "情绪价值"],
-      "description": "降噪智能耳机，强调通勤体验与情绪陪伴。期望形象：现代、冷静、有情绪价值。"
+      "description": "降噪智能耳机，强调通勤体验与情绪陪伴。期望形象：现代、冷静、有情绪价值。",
+      "description_en": "Noise-cancelling smart headphones for commute and companionship. Desired image: modern, calm, emotionally aware."
     }
   ]
 }

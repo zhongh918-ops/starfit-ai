@@ -646,8 +646,26 @@ a.wordmark {
   font-family: inherit;
   font-size: 15px;
   font-weight: 600;
+  line-height: 1;
   cursor: pointer;
   border: 0;
+}
+
+a.btn-primary,
+a.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+a.btn-primary:hover,
+a.btn-secondary:hover,
+a.btn-primary:focus,
+a.btn-secondary:focus {
+  text-decoration: none;
 }
 
 .btn-primary {

@@ -16,14 +16,14 @@
 </script>
 <script src="js/public-base.js"></script>
 <link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/shell.css">
+<link rel="stylesheet" href="css/shell.css?v=backcenter">
 <link rel="stylesheet" href="css/work-home.css?v=trends2">
-<link rel="stylesheet" href="css/product.css">
+<link rel="stylesheet" href="css/product.css?v=lang1">
 <link rel="stylesheet" href="css/trends.css">
 <link rel="stylesheet" href="css/tags.css">
-<link rel="stylesheet" href="css/scoring.css">
+<link rel="stylesheet" href="css/scoring.css?v=backcenter">
 <link rel="stylesheet" href="css/listing.css">
-<link rel="stylesheet" href="css/candidate.css">
+<link rel="stylesheet" href="css/candidate.css?v=evidence1">
 <link rel="stylesheet" href="css/campaign.css?v=scenes4">
 <link rel="stylesheet" href="css/legacy.css">
 </head>
@@ -117,6 +117,7 @@
                   <span class="meta-label" data-i18n="home.audience">Target audience</span>
                   <input type="hidden" id="audience" value="18-28">
                   <button type="button" class="age-pill" id="agePill" data-i18n-title="home.ageTitle" title="Age is edited on Product Understanding">18–28</button>
+                  <button type="button" class="age-pill" id="genderPill" data-i18n-title="home.genderTitle" title="Talent gender is edited on Product Understanding">Any</button>
                 </div>
                 <div class="meta-block detected">
                   <span class="meta-label" data-i18n="home.tags">Detected tags</span>
@@ -185,6 +186,7 @@
                     <option value="Coffee" data-i18n="pu.cat.coffee">Coffee</option>
                     <option value="Sports shoes" data-i18n="pu.cat.shoes">Sports shoes</option>
                     <option value="Smart headphones" data-i18n="pu.cat.headphones">Smart headphones</option>
+                    <option value="Beauty" data-i18n="pu.cat.beauty">Beauty</option>
                     <option value="Other" data-i18n="pu.cat.other">Other</option>
                   </select>
                 </div>
@@ -206,6 +208,14 @@
                   </div>
                 </div>
                 <div class="pu-row">
+                  <span data-i18n="pu.gender">Talent gender</span>
+                  <select class="field" id="puGender">
+                    <option value="any" data-i18n="pu.gender.any">Any</option>
+                    <option value="female" data-i18n="pu.gender.female">Female</option>
+                    <option value="male" data-i18n="pu.gender.male">Male</option>
+                  </select>
+                </div>
+                <div class="pu-row">
                   <span data-i18n="pu.price">Price tier</span>
                   <select class="field" id="puPrice">
                     <option value="Mass" data-i18n="pu.price.mass">Mass</option>
@@ -217,7 +227,10 @@
                 </div>
                 <div class="pu-row">
                   <span data-i18n="pu.budget">Talent budget</span>
-                  <input class="field" id="puBudget" type="number" min="0" step="0.5" inputmode="decimal" data-i18n-aria="pu.budgetHint" aria-label="CNY millions">
+                  <div class="pu-budget">
+                    <input class="field" id="puBudget" type="number" min="0" step="0.5" inputmode="decimal" data-i18n-aria="pu.budgetHint" aria-label="CNY millions">
+                    <span class="form-note" data-i18n="pu.budgetHint">CNY millions</span>
+                  </div>
                 </div>
                 <div class="pu-row">
                   <span data-i18n="pu.features">Key features</span>
@@ -247,7 +260,7 @@
             <div class="pu-foot">
               <p class="ready-line"><span class="status-dot"></span><span data-i18n="pu.ready">Ready for trend validation</span></p>
               <div class="actions">
-                <a class="btn-secondary" href="/work" id="backToBrief" data-i18n="pu.back">Back to brief</a>
+                <a class="btn-secondary" href="/work" id="backToBrief" data-i18n="ss.back">Back to workbench</a>
                 <button type="button" class="btn-primary" id="confirmBrief" data-i18n="pu.confirm">Confirm and explore trends →</button>
               </div>
             </div>
@@ -354,6 +367,7 @@
                 <h1 data-i18n="ss.h1">Choose what this match should optimize.</h1>
                 <p class="lede" data-i18n="ss.lede">Set component weights that total 100%. The Risk Gate stays a separate 0.12 × risk penalty and is not a sixth slider. Candidate order changes only after you apply a saved strategy.</p>
               </div>
+              <a class="btn-secondary ss-back" href="/work" id="ssBack" data-i18n="ss.back">Back to workbench</a>
             </div>
             <p class="ss-banner" id="ssLiveNote"></p>
             <div class="ss-layout">
@@ -362,6 +376,7 @@
                 <div id="ssRows"></div>
                 <p class="ss-total" id="ssTotal"></p>
                 <div class="ss-actions">
+                  <a class="btn-secondary" href="/work" id="ssBackFoot" data-i18n="ss.back">Back to workbench</a>
                   <button type="button" class="btn-secondary" id="ssReset" data-i18n="ss.reset">Reset draft</button>
                   <button type="button" class="btn-secondary" id="ssSave" data-i18n="ss.save">Save strategy</button>
                   <button type="button" class="btn-primary" id="ssApply" data-i18n="ss.apply">Apply to ranking →</button>
@@ -402,7 +417,7 @@
           </div>
 
           <div class="results-wrap" id="resultsWrap" hidden>
-            <p class="muted" id="hint">Only celebrities in the database. Scores are Model-Based / Synthetic Demo, not third-party official scores.</p>
+            <p class="muted" id="hint" data-i18n="fit.dbOnly">Only celebrities in the database. Scores are Model-Based / Synthetic Demo, not third-party official scores.</p>
             <div class="legacy-work">
               <main id="out" class="card"></main>
             </div>
@@ -430,10 +445,10 @@
     </div>
   </div>
 </div>
-<script src="js/i18n.js?v=camp-fusion1"></script>
+<script src="js/i18n.js?v=cases1"></script>
 <script src="js/campaign-poster.js?v=scenes4"></script>
 <script>
-const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, campaignScene: 'lobby', drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
+const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, genderLocked: false, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, campaignScene: 'lobby', drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
 const SESSION_KEY = 'match99-work';
 const HIST_KEY = 'match99-work-hist';
 const MODE_KEY = 'match99-data-mode';
@@ -543,7 +558,10 @@ const EXTRA_ZH = {
   'Wearable technology': '可穿戴科技', 'Technical apparel': '机能服饰',
   'Consumer design': '消费设计', 'Audio technology': '音频科技',
   'Gaming equipment': '游戏装备', 'Mobile technology': '移动科技',
-  'Fashion fragrance': '时尚香氛', 'Lifestyle footwear': '生活鞋履'
+  'Fashion fragrance': '时尚香氛', 'Lifestyle footwear': '生活鞋履',
+  'Color cosmetics': '彩妆粉底', 'Skincare': '护肤精华',
+  'Fitness footwear': '训练鞋履', 'Ready-to-drink coffee': '即饮咖啡',
+  'Beauty skincare': '美妆护肤'
 };
 const CAND_ZH = {
   cand_demo_001: {
@@ -608,7 +626,47 @@ const CATEGORY_EN = { Coffee: 'Coffee', 'Sports Shoes': 'Sports shoes', 'Smart H
 const PRODUCT_IMAGES = {
   shoes: '/assets/product/product-training-shoe.png',
   'cold-brew': '/assets/product/product-niteflow-can.png',
-  headphones: '/assets/product/product-pulse-air.png'
+  headphones: '/assets/product/product-pulse-air.png',
+  custom: '/assets/product/product-custom.png'
+};
+const CASE_IMAGE_BY_CATEGORY = [
+  [/makeup|foundation|cosmetic|skincare|serum|beauty|color cosmetics/, '/assets/evidence/evidence-beauty.png'],
+  [/footwear|run|fitness|sport|hydrat|outdoor/, '/assets/evidence/evidence-motionlab-run.png'],
+  [/tech|audio|mobile|gaming|wearable|design/, '/assets/evidence/evidence-nova-audio.png'],
+  [/coffee|brew|beverage|drink/, '/assets/product/product-niteflow-can.png'],
+  [/wellness|health|nutrition/, '/assets/evidence/evidence-wellness.png'],
+  [/apparel|fashion|lifestyle|fragrance|music/, '/assets/evidence/evidence-lifestyle.png']
+];
+const CASE_FAMILY_RULES = [
+  { id: 'beauty', test: /make[\s-]*up|foundation|cosmetic|skincare|serum|lipstick|concealer|bb\s*cream|cc\s*cream|beauty|粉底|美妆|彩妆|护肤|口红|精华/i },
+  { id: 'footwear', test: /shoe|footwear|sneaker|runn|training shoe|sport|跑鞋|运动鞋|训练鞋/i },
+  { id: 'beverage', test: /coffee|brew|latte|beverage|cold[\s-]*drink|冷萃|咖啡|饮品/i },
+  { id: 'audio', test: /headphone|audio|earbud|headset|耳机|降噪/i },
+  { id: 'wellness', test: /wellness|vitamin|supplement|sleep aid|保健/i }
+];
+const CASE_TEMPLATES = {
+  beauty: [
+    { title: 'Soft Focus Foundation Edit', title_zh: '柔焦粉底妆容', category: 'Color cosmetics', imageAsset: '/assets/evidence/evidence-beauty.png' },
+    { title: 'Dew Skin Serum Ritual', title_zh: '水光精华护肤', category: 'Skincare', imageAsset: '/assets/evidence/evidence-wellness.png' },
+    { title: 'Daily Tint Complex', title_zh: '日常底妆修色', category: 'Color cosmetics', imageAsset: '/assets/evidence/evidence-beauty.png' },
+    { title: 'Barrier Cream Morning', title_zh: '屏障面霜晨间', category: 'Skincare', imageAsset: '/assets/evidence/evidence-wellness.png' }
+  ],
+  footwear: [
+    { title: 'MotionLab Run Series', title_zh: 'MotionLab 训练系列', category: 'Performance footwear', imageAsset: '/assets/evidence/evidence-motionlab-run.png' },
+    { title: 'Urban Training Circuit', title_zh: '城市训练回路', category: 'Fitness footwear', imageAsset: '/assets/evidence/evidence-lifestyle.png' }
+  ],
+  beverage: [
+    { title: 'NITEFLOW Cold Cup', title_zh: 'NITEFLOW 即饮冷萃', category: 'Ready-to-drink coffee', imageAsset: '/assets/product/product-niteflow-can.png' },
+    { title: 'Morning Brew Desk Edit', title_zh: '晨间咖啡桌面', category: 'Ready-to-drink coffee', imageAsset: '/assets/evidence/evidence-wellness.png' }
+  ],
+  audio: [
+    { title: 'NOVA Audio Launch', title_zh: 'NOVA 音频发布', category: 'Audio technology', imageAsset: '/assets/evidence/evidence-nova-audio.png' },
+    { title: 'Pulse Mobile Story', title_zh: 'Pulse 移动随行', category: 'Consumer technology', imageAsset: '/assets/evidence/evidence-nova-audio.png' }
+  ],
+  wellness: [
+    { title: 'Stillpoint Morning Series', title_zh: '静点晨间系列', category: 'Wellness platform', imageAsset: '/assets/evidence/evidence-wellness.png' },
+    { title: 'Daily Restore Ritual', title_zh: '日常修护仪式', category: 'Beauty skincare', imageAsset: '/assets/evidence/evidence-beauty.png' }
+  ]
 };
 function readDataMode() {
   try {
@@ -636,11 +694,15 @@ function candidatePhotoSrc(celebOrRow, kind) {
   const id = celebOrRow && celebOrRow.id;
   const celeb = id ? ((state.celebrities || []).find(c => c.id === id) || celebOrRow) : celebOrRow;
   if (!celeb) return '';
-  if (kind === 'listing') return withBase(celeb.listingImage || celeb.portrait || '');
-  if (kind === 'profile') return withBase(celeb.profilePortrait || celeb.portrait || '');
-  return withBase(celeb.portrait || '');
+  const slug = celeb.slug || '';
+  const fallback = slug ? '/assets/portraits/' + slug + '.png' : '';
+  if (kind === 'listing') return withBase(celeb.listingImage || celeb.portrait || fallback);
+  if (kind === 'profile') return withBase(celeb.profilePortrait || celeb.portrait || celeb.listingImage || fallback);
+  return withBase(celeb.portrait || celeb.listingImage || fallback);
 }
-function feeLabelOf(celeb) {
+function feeLabelOf(celebOrRow) {
+  const id = celebOrRow && celebOrRow.id;
+  const celeb = id ? ((state.celebrities || []).find(c => c.id === id) || celebOrRow) : celebOrRow;
   const r = celeb && celeb.commercial && celeb.commercial.feeRangeCny;
   if (!r || r.min == null) return t('common.unavailable');
   const a = (Number(r.min) / 1000000);
@@ -723,12 +785,14 @@ function canUseAerostrideFixture() {
 const OBJECTIVE_EN = {
   'cold-brew': 'Find the celebrity who best represents a ready-to-drink cold-brew lifestyle—not the one with the most heat.',
   'shoes': 'Use credible training authority to communicate cushioning technology—not popularity alone.',
-  'headphones': 'Use a restrained, emotionally boundaried public image to carry noise-cancelling and companionship.'
+  'headphones': 'Use a restrained, emotionally boundaried public image to carry noise-cancelling and companionship.',
+  custom: 'Find the celebrity whose public image fits this researched product—not the one with the most heat.'
 };
 const OBJECTIVE_ZH = {
   'cold-brew': '找到最能代表即饮冷萃生活方式的明星——而不是热度最高的人。',
   'shoes': '用可信的训练权威讲缓震科技——而不是只看人气。',
-  'headphones': '用克制、有情绪边界的公众形象承载降噪与陪伴。'
+  'headphones': '用克制、有情绪边界的公众形象承载降噪与陪伴。',
+  custom: '找到公众形象最适合这款自研产品的明星——而不是热度最高的人。'
 };
 
 function t(key, vars) { return window.Match99I18n ? Match99I18n.t(key, vars) : key; }
@@ -767,6 +831,13 @@ function liveRole(celebOrRow) {
 }
 function liveProductShort(packOrProduct) {
   const id = (packOrProduct && (packOrProduct.productId || packOrProduct.id)) || '';
+  if (id === 'custom') {
+    const u = state.understanding;
+    if (u && u.name && u.name !== t('product.custom')) return u.name;
+    const p = (state.products || []).find(x => x.id === 'custom');
+    if (p && p.name && p.name !== '自定义产品' && p.name !== t('product.custom')) return p.name;
+    if (packOrProduct && packOrProduct.productShort && packOrProduct.productShort !== t('product.this')) return packOrProduct.productShort;
+  }
   const key = 'product.short.' + id;
   const tr = t(key);
   if (tr !== key) return tr;
@@ -788,6 +859,32 @@ function whyForRow(row) {
     return tagStr ? t('cl.why.rank1', { tags: tagStr }) : t('cl.why.rank1empty');
   }
   return tagStr ? t('cl.why.other', { tags: tagStr }) : t('cl.why.otherempty');
+}
+function productBriefText(p) {
+  if (!p) return '';
+  if (isZh()) return p.description || p.description_en || '';
+  return p.description_en || p.description || '';
+}
+function isCatalogBrief(text, p) {
+  const cur = String(text || '').trim();
+  if (!p || !p.id || p.id === 'custom') return !cur;
+  const zh = String(p.description || '').trim();
+  const en = String(p.description_en || '').trim();
+  return !cur || cur === zh || cur === en;
+}
+function syncCatalogBrief() {
+  const el = document.getElementById('desc');
+  if (!el) return;
+  const p = (state.products || []).find(x => x.id === (document.getElementById('product') || {}).value) || {};
+  if (isCatalogBrief(el.value, p)) el.value = productBriefText(p);
+}
+function puCategoryValue(p) {
+  const cat = p && p.category;
+  if (cat === 'Sports Shoes' || cat === 'Sports shoes') return 'Sports shoes';
+  if (cat === 'Smart Headphones' || cat === 'Smart headphones') return 'Smart headphones';
+  if (cat === 'Coffee') return 'Coffee';
+  if (cat === 'Beauty' || cat === 'Makeup' || cat === 'Skincare') return 'Beauty';
+  return 'Other';
 }
 function localizedObjective(p, current) {
   const en = OBJECTIVE_EN[p && p.id];
@@ -880,6 +977,7 @@ function saveSession() {
     minAge: state.minAge,
     maxAge: state.maxAge,
     understanding: state.understanding,
+    genderLocked: !!state.genderLocked,
     pinnedTags: state.pinnedTags,
     briefConfirmed: state.briefConfirmed,
     briefVersion: state.briefVersion,
@@ -1484,14 +1582,38 @@ function titleChip(v) {
   return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
 }
 
+function inferCustomUnderstanding(u, p) {
+  if (!u || (p && p.id && p.id !== 'custom')) return u;
+  const text = ((document.getElementById('desc') || {}).value || '') + ' ' + (u.name || '') + ' ' + (u.objective || '');
+  const tags = extractTags(text);
+  if (!(u.features && u.features.length)) {
+    u.features = tags.slice(0, 3).map(tag => FEATURE_EN[tag] || (isZh() ? tag : (CHIP_EN[tag] || tag)));
+    if (!u.features.length) u.features = isZh() ? ['日常使用', '便携', '年轻'] : ['Daily use', 'Portable', 'Youth'];
+  }
+  if (!(u.scenarios && u.scenarios.length)) {
+    u.scenarios = isZh() ? ['通勤', '居家', '周末'] : ['Commute', 'At home', 'Weekend'];
+  }
+  if (!(u.imageChips && u.imageChips.length)) {
+    u.imageChips = isZh() ? ['现代', '真诚'] : ['Modern', 'Authentic'];
+  }
+  if (!u.objective) u.objective = isZh() ? OBJECTIVE_ZH.custom : OBJECTIVE_EN.custom;
+  if (!u.talentBudgetCny) u.talentBudgetCny = 8000000;
+  if (!u.priceTier || u.priceTier === 'Unavailable') u.priceTier = 'Mid';
+  if (!u.category || u.category === 'Other') {
+    const family = caseFamilyId(text);
+    if (family === 'beauty') u.category = 'Beauty';
+    else if (family === 'beverage') u.category = 'Coffee';
+    else if (family === 'footwear') u.category = 'Sports shoes';
+    else if (family === 'audio') u.category = 'Smart headphones';
+  }
+  return u;
+}
+
 function defaultUnderstanding(p) {
   const age = parseAge(p.audience || document.getElementById('audience')?.value || '18-28');
   return {
     name: productLabel(p),
-    category: (function () {
-      const key = p.category === 'Sports Shoes' ? 'pu.cat.shoes' : p.category === 'Smart Headphones' ? 'pu.cat.headphones' : p.category === 'Coffee' ? 'pu.cat.coffee' : 'pu.cat.other';
-      return t(key);
-    })(),
+    category: puCategoryValue(p),
     minAge: age.minAge,
     maxAge: age.maxAge,
     priceTier: priceTierShort(p.price_level),
@@ -1500,7 +1622,13 @@ function defaultUnderstanding(p) {
     imageChips: splitChips(p.desired_image).map(titleChip),
     objective: localizedObjective(p, OBJECTIVE_EN[p.id] || p.campaign_objective || ''),
     talentBudgetCny: Number(p.talentBudgetCny) || DEFAULT_TALENT_BUDGET[p.id] || 0,
-    productionBudgetCny: Number(p.productionBudgetCny) || DEFAULT_PROD_BUDGET[p.id] || 0
+    productionBudgetCny: Number(p.productionBudgetCny) || DEFAULT_PROD_BUDGET[p.id] || 0,
+    gender: parseTargetGender([
+      document.getElementById('desc')?.value,
+      p.description,
+      p.description_en,
+      p.audience
+    ].join(' ')) || ''
   };
 }
 
@@ -1515,7 +1643,8 @@ function understandingSnapshot() {
     scenarios: state.understanding?.scenarios,
     imageChips: state.understanding?.imageChips,
     objective: document.getElementById('puObjective')?.value,
-    talentBudgetCny: document.getElementById('puBudget')?.value
+    talentBudgetCny: document.getElementById('puBudget')?.value,
+    gender: document.getElementById('puGender')?.value
   });
 }
 
@@ -1527,6 +1656,8 @@ function readUnderstandingFromForm() {
   u.maxAge = state.maxAge;
   u.priceTier = document.getElementById('puPrice').value;
   u.objective = document.getElementById('puObjective').value.trim();
+  const genderEl = document.getElementById('puGender');
+  if (genderEl) u.gender = genderEl.value || 'any';
   const budgetEl = document.getElementById('puBudget');
   const millions = budgetEl ? Number(budgetEl.value) : 0;
   u.talentBudgetCny = millions > 0 ? Math.round(millions * 1000000) : 0;
@@ -1541,7 +1672,8 @@ function countExtracted() {
   const u = state.understanding || {};
   const fields = [
     u.name, u.category, u.minAge && u.maxAge, u.priceTier && u.priceTier !== 'Unavailable',
-    u.talentBudgetCny, u.features?.length, u.scenarios?.length, u.imageChips?.length, u.objective
+    u.talentBudgetCny, u.features?.length, u.scenarios?.length, u.imageChips?.length, u.objective,
+    u.gender && u.gender !== 'any'
   ];
   return fields.filter(Boolean).length;
 }
@@ -1574,16 +1706,130 @@ function renderSignalMap() {
     + '<p class="form-note">' + escHtml(t('pu.mapNote')) + '</p>';
 }
 
+function productImageSrc(productId, category) {
+  if (PRODUCT_IMAGES[productId] && productId !== 'custom') return PRODUCT_IMAGES[productId];
+  const cat = String(category || '').toLowerCase();
+  const blob = cat + ' ' + ((document.getElementById('desc') || {}).value || '') + ' ' + ((state.understanding && state.understanding.name) || '');
+  if (CASE_FAMILY_RULES[0].test.test(blob)) return '/assets/evidence/evidence-beauty.png';
+  if (cat.indexOf('coffee') >= 0) return PRODUCT_IMAGES['cold-brew'];
+  if (cat.indexOf('shoe') >= 0 || cat.indexOf('sport') >= 0) return PRODUCT_IMAGES.shoes;
+  if (cat.indexOf('headphone') >= 0 || cat.indexOf('smart') >= 0) return PRODUCT_IMAGES.headphones;
+  if (PRODUCT_IMAGES[productId]) return PRODUCT_IMAGES[productId];
+  return PRODUCT_IMAGES.custom;
+}
+
+function caseFamilyId(text) {
+  const blob = String(text || '');
+  for (let i = 0; i < CASE_FAMILY_RULES.length; i++) {
+    if (CASE_FAMILY_RULES[i].test.test(blob)) return CASE_FAMILY_RULES[i].id;
+  }
+  return '';
+}
+
+function currentProductFamily() {
+  const p = (state.products || []).find(x => x.id === (document.getElementById('product') || {}).value) || {};
+  const u = state.understanding || {};
+  const blob = [
+    u.category, u.name, u.objective,
+    (document.getElementById('desc') || {}).value,
+    p.category, p.name, p.name_en, p.description, p.description_en
+  ].join(' ');
+  const fromText = caseFamilyId(blob);
+  if (fromText) return fromText;
+  if (p.id === 'shoes') return 'footwear';
+  if (p.id === 'cold-brew') return 'beverage';
+  if (p.id === 'headphones') return 'audio';
+  return '';
+}
+
+function caseImageSrc(cs) {
+  if (cs && cs.imageAsset) return cs.imageAsset;
+  const cat = String((cs && cs.category) || '').toLowerCase();
+  for (let i = 0; i < CASE_IMAGE_BY_CATEGORY.length; i++) {
+    if (CASE_IMAGE_BY_CATEGORY[i][0].test(cat)) return CASE_IMAGE_BY_CATEGORY[i][1];
+  }
+  return '/assets/evidence/evidence-lifestyle.png';
+}
+
+function overlayCase(src, tpl, suffix) {
+  src = src || {};
+  tpl = tpl || {};
+  return {
+    id: (src.id || 'case') + '-' + suffix,
+    title: tpl.title || src.title,
+    title_zh: tpl.title_zh || src.title_zh,
+    category: tpl.category || src.category,
+    year: src.year || 2025,
+    metrics: src.metrics || tpl.metrics || {},
+    imageAsset: tpl.imageAsset || src.imageAsset || null,
+    status: 'illustrative'
+  };
+}
+
+function casesForCurrentProduct(celeb) {
+  const own = (celeb && celeb.endorsementCases) || [];
+  const family = currentProductFamily();
+  const templates = CASE_TEMPLATES[family];
+  if (!templates || !templates.length) return own;
+  const first = templates[0];
+  const second = templates[1] || templates[0];
+  const matching = own.filter(cs => caseFamilyId(((cs && cs.category) || '') + ' ' + ((cs && cs.title) || '')) === family);
+  if (matching.length >= 2) {
+    return matching.slice(0, 2).map((cs, i) => {
+      const copy = Object.assign({}, cs);
+      if (!copy.imageAsset) copy.imageAsset = caseImageSrc(copy);
+      if (i === 0 && family === 'beauty') copy.imageAsset = copy.imageAsset || first.imageAsset;
+      return copy;
+    });
+  }
+  return [overlayCase(own[0] || matching[0], first, family + 'a'), overlayCase(own[1] || own[0], second, family + 'b')];
+}
+
 function renderPuPhoto() {
   const fig = document.getElementById('puPhoto');
   if (!fig) return;
   const id = document.getElementById('product').value;
-  const src = PRODUCT_IMAGES[id];
+  const p = (state.products || []).find(x => x.id === id) || {};
+  const cat = (state.understanding && state.understanding.category) || p.category;
+  const src = productImageSrc(id, cat);
   if (src) {
     fig.innerHTML = `<img src="${withBase(src)}" width="462" height="370" alt="${escHtml(t('pu.imgAlt'))}">`;
   } else {
     fig.innerHTML = '<div class="pu-unavailable">' + escHtml(t('pu.imgNa')) + '</div>';
   }
+}
+
+function genderChipLabel(g) {
+  const v = String(g || targetGender() || 'any');
+  if (v === 'female') return t('pu.gender.female');
+  if (v === 'male') return t('pu.gender.male');
+  return t('pu.gender.any');
+}
+
+function syncGenderUi() {
+  const g = targetGender();
+  const pill = document.getElementById('genderPill');
+  if (pill) pill.textContent = genderChipLabel(g);
+  const sel = document.getElementById('puGender');
+  if (sel && [...sel.options].some(o => o.value === g)) sel.value = g;
+}
+
+function syncGenderFromBrief(force) {
+  if (state.genderLocked && !force) {
+    syncGenderUi();
+    return;
+  }
+  const inferred = parseTargetGender([
+    document.getElementById('desc')?.value,
+    document.getElementById('puName')?.value,
+    document.getElementById('puObjective')?.value,
+    state.understanding && state.understanding.name,
+    state.understanding && state.understanding.objective
+  ].join(' '));
+  if (!state.understanding) return;
+  if (inferred) state.understanding.gender = inferred;
+  else if (!state.genderLocked) state.understanding.gender = '';
+  syncGenderUi();
 }
 
 function syncAgeUi() {
@@ -1600,6 +1846,7 @@ function syncAgeUi() {
   const aMax = document.getElementById('ageMax');
   if (aMin) aMin.value = minAge;
   if (aMax) aMax.value = maxAge;
+  syncGenderUi();
 }
 
 function clampAgeHandles(which) {
@@ -1627,7 +1874,8 @@ function fillProductUnderstanding() {
     state.maxAge = state.understanding.maxAge;
   }
   const u = state.understanding;
-  if (OBJECTIVE_EN[p.id]) u.objective = localizedObjective(p, u.objective);
+  inferCustomUnderstanding(u, p);
+  if (OBJECTIVE_EN[p.id] && p.id !== 'custom') u.objective = localizedObjective(p, u.objective);
   const catalog = {
     shoes: ['AEROSTRIDE · Training shoes', 'AEROSTRIDE · 训练跑鞋'],
     'cold-brew': ['NITEFLOW · Cold brew', 'NITEFLOW · 即饮冷萃'],
@@ -1655,6 +1903,12 @@ function fillProductUnderstanding() {
   state.minAge = u.minAge;
   state.maxAge = u.maxAge;
   document.getElementById('audience').value = `${u.minAge}-${u.maxAge}`;
+  const genderEl = document.getElementById('puGender');
+  if (genderEl) {
+    const g = u.gender || parseTargetGender((document.getElementById('desc') || {}).value) || '';
+    if (g) u.gender = g;
+    genderEl.value = (g === 'female' || g === 'male' || g === 'any') ? g : 'any';
+  }
   syncAgeUi();
   renderChipRow(document.getElementById('puFeatures'), 'features');
   renderChipRow(document.getElementById('puScenarios'), 'scenarios');
@@ -1853,7 +2107,7 @@ async function load(keepProduct) {
   setLive();
   const sel = document.getElementById('product');
   if (!state.products.some(p => p.id === 'custom')) {
-    state.products.push({ id: 'custom', name: '自定义产品', category: 'Custom', audience: '18-28', seed_tags: [], description: '' });
+    state.products.push({ id: 'custom', name: '自定义产品', name_en: 'Custom product', category: 'Custom', audience: '18-28', seed_tags: [], description: '', description_en: '' });
   }
   if (!state.seeded) {
     sel.innerHTML = '';
@@ -1879,6 +2133,7 @@ async function load(keepProduct) {
       if (saved.minAge) state.minAge = Number(saved.minAge);
       if (saved.maxAge) state.maxAge = Number(saved.maxAge);
       if (saved.understanding) state.understanding = saved.understanding;
+      state.genderLocked = !!saved.genderLocked;
       if (typeof saved.trendQuery === 'string') state.trendQuery = saved.trendQuery;
       if (saved.trendWindow) state.trendWindow = saved.trendWindow;
       if (saved.trendPlatform) state.trendPlatform = saved.trendPlatform;
@@ -1903,6 +2158,7 @@ async function load(keepProduct) {
       }
       fillProduct();
       if (typeof saved.description === 'string') document.getElementById('desc').value = saved.description;
+      syncCatalogBrief();
       if (saved.minAge && saved.maxAge) {
         state.minAge = Number(saved.minAge);
         state.maxAge = Number(saved.maxAge);
@@ -1916,6 +2172,7 @@ async function load(keepProduct) {
         syncAgeUi();
       }
       syncTagsFromDesc();
+      syncGenderFromBrief();
     } else {
       state.pinnedTags = [];
       fillProduct();
@@ -1941,16 +2198,16 @@ async function load(keepProduct) {
 const TAG_RULES = {
   '运动': /运动|健身|跑步|马拉松|NBA|CBA|足球|篮球|奥运|训练|瑜伽|骑行|网球|乒乓|运动员|跑鞋|球鞋|健身房|sports?|fitness|running|gym/i,
   '户外': /户外|露营|徒步|登山|旅行|自驾|city\s*walk|海边|滑雪|冲浪|川西|outdoor|camping|hiking|travel/i,
-  '健康': /健康|养生|减脂|减肥|睡眠|防晒|低糖|无糖|轻食|蛋白|health/i,
-  '科技': /科技|AI|人工智能|芯片|华为|苹果|小米|机器人|智能|数码|手机|耳机|降噪|折叠|tech|smart/i,
+  '健康': /健康|养生|减脂|减肥|睡眠|防晒|低糖|无糖|轻食|蛋白|health|wellness/i,
+  '科技': /科技|AI|人工智能|芯片|华为|苹果|小米|机器人|智能|数码|手机|耳机|降噪|折叠|tech|smart|gaming/i,
   '情绪价值': /情绪|治愈|松弛|氛围|陪伴|真诚|解压|燕麦系|healing/i,
-  '便利': /便利|即饮|外卖|通勤|速溶|懒人|到家|convenient/i,
-  '时尚': /时尚|穿搭|美妆|潮流|秀场|时装|造型|fashion|beauty|makeup/i,
+  '便利': /便利|即饮|外卖|通勤|速溶|懒人|到家|convenient|snack|饮料/i,
+  '时尚': /时尚|穿搭|美妆|潮流|秀场|时装|造型|护肤|精华|serum|skincare|apparel|fashion|beauty|makeup/i,
   '体验': /体验|沉浸|快闪|线下|展览|市集|experience/i,
-  '咖啡': /咖啡|拿铁|冷萃|美式|咖啡因|茶姬|coffee|latte/i,
+  '咖啡': /咖啡|拿铁|冷萃|美式|咖啡因|茶姬|coffee|latte|drink|beverage|饮品/i,
   '活力': /青春|活力|街舞|热血|燃|youth|energy/i
 };
-const EN_ALIAS = { sports:'运动', sport:'运动', fitness:'运动', running:'运动', gym:'运动', outdoor:'户外', outdoors:'户外', health:'健康', tech:'科技', fashion:'时尚', beauty:'时尚', makeup:'时尚', coffee:'咖啡' };
+const EN_ALIAS = { sports:'运动', sport:'运动', fitness:'运动', running:'运动', gym:'运动', outdoor:'户外', outdoors:'户外', health:'健康', wellness:'健康', tech:'科技', fashion:'时尚', beauty:'时尚', makeup:'时尚', skincare:'时尚', coffee:'咖啡', drink:'便利', snack:'便利' };
 
 function extractTags(text) {
   const found = [];
@@ -1967,12 +2224,35 @@ function extractTags(text) {
   return found;
 }
 
+function categoryFallbackTags(cat) {
+  const c = String(cat || '').toLowerCase();
+  if (c.indexOf('coffee') >= 0) return ['咖啡', '便利', '情绪价值'];
+  if (c.indexOf('shoe') >= 0 || c.indexOf('sport') >= 0) return ['运动', '健康'];
+  if (c.indexOf('headphone') >= 0 || c.indexOf('tech') >= 0) return ['科技', '便利'];
+  return ['活力', '体验', '时尚'];
+}
+
+function tagsFromUnderstanding() {
+  const u = state.understanding || {};
+  const blob = [
+    u.name, u.category, u.objective,
+    (u.features || []).join(' '),
+    (u.scenarios || []).join(' '),
+    (u.imageChips || []).join(' ')
+  ].join(' ');
+  return extractTags(blob);
+}
+
 function currentSeed() {
-  const extracted = extractTags(document.getElementById('desc').value);
-  const p = state.products.find(x => x.id === document.getElementById('product').value);
-  const base = extracted.length ? extracted : ((p && p.seed_tags) ? p.seed_tags.slice() : []);
+  const descEl = document.getElementById('desc');
+  const extracted = extractTags(descEl ? descEl.value : '');
+  const inferred = tagsFromUnderstanding();
+  const p = state.products.find(x => x.id === (document.getElementById('product') || {}).value);
+  const catalog = (p && p.seed_tags) ? p.seed_tags.slice() : [];
   const extra = state.pinnedTags || [];
-  return [...new Set([...base, ...extra])];
+  let seed = [...new Set([...extracted, ...inferred, ...catalog, ...extra])];
+  if (!seed.length) seed = categoryFallbackTags((state.understanding && state.understanding.category) || (p && p.category));
+  return seed;
 }
 
 function syncTagsFromDesc() {
@@ -1984,7 +2264,7 @@ function syncTagsFromDesc() {
 
 function fillProduct() {
   const p = state.products.find(x => x.id === document.getElementById('product').value) || {};
-  document.getElementById('desc').value = p.description || '';
+  document.getElementById('desc').value = productBriefText(p);
   const age = parseAge(p.audience || '18-28');
   state.minAge = age.minAge;
   state.maxAge = age.maxAge;
@@ -1993,8 +2273,10 @@ function fillProduct() {
   const run = document.getElementById('run');
   if (run) run.textContent = t('home.run');
   if (!state.understanding || state.understanding.productId !== p.id) {
+    state.genderLocked = false;
     state.understanding = Object.assign({ productId: p.id }, defaultUnderstanding(p));
   }
+  syncGenderFromBrief();
   syncTagsFromDesc();
   ensureDefaultBrief();
   updateMatchGate();
@@ -2075,6 +2357,39 @@ function buildProductProfile(seedTags, product, trends, desc) {
   });
 
   return result.sort((a, b) => b.score - a.score);
+}
+
+function parseTargetGender(text) {
+  const s = String(text || '').toLowerCase();
+  const female = /\bfemales?\b|\bwomen\b|\bwoman\b|\bgirls?\b|\blad(?:y|ies)\b|女生|女性|女明星|女代言|女向|女款/;
+  const male = /\bmales?\b|\bmen\b|\bman\b|\bboys?\b|\bguys?\b|男生|男性|男明星|男代言|男向|男款/;
+  const f = female.test(s);
+  const m = male.test(s);
+  if (f && !m) return 'female';
+  if (m && !f) return 'male';
+  return '';
+}
+
+function celebrityGender(celeb) {
+  return String((celeb && celeb.gender) || '').toLowerCase();
+}
+
+function targetGender() {
+  const u = state.understanding || {};
+  const g = String(u.gender || '').toLowerCase();
+  if (g === 'female' || g === 'male' || g === 'any') return g;
+  return parseTargetGender([
+    document.getElementById('desc')?.value,
+    document.getElementById('puName')?.value,
+    document.getElementById('puObjective')?.value,
+    u.name, u.objective, u.category
+  ].join(' ')) || 'any';
+}
+
+function applyGenderFilter(ranked) {
+  const g = targetGender();
+  if (!g || g === 'any' || !Array.isArray(ranked)) return ranked || [];
+  return ranked.filter(r => celebrityGender(r.celeb) === g);
 }
 
 function ageFit(celeb) {
@@ -2220,6 +2535,18 @@ const TAG_META = {
   '咖啡': { keywords: ['cold brew', 'latte', 'RTD coffee'], categories: ['即饮咖啡'] },
   '活力': { keywords: ['youthful', 'energetic'], categories: ['运动', '潮流'] }
 };
+const CAT_EN = {
+  '运动装备': 'Sports gear', '即饮': 'RTD drinks', '服饰': 'Apparel',
+  '户外装备': 'Outdoor gear', '旅行': 'Travel',
+  '食品饮料': 'Food & beverage', '个护': 'Personal care',
+  '消费电子': 'Consumer electronics', '智能硬件': 'Smart hardware',
+  '音频': 'Audio', '生活方式': 'Lifestyle', '零售': 'Retail',
+  '美妆': 'Beauty', '线下活动': 'Offline events', '即饮咖啡': 'RTD coffee',
+  '潮流': 'Street culture', '运动': 'Sports'
+};
+function relatedCatLabel(c) {
+  return isZh() ? c : (CAT_EN[c] || c);
+}
 const COFFEE_RELATED = ['便利', '健康', '户外', '情绪价值', '运动', '咖啡'];
 const RELATED_TAGS = {
   '运动': ['户外', '健康', '活力'],
@@ -2247,11 +2574,11 @@ const NOTE_EN = {
 };
 
 function trendArrow(tag) {
-  const t = (state.trends || {})[tag];
-  if (!t) return { mark: '→', cls: 'flat', status: 'Stable' };
-  if (t.verdict === 'caution') return { mark: '↓', cls: 'down', status: 'Caution' };
-  if ((t.today_count || 0) >= 8 || (t.heat || 0) >= 0.45) return { mark: '↑', cls: '', status: 'Rising' };
-  return { mark: '→', cls: 'flat', status: 'Stable' };
+  const row = (state.trends || {})[tag];
+  if (!row) return { mark: '→', cls: 'flat', status: t('home.trends.stable') };
+  if (row.verdict === 'caution') return { mark: '↓', cls: 'down', status: t('home.trends.caution') };
+  if ((row.today_count || 0) >= 8 || (row.heat || 0) >= 0.45) return { mark: '↑', cls: '', status: t('home.trends.rising') };
+  return { mark: '→', cls: 'flat', status: t('home.trends.stable') };
 }
 
 function trendDirLabel(a) {
@@ -2309,16 +2636,15 @@ function renderTrends() {
   if (!box || !state.trends) return;
   const tags = Object.keys(state.trends);
   box.innerHTML = tags.map(tag => {
-    const t = state.trends[tag];
+    const row = state.trends[tag];
     const a = trendArrow(tag);
     return `<article class="trend-card" id="trend-${tag}">
-      <h4>${tag} <span class="arrow ${a.cls}">${a.mark}</span></h4>
-      <div class="mini">${TAG_EN[tag] || tag}</div>
-      <div class="bar"><span>Score</span><i><em style="width:${pct(t.heat)}%"></em></i><span>${pct(t.heat)}</span></div>
-      <p class="mini">${a.status} · 今日 ${t.today_count || 0} / 总 ${t.mention_count || 0}${trendConfirmed(t) ? '' : ' · 信号不足，未确认趋势'}</p>
+      <h4>${escHtml(chipLabel(tag))} <span class="arrow ${a.cls}">${a.mark}</span></h4>
+      <div class="bar"><span>${escHtml(t('home.trends.score'))}</span><i><em style="width:${pct(row.heat)}%"></em></i><span>${pct(row.heat)}</span></div>
+      <p class="mini">${escHtml(a.status)} · ${escHtml(t('home.trends.count'))} ${row.today_count || 0} / ${row.mention_count || 0}${trendConfirmed(row) ? '' : ' · ' + escHtml(t('home.trends.weak'))}</p>
       <p class="kw">${(TAG_META[tag]?.keywords || []).join(' · ')}</p>
-      <p class="mini">Related: ${(TAG_META[tag]?.categories || []).join(' / ')}</p>
-      <button class="tiny" data-add-tag="${tag}">Add to Product Tags</button>
+      <p class="mini">${escHtml(t('ts.relatedCats'))}: ${(TAG_META[tag]?.categories || []).map(relatedCatLabel).join(' / ')}</p>
+      <button class="tiny" data-add-tag="${tag}">${escHtml(t('home.addTag'))}</button>
     </article>`;
   }).join('');
 }
@@ -2352,8 +2678,8 @@ function showSearchResults(q) {
   const hits = searchTrends(q);
   if (!q.trim() || !hits.length) { drop.classList.remove('show'); drop.innerHTML = ''; return; }
   drop.innerHTML = hits.map(h => `<div class="search-item" data-jump-tag="${h.tag}">
-    <span>${h.tag}<br><small class="muted">${TAG_EN[h.tag] || ''} ${h.related ? '· Related' : ''} · Trend ${h.score} <span class="arrow ${h.arrow.cls}">${h.arrow.mark}</span></small><br><small class="kw">${(TAG_META[h.tag]?.keywords || []).slice(0,3).join(' · ')}</small></span>
-    <button class="tiny" data-add-tag="${h.tag}">Add to Product Tags</button>
+    <span>${escHtml(chipLabel(h.tag))}<br><small class="muted">${h.related ? escHtml(t('ts.related')) + ' · ' : ''}${escHtml(t('home.trends.score'))} ${h.score} <span class="arrow ${h.arrow.cls}">${h.arrow.mark}</span></small><br><small class="kw">${(TAG_META[h.tag]?.keywords || []).slice(0,3).join(' · ')}</small></span>
+    <button class="tiny" data-add-tag="${h.tag}">${escHtml(t('home.addTag'))}</button>
   </div>`).join('');
   drop.classList.add('show');
 }
@@ -3272,30 +3598,34 @@ function computeRanking() {
         confidenceRange: res.confidenceRange
       };
     }).filter(Boolean).sort((a, b) => b.final - a.final || a.celeb.id.localeCompare(b.celeb.id));
-    return { product, seed, opt, ranked, desc, audience, fromFixture: true };
+    return { product, seed, opt, ranked: applyGenderFilter(ranked), desc, audience, fromFixture: true };
   }
-  const ranked = state.celebrities.map(c => matchOne(opt, c, product)).sort((a, b) => b.final - a.final);
+  const ranked = applyGenderFilter(state.celebrities.map(c => matchOne(opt, c, product)).sort((a, b) => b.final - a.final));
   return { product, seed, opt, ranked, desc, audience };
 }
 
 function persistMatchPack(ranked, product, opt) {
-  if (!ranked || !ranked.length) return;
+  ranked = ranked || [];
+  const gender = targetGender();
+  if (!ranked.length && gender === 'any') return;
   const prev = state.matchPack;
   const same = prev && prev.analysisId && prev.analysisId === state.analysisId;
+  const idSet = new Set(ranked.map(r => r.celeb && r.celeb.id));
   state.matchPack = {
     analysisId: state.analysisId || ('an-' + Date.now().toString(36)),
     productId: product.id,
     productShort: productShortName(product),
     audience: formatAge(state.minAge, state.maxAge),
+    gender,
     scoringVersion: state.scoringApplied ? (state.scoringVersion || 'saved') : 'demo-v1',
     fingerprint: snapshotFingerprint(),
     staleSnapshot: false,
     createdAt: new Date().toISOString(),
     showAll: same ? !!prev.showAll : false,
     sort: same && prev.sort ? prev.sort : 'fit',
-    compareIds: same && Array.isArray(prev.compareIds) ? prev.compareIds.slice() : [],
-    shortlist: same && Array.isArray(prev.shortlist) ? prev.shortlist.slice() : [],
-    selectedId: same ? (prev.selectedId || null) : null,
+    compareIds: same && Array.isArray(prev.compareIds) ? prev.compareIds.filter(id => idSet.has(id)) : [],
+    shortlist: same && Array.isArray(prev.shortlist) ? prev.shortlist.filter(id => idSet.has(id)) : [],
+    selectedId: same && prev.selectedId && idSet.has(prev.selectedId) ? prev.selectedId : null,
     concepts: same && prev.concepts ? prev.concepts : {},
     studios: same && prev.studios ? prev.studios : {},
     baselineKind: activeScoring() ? 'saved' : 'demo',
@@ -3334,6 +3664,8 @@ function persistMatchPack(ranked, product, opt) {
         cFeas: r.feasibility != null ? r.feasibility : 0.4,
         portrait: r.celeb.portrait || '',
         listingImage: r.celeb.listingImage || r.celeb.portrait || '',
+        profilePortrait: r.celeb.profilePortrait || r.celeb.portrait || '',
+        slug: r.celeb.slug || '',
         feeLabel: feeLabelOf(r.celeb),
         demo: !!r.celeb.demo
       };
@@ -3385,9 +3717,11 @@ function renderListing() {
   if (!el) return;
   const pack = state.matchPack;
   if (!pack || !pack.rows || !pack.rows.length) {
+    const g = (pack && pack.gender) || targetGender();
+    const filtered = g === 'female' || g === 'male';
     el.innerHTML = `<div class="cl-empty">
-      <h2>${escHtml(t('fit.noPack.h'))}</h2>
-      <p>${escHtml(t('fit.noPack'))}</p>
+      <h2>${escHtml(t(filtered ? 'fit.noGender.h' : 'fit.noPack.h'))}</h2>
+      <p>${escHtml(t(filtered ? 'fit.noGender' : 'fit.noPack', { gender: genderChipLabel(g) }))}</p>
       <p><a class="btn-primary" href="/work" style="display:inline-flex;align-items:center;text-decoration:none;margin-top:12px">${escHtml(t('fit.backHome'))}</a></p>
     </div>`;
     return;
@@ -3433,6 +3767,8 @@ function renderListing() {
       ${tags || '<span>' + escHtml(t('fit.none')) + '</span>'}
       <span>${escHtml(t('cl.audience'))}</span>
       <span class="chip">${escHtml(pack.audience)}</span>
+      <span>${escHtml(t('cl.gender'))}</span>
+      <span class="chip">${escHtml(genderChipLabel(pack.gender))}</span>
       <span>${escHtml(t('cl.budget'))}</span>
       <span class="chip">${escHtml(workingBudgetLabel())}</span>
       <span>${escHtml(liveTrendCopy())}</span>
@@ -3465,7 +3801,7 @@ function renderListing() {
             <div><b>${row.audience}</b><span>${escHtml(t('cl.audFit'))}</span></div>
             <div><b>${row.confidence}</b><span>${escHtml(t('cl.riskConf'))}</span></div>
           </div>
-          <p class="cl-budget">${escHtml(t('fit.budget'))} <b>${escHtml(budgetFitOf(row).label)}</b> · ${escHtml(row.feeLabel || t('common.unavailable'))}</p>
+          <p class="cl-budget">${escHtml(t('fit.budget'))} <b>${escHtml(budgetFitOf(row).label)}</b> · ${escHtml(feeLabelOf(row) || t('common.unavailable'))}</p>
           <p class="cl-gate ${row.gateCls}">${escHtml(t('cl.gate'))} <b>${escHtml(gateLabelOf(row))}</b></p>
           <div class="cl-actions">
             <a class="btn-primary" href="/work/candidate/${encodeURIComponent(row.id)}">${escHtml(t('fit.profile'))}</a>
@@ -4061,7 +4397,7 @@ function composeFallbackPoster(row, rec, pack, key) {
     slogan: rec.slogan,
     productLine: productLine,
     portrait: candidatePhotoSrc(row, 'profile'),
-    productImg: PRODUCT_IMAGES[productId] ? withBase(PRODUCT_IMAGES[productId]) : ''
+    productImg: productImageSrc(productId, product && product.category) ? withBase(productImageSrc(productId, product && product.category)) : ''
   }).then((urls) => {
     state.campaignPosterKey = key;
     state.campaignPosterUrls = urls;
@@ -4077,6 +4413,8 @@ function candidateHref(id, page) {
 function hydratePackRow(row) {
   if (!row) return row;
   const celeb = (state.celebrities || []).find(c => c.id === row.id);
+  if (!row.riskLevel && celeb && celeb.risk) row.riskLevel = celeb.risk.level;
+  if (row.riskRaw == null && celeb && celeb.risk) row.riskRaw = celeb.risk.score;
   if (!row.ageSplit && celeb && celeb.fan_profile) row.ageSplit = celeb.fan_profile.age_split || {};
   if (row.heatMentions == null && celeb) row.heatMentions = celeb.heat_mentions || 0;
   if (!row.tagScores) {
@@ -4153,9 +4491,9 @@ function renderCandidateRail(row, celeb, page) {
     : { href: '/library', label: t('nav.library') });
   const back = `<a class="cd-back" href="${backInfo.href}">${backInfo.label}</a>`;
   const photoSrc = candidatePhotoSrc(celeb || row, 'profile');
-  const photo = textLed ? '' : (photoSrc
+  const photo = photoSrc
     ? `<div class="cd-photo"><img src="${escHtml(photoSrc)}" alt="${escHtml(name)}"></div>`
-    : `<div class="cd-photo"><div class="na">${escHtml(t('fit.imageNa'))}</div></div>`);
+    : `<div class="cd-photo"><div class="na">${escHtml(t('fit.imageNa'))}</div></div>`;
   const bio = textLed ? `<p class="cd-bio">${escHtml(candidateShortBio(row, celeb))}</p>` : '';
   const context = page === 'risk' ? decisionContextHtml(row, pack)
     : page === 'evidence' ? workingPlanHtml(row, pack)
@@ -4518,7 +4856,21 @@ function evidenceSourceLabel(src) {
   if (s.includes('douyin')) return 'Douyin';
   if (s.includes('bilibili')) return 'Bilibili';
   if (s.includes('zhihu')) return 'Zhihu';
+  if (s.includes('xiaohongshu') || s.includes('redbook') || s.includes('xhs')) return 'Xiaohongshu';
   return src || t('origin.observed');
+}
+
+function localizedText(obj, key) {
+  if (!obj) return '';
+  if (isZh() && obj[key + '_zh']) return obj[key + '_zh'];
+  return obj[key] || obj[key + '_zh'] || '';
+}
+
+function workTypeLabel(type) {
+  const raw = String(type || '').toLowerCase().replace(/\s+/g, '');
+  const key = 'cd.ev.work.' + raw;
+  const label = t(key);
+  return label === key ? (type || t('cd.ev.works')) : label;
 }
 
 function renderCandidateEvidence(row, celeb) {
@@ -4531,12 +4883,12 @@ function renderCandidateEvidence(row, celeb) {
   const tags = ((row && row.tags) || []).map(chipLabel);
   const works = (celeb && celeb.works) || [];
   const mentions = (celeb && celeb.evidence) || [];
-  const cases = (celeb && celeb.endorsementCases) || [];
+  const cases = casesForCurrentProduct(celeb);
   const worksHtml = works.length
-    ? works.map(w => `<li><b>${escHtml(w.type || t('cd.ev.works'))}</b> ${escHtml(w.title)} <span>${escHtml(t('common.unavailable'))}</span></li>`).join('')
+    ? works.map(w => `<li><b>${escHtml(workTypeLabel(w.type))}</b> ${escHtml(localizedText(w, 'title'))} <span>${escHtml(w.year != null ? String(w.year) : t('common.unavailable'))}</span></li>`).join('')
     : '<li>' + escHtml(t('cd.ev.noworks')) + '</li>';
   const mentionHtml = mentions.length
-    ? mentions.map(m => `<li><b>${escHtml(evidenceSourceLabel(m.source))}</b> ${escHtml(m.date || '')} · ${escHtml(m.title)} <span>${escHtml(t('cd.ev.kpi'))}</span></li>`).join('')
+    ? mentions.map(m => `<li><b>${escHtml(evidenceSourceLabel(m.source))}</b> ${escHtml(m.date || '')} · ${escHtml(localizedText(m, 'title'))} <span>${escHtml(t('cd.ev.kpi'))}</span></li>`).join('')
     : '<li>' + escHtml(t('cd.ev.nomentions')) + '</li>';
   const zh = celeb && CAND_ZH[celeb.id];
   const why = (isZh() && zh && zh.why) ? zh.why : (celeb && celeb.whyCandidate);
@@ -4549,13 +4901,13 @@ function renderCandidateEvidence(row, celeb) {
   const caseCards = cases.length
     ? cases.slice(0, 2).map(cs => {
         const m = cs.metrics || {};
-        const img = cs.imageAsset
-          ? '<img src="' + escHtml(cs.imageAsset) + '" alt="">'
+        const img = caseImageSrc(cs)
+          ? '<img src="' + escHtml(withBase(caseImageSrc(cs))) + '" alt="">'
           : '<div class="na">' + escHtml(t('cd.ev.imgNa')) + '</div>';
         return '<article class="cd-card cd-case"><div class="cd-case-media">' + img + '</div>'
           + '<p class="sub">' + escHtml(t('cd.ev.bench')) + '</p>'
-          + '<h3>' + escHtml(cs.title || t('common.unavailable')) + '</h3>'
-          + '<p class="cd-cap">' + escHtml((chipLabel(cs.category) || '') + ' · ' + (cs.year || '') + ' · ' + t('cd.ev.sim')) + '</p>'
+          + '<h3>' + escHtml(localizedText(cs, 'title') || t('common.unavailable')) + '</h3>'
+          + '<p class="cd-cap">' + escHtml((chipLabel(cs.category) || localizedText(cs, 'category') || '') + ' · ' + (cs.year || '') + ' · ' + t('cd.ev.sim')) + '</p>'
           + '<div class="cd-kpis">'
           + '<div><b>' + escHtml(m.awarenessLiftPct != null ? m.awarenessLiftPct + '%' : (m.considerationLiftPct != null ? m.considerationLiftPct + '%' : t('common.unavailable'))) + '</b><span>' + escHtml(t('cd.ev.lift')) + '</span></div>'
           + '<div><b>' + escHtml(m.engagementRatePct != null ? m.engagementRatePct + '%' : (m.qualifiedViews != null ? String(m.qualifiedViews) : t('common.unavailable'))) + '</b><span>' + escHtml(t('cd.ev.attention')) + '</span></div>'
@@ -4605,6 +4957,123 @@ function riskLevelLabel(level) {
   if (lv === 'medium') return t('lvl.medium');
   if (lv === 'high') return t('lvl.high');
   return t('lvl.unverified');
+}
+
+function celebRiskProfile(celeb) {
+  return (celeb && celeb.risk && celeb.risk.profile) || {};
+}
+
+function conflictStatusLabel(code) {
+  const c = String(code || '').toLowerCase();
+  if (c === 'clear') return t('cd.conflict.clear');
+  if (c === 'hold') return t('cd.conflict.hold');
+  if (c === 'unverified' || !c) return t('cd.conflict.unverified');
+  return riskLevelLabel(c);
+}
+
+function formatSignedPct(n) {
+  const v = Number(n);
+  if (!Number.isFinite(v)) return '—';
+  const rounded = Math.round(v);
+  return (rounded > 0 ? '+' : '') + rounded + '%';
+}
+
+function hash01(str) {
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return (h >>> 0) / 4294967296;
+}
+
+function celebritySeries30d(celeb) {
+  const tp = (celeb && celeb.trendProfile) || {};
+  if (Array.isArray(tp.series30d) && tp.series30d.length >= 2) {
+    const vals = tp.series30d.map(Number).filter(Number.isFinite);
+    return vals.length >= 2 ? vals : null;
+  }
+  const end = Number(tp.momentum30d);
+  if (!Number.isFinite(end)) return null;
+  const change = Number(tp.change30dPct) || 0;
+  const vol = String(tp.volatility || 'medium');
+  const amp = vol === 'low' ? 2.2 : (vol === 'medium-high' || vol === 'high') ? 11 : 6.5;
+  const start = change > -99 ? end / (1 + change / 100) : end;
+  const slug = (celeb && (celeb.slug || celeb.id)) || 'demo';
+  const n = 30;
+  const out = [];
+  for (let i = 0; i < n; i++) {
+    const p = i / (n - 1);
+    const base = start + (end - start) * Math.pow(p, 0.85);
+    const u1 = hash01(slug + ':a:' + i);
+    const u2 = hash01(slug + ':b:' + i);
+    let wobble = amp * Math.sin((i + 1) * 0.55 + u1 * 6.28) * (0.35 + 0.65 * u2);
+    if ((vol === 'medium-high' || vol === 'high') && u1 > 0.82) wobble += amp * (u2 - 0.3);
+    out.push(Math.round(Math.max(8, Math.min(100, base + wobble)) * 10) / 10);
+  }
+  out[n - 1] = Math.round(Math.max(8, Math.min(100, end)) * 10) / 10;
+  return out;
+}
+
+function seriesSparkSvg(values, opts) {
+  const W = 260, H = 92, padL = 2, padR = 10, padT = 14, padB = 20;
+  const innerW = W - padL - padR, innerH = H - padT - padB;
+  const min = Math.min.apply(null, values);
+  const max = Math.max.apply(null, values);
+  const span = Math.max(8, max - min);
+  const lo = min - span * 0.18;
+  const hi = max + span * 0.12;
+  const n = values.length;
+  const xy = values.map((v, i) => {
+    const x = padL + (n === 1 ? innerW / 2 : i * innerW / (n - 1));
+    const y = padT + innerH * (1 - (v - lo) / (hi - lo));
+    return { x: +x.toFixed(1), y: +y.toFixed(1) };
+  });
+  const line = xy.map(p => p.x + ',' + p.y).join(' ');
+  const first = xy[0];
+  const last = xy[xy.length - 1];
+  const mid = xy[Math.floor((n - 1) / 2)];
+  const area = first.x + ',' + (padT + innerH) + ' ' + line + ' ' + last.x + ',' + (padT + innerH);
+  const change = opts && opts.change;
+  const changeText = change != null && Number.isFinite(Number(change))
+    ? '<text class="chg' + (Number(change) < 0 ? ' down' : '') + '" x="' + (W - padR) + '" y="11" text-anchor="end">' + escHtml(formatSignedPct(change)) + '</text>'
+    : '';
+  return '<svg class="cd-spark" viewBox="0 0 ' + W + ' ' + H + '" width="100%" height="' + H + '" role="img" aria-label="' + escHtml(t('cd.vol.chart')) + '">'
+    + '<polygon class="fill" points="' + area + '"/>'
+    + '<polyline class="line" points="' + line + '" fill="none"/>'
+    + '<circle class="dot" cx="' + last.x + '" cy="' + last.y + '" r="3.5"/>'
+    + changeText
+    + '<text class="axis" x="' + first.x + '" y="' + (H - 4) + '">' + escHtml(t('cd.vol.axis.start')) + '</text>'
+    + '<text class="axis" x="' + mid.x + '" y="' + (H - 4) + '" text-anchor="middle">' + escHtml(t('cd.vol.axis.mid')) + '</text>'
+    + '<text class="axis" x="' + last.x + '" y="' + (H - 4) + '" text-anchor="end">' + escHtml(t('cd.vol.axis.now')) + '</text>'
+    + '</svg>';
+}
+
+function reputationChartHtml(celeb) {
+  const series = celebritySeries30d(celeb);
+  if (!series) return '<div class="cd-na-chart">' + escHtml(t('cd.vol.na')) + '</div>';
+  const change = celeb && celeb.trendProfile ? celeb.trendProfile.change30dPct : null;
+  return seriesSparkSvg(series, { change: change });
+}
+
+function categoryFactsHtml(celeb) {
+  const rp = celebRiskProfile(celeb);
+  const commercial = (celeb && celeb.commercial) || {};
+  const conflict = rp.categoryConflict || 'unverified';
+  const excl = commercial.categoryExclusivity || 'unverified';
+  const unique = [];
+  (casesForCurrentProduct(celeb) || []).forEach(cs => {
+    if (cs && cs.category && unique.indexOf(cs.category) < 0) unique.push(cs.category);
+  });
+  const chips = unique.length
+    ? '<div class="cd-fact-chips">' + unique.map(c => '<span class="chip">' + escHtml(chipLabel(c)) + '</span>').join('') + '</div>'
+    : '<p class="cd-cap">' + escHtml(t('cd.cat.nocases')) + '</p>';
+  return '<dl class="cd-facts">'
+    + '<div><dt>' + escHtml(t('cd.cat.conflict')) + '</dt><dd>' + escHtml(conflictStatusLabel(conflict)) + '</dd></div>'
+    + '<div><dt>' + escHtml(t('cd.cat.excl')) + '</dt><dd>' + escHtml(conflictStatusLabel(excl)) + '</dd></div>'
+    + '</dl>'
+    + '<p class="sub">' + escHtml(t('cd.cat.cases')) + '</p>'
+    + chips;
 }
 
 function audienceGapLevel(score) {
@@ -4693,9 +5162,21 @@ function renderCandidateRisk(row, celeb) {
   const id = (row && row.id) || (celeb && celeb.id);
   const name = row ? liveName(row) : liveName(celeb);
   ensurePackParts();
-  const vol = riskLevelLabel(row && row.riskLevel);
-  const volRaw = String((row && row.riskLevel) || '').toLowerCase();
-  const volWarn = volRaw === 'medium' || volRaw === 'high' || volRaw === 'high';
+  const rp = celebRiskProfile(celeb);
+  const volRaw = String(rp.reputationVolatility || (row && row.riskLevel) || (celeb && celeb.risk && celeb.risk.level) || '').toLowerCase();
+  const vol = riskLevelLabel(volRaw);
+  const volWarn = volRaw === 'medium' || volRaw === 'high';
+  const conflictRaw = String(rp.categoryConflict || '').toLowerCase();
+  const exclRaw = String((celeb && celeb.commercial && celeb.commercial.categoryExclusivity) || '').toLowerCase();
+  const catWarn = conflictRaw !== 'clear' || exclRaw !== 'clear';
+  const catCap = (conflictRaw === 'hold' || exclRaw === 'hold')
+    ? t('cd.cat.capHold')
+    : (conflictRaw === 'clear' && exclRaw === 'clear')
+      ? t('cd.cat.capClear')
+      : t('cd.cat.cap');
+  const riskScore = (row && row.riskRaw != null) ? row.riskRaw : (celeb && celeb.risk ? celeb.risk.score : null);
+  const heatN = (row && row.heatMentions != null) ? row.heatMentions : ((celeb && celeb.heat_mentions) || '—');
+  const volCap = t('cd.vol.cap', { n: String(heatN) });
   const gap = audienceGapLevel(row && row.audience);
   const gate = row ? gateLabelOf(row) : t('lvl.unverified');
   const badge = (row && row.gateCode === 'HOLD') ? t('risk.holdReview') : t('risk.withConditions');
@@ -4748,16 +5229,16 @@ function renderCandidateRisk(row, celeb) {
       <article class="cd-card tint">
         ${ico.vol}
         <h3>${escHtml(t('cd.vol.h'))} <span class="lvl${volWarn ? ' warn' : ''}">${escHtml(vol)}</span></h3>
-        <p class="sub">${escHtml(t('cd.vol.sub', { n: (row && row.riskRaw != null) ? Number(row.riskRaw).toFixed(2) : '—' }))}</p>
-        <div class="cd-na-chart">${escHtml(t('cd.vol.na'))}</div>
-        <p class="cd-cap">${escHtml(t('cd.vol.cap', { n: String((row && row.heatMentions != null) ? row.heatMentions : '—') }))}</p>
+        <p class="sub">${escHtml(t('cd.vol.sub', { n: riskScore != null ? Number(riskScore).toFixed(2) : '—' }))}</p>
+        ${reputationChartHtml(celeb)}
+        <p class="cd-cap">${escHtml(volCap)}</p>
       </article>
       <article class="cd-card">
         ${ico.cat}
-        <h3>${escHtml(t('cd.cat.h'))} <span class="lvl warn">${escHtml(t('lvl.unverified'))}</span></h3>
+        <h3>${escHtml(t('cd.cat.h'))} <span class="lvl${catWarn ? ' warn' : ''}">${escHtml(conflictStatusLabel(conflictRaw || 'unverified'))}</span></h3>
         <p class="sub">${escHtml(t('cd.cat.sub'))}</p>
-        <div class="cd-na-chart">${escHtml(t('cd.cat.na'))}</div>
-        <p class="cd-cap">${escHtml(t('cd.cat.cap'))}</p>
+        ${categoryFactsHtml(celeb)}
+        <p class="cd-cap">${escHtml(catCap)}</p>
       </article>
       <article class="cd-card tint">
         ${ico.aud}
@@ -4772,7 +5253,7 @@ function renderCandidateRisk(row, celeb) {
         <p class="sub">${escHtml(t('cd.cost.sub'))}</p>
         ${budgetFitOf(row).code === 'na'
           ? '<div class="cd-na-chart">' + escHtml(t('cd.cost.na')) + '</div><p class="cd-cap">' + escHtml(t('cd.cost.cap')) + '</p>'
-          : '<p>' + escHtml(t('cd.cost.has', { budget: moneyMillions(productTalentBudgetCny()), fee: (row && row.feeLabel) || feeLabelOf(row) || t('common.unavailable') })) + '</p><p><b>' + escHtml(budgetFitOf(row).label) + '</b></p><p class="cd-cap">' + escHtml(t('cd.cost.capHas')) + '</p>'}
+          : '<p>' + escHtml(t('cd.cost.has', { budget: moneyMillions(productTalentBudgetCny()), fee: feeLabelOf(row) || t('common.unavailable') })) + '</p><p><b>' + escHtml(budgetFitOf(row).label) + '</b></p><p class="cd-cap">' + escHtml(t('cd.cost.capHas')) + '</p>'}
       </article>
     </div>
     <div class="cd-split">
@@ -4874,7 +5355,7 @@ function renderCandidateOverview(row, celeb) {
         <p class="sub">${escHtml(t('cd.mom.sub'))}</p>
         <div class="cd-card-body">
           <div class="cd-num">${escHtml(String(momentum))}</div>
-          <div class="cd-na-chart">${escHtml(t('cd.ewma'))} ${row && row.heatMentions != null ? escHtml(t('cd.recorded', { n: String(row.heatMentions) })) : ''}</div>
+          ${reputationChartHtml(celeb)}
         </div>
         <p class="cd-cap">${escHtml(t('cd.heatPct', { n: String((state.celebrities || []).length || 10) }))}</p>
       </article>
@@ -4911,7 +5392,7 @@ function renderCompareModal() {
     <tr><th>${escHtml(t('cmp.conf'))}</th>${rows.map(r => `<td>${r.confidence}</td>`).join('')}</tr>
     <tr><th>${escHtml(t('cmp.gate'))}</th>${rows.map(r => `<td>${escHtml(gateLabelOf(r))}</td>`).join('')}</tr>
     <tr><th>${escHtml(t('cmp.budget'))}</th>${rows.map(r => '<td>' + escHtml(budgetFitOf(r).label) + '</td>').join('')}</tr>
-    <tr><th>${escHtml(t('cmp.fee'))}</th>${rows.map(r => '<td>' + escHtml(r.feeLabel || feeLabelOf(r) || t('common.unavailable')) + '</td>').join('')}</tr>
+    <tr><th>${escHtml(t('cmp.fee'))}</th>${rows.map(r => '<td>' + escHtml(feeLabelOf(r) || t('common.unavailable')) + '</td>').join('')}</tr>
   </table>
   <p class="form-note" style="margin-top:12px">${escHtml(t('cmp.note'))}</p>`;
   modal.hidden = false;
@@ -5059,17 +5540,23 @@ document.getElementById('product').addEventListener('change', () => {
 document.getElementById('run').addEventListener('click', () => {
   if (!state.scoringValid) return;
   ensureDefaultBrief();
+  inferCustomUnderstanding(state.understanding, state.products.find(x => x.id === (document.getElementById('product') || {}).value) || {});
+  syncGenderFromBrief();
   if (state.tagDraft) applyTagProfile();
   try { render({ openTop: false, persist: true }); } catch (err) { console.error(err); }
-  if (state.matchPack && state.matchPack.rows && state.matchPack.rows.length) goWork('/work/fit');
+  if (state.matchPack) goWork('/work/fit');
 });
 document.getElementById('desc').addEventListener('input', () => {
   if (state.matchPack) state.rankingStale = true;
+  syncGenderFromBrief();
   syncTagsFromDesc();
   updateMatchGate();
   saveSession();
 });
 document.getElementById('agePill').addEventListener('click', () => {
+  goWork('/work/product');
+});
+document.getElementById('genderPill').addEventListener('click', () => {
   goWork('/work/product');
 });
 document.getElementById('addTagBtn').addEventListener('click', (e) => {
@@ -5090,7 +5577,18 @@ document.getElementById('tagPicker').addEventListener('click', (e) => {
   document.getElementById('tagPicker').hidden = true;
 });
 document.getElementById('confirmBrief').addEventListener('click', () => {
-  readUnderstandingFromForm();
+  const u = readUnderstandingFromForm();
+  inferCustomUnderstanding(u, state.products.find(x => x.id === (document.getElementById('product') || {}).value) || {});
+  const pid = (document.getElementById('product') || {}).value;
+  const custom = (state.products || []).find(x => x.id === 'custom');
+  if (pid === 'custom' && custom) {
+    custom.name = u.name || custom.name;
+    custom.name_en = u.name || custom.name_en;
+    custom.category = u.category === 'Other' ? 'Custom' : (u.category || custom.category);
+    custom.description = (document.getElementById('desc') || {}).value || u.objective || '';
+    custom.seed_tags = currentSeed();
+    custom.talentBudgetCny = u.talentBudgetCny || custom.talentBudgetCny;
+  }
   state.briefConfirmed = true;
   state.hadConfirmedBrief = true;
   state.briefVersion = (state.briefVersion || 0) + 1;
@@ -5315,6 +5813,14 @@ function leaveProduct(href, ev) {
   saveSession();
   return true;
 }
+document.getElementById('ssBack').addEventListener('click', (e) => {
+  e.preventDefault();
+  goWork('/work');
+});
+document.getElementById('ssBackFoot').addEventListener('click', (e) => {
+  e.preventDefault();
+  goWork('/work');
+});
 document.getElementById('backToBrief').addEventListener('click', (e) => {
   if (!leaveProduct('/work', e)) return;
 });
@@ -5408,15 +5914,19 @@ document.getElementById('view-product').addEventListener('click', (e) => {
     markBriefStale();
   }
 });
-['puName','puCategory','puPrice','puBudget','puObjective'].forEach(id => {
+['puName','puCategory','puPrice','puBudget','puObjective','puGender'].forEach(id => {
   document.getElementById(id).addEventListener('input', () => {
     readUnderstandingFromForm();
+    if (id !== 'puGender') syncGenderFromBrief();
     document.getElementById('puCount').textContent = t('pu.fields', { n: String(countExtracted()) });
     markBriefStale();
   });
   document.getElementById(id).addEventListener('change', () => {
+    if (id === 'puGender') state.genderLocked = true;
     readUnderstandingFromForm();
+    if (id !== 'puGender') syncGenderFromBrief();
     document.getElementById('puCount').textContent = t('pu.fields', { n: String(countExtracted()) });
+    syncGenderUi();
     markBriefStale();
   });
 });
@@ -5699,7 +6209,9 @@ if (window.Match99I18n) {
     if (presets) presets.dataset.ready = '';
     if (rows) rows.dataset.ready = '';
     refreshProductOptions();
+    syncCatalogBrief();
     syncTagsFromDesc();
+    syncGenderUi();
     productViewFilled = false;
     applyView();
     setLive();

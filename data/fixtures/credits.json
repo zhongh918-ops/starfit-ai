@@ -1,0 +1,125 @@
+{
+  "disclaimer": "Fictional demo credits and hot-list mention titles. Isolated from verified campaign cases.",
+  "candidates": {
+    "cand_demo_001": {
+      "works": [
+        {"type": "film", "title": "North Circuit", "title_zh": "北线", "year": 2025},
+        {"type": "series", "title": "After Practice", "title_zh": "练后", "year": 2024},
+        {"type": "performance", "title": "City Heat Stage", "title_zh": "城热现场", "year": 2025}
+      ],
+      "mentions": [
+        {"source": "Weibo", "date": "2026-09-10", "title": "Kai Ren dawn-run clips trend after a training diary drop", "title_zh": "Kai Ren 训练日记放出后，晨跑片段登上热搜"},
+        {"source": "Douyin", "date": "2026-09-09", "title": "Gym-to-street transition video with Kai Ren circulates", "title_zh": "Kai Ren 健身房到街头的过渡视频在抖音流传"},
+        {"source": "Bilibili", "date": "2026-09-08", "title": "Kai Ren on movement, gadgets and controlled energy", "title_zh": "Kai Ren 谈动作、设备和克制的能量感"}
+      ]
+    },
+    "cand_demo_002": {
+      "works": [
+        {"type": "series", "title": "Daylight Edit", "title_zh": "日光剪辑", "year": 2025},
+        {"type": "variety", "title": "Weekend Warm-up", "title_zh": "周末热身", "year": 2024},
+        {"type": "film", "title": "Soft Launch", "title_zh": "轻发布", "year": 2025}
+      ],
+      "mentions": [
+        {"source": "Douyin", "date": "2026-09-10", "title": "Mina Zhou commute look-book clips keep looping", "title_zh": "Mina Zhou 通勤穿搭片段持续循环"},
+        {"source": "Xiaohongshu", "date": "2026-09-09", "title": "Young professionals quote Mina Zhou on everyday energy", "title_zh": "年轻职场人转述 Mina Zhou 的日常能量"},
+        {"source": "Weibo", "date": "2026-09-07", "title": "Mina Zhou variety recap hits the entertainment list", "title_zh": "Mina Zhou 综艺回顾登上娱乐热榜"}
+      ]
+    },
+    "cand_demo_003": {
+      "works": [
+        {"type": "sport", "title": "East Open Invitational", "title_zh": "东部公开邀请赛", "year": 2025},
+        {"type": "hosting", "title": "Trackside Live", "title_zh": "跑道直播", "year": 2025},
+        {"type": "documentary", "title": "Form Check", "title_zh": "动作核对", "year": 2024}
+      ],
+      "mentions": [
+        {"source": "Douyin", "date": "2026-09-10", "title": "Evan Lu interval session is used as a form reference", "title_zh": "Evan Lu 间歇训练被当作跑姿参考"},
+        {"source": "Weibo", "date": "2026-09-08", "title": "Sports desk recaps Evan Lu's hosting debut", "title_zh": "体育板块回顾 Evan Lu 主持首秀"},
+        {"source": "Bilibili", "date": "2026-09-06", "title": "Evan Lu recovery routine explained in a training cut", "title_zh": "Evan Lu 恢复流程被剪进训练切片"}
+      ]
+    },
+    "cand_demo_004": {
+      "works": [
+        {"type": "show", "title": "Still Morning", "title_zh": "静晨", "year": 2025},
+        {"type": "hosting", "title": "Work-Life Desk", "title_zh": "工作生活席", "year": 2024},
+        {"type": "documentary", "title": "Daily Reset", "title_zh": "每日重置", "year": 2024}
+      ],
+      "mentions": [
+        {"source": "Xiaohongshu", "date": "2026-09-10", "title": "Tessa Wu morning routine notes get saved in wellness folders", "title_zh": "Tessa Wu 晨间流程笔记被收藏进养生文件夹"},
+        {"source": "Weibo", "date": "2026-09-08", "title": "Urban professionals cite Tessa Wu on sustainable movement", "title_zh": "都市职场人引用 Tessa Wu 谈可持续运动"},
+        {"source": "Douyin", "date": "2026-09-05", "title": "Tessa Wu commute stretch clip stays in recommended", "title_zh": "Tessa Wu 通勤拉伸片段持续出现在推荐"}
+      ]
+    },
+    "cand_demo_005": {
+      "works": [
+        {"type": "choreography", "title": "Loop City", "title_zh": "循环城市", "year": 2025},
+        {"type": "performance", "title": "Kinetic Night", "title_zh": "动能之夜", "year": 2025},
+        {"type": "series", "title": "Street Count", "title_zh": "街头计数", "year": 2024}
+      ],
+      "mentions": [
+        {"source": "Douyin", "date": "2026-09-10", "title": "Yuna Fang movement challenge jumps the youth list", "title_zh": "Yuna Fang 动作挑战冲上青年热榜"},
+        {"source": "Bilibili", "date": "2026-09-09", "title": "Street choreography cut of Yuna Fang keeps looping", "title_zh": "Yuna Fang 街头编舞切片持续循环"},
+        {"source": "Weibo", "date": "2026-09-07", "title": "Yuna Fang rehearsal clip trends with dance accounts", "title_zh": "Yuna Fang 排练片段在舞蹈账号间传播"}
+      ]
+    },
+    "cand_demo_006": {
+      "works": [
+        {"type": "documentary", "title": "Long Road Notes", "title_zh": "长路笔记", "year": 2025},
+        {"type": "sport", "title": "Ridge 100", "title_zh": "山脊一百", "year": 2024},
+        {"type": "show", "title": "Field Test Hours", "title_zh": "场地测试时数", "year": 2025}
+      ],
+      "mentions": [
+        {"source": "Bilibili", "date": "2026-09-10", "title": "Miles Gu equipment field notes get quoted by outdoor boards", "title_zh": "Miles Gu 装备实测笔记被户外板块引用"},
+        {"source": "Douyin", "date": "2026-09-08", "title": "Miles Gu ridge session used as endurance reference", "title_zh": "Miles Gu 山脊训练被当作耐力参考"},
+        {"source": "Weibo", "date": "2026-09-06", "title": "Sports media recaps Miles Gu's documentary drop", "title_zh": "体育媒体回顾 Miles Gu 纪录片上线"}
+      ]
+    },
+    "cand_demo_007": {
+      "works": [
+        {"type": "fashion", "title": "Form Study 09", "title_zh": "形态研究 09", "year": 2025},
+        {"type": "film", "title": "Future Object", "title_zh": "未来物件", "year": 2024},
+        {"type": "show", "title": "Atelier Hours", "title_zh": "工作室时数", "year": 2025}
+      ],
+      "mentions": [
+        {"source": "Xiaohongshu", "date": "2026-09-10", "title": "Nora Lin editorial stills lead design-utility posts", "title_zh": "Nora Lin 形象大片带动设计实用帖"},
+        {"source": "Weibo", "date": "2026-09-09", "title": "Nora Lin launch look is saved across fashion boards", "title_zh": "Nora Lin 发布造型在时装板块被收藏"},
+        {"source": "Douyin", "date": "2026-09-07", "title": "Nora Lin architecture-walk film clip circulates", "title_zh": "Nora Lin 建筑漫步影片片段在流传"}
+      ]
+    },
+    "cand_demo_008": {
+      "works": [
+        {"type": "album", "title": "Night Signal", "title_zh": "夜信号", "year": 2025},
+        {"type": "film", "title": "Independent Motion", "title_zh": "独立运动", "year": 2024},
+        {"type": "performance", "title": "Studio Live 12", "title_zh": "录音室现场 12", "year": 2025}
+      ],
+      "mentions": [
+        {"source": "Bilibili", "date": "2026-09-10", "title": "Aria Chen night-session film is clipped by music accounts", "title_zh": "Aria Chen 夜间录音影片被音乐账号切片"},
+        {"source": "Weibo", "date": "2026-09-08", "title": "Aria Chen new single talk hits culture lists", "title_zh": "Aria Chen 新单曲对谈登上文化热榜"},
+        {"source": "Douyin", "date": "2026-09-05", "title": "Aria Chen studio diary loop keeps returning in recommended", "title_zh": "Aria Chen 录音室日记在推荐里反复出现"}
+      ]
+    },
+    "cand_demo_009": {
+      "works": [
+        {"type": "show", "title": "Input Lab", "title_zh": "输入实验室", "year": 2025},
+        {"type": "hosting", "title": "Queue Night", "title_zh": "队列之夜", "year": 2025},
+        {"type": "series", "title": "Everyday Battery", "title_zh": "日常电量", "year": 2024}
+      ],
+      "mentions": [
+        {"source": "Bilibili", "date": "2026-09-10", "title": "Leo Xu wearable teardown stays on the tech list", "title_zh": "Leo Xu 可穿戴拆解留在科技热榜"},
+        {"source": "Douyin", "date": "2026-09-09", "title": "Leo Xu product-test challenge is remixed overnight", "title_zh": "Leo Xu 产品测试挑战一夜被二创"},
+        {"source": "Weibo", "date": "2026-09-07", "title": "Gaming desks quote Leo Xu on everyday performance kit", "title_zh": "游戏板块引用 Leo Xu 谈日常性能装备"}
+      ]
+    },
+    "cand_demo_010": {
+      "works": [
+        {"type": "film", "title": "After Dark", "title_zh": "入夜之后", "year": 2025},
+        {"type": "album", "title": "Scene Shift", "title_zh": "场景切换", "year": 2024},
+        {"type": "fashion", "title": "Night Tailoring", "title_zh": "夜间剪裁", "year": 2025}
+      ],
+      "mentions": [
+        {"source": "Weibo", "date": "2026-09-10", "title": "Theo Bai after-dark stills lead entertainment roundups", "title_zh": "Theo Bai 入夜剧照出现在娱乐盘点"},
+        {"source": "Douyin", "date": "2026-09-08", "title": "Theo Bai music-film cut loops on night-city tags", "title_zh": "Theo Bai 音乐短片在夜城标签下循环"},
+        {"source": "Xiaohongshu", "date": "2026-09-06", "title": "Theo Bai tailoring look-book is saved in style folders", "title_zh": "Theo Bai 剪裁造型被收藏进风格文件夹"}
+      ]
+    }
+  }
+}

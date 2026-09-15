@@ -119,11 +119,13 @@
   font-size: 13px;
 }
 
-button.field {
-  cursor: pointer;
+.pu-budget {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
+.pu-budget .field { flex: 1; min-width: 0; }
+.pu-budget .form-note { margin: 0; white-space: nowrap; }
 
 .age-wrap {
   position: relative;
@@ -283,7 +285,11 @@ button.field {
   gap: 10px;
 }
 
-.pu-foot .btn-primary { border-radius: 999px; }
+.pu-foot .btn-primary,
+.pu-foot .btn-secondary,
+.pu-meta .btn-secondary {
+  border-radius: 999px;
+}
 
 @media (max-width: 1280px) {
   .pu-grid { grid-template-columns: 1fr; }

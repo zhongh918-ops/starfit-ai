@@ -5,7 +5,9 @@ written back onto those records.
 """
 from __future__ import annotations
 
+import hashlib
 import json
+import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -66,6 +68,40 @@ CASE_IMAGES = {
     "case_001_b": "/assets/evidence/evidence-nova-audio.png",
 }
 
+CASE_IMAGE_BY_CATEGORY = (
+    ("footwear", "/assets/evidence/evidence-motionlab-run.png"),
+    ("run", "/assets/evidence/evidence-motionlab-run.png"),
+    ("fitness", "/assets/evidence/evidence-motionlab-run.png"),
+    ("sport", "/assets/evidence/evidence-motionlab-run.png"),
+    ("hydrat", "/assets/evidence/evidence-motionlab-run.png"),
+    ("outdoor", "/assets/evidence/evidence-motionlab-run.png"),
+    ("tech", "/assets/evidence/evidence-nova-audio.png"),
+    ("audio", "/assets/evidence/evidence-nova-audio.png"),
+    ("mobile", "/assets/evidence/evidence-nova-audio.png"),
+    ("gaming", "/assets/evidence/evidence-nova-audio.png"),
+    ("wearable", "/assets/evidence/evidence-nova-audio.png"),
+    ("wellness", "/assets/evidence/evidence-wellness.png"),
+    ("health", "/assets/evidence/evidence-wellness.png"),
+    ("apparel", "/assets/evidence/evidence-lifestyle.png"),
+    ("fashion", "/assets/evidence/evidence-lifestyle.png"),
+    ("lifestyle", "/assets/evidence/evidence-lifestyle.png"),
+    ("fragrance", "/assets/evidence/evidence-lifestyle.png"),
+    ("music", "/assets/evidence/evidence-lifestyle.png"),
+)
+
+
+def _case_image(case: dict) -> str | None:
+    if case.get("imageAsset"):
+        return case.get("imageAsset")
+    known = CASE_IMAGES.get(case.get("id"))
+    if known:
+        return known
+    cat = str(case.get("category") or "").lower()
+    for key, src in CASE_IMAGE_BY_CATEGORY:
+        if key in cat:
+            return src
+    return "/assets/evidence/evidence-lifestyle.png"
+
 
 def _load(name: str):
     return json.loads((FIXTURES / name).read_text(encoding="utf-8"))
@@ -85,6 +121,13 @@ def load_trend_doc() -> dict:
 
 def load_scoring_doc() -> dict:
     return _load("scoring-presets.json")
+
+
+def load_credits_doc() -> dict:
+    path = FIXTURES / "credits.json"
+    if not path.exists():
+        return {}
+    return _load("credits.json")
 
 
 def load_archetype_doc() -> dict:
@@ -172,6 +215,37 @@ def _age_split(dist: dict) -> dict:
     }
 
 
+def _unit(seed: str) -> float:
+    digest = hashlib.md5(seed.encode("utf-8")).hexdigest()
+    return int(digest[:8], 16) / 0xFFFFFFFF
+
+
+def _series30d(profile: dict) -> list[float]:
+    """Stable demo mention-index path from recorded momentum / change / volatility."""
+    tp = profile.get("trendProfile") or {}
+    if isinstance(tp.get("series30d"), list) and len(tp["series30d"]) >= 2:
+        return [round(float(v), 1) for v in tp["series30d"]]
+    end = float(tp.get("momentum30d") or 50)
+    change = float(tp.get("change30dPct") or 0)
+    vol = str(tp.get("volatility") or "medium")
+    amp = {"low": 2.2, "medium": 6.5, "medium-high": 11.0, "high": 14.0}.get(vol, 6.5)
+    start = end / (1.0 + change / 100.0) if change > -99 else end
+    slug = str(profile.get("slug") or profile.get("id") or "demo")
+    n = 30
+    out = []
+    for i in range(n):
+        t = i / (n - 1)
+        base = start + (end - start) * (t ** 0.85)
+        u1 = _unit(f"{slug}:a:{i}")
+        u2 = _unit(f"{slug}:b:{i}")
+        wobble = amp * math.sin((i + 1) * 0.55 + u1 * 6.28) * (0.35 + 0.65 * u2)
+        if vol in ("medium-high", "high") and u1 > 0.82:
+            wobble += amp * (u2 - 0.3)
+        out.append(round(max(8.0, min(100.0, base + wobble)), 1))
+    out[-1] = round(max(8.0, min(100.0, end)), 1)
+    return out
+
+
 def _risk(profile: dict) -> dict:
     rp = profile.get("riskProfile") or {}
     vol = str(rp.get("reputationVolatility") or "medium")
@@ -204,7 +278,7 @@ def profile_to_celebrity(profile: dict) -> dict:
     for case in profile.get("endorsementCases") or []:
         item = dict(case)
         if not item.get("imageAsset"):
-            item["imageAsset"] = CASE_IMAGES.get(item.get("id"))
+            item["imageAsset"] = _case_image(item)
         cases.append(item)
     return {
         "id": profile["id"],
@@ -231,11 +305,11 @@ def profile_to_celebrity(profile: dict) -> dict:
         "risk": _risk(profile),
         "heat_mentions": int((profile.get("trendProfile") or {}).get("momentum30d") or 0),
         "today_mentions": 0,
-        "evidence": [],
+        "evidence": list(profile.get("mentions") or profile.get("evidence") or []),
         "why_for_coffee": profile.get("whyCandidate") or "",
         "public_image": profile.get("bio") or "",
         "main_audience": (profile.get("ageBand") or "") + " · " + (profile.get("market") or ""),
-        "works": [],
+        "works": list(profile.get("works") or []),
         "portrait": f"/assets/portraits/{slug}.png",
         "listingImage": LISTING_CROPS.get(slug, f"/assets/portraits/{slug}.png"),
         "profilePortrait": "/assets/candidates/profile-kai-ren.png" if slug == "kai-ren" else f"/assets/portraits/{slug}.png",
@@ -247,7 +321,7 @@ def profile_to_celebrity(profile: dict) -> dict:
         "languages": profile.get("languages") or [],
         "commercial": profile.get("commercial") or {},
         "creativeProfile": profile.get("creativeProfile") or {},
-        "trendProfile": profile.get("trendProfile") or {},
+        "trendProfile": {**(profile.get("trendProfile") or {}), "series30d": _series30d(profile)},
         "culturalArchetype": profile.get("culturalArchetype") or {},
         "endorsementCases": cases,
         "provenance": profile.get("provenance") or {"mode": "demo", "simulated": True},
@@ -258,7 +332,17 @@ def profile_to_celebrity(profile: dict) -> dict:
 
 def demo_celebrities() -> list[dict]:
     doc = load_profiles_doc()
-    return [profile_to_celebrity(p) for p in (doc.get("candidates") or [])]
+    credits = (load_credits_doc() or {}).get("candidates") or {}
+    out = []
+    for profile in doc.get("candidates") or []:
+        celeb = profile_to_celebrity(profile)
+        extra = credits.get(profile["id"]) or credits.get(profile.get("slug") or "") or {}
+        if extra.get("works"):
+            celeb["works"] = list(extra["works"])
+        if extra.get("mentions"):
+            celeb["evidence"] = list(extra["mentions"])
+        out.append(celeb)
+    return out
 
 
 def fixture_bundle() -> dict:
