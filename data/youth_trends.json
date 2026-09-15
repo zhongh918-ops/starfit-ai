@@ -1,12 +1,24 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 233,
-    "today_count": 0,
-    "heat": 0.1,
+    "mention_count": 235,
+    "today_count": 2,
+    "heat": 0.128,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
+      {
+        "date": "2026-09-15",
+        "title": "国米5-3乌迪内斯",
+        "platform": "bilibili-hot-search",
+        "rank": 12
+      },
+      {
+        "date": "2026-09-15",
+        "title": "每天完成10分钟高强度运动有哪些益处",
+        "platform": "toutiao",
+        "rank": 28
+      },
       {
         "date": "2026-09-09",
         "title": "皇马2:1击败国米",
@@ -24,18 +36,6 @@
         "title": "中国女篮不敌法国无缘世界杯四强",
         "platform": "douyin",
         "rank": 1
-      },
-      {
-        "date": "2026-09-14",
-        "title": "中国足球小将西班牙捧杯",
-        "platform": "toutiao",
-        "rank": 1
-      },
-      {
-        "date": "2025-12-21",
-        "title": "健身房教练说不报课自己练会练废，到底是为了卖课还是真的这样？",
-        "platform": "zhihu",
-        "rank": 2
       }
     ],
     "sources": [
@@ -44,12 +44,18 @@
   },
   "户外": {
     "tag": "户外",
-    "mention_count": 50,
-    "today_count": 0,
-    "heat": 0.021,
+    "mention_count": 51,
+    "today_count": 1,
+    "heat": 0.037,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
+      {
+        "date": "2026-09-15",
+        "title": "旅行青蛙停运,吧友手搓离线版",
+        "platform": "tieba",
+        "rank": 2
+      },
       {
         "date": "2026-09-11",
         "title": "川西的秋天美得没轻没重",
@@ -73,12 +79,6 @@
         "title": "23岁硕士川西徒步因高反去世",
         "platform": "toutiao",
         "rank": 5
-      },
-      {
-        "date": "2025-12-22",
-        "title": "23岁硕士徒步去世前已主动返程",
-        "platform": "weibo",
-        "rank": 5
       }
     ],
     "sources": [
@@ -87,9 +87,9 @@
   },
   "健康": {
     "tag": "健康",
-    "mention_count": 80,
-    "today_count": 3,
-    "heat": 0.173,
+    "mention_count": 82,
+    "today_count": 5,
+    "heat": 0.111,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -101,27 +101,27 @@
       },
       {
         "date": "2026-09-15",
+        "title": "未来五年民生健康重磅规划",
+        "platform": "baidu",
+        "rank": 3
+      },
+      {
+        "date": "2026-09-15",
         "title": "马上评｜赢了就是赢了？HYROX要守住体面和健康底线",
         "platform": "thepaper",
         "rank": 11
       },
       {
         "date": "2026-09-15",
+        "title": "于东来回应「胖东来新员工实行四年合同制」称未违反劳动法，此举是为培养更多懂健康生活的群体，你怎么看？",
+        "platform": "zhihu",
+        "rank": 13
+      },
+      {
+        "date": "2026-09-15",
         "title": "八部门：推广家庭服务机器人、健康监测、智能照护等适老化产品",
         "platform": "thepaper",
         "rank": 14
-      },
-      {
-        "date": "2025-12-22",
-        "title": "抗癌药平替有效成分为0",
-        "platform": "weibo",
-        "rank": 2
-      },
-      {
-        "date": "2025-12-23",
-        "title": "大脑消耗糖分这么多，为什么没有动脑减肥法？",
-        "platform": "zhihu",
-        "rank": 2
       }
     ],
     "sources": [
@@ -130,41 +130,41 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 819,
-    "today_count": 14,
+    "mention_count": 847,
+    "today_count": 42,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
     "evidence": [
       {
         "date": "2026-09-15",
-        "title": "苹果回应iPhone 18 Pro破发",
+        "title": "全键盘版“阔直板”手机爆火",
         "platform": "toutiao",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-15",
+        "title": "AI开发放缓担忧升温，美股指全线收跌，芯片指数大跌近6%，10年期美债收益率一度涨破5%",
+        "platform": "wallstreetcn-hot",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-15",
+        "title": "【早报】美股光通信、存储芯片板块大跌；事关国民经济运行，重要发布会今日举行；原油走强、黄金下挫",
+        "platform": "cls-hot",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-15",
+        "title": "特朗普急了，现场连线黄仁勋，斥责AI危险论是骗局",
+        "platform": "ifeng",
         "rank": 1
       },
       {
         "date": "2026-09-15",
         "title": "大量5090显卡流入AI矿场",
         "platform": "bilibili-hot-search",
-        "rank": 1
-      },
-      {
-        "date": "2026-09-15",
-        "title": "全键盘版“阔直板”手机爆火",
-        "platform": "toutiao",
         "rank": 2
-      },
-      {
-        "date": "2026-09-15",
-        "title": "外交部：散播人工智能威胁叙事不符合任何一方利益",
-        "platform": "thepaper",
-        "rank": 7
-      },
-      {
-        "date": "2026-09-15",
-        "title": "一部手机看金砖国家合作前景",
-        "platform": "bilibili-hot-search",
-        "rank": 11
       }
     ],
     "sources": [
@@ -173,12 +173,18 @@
   },
   "情绪价值": {
     "tag": "情绪价值",
-    "mention_count": 46,
-    "today_count": 0,
-    "heat": 0.02,
+    "mention_count": 47,
+    "today_count": 1,
+    "heat": 0.035,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
+      {
+        "date": "2026-09-15",
+        "title": "燕麦系部落格女孩",
+        "platform": "douyin",
+        "rank": 16
+      },
       {
         "date": "2025-12-24",
         "title": "马上测·回顾2025：两位“较真”记者，这一年测评的快乐、震惊和成就",
@@ -202,12 +208,6 @@
         "title": "燕麦系秋天的神",
         "platform": "douyin",
         "rank": 4
-      },
-      {
-        "date": "2026-09-14",
-        "title": "准备礼物的快乐总是先到一步",
-        "platform": "douyin",
-        "rank": 4
       }
     ],
     "sources": [
@@ -216,12 +216,24 @@
   },
   "便利": {
     "tag": "便利",
-    "mention_count": 29,
-    "today_count": 0,
-    "heat": 0.012,
+    "mention_count": 31,
+    "today_count": 2,
+    "heat": 0.044,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
+      {
+        "date": "2026-09-15",
+        "title": "搜打撤?大学城猎手偷光外卖",
+        "platform": "tieba",
+        "rank": 1
+      },
+      {
+        "date": "2026-09-15",
+        "title": "基层干部下班当外卖员排名前15%",
+        "platform": "weibo",
+        "rank": 25
+      },
       {
         "date": "2025-12-26",
         "title": "贾国龙预制菜风波后发声，称靠吃安眠药入睡，如果能重来坚决不硬刚，如何看待西贝未来的发展？",
@@ -239,18 +251,6 @@
         "title": "自费买可乐的外卖骑手被奖励一年骑手餐",
         "platform": "weibo",
         "rank": 4
-      },
-      {
-        "date": "2025-12-27",
-        "title": "外卖骑手在家中猝死被保险公司拒赔",
-        "platform": "baidu",
-        "rank": 7
-      },
-      {
-        "date": "2026-09-09",
-        "title": "副部长赵世堂点赞一名外卖小哥",
-        "platform": "baidu",
-        "rank": 9
       }
     ],
     "sources": [
@@ -259,12 +259,18 @@
   },
   "时尚": {
     "tag": "时尚",
-    "mention_count": 49,
-    "today_count": 0,
-    "heat": 0.021,
+    "mention_count": 50,
+    "today_count": 1,
+    "heat": 0.036,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
+      {
+        "date": "2026-09-15",
+        "title": "当我不小心染上蔡徐坤审美穿搭",
+        "platform": "douyin",
+        "rank": 11
+      },
       {
         "date": "2026-09-11",
         "title": "速来领取可可系穿搭说明书",
@@ -288,12 +294,6 @@
         "title": "井柏然Luke穿搭爆火",
         "platform": "baidu",
         "rank": 10
-      },
-      {
-        "date": "2025-12-21",
-        "title": "火影鸣佐传说时装技能爆料",
-        "platform": "bilibili-hot-search",
-        "rank": 12
       }
     ],
     "sources": [
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 62,
     "today_count": 1,
-    "heat": 0.073,
+    "heat": 0.041,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -312,7 +312,7 @@
         "date": "2026-09-15",
         "title": "沉浸式体验反坦克导弹实弹射击",
         "platform": "bilibili-hot-search",
-        "rank": 4
+        "rank": 9
       },
       {
         "date": "2025-12-22",
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 61,
     "today_count": 0,
-    "heat": 0.026,
+    "heat": 0.025,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
