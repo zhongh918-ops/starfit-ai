@@ -85,6 +85,18 @@
   border-color: var(--lime-300);
 }
 
+.ss-custom-hint {
+  margin: -4px 0 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--slate);
+}
+
+.ss-row input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .ss-row {
   display: grid;
   grid-template-columns: minmax(140px, 1.1fr) minmax(0, 1.4fr) 72px;

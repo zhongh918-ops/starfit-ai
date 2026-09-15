@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="css/product.css?v=lang1">
 <link rel="stylesheet" href="css/trends.css">
 <link rel="stylesheet" href="css/tags.css">
-<link rel="stylesheet" href="css/scoring.css?v=backcenter">
+<link rel="stylesheet" href="css/scoring.css?v=custom2">
 <link rel="stylesheet" href="css/listing.css">
 <link rel="stylesheet" href="css/candidate.css?v=evidence1">
 <link rel="stylesheet" href="css/campaign.css?v=scenes4">
@@ -373,6 +373,7 @@
             <div class="ss-layout">
               <div>
                 <div class="ss-presets" id="ssPresets"></div>
+                <p class="ss-custom-hint" id="ssCustomHint"></p>
                 <div id="ssRows"></div>
                 <p class="ss-total" id="ssTotal"></p>
                 <div class="ss-actions">
@@ -445,10 +446,10 @@
     </div>
   </div>
 </div>
-<script src="js/i18n.js?v=cases1"></script>
+<script src="js/i18n.js?v=custom2"></script>
 <script src="js/campaign-poster.js?v=beauty2"></script>
 <script>
-const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, genderLocked: false, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, campaignScene: 'lobby', drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
+const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, genderLocked: false, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', scoringCustom: null, matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, campaignScene: 'lobby', drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
 const SESSION_KEY = 'match99-work';
 const HIST_KEY = 'match99-work-hist';
 const MODE_KEY = 'match99-data-mode';
@@ -526,6 +527,40 @@ function scoresEqual(a, b) {
 function presetIdFromWeights(w) {
   const id = Object.keys(SCORE_PRESETS).find(k => scoresEqual(SCORE_PRESETS[k], w));
   return id || 'custom';
+}
+function scoringChipId() {
+  return state.scoringPreset === 'custom' ? 'custom' : presetIdFromWeights(state.scoringDraft);
+}
+function scoringEditable() {
+  return scoringChipId() === 'custom';
+}
+function rememberCustomDraft() {
+  if (!state.scoringDraft) return;
+  state.scoringCustom = cloneScore(state.scoringDraft);
+}
+function allocateRemainder(keys, leftover) {
+  const out = {};
+  if (!keys.length) return out;
+  leftover = Math.max(0, Math.round(Number(leftover) || 0));
+  if (leftover <= 0) {
+    keys.forEach((k) => { out[k] = 0; });
+    return out;
+  }
+  const weights = keys.map((k) => Math.max(0, Number(state.scoringDraft[k] || 0)));
+  const sum = weights.reduce((s, n) => s + n, 0);
+  if (sum <= 0) {
+    const base = Math.floor(leftover / keys.length);
+    let rem = leftover - base * keys.length;
+    keys.forEach((k, i) => { out[k] = base + (i < rem ? 1 : 0); });
+    return out;
+  }
+  const exact = weights.map((n) => leftover * n / sum);
+  const floors = exact.map((n) => Math.floor(n));
+  const used = floors.reduce((s, n) => s + n, 0);
+  const order = exact.map((n, i) => ({ i: i, frac: n - floors[i] })).sort((a, b) => b.frac - a.frac);
+  keys.forEach((k, i) => { out[k] = floors[i]; });
+  for (let j = 0; j < leftover - used; j++) out[keys[order[j].i]] += 1;
+  return out;
 }
 const CHIP_EN = {
   '运动': 'Sports', '户外': 'Outdoor', '健康': 'Health', '科技': 'Technology',
@@ -997,6 +1032,7 @@ function saveSession() {
     scoringSaved: state.scoringSaved,
     scoringApplied: state.scoringApplied,
     scoringPreset: state.scoringPreset,
+    scoringCustom: state.scoringCustom,
     matchPack: state.matchPack
   };
   try { sessionStorage.setItem(SESSION_KEY, JSON.stringify(payload)); } catch (e) {}
@@ -1921,6 +1957,14 @@ function fillProductUnderstanding() {
 
 function ensureScoringDraft() {
   if (!state.scoringDraft) state.scoringDraft = cloneScore(SCORE_PRESETS.balanced);
+  if (scoreTotal(state.scoringDraft) !== 100) {
+    if (state.scoringCustom && scoreTotal(state.scoringCustom) === 100) {
+      state.scoringDraft = cloneScore(state.scoringCustom);
+    } else {
+      state.scoringDraft = cloneScore(SCORE_PRESETS.balanced);
+      if (state.scoringPreset === 'custom') state.scoringPreset = 'balanced';
+    }
+  }
   if (!state.scoringPreset) state.scoringPreset = presetIdFromWeights(state.scoringDraft);
 }
 
@@ -1960,7 +2004,7 @@ function updateScoringChrome() {
     save.title = total !== 100 ? t('ss.saveNeed100') : (scoresEqual(w, state.scoringSaved) ? t('ss.saveSame') : t('ss.saveOk'));
   }
   if (apply) {
-    apply.disabled = !(state.scoringSaved && scoreTotal(state.scoringSaved) === 100);
+    apply.disabled = total !== 100;
     apply.title = apply.disabled ? t('ss.applyNeed') : t('ss.applyOk');
   }
   if (live) {
@@ -1972,9 +2016,21 @@ function updateScoringChrome() {
   }
   if (savedVer) savedVer.textContent = state.scoringSaved ? (state.scoringVersion || 'saved') : t('ss.none');
   if (appliedVer) appliedVer.textContent = activeScoring() ? (state.scoringVersion || 'saved') : t('ss.demoLive');
+  const chip = scoringChipId();
+  const editable = chip === 'custom';
   document.querySelectorAll('#ssPresets button').forEach(b => {
-    b.classList.toggle('on', b.getAttribute('data-preset') === (presetIdFromWeights(w)));
+    b.classList.toggle('on', b.getAttribute('data-preset') === chip);
   });
+  const rows = document.getElementById('ssRows');
+  if (rows) {
+    rows.classList.toggle('is-preset', !editable);
+    rows.querySelectorAll('input').forEach((el) => { el.disabled = false; });
+  }
+  const hint = document.getElementById('ssCustomHint');
+  if (hint) {
+    hint.hidden = false;
+    hint.textContent = editable ? t('ss.customHint') : t('ss.customLocked');
+  }
 }
 
 function renderScoring() {
@@ -2016,24 +2072,46 @@ function renderScoring() {
 
 function setScoreKey(key, raw) {
   ensureScoringDraft();
+  if (SCORE_KEYS.indexOf(key) < 0) return;
   let n = Math.round(Number(raw));
   if (Number.isNaN(n)) return;
   n = Math.max(0, Math.min(100, n));
+  const others = SCORE_KEYS.filter((k) => k !== key);
+  const next = allocateRemainder(others, 100 - n);
   state.scoringDraft[key] = n;
-  state.scoringPreset = presetIdFromWeights(state.scoringDraft);
+  others.forEach((k) => { state.scoringDraft[k] = next[k]; });
+  state.scoringPreset = 'custom';
+  rememberCustomDraft();
   const rows = document.getElementById('ssRows');
   if (rows) {
-    const sl = rows.querySelector(`[data-score-key="${key}"]`);
-    const num = rows.querySelector(`[data-score-num="${key}"]`);
-    if (sl && sl !== document.activeElement) sl.value = n;
-    if (num && num !== document.activeElement) num.value = n;
+    SCORE_KEYS.forEach((k) => {
+      const sl = rows.querySelector(`[data-score-key="${k}"]`);
+      const num = rows.querySelector(`[data-score-num="${k}"]`);
+      if (sl && sl !== document.activeElement) sl.value = state.scoringDraft[k];
+      if (num && num !== document.activeElement) num.value = state.scoringDraft[k];
+    });
   }
   updateScoringChrome();
   saveSession();
 }
 
 function applyPreset(id) {
-  if (id === 'custom') return;
+  if (id === 'custom') {
+    ensureScoringDraft();
+    if (state.scoringCustom && scoreTotal(state.scoringCustom) === 100) {
+      state.scoringDraft = cloneScore(state.scoringCustom);
+    } else if (scoreTotal(state.scoringDraft) !== 100) {
+      state.scoringDraft = cloneScore(SCORE_PRESETS.balanced);
+    }
+    state.scoringPreset = 'custom';
+    rememberCustomDraft();
+    const rows = document.getElementById('ssRows');
+    if (rows) rows.dataset.ready = '';
+    renderScoring();
+    const first = document.querySelector('#ssRows [data-score-num]');
+    if (first) first.focus();
+    return;
+  }
   const p = SCORE_PRESETS[id];
   if (!p) return;
   state.scoringDraft = cloneScore(p);
@@ -2048,6 +2126,7 @@ function resetScoringState() {
   state.scoringSaved = cloneScore(SCORE_PRESETS.balanced);
   state.scoringApplied = cloneScore(SCORE_PRESETS.balanced);
   state.scoringPreset = 'balanced';
+  state.scoringCustom = null;
   state.scoringVersion = 'scoring_balanced_v1';
   state.scoringValid = true;
   const rows = document.getElementById('ssRows');
@@ -2150,6 +2229,7 @@ async function load(keepProduct) {
       if (saved.scoringSaved) state.scoringSaved = saved.scoringSaved;
       if (saved.scoringApplied) state.scoringApplied = saved.scoringApplied;
       if (saved.scoringPreset) state.scoringPreset = saved.scoringPreset;
+      if (saved.scoringCustom && scoreTotal(saved.scoringCustom) === 100) state.scoringCustom = saved.scoringCustom;
       if (saved.scoringVersion) state.scoringVersion = saved.scoringVersion;
       if (saved.matchPack) state.matchPack = saved.matchPack;
       if (state.matchPack && (state.dataMode || 'demo') === 'demo') {
@@ -5760,6 +5840,7 @@ document.getElementById('ssRows').addEventListener('input', (e) => {
 document.getElementById('ssReset').addEventListener('click', () => {
   state.scoringDraft = cloneScore(state.scoringSaved || SCORE_PRESETS.balanced);
   state.scoringPreset = presetIdFromWeights(state.scoringDraft);
+  if (state.scoringPreset === 'custom') rememberCustomDraft();
   const rows = document.getElementById('ssRows');
   if (rows) rows.dataset.ready = '';
   renderScoring();
@@ -5768,7 +5849,8 @@ document.getElementById('ssSave').addEventListener('click', () => {
   ensureScoringDraft();
   if (scoreTotal(state.scoringDraft) !== 100) return;
   state.scoringSaved = cloneScore(state.scoringDraft);
-  const preset = presetIdFromWeights(state.scoringDraft);
+  const preset = state.scoringPreset === 'custom' ? 'custom' : presetIdFromWeights(state.scoringDraft);
+  if (preset === 'custom') rememberCustomDraft();
   const prev = String(state.scoringVersion || '');
   const n = (!prev || prev.startsWith('demo')) ? 1 : ((prev.match(/(\d+)$/) ? Number(prev.match(/(\d+)$/)[1]) : 0) + 1);
   state.scoringVersion = (preset === 'custom' ? 'custom' : preset) + '-v' + n;
@@ -5777,13 +5859,29 @@ document.getElementById('ssSave').addEventListener('click', () => {
   updateScoringChrome();
 });
 document.getElementById('ssApply').addEventListener('click', () => {
-  if (!state.scoringSaved || scoreTotal(state.scoringSaved) !== 100) return;
+  ensureScoringDraft();
+  const source = scoreTotal(state.scoringDraft) === 100
+    ? state.scoringDraft
+    : (state.scoringSaved && scoreTotal(state.scoringSaved) === 100 ? state.scoringSaved : null);
+  if (!source) return;
   if (!confirm(t('ss.applyConfirm'))) return;
-  state.scoringApplied = cloneScore(state.scoringSaved);
+  const preset = state.scoringPreset === 'custom' ? 'custom' : presetIdFromWeights(source);
+  state.scoringSaved = cloneScore(source);
+  if (preset === 'custom') {
+    state.scoringPreset = 'custom';
+    state.scoringCustom = cloneScore(source);
+  }
+  if (!scoresEqual(state.scoringApplied, source)) {
+    const prev = String(state.scoringVersion || '');
+    const n = (!prev || prev.startsWith('demo')) ? 1 : ((prev.match(/(\d+)$/) ? Number(prev.match(/(\d+)$/)[1]) : 0) + 1);
+    state.scoringVersion = (preset === 'custom' ? 'custom' : preset) + '-v' + n;
+  }
+  state.scoringApplied = cloneScore(source);
   state.rankingStale = false;
   saveSession();
   updateScoringChrome();
   render({ openTop: false, persist: true });
+  if (state.matchPack && state.matchPack.rows && state.matchPack.rows.length) goWork('/work/fit');
 });
 function puDirty() {
   return workView() === 'product' && state.puClean && understandingSnapshot() !== state.puClean;
