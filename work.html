@@ -446,7 +446,7 @@
   </div>
 </div>
 <script src="js/i18n.js?v=cases1"></script>
-<script src="js/campaign-poster.js?v=scenes4"></script>
+<script src="js/campaign-poster.js?v=beauty2"></script>
 <script>
 const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, genderLocked: false, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, campaignScene: 'lobby', drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
 const SESSION_KEY = 'match99-work';
@@ -4361,7 +4361,8 @@ function renderCampaignStudio() {
 function refreshCampaignPosters(row, rec, pack) {
   if (!row || !rec || !pack) return;
   const productId = liveProductId(pack);
-  const key = ['scenes3', productId, row.id || '', rec.slogan || '', rec.key || ''].join('|');
+  const family = typeof currentProductFamily === 'function' ? currentProductFamily() : '';
+  const key = ['scenes4', productId, family, row.id || '', rec.slogan || '', rec.key || ''].join('|');
   if (state.campaignPosterKey === key && state.campaignPosterUrls) {
     if (window.Match99Poster) Match99Poster.apply(state.campaignPosterUrls);
     return;
@@ -4374,7 +4375,7 @@ function refreshCampaignPosters(row, rec, pack) {
     Match99Poster.apply(urls);
   };
   if (useFusion) {
-    Match99Poster.resolveFusionArt(productId, slug).then((src) => {
+    Match99Poster.resolveFusionArt(productId, slug, family).then((src) => {
       if (!src) {
         composeFallbackPoster(row, rec, pack, key);
         return;
