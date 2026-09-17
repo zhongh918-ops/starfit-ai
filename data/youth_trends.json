@@ -2,40 +2,40 @@
   "运动": {
     "tag": "运动",
     "mention_count": 242,
-    "today_count": 7,
-    "heat": 0.311,
+    "today_count": 0,
+    "heat": 0.094,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
       {
-        "date": "2026-09-17",
-        "title": "HYROX 就「选手失禁夺冠」一事道歉并给下午场赛事运动员全额退费，你认为这次道歉＋退费能挽回口碑吗？",
-        "platform": "zhihu",
-        "rank": 3
+        "date": "2026-09-09",
+        "title": "皇马2:1击败国米",
+        "platform": "douyin",
+        "rank": 1
       },
       {
-        "date": "2026-09-17",
-        "title": "中国运动员在日本机场干等6小时",
-        "platform": "toutiao",
-        "rank": 5
-      },
-      {
-        "date": "2026-09-17",
-        "title": "亚运板球是什么运动",
+        "date": "2026-09-10",
+        "title": "回顾郑钦文美网之路",
         "platform": "bilibili-hot-search",
-        "rank": 9
+        "rank": 1
       },
       {
-        "date": "2026-09-17",
-        "title": "被困日本机场的中国运动员苦笑：这些事情，比比赛更难",
-        "platform": "ifeng",
-        "rank": 10
+        "date": "2026-09-10",
+        "title": "中国女篮不敌法国无缘世界杯四强",
+        "platform": "douyin",
+        "rank": 1
       },
       {
-        "date": "2026-09-17",
-        "title": "外籍运动员“边跑边腹泻”夺冠事件，又有争议后续",
-        "platform": "ifeng",
-        "rank": 12
+        "date": "2026-09-14",
+        "title": "中国足球小将西班牙捧杯",
+        "platform": "toutiao",
+        "rank": 1
+      },
+      {
+        "date": "2025-12-21",
+        "title": "健身房教练说不报课自己练会练废，到底是为了卖课还是真的这样？",
+        "platform": "zhihu",
+        "rank": 2
       }
     ],
     "sources": [
@@ -131,40 +131,40 @@
   "科技": {
     "tag": "科技",
     "mention_count": 898,
-    "today_count": 21,
-    "heat": 1.0,
+    "today_count": 0,
+    "heat": 0.35,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
     "evidence": [
       {
-        "date": "2026-09-17",
-        "title": "美联储加息并暗示更多紧缩，美国股债齐跌，AI板块相对抗跌，美元拉升，黄金日内跳水",
+        "date": "2025-12-21",
+        "title": "高盛2026年全球股市展望：更广泛的牛市，更宽泛的AI受益者",
         "platform": "wallstreetcn-hot",
-        "rank": 3
+        "rank": 1
       },
       {
-        "date": "2026-09-17",
-        "title": "deepseek工程师自嘲被AI取代",
-        "platform": "tieba",
-        "rank": 5
-      },
-      {
-        "date": "2026-09-17",
-        "title": "押注物理AI：韩国10亿美元国家级研发项目正式启动",
-        "platform": "cls-hot",
-        "rank": 8
-      },
-      {
-        "date": "2026-09-17",
-        "title": "DeepSeek核心工程师长文刷屏：《我不得不把才华埋葬在昨天》",
+        "date": "2025-12-21",
+        "title": "摩尔线程重磅发布：新一代GPU架构“花港”能效提升10倍，系列芯片明年量产上市，推出AI算力笔记本",
         "platform": "wallstreetcn-hot",
-        "rank": 9
+        "rank": 1
       },
       {
-        "date": "2026-09-17",
-        "title": "中式恐怖!上大学不给买手机",
-        "platform": "tieba",
-        "rank": 9
+        "date": "2025-12-21",
+        "title": "火线解析智谱AI招股书：年营收3亿增速130%，“中国版OpenAI”率先冲刺全球大模型第一股",
+        "platform": "wallstreetcn-hot",
+        "rank": 1
+      },
+      {
+        "date": "2025-12-21",
+        "title": "付鹏：决定2026全球资产涨跌的关键—AI“高速路”上，真有车跑吗? | Alpha峰会",
+        "platform": "wallstreetcn-hot",
+        "rank": 1
+      },
+      {
+        "date": "2025-12-24",
+        "title": "科技股助标普收创新高，金银铜再新高，人民币强势逼近7.0，GDP强劲打击美债",
+        "platform": "wallstreetcn-hot",
+        "rank": 1
       }
     ],
     "sources": [
@@ -174,17 +174,11 @@
   "情绪价值": {
     "tag": "情绪价值",
     "mention_count": 50,
-    "today_count": 1,
-    "heat": 0.05,
+    "today_count": 0,
+    "heat": 0.019,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
-      {
-        "date": "2026-09-17",
-        "title": "美股收盘：FED鹰派加息打压市场情绪 三大指数集体走低",
-        "platform": "cls-hot",
-        "rank": 4
-      },
       {
         "date": "2025-12-24",
         "title": "马上测·回顾2025：两位“较真”记者，这一年测评的快乐、震惊和成就",
@@ -208,6 +202,12 @@
         "title": "燕麦系秋天的神",
         "platform": "douyin",
         "rank": 4
+      },
+      {
+        "date": "2026-09-14",
+        "title": "准备礼物的快乐总是先到一步",
+        "platform": "douyin",
+        "rank": 4
       }
     ],
     "sources": [
@@ -217,28 +217,16 @@
   "便利": {
     "tag": "便利",
     "mention_count": 34,
-    "today_count": 3,
-    "heat": 0.106,
+    "today_count": 0,
+    "heat": 0.013,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
       {
-        "date": "2026-09-17",
+        "date": "2026-09-15",
         "title": "搜打撤?大学城猎手偷光外卖",
         "platform": "tieba",
-        "rank": 19
-      },
-      {
-        "date": "2026-09-17",
-        "title": "国乒驻地与亚运赛场往返通勤3小时",
-        "platform": "baidu",
-        "rank": 23
-      },
-      {
-        "date": "2026-09-17",
-        "title": "终于不会点外卖就稀里糊涂“负债”了",
-        "platform": "baidu",
-        "rank": 29
+        "rank": 1
       },
       {
         "date": "2025-12-26",
@@ -251,6 +239,18 @@
         "title": "小区歧视外卖员,百名骑手集结抗议",
         "platform": "tieba",
         "rank": 4
+      },
+      {
+        "date": "2026-09-09",
+        "title": "自费买可乐的外卖骑手被奖励一年骑手餐",
+        "platform": "weibo",
+        "rank": 4
+      },
+      {
+        "date": "2025-12-27",
+        "title": "外卖骑手在家中猝死被保险公司拒赔",
+        "platform": "baidu",
+        "rank": 7
       }
     ],
     "sources": [
@@ -260,17 +260,11 @@
   "时尚": {
     "tag": "时尚",
     "mention_count": 53,
-    "today_count": 1,
-    "heat": 0.052,
+    "today_count": 0,
+    "heat": 0.021,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
-      {
-        "date": "2026-09-17",
-        "title": "肖战VOGUE造型刘潇",
-        "platform": "weibo",
-        "rank": 30
-      },
       {
         "date": "2026-09-11",
         "title": "速来领取可可系穿搭说明书",
@@ -293,6 +287,12 @@
         "date": "2026-09-11",
         "title": "井柏然Luke穿搭爆火",
         "platform": "baidu",
+        "rank": 10
+      },
+      {
+        "date": "2026-09-15",
+        "title": "国庆穿搭开始预备",
+        "platform": "douyin",
         "rank": 10
       }
     ],
@@ -389,23 +389,11 @@
   "活力": {
     "tag": "活力",
     "mention_count": 64,
-    "today_count": 2,
-    "heat": 0.087,
+    "today_count": 0,
+    "heat": 0.025,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
-      {
-        "date": "2026-09-17",
-        "title": "青春时期最意难平的那个人",
-        "platform": "tieba",
-        "rank": 17
-      },
-      {
-        "date": "2026-09-17",
-        "title": "我的青春舞曲挑战",
-        "platform": "douyin",
-        "rank": 27
-      },
       {
         "date": "2026-09-11",
         "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
@@ -422,6 +410,18 @@
         "date": "2025-12-22",
         "title": "中国人造太阳燃料取自海水",
         "platform": "weibo",
+        "rank": 3
+      },
+      {
+        "date": "2025-12-22",
+        "title": "从多领域成就感受中国经济活力",
+        "platform": "baidu",
+        "rank": 3
+      },
+      {
+        "date": "2025-12-24",
+        "title": "消费有“数”活力无界",
+        "platform": "douyin",
         "rank": 3
       }
     ],
