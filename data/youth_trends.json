@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 246,
-    "today_count": 4,
-    "heat": 0.193,
+    "mention_count": 247,
+    "today_count": 5,
+    "heat": 0.214,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -21,6 +21,12 @@
       },
       {
         "date": "2026-09-19",
+        "title": "体坛联播｜C罗入选新一期国家队，切尔西半场崩盘三球败北",
+        "platform": "thepaper",
+        "rank": 16
+      },
+      {
+        "date": "2026-09-19",
         "title": "中国篮球国家队回应“男篮负日本”",
         "platform": "toutiao",
         "rank": 25
@@ -30,12 +36,6 @@
         "title": "中国篮球之队回应负于日本男篮",
         "platform": "baidu",
         "rank": 27
-      },
-      {
-        "date": "2026-09-09",
-        "title": "皇马2:1击败国米",
-        "platform": "douyin",
-        "rank": 1
       }
     ],
     "sources": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 52,
     "today_count": 1,
-    "heat": 0.045,
+    "heat": 0.044,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 86,
     "today_count": 4,
-    "heat": 0.133,
+    "heat": 0.129,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 924,
-    "today_count": 26,
+    "mention_count": 925,
+    "today_count": 27,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -152,7 +152,7 @@
         "date": "2026-09-19",
         "title": "日本央行行长：不排除连续加息选项，要先发制人地遏制通胀，中东、AI、汇率是关键变量",
         "platform": "wallstreetcn-hot",
-        "rank": 3
+        "rank": 4
       },
       {
         "date": "2026-09-19",
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 52,
     "today_count": 2,
-    "heat": 0.07,
+    "heat": 0.068,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 37,
     "today_count": 3,
-    "heat": 0.089,
+    "heat": 0.086,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -238,7 +238,7 @@
         "date": "2026-09-19",
         "title": "把胆子肥嘟嘟做成外卖游戏",
         "platform": "bilibili-hot-search",
-        "rank": 15
+        "rank": 9
       },
       {
         "date": "2026-09-15",
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 55,
     "today_count": 2,
-    "heat": 0.071,
+    "heat": 0.069,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -275,7 +275,7 @@
         "date": "2026-09-19",
         "title": "彩色系早秋穿搭教程",
         "platform": "douyin",
-        "rank": 30
+        "rank": 27
       },
       {
         "date": "2026-09-11",
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 65,
     "today_count": 2,
-    "heat": 0.075,
+    "heat": 0.073,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -312,7 +312,7 @@
         "date": "2026-09-19",
         "title": "国际市长们体验武汉光谷空轨",
         "platform": "toutiao",
-        "rank": 5
+        "rank": 2
       },
       {
         "date": "2026-09-19",
@@ -388,12 +388,18 @@
   },
   "活力": {
     "tag": "活力",
-    "mention_count": 64,
-    "today_count": 0,
-    "heat": 0.024,
+    "mention_count": 65,
+    "today_count": 1,
+    "heat": 0.049,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
+      {
+        "date": "2026-09-19",
+        "title": "一组数据看中国经济活力迸发",
+        "platform": "toutiao",
+        "rank": 3
+      },
       {
         "date": "2026-09-11",
         "title": "通胀忧虑重燃，美国股债双杀，存储芯片股普跌，美油飙涨7%破百，黄金重挫逼近4300",
@@ -416,12 +422,6 @@
         "date": "2025-12-22",
         "title": "从多领域成就感受中国经济活力",
         "platform": "baidu",
-        "rank": 3
-      },
-      {
-        "date": "2025-12-24",
-        "title": "消费有“数”活力无界",
-        "platform": "douyin",
         "rank": 3
       }
     ],
