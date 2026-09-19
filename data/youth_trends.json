@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 245,
-    "today_count": 3,
-    "heat": 0.208,
+    "mention_count": 246,
+    "today_count": 4,
+    "heat": 0.238,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -23,18 +23,18 @@
         "date": "2026-09-19",
         "title": "中国篮球国家队回应“男篮负日本”",
         "platform": "toutiao",
-        "rank": 8
+        "rank": 12
+      },
+      {
+        "date": "2026-09-19",
+        "title": "中国篮球之队回应负于日本男篮",
+        "platform": "baidu",
+        "rank": 30
       },
       {
         "date": "2026-09-09",
         "title": "皇马2:1击败国米",
         "platform": "douyin",
-        "rank": 1
-      },
-      {
-        "date": "2026-09-10",
-        "title": "回顾郑钦文美网之路",
-        "platform": "bilibili-hot-search",
         "rank": 1
       }
     ],
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 51,
     "today_count": 0,
-    "heat": 0.02,
+    "heat": 0.019,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 85,
     "today_count": 3,
-    "heat": 0.147,
+    "heat": 0.141,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 915,
-    "today_count": 17,
+    "mention_count": 916,
+    "today_count": 18,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 51,
     "today_count": 1,
-    "heat": 0.058,
+    "heat": 0.056,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -183,7 +183,7 @@
         "date": "2026-09-19",
         "title": "“三巫日”来袭 原油供应传闻拖累市场情绪 | 今夜看点",
         "platform": "cls-hot",
-        "rank": 8
+        "rank": 7
       },
       {
         "date": "2025-12-24",
@@ -218,27 +218,27 @@
     "tag": "便利",
     "mention_count": 37,
     "today_count": 3,
-    "heat": 0.129,
+    "heat": 0.122,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
       {
         "date": "2026-09-19",
+        "title": "伊朗总统将赴纽约参会！巴勒斯坦总统遭美国拒签，只能通过预制录像发言",
+        "platform": "wallstreetcn-hot",
+        "rank": 10
+      },
+      {
+        "date": "2026-09-19",
         "title": "如何评价 31 岁博士辞医院工作去送外卖、做驻唱？现代社会如何看待人选择生活方式的自由，探索生活的可能性？",
         "platform": "zhihu",
-        "rank": 4
+        "rank": 10
       },
       {
         "date": "2026-09-19",
         "title": "把胆子肥嘟嘟做成外卖游戏",
         "platform": "bilibili-hot-search",
-        "rank": 5
-      },
-      {
-        "date": "2026-09-19",
-        "title": "伊朗总统将赴纽约参会！巴勒斯坦总统遭美国拒签，只能通过预制录像发言",
-        "platform": "wallstreetcn-hot",
-        "rank": 10
+        "rank": 14
       },
       {
         "date": "2026-09-15",
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 54,
     "today_count": 1,
-    "heat": 0.059,
+    "heat": 0.057,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
