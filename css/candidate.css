@@ -466,7 +466,7 @@
   margin-bottom: 12px;
 }
 .cd-case-media {
-  height: 110px;
+  height: 168px;
   border-radius: 12px;
   background: var(--track);
   margin-bottom: 10px;
@@ -483,8 +483,8 @@
 .cd-case-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 16%;
+  object-fit: contain;
+  object-position: center 12%;
   display: block;
 }
 .cd-case h3 { margin: 0 0 4px; font-size: 18px; }
@@ -593,19 +593,29 @@
   object-position: 50% 18%;
   pointer-events: none;
 }
+.cd-concept-hero.has-fusion .cd-concept-art {
+  width: 50%;
+}
+.cd-concept-hero.has-fusion .cd-concept-art img {
+  object-fit: contain;
+  object-position: center right;
+}
 .cd-concept-hero.has-shoes .cd-concept-art img {
-  object-position: 46% 24%;
+  object-fit: contain;
+  object-position: center right;
 }
 .cd-concept-hero.has-beauty .cd-concept-art {
-  width: 52%;
+  width: 48%;
 }
 .cd-concept-hero.has-beauty .cd-concept-art img {
-  object-position: 50% 8%;
+  object-fit: contain;
+  object-position: center right;
 }
 .cd-concept-hero.has-portrait .cd-concept-art {
   width: 44%;
 }
 .cd-concept-hero.has-portrait .cd-concept-art img {
+  object-fit: cover;
   object-position: 50% 10%;
 }
 .cd-concept-hero.has-asset::after {

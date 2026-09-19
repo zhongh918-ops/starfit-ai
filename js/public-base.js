@@ -14,7 +14,13 @@
   }
   function withBase(p) {
     if (!p || typeof p !== "string") return p;
-    if (/^https?:\/\//i.test(p) || p.charAt(0) === "#") return p;
+    if (p.charAt(0) === "#") return p;
+    if (root) {
+      var twice = root + root;
+      while (p.indexOf(twice) !== -1) p = p.split(twice).join(root);
+    }
+    if (/^https?:\/\//i.test(p)) return p;
+    if (root && (p === root || p.indexOf(root + "/") === 0)) return p;
     if (p.charAt(0) === "/") return root + p;
     return p;
   }

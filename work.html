@@ -32,17 +32,17 @@
   } catch (e) {}
 })();
 </script>
-<script src="js/public-base.js?v=evimg2"></script>
+<script src="js/public-base.js?v=base2"></script>
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/shell.css?v=backcenter">
-<link rel="stylesheet" href="css/work-home.css?v=kinds5">
+<link rel="stylesheet" href="css/work-home.css?v=kinds6">
 <link rel="stylesheet" href="css/product.css?v=lang1">
 <link rel="stylesheet" href="css/trends.css?v=evimg2">
 <link rel="stylesheet" href="css/tags.css">
 <link rel="stylesheet" href="css/scoring.css?v=custom2">
-<link rel="stylesheet" href="css/listing.css">
-<link rel="stylesheet" href="css/candidate.css?v=tessa-audio1">
-<link rel="stylesheet" href="css/campaign.css?v=scenes4">
+<link rel="stylesheet" href="css/listing.css?v=fullimg1">
+<link rel="stylesheet" href="css/candidate.css?v=fullimg1">
+<link rel="stylesheet" href="css/campaign.css?v=fullimg1">
 <link rel="stylesheet" href="css/legacy.css">
 </head>
 <body data-page="work">
@@ -559,6 +559,22 @@ function withBase(path) {
 }
 function publicRoot() {
   return (window.Match99Base && Match99Base.root) || '';
+}
+function rawAssetPath(src) {
+  const s = String(src || '');
+  if (!s) return s;
+  const root = publicRoot();
+  let out = s.replace(/^https?:\/\/[^/]+/i, '');
+  if (root) {
+    const twice = root + root;
+    while (out.indexOf(twice) !== -1) out = out.split(twice).join(root);
+    if (out === root) return '/';
+    if (out.indexOf(root + '/') === 0) out = out.slice(root.length);
+  }
+  return out || s;
+}
+function isBeautyFusion(src) {
+  return /\/(beauty|sunscreen|powder|lipstick|cushion|primer|concealer|blush|eyeshadow|mascara|sunwear)\//.test(String(src || ''));
 }
 const DEMO_EVIDENCE_THUMBS = [
   '/assets/trends/evidence-01-running.png',
@@ -2031,7 +2047,7 @@ function bindFallbackImages(root) {
     let i = 0;
     img.addEventListener('error', function onErr() {
       i += 1;
-      if (i < list.length) img.src = withBase(list[i]);
+      if (i < list.length) img.src = withBase(rawAssetPath(list[i]));
       else img.removeEventListener('error', onErr);
     });
   });
@@ -5037,7 +5053,7 @@ function persistConceptVisual(pack, id, src, kind) {
   if (!pack || !id || !src) return;
   const rec = currentConceptRecord(pack, id);
   if (!rec) return;
-  rec.visualSrc = src;
+  rec.visualSrc = rawAssetPath(src);
   rec.visualKind = kind || rec.visualKind;
 }
 
@@ -5048,12 +5064,13 @@ function refreshConceptVisual(row, pack) {
   const guess = conceptVisualGuess(row, pack);
   const apply = (src, kind) => {
     if (!src) return;
-    img.src = withBase(src);
-    persistConceptVisual(pack, row.id, src, kind);
+    const raw = rawAssetPath(src);
+    img.src = withBase(raw);
+    persistConceptVisual(pack, row.id, raw, kind);
     figure.classList.toggle('has-fusion', kind === 'candidate-fusion');
     figure.classList.toggle('has-portrait', kind === 'candidate-portrait');
-    figure.classList.toggle('has-beauty', kind === 'candidate-fusion' && /\/beauty\//.test(src));
-    figure.classList.toggle('has-shoes', kind === 'candidate-fusion' && /\/shoes\//.test(src));
+    figure.classList.toggle('has-beauty', kind === 'candidate-fusion' && isBeautyFusion(raw));
+    figure.classList.toggle('has-shoes', kind === 'candidate-fusion' && /\/shoes\//.test(raw));
   };
   if (guess.portrait) apply(guess.portrait, 'candidate-portrait');
   if (window.Match99Poster && guess.slug) {
@@ -5237,8 +5254,8 @@ function renderCandidateConcept(row, celeb) {
     const lib = comparisonConceptLibrary(rec.productId || pack.productId);
     const n = rec.variantIndex || 0;
     const guess = conceptVisualGuess(row || { id }, pack);
-    const visualSrc = guess.portrait || guess.fusion || rec.visualSrc || '';
-    const visualKind = guess.portrait ? 'candidate-portrait' : (guess.fusion ? 'candidate-fusion' : rec.visualKind);
+    const visualSrc = guess.fusion || guess.portrait || rawAssetPath(rec.visualSrc) || '';
+    const visualKind = guess.fusion ? 'candidate-fusion' : (guess.portrait ? 'candidate-portrait' : rec.visualKind);
     rec = Object.assign({}, rec, {
       headline: lib.headlines[n % lib.headlines.length],
       line: lib.lines[n % lib.lines.length],
@@ -5261,7 +5278,7 @@ function renderCandidateConcept(row, celeb) {
     ? 'has-asset'
       + (rec.visualKind === 'candidate-fusion' ? ' has-fusion' : '')
       + (rec.visualKind === 'candidate-portrait' ? ' has-portrait' : '')
-      + (/\/beauty\//.test(rec.visualSrc || '') ? ' has-beauty' : '')
+      + (isBeautyFusion(rec.visualSrc) ? ' has-beauty' : '')
       + (/\/shoes\//.test(rec.visualSrc || '') ? ' has-shoes' : '')
     : '';
   const board = rec
@@ -5402,7 +5419,7 @@ function renderCandidateEvidence(row, celeb) {
         const m = cs.metrics || {};
         const srcs = caseImageCandidates(cs, celeb || row, i);
         const img = srcs.length
-          ? '<img src="' + escHtml(withBase(srcs[0])) + '" alt="' + escHtml(name) + '" data-fallbacks="' + escHtml(srcs.join('|')) + '">'
+          ? '<img src="' + escHtml(withBase(rawAssetPath(srcs[0]))) + '" alt="' + escHtml(name) + '" data-fallbacks="' + escHtml(srcs.map(rawAssetPath).join('|')) + '">'
           : '<div class="na">' + escHtml(t('cd.ev.imgNa')) + '</div>';
         return '<article class="cd-card cd-case"><div class="cd-case-media">' + img + '</div>'
           + '<p class="sub">' + escHtml(t('cd.ev.bench')) + '</p>'
