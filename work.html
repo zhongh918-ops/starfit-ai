@@ -21,28 +21,84 @@
   }
 })();
 </script>
+<script>
+(function () {
+  try {
+    var p = (location.pathname || "").replace(/\/$/, "") || "/";
+    var entry = /(?:^|\/)work(?:\.html)?$/.test(p);
+    if (entry && !sessionStorage.getItem("match99-entered-work")) {
+      document.documentElement.classList.add("work-splash-on");
+    }
+  } catch (e) {}
+})();
+</script>
 <script src="js/public-base.js?v=evimg2"></script>
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/shell.css?v=backcenter">
-<link rel="stylesheet" href="css/work-home.css?v=trends2">
+<link rel="stylesheet" href="css/work-home.css?v=kinds5">
 <link rel="stylesheet" href="css/product.css?v=lang1">
 <link rel="stylesheet" href="css/trends.css?v=evimg2">
 <link rel="stylesheet" href="css/tags.css">
 <link rel="stylesheet" href="css/scoring.css?v=custom2">
 <link rel="stylesheet" href="css/listing.css">
-<link rel="stylesheet" href="css/candidate.css?v=evidence2">
+<link rel="stylesheet" href="css/candidate.css?v=tessa-audio1">
 <link rel="stylesheet" href="css/campaign.css?v=scenes4">
 <link rel="stylesheet" href="css/legacy.css">
 </head>
 <body data-page="work">
+<div id="workSplash" class="work-splash" role="dialog" aria-modal="true" aria-label="99% match">
+  <div class="work-splash-window">
+    <header class="work-splash-chrome">
+      <div class="traffic" aria-hidden="true">
+        <span class="tl close"></span><span class="tl min"></span><span class="tl max"></span>
+      </div>
+      <div class="work-splash-head">
+        <p class="work-splash-kicker" data-i18n="open.kicker">We match products with the people who can move culture—using signals, not popularity alone.</p>
+        <div class="work-splash-navrow">
+          <nav class="work-splash-nav" aria-label="Primary">
+            <button type="button" id="workEnter" data-i18n="nav.work">Work</button>
+            <a href="about.html" data-i18n="nav.about">About</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            <a href="support.html" data-i18n="nav.support">Support</a>
+          </nav>
+          <div data-lang-switch></div>
+        </div>
+      </div>
+    </header>
+    <section class="work-splash-opening">
+      <h1 class="work-splash-mark">99% match</h1>
+      <div class="work-splash-row">
+        <figure><img src="assets/opening/opening-01-run-club.png" width="475" height="565" data-i18n-alt="open.alt1" alt=""></figure>
+        <figure><img src="assets/opening/opening-02-editorial-headphones.png" width="451" height="565" data-i18n-alt="open.alt2" alt=""></figure>
+        <figure><img src="assets/opening/opening-03-fashion-tech-portrait.png" width="474" height="565" data-i18n-alt="open.alt3" alt=""></figure>
+      </div>
+    </section>
+  </div>
+</div>
+<script>
+(function () {
+  function dismissWorkSplash() {
+    try { sessionStorage.setItem("match99-entered-work", "1"); } catch (e) {}
+    document.documentElement.classList.remove("work-splash-on");
+  }
+  window.dismissWorkSplash = dismissWorkSplash;
+  document.addEventListener("click", function (e) {
+    var btn = e.target && e.target.closest && e.target.closest("#workEnter");
+    if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    dismissWorkSplash();
+  }, true);
+})();
+</script>
 <div class="page">
   <div class="app-window" role="application" aria-label="99% match">
     <header class="app-chrome">
       <div class="chrome-left">
-        <div class="traffic" aria-hidden="true">
-          <span class="tl close"></span>
-          <span class="tl min"></span>
-          <span class="tl max"></span>
+      <div class="traffic" aria-hidden="true">
+        <span class="tl close"></span>
+        <span class="tl min"></span>
+        <span class="tl max"></span>
         </div>
         <div class="hist-nav" role="group" data-i18n-aria="work.hist" aria-label="Page history">
           <button type="button" class="hist-btn" id="histBack" data-i18n-aria="work.back" aria-label="Back" disabled>
@@ -119,6 +175,7 @@
               <select class="field" id="product"></select>
               <label for="desc" data-i18n="home.brief">Product brief</label>
               <textarea class="field-area" id="desc" data-i18n-placeholder="home.briefPh" placeholder="Describe the product, audience and the image you want to carry."></textarea>
+              <div class="kind-suggest" id="kindSuggest" hidden></div>
               <div class="brief-meta">
                 <div class="meta-block">
                   <span class="meta-label" data-i18n="home.audience">Target audience</span>
@@ -194,6 +251,7 @@
                     <option value="Sports shoes" data-i18n="pu.cat.shoes">Sports shoes</option>
                     <option value="Smart headphones" data-i18n="pu.cat.headphones">Smart headphones</option>
                     <option value="Beauty" data-i18n="pu.cat.beauty">Beauty</option>
+                    <option value="Sunwear" data-i18n="pu.cat.sunwear">Sunwear</option>
                     <option value="Other" data-i18n="pu.cat.other">Other</option>
                   </select>
                 </div>
@@ -426,7 +484,7 @@
 
           <div class="results-wrap" id="resultsWrap" hidden>
             <p class="muted" id="hint" data-i18n="fit.dbOnly">Only celebrities in the database. Scores are Model-Based / Synthetic Demo, not third-party official scores.</p>
-            <div class="legacy-work">
+          <div class="legacy-work">
               <main id="out" class="card"></main>
             </div>
           </div>
@@ -454,7 +512,7 @@
   </div>
 </div>
 <script src="js/i18n.js?v=custom2"></script>
-<script src="js/campaign-poster.js?v=beauty2"></script>
+<script src="js/campaign-poster.js?v=kinds5"></script>
 <script>
 const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, genderLocked: false, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', scoringCustom: null, matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, campaignScene: 'lobby', drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
 const SESSION_KEY = 'match99-work';
@@ -481,9 +539,13 @@ function campaignFaceSlug(row) {
   return (id && CAMPAIGN_FACE_SLUG[id]) || null;
 }
 function liveProductId(pack) {
-  return ((document.getElementById('product') || {}).value)
+  const sel = ((document.getElementById('product') || {}).value)
     || (pack && pack.productId)
-    || 'shoes';
+    || '';
+  const family = typeof currentProductFamily === 'function' ? currentProductFamily() : '';
+  const cat = catalogFamilyOf(sel);
+  if (family && cat && family !== cat) return 'custom';
+  return sel || 'shoes';
 }
 function campaignSceneList(row, pack) {
   return CAMPAIGN_SCENE_KEYS.map(key => ({
@@ -617,6 +679,11 @@ const EXTRA_ZH = {
   'Gaming equipment': '游戏装备', 'Mobile technology': '移动科技',
   'Fashion fragrance': '时尚香氛', 'Lifestyle footwear': '生活鞋履',
   'Color cosmetics': '彩妆粉底', 'Skincare': '护肤精华',
+  'Sunscreen': '防晒霜', 'Loose powder': '散粉', 'Sunwear': '防晒服',
+  'Lipstick': '口红',
+  'Cushion': '气垫', 'Primer': '隔离', 'Concealer': '遮瑕',
+  'Blush': '腮红', 'Eyeshadow': '眼影', 'Mascara': '睫毛膏',
+  'Yoga mat': '瑜伽垫', 'Sports bottle': '运动水壶', 'Activewear': '健身服',
   'Fitness footwear': '训练鞋履', 'Ready-to-drink coffee': '即饮咖啡',
   'Beauty skincare': '美妆护肤'
 };
@@ -684,22 +751,71 @@ const PRODUCT_IMAGES = {
   shoes: '/assets/product/product-training-shoe.png',
   'cold-brew': '/assets/product/product-niteflow-can.png',
   headphones: '/assets/product/product-pulse-air.png',
-  custom: '/assets/product/product-custom.png'
+  custom: '/assets/product/product-custom.png',
+  beauty: '/assets/evidence/evidence-beauty.png',
+  sunscreen: '/assets/product/product-sunscreen.png',
+  powder: '/assets/product/product-powder.png',
+  sunwear: '/assets/product/product-sunwear.png',
+  lipstick: '/assets/product/product-lipstick.png',
+  cushion: '/assets/product/product-cushion.png',
+  primer: '/assets/product/product-primer.png',
+  concealer: '/assets/product/product-concealer.png',
+  blush: '/assets/product/product-blush.png',
+  eyeshadow: '/assets/product/product-eyeshadow.png',
+  mascara: '/assets/product/product-mascara.png',
+  yoga: '/assets/product/product-yoga.png',
+  bottle: '/assets/product/product-bottle.png',
+  activewear: '/assets/product/product-activewear.png'
 };
 const CASE_IMAGE_BY_CATEGORY = [
-  [/makeup|foundation|cosmetic|skincare|serum|beauty|color cosmetics/, '/assets/evidence/evidence-beauty.png'],
-  [/footwear|run|fitness|sport|hydrat|outdoor/, '/assets/evidence/evidence-motionlab-run.png'],
+  [/makeup|foundation|cosmetic|skincare|serum|beauty|color cosmetics|sunscreen|powder/, '/assets/evidence/evidence-beauty.png'],
+  [/sunwear|upf/, '/assets/product/product-sunwear.png'],
+  [/yoga mat|yoga/, '/assets/product/product-yoga.png'],
+  [/hydrat|bottle|shaker/, '/assets/product/product-bottle.png'],
+  [/activewear|athleisure/, '/assets/product/product-activewear.png'],
+  [/footwear|run|fitness|sport|outdoor/, '/assets/evidence/evidence-motionlab-run.png'],
   [/tech|audio|mobile|gaming|wearable|design/, '/assets/evidence/evidence-nova-audio.png'],
   [/coffee|brew|beverage|drink/, '/assets/product/product-niteflow-can.png'],
   [/wellness|health|nutrition/, '/assets/evidence/evidence-wellness.png'],
-  [/apparel|fashion|lifestyle|fragrance|music/, '/assets/evidence/evidence-lifestyle.png']
+  [/fashion|lifestyle|fragrance|music/, '/assets/evidence/evidence-lifestyle.png']
 ];
 const CASE_FAMILY_RULES = [
-  { id: 'beauty', test: /make[\s-]*up|foundation|cosmetic|skincare|serum|lipstick|concealer|bb\s*cream|cc\s*cream|beauty|粉底|美妆|彩妆|护肤|口红|精华/i },
-  { id: 'footwear', test: /shoe|footwear|sneaker|runn|training shoe|sport|跑鞋|运动鞋|训练鞋/i },
+  { id: 'sunwear', test: /防晒服|防晒衣|防晒外套|防晒衫|防嗮服|防嗮衣|upf|rash[\s-]*guard|sun[\s-]*protect(?:ive)?[\s-]*(?:shirt|jacket|wear|clothing)|sun[\s-]*wear/i },
+  { id: 'sunscreen', test: /防晒霜|防晒乳|防晒膏|防晒喷雾|防晒棒|隔离防晒|防嗮霜|防嗮乳|sun[\s-]*screen|spf\s*\d*/i },
+  { id: 'powder', test: /散粉|蜜粉|定妆粉|loose[\s-]*powder|setting[\s-]*powder/i },
+  { id: 'lipstick', test: /口红|唇釉|唇膏|唇彩|lipstick|lip[\s-]*(?:stick|tint|gloss)/i },
+  { id: 'cushion', test: /气垫|cushion[\s-]*foundation|bb\s*cream|cc\s*cream/i },
+  { id: 'primer', test: /妆前|隔离霜|隔离乳|妆前乳|primer/i },
+  { id: 'concealer', test: /遮瑕|concealer/i },
+  { id: 'blush', test: /腮红|blush/i },
+  { id: 'eyeshadow', test: /眼影|eyeshadow/i },
+  { id: 'mascara', test: /睫毛膏|mascara/i },
+  { id: 'beauty', test: /make[\s-]*up|foundation|cosmetic|skincare|serum|beauty|粉底|美妆|彩妆|护肤|眉笔|卸妆|高光|修容|精华/i },
+  { id: 'yoga', test: /瑜伽垫|瑜伽毯|yoga[\s-]*mat/i },
+  { id: 'bottle', test: /运动水壶|运动水杯|摇摇杯|补水壶|sports[\s-]*bottle|shaker[\s-]*bottle/i },
+  { id: 'activewear', test: /健身服|运动服|运动套装|瑜伽服|训练服|activewear|athleisure/i },
+  { id: 'footwear', test: /shoe|footwear|sneaker|runn|training shoe|sports?\s*shoes?|跑鞋|运动鞋|训练鞋|球鞋/i },
   { id: 'beverage', test: /coffee|brew|latte|beverage|cold[\s-]*drink|冷萃|咖啡|饮品/i },
   { id: 'audio', test: /headphone|audio|earbud|headset|耳机|降噪/i },
   { id: 'wellness', test: /wellness|vitamin|supplement|sleep aid|保健/i }
+];
+const PRODUCT_KIND_HINTS = [
+  { id: 'running', family: 'footwear', keys: ['运动', '跑鞋', '跑步', 'running', 'sneaker'], label: '跑鞋', label_en: 'Running shoes', brief: '轻量训练跑鞋，面向日常跑步与健身房。期望形象：运动、真诚、有活力。', brief_en: 'A light training shoe for daily runs and the gym. Image: athletic, sincere, energetic.' },
+  { id: 'sneakers', family: 'footwear', keys: ['运动', '运动鞋', '球鞋', '训练鞋', 'sports shoes'], label: '运动鞋', label_en: 'Sports shoes', brief: '日常运动鞋，通勤和训练都能穿。期望形象：运动、好亲近、有活力。', brief_en: 'Everyday sports shoes for commute and training. Image: athletic, approachable, energetic.' },
+  { id: 'yoga', family: 'yoga', keys: ['运动', '瑜伽', '瑜伽垫', 'yoga'], label: '瑜伽垫', label_en: 'Yoga mat', brief: '防滑瑜伽垫，居家和教室都能用。期望形象：干净、克制、好靠近。', brief_en: 'A grippy yoga mat for home and studio. Image: clean, restrained, close.' },
+  { id: 'bottle', family: 'bottle', keys: ['运动', '水壶', '水杯', '摇摇杯', 'bottle'], label: '运动水壶', label_en: 'Sports bottle', brief: '轻量运动水壶，训练和通勤都能带。期望形象：运动、真诚、好活动。', brief_en: 'A light sports bottle for training and commute. Image: athletic, sincere, easy to move with.' },
+  { id: 'activewear', family: 'activewear', keys: ['运动', '健身服', '运动服', '训练服', 'activewear'], label: '健身服', label_en: 'Activewear', brief: '轻量健身服，训练和日常都能穿。期望形象：运动、干净、有活力。', brief_en: 'Light activewear for training and everyday wear. Image: athletic, clean, energetic.' },
+  { id: 'yogaset', family: 'activewear', keys: ['运动', '瑜伽服', '瑜伽衣'], label: '瑜伽服', label_en: 'Yoga wear', brief: '柔软瑜伽服，拉伸时不紧绷。期望形象：干净、克制、好靠近。', brief_en: 'Soft yoga wear that stays easy in a stretch. Image: clean, restrained, close.' },
+  { id: 'sunscreen', family: 'sunscreen', keys: ['防晒', '防晒霜', '防晒乳', '防晒喷雾', '防嗮', 'spf', 'sunscreen'], label: '防晒霜', label_en: 'Sunscreen', brief: '轻薄防晒霜，日常通勤和户外都用得上。期望形象：干净、好亲近、有保护感。', brief_en: 'A light daily sunscreen for commute and outdoor hours. Image: clean, approachable, protective.' },
+  { id: 'powder', family: 'powder', keys: ['散粉', '蜜粉', '定妆', 'powder'], label: '散粉', label_en: 'Loose powder', brief: '定妆散粉，把底妆定住、不结块。期望形象：自然、干净、精致。', brief_en: 'A loose setting powder that holds makeup without caking. Image: natural, clean, polished.' },
+  { id: 'lipstick', family: 'lipstick', keys: ['口红', '唇釉', '唇膏', 'lipstick'], label: '口红', label_en: 'Lipstick', brief: '日常口红，颜色干净好亲近。期望形象：精致、真诚、有设计感。', brief_en: 'An everyday lipstick with a clean, wearable color. Image: polished, sincere, design-aware.' },
+  { id: 'cushion', family: 'cushion', keys: ['气垫', 'cushion', '粉底'], label: '气垫', label_en: 'Cushion', brief: '气垫粉底，上妆快、妆感薄。期望形象：干净、好亲近、有光泽。', brief_en: 'A cushion foundation for a fast, sheer finish. Image: clean, approachable, luminous.' },
+  { id: 'primer', family: 'primer', keys: ['隔离', '妆前', 'primer'], label: '隔离', label_en: 'Primer', brief: '妆前隔离，把皮肤和底妆隔开。期望形象：干净、克制、好靠近。', brief_en: 'A makeup primer that prepares skin before base. Image: clean, restrained, close.' },
+  { id: 'concealer', family: 'concealer', keys: ['遮瑕', 'concealer'], label: '遮瑕', label_en: 'Concealer', brief: '日常遮瑕，把瑕疵盖住但不厚。期望形象：干净、自然、好靠近。', brief_en: 'An everyday concealer that covers without looking heavy. Image: clean, natural, close.' },
+  { id: 'blush', family: 'blush', keys: ['腮红', 'blush'], label: '腮红', label_en: 'Blush', brief: '日常腮红，气色自然。期望形象：温柔、真诚、年轻。', brief_en: 'An everyday blush for a natural flush. Image: soft, sincere, young.' },
+  { id: 'eyeshadow', family: 'eyeshadow', keys: ['眼影', 'eyeshadow'], label: '眼影', label_en: 'Eyeshadow', brief: '日常眼影盘，颜色克制能上镜。期望形象：精致、有设计感。', brief_en: 'A wearable eyeshadow palette. Image: polished, design-aware.' },
+  { id: 'mascara', family: 'mascara', keys: ['睫毛膏', 'mascara'], label: '睫毛膏', label_en: 'Mascara', brief: '日常睫毛膏，根根分明能上镜。期望形象：精致、真诚。', brief_en: 'An everyday mascara with clean separation. Image: polished, sincere.' },
+  { id: 'sunwear', family: 'sunwear', keys: ['防晒服', '防晒衣', '防晒外套', '防嗮服', '防嗮衣', 'upf', 'sunwear'], label: '防晒服', label_en: 'Sunwear', brief: '轻薄防晒服，通勤和户外都能穿。期望形象：干净、好活动、有保护感。', brief_en: 'A light sun-protective jacket for commute and outdoor hours. Image: clean, easy to move in, protective.' }
 ];
 const CASE_TEMPLATES = {
   beauty: [
@@ -707,6 +823,58 @@ const CASE_TEMPLATES = {
     { title: 'Dew Skin Serum Ritual', title_zh: '水光精华护肤', category: 'Skincare', imageAsset: '/assets/evidence/evidence-wellness.png' },
     { title: 'Daily Tint Complex', title_zh: '日常底妆修色', category: 'Color cosmetics', imageAsset: '/assets/evidence/evidence-beauty.png' },
     { title: 'Barrier Cream Morning', title_zh: '屏障面霜晨间', category: 'Skincare', imageAsset: '/assets/evidence/evidence-wellness.png' }
+  ],
+  sunscreen: [
+    { title: 'Daily SPF Commute', title_zh: '日常通勤防晒', category: 'Sunscreen', imageAsset: '/assets/product/product-sunscreen.png' },
+    { title: 'Light Shield Outdoor', title_zh: '轻薄户外防晒', category: 'Sunscreen', imageAsset: '/assets/evidence/evidence-beauty.png' }
+  ],
+  powder: [
+    { title: 'Soft Focus Powder Set', title_zh: '柔焦散粉定妆', category: 'Loose powder', imageAsset: '/assets/product/product-powder.png' },
+    { title: 'No-Cake Finish Edit', title_zh: '不结块定妆', category: 'Color cosmetics', imageAsset: '/assets/evidence/evidence-beauty.png' }
+  ],
+  lipstick: [
+    { title: 'Daily Lip Color', title_zh: '日常唇色', category: 'Lipstick', imageAsset: '/assets/product/product-lipstick.png' },
+    { title: 'Clean Wear Tint', title_zh: '干净好亲近唇色', category: 'Lipstick', imageAsset: '/assets/evidence/evidence-beauty.png' }
+  ],
+  cushion: [
+    { title: 'Sheer Cushion Base', title_zh: '薄妆气垫', category: 'Cushion', imageAsset: '/assets/product/product-cushion.png' },
+    { title: 'Fast Face Edit', title_zh: '快速上妆', category: 'Cushion', imageAsset: '/assets/evidence/evidence-beauty.png' }
+  ],
+  primer: [
+    { title: 'Prep Then Base', title_zh: '妆前打底', category: 'Primer', imageAsset: '/assets/product/product-primer.png' },
+    { title: 'Skin Barrier Layer', title_zh: '隔离层', category: 'Primer', imageAsset: '/assets/evidence/evidence-wellness.png' }
+  ],
+  concealer: [
+    { title: 'Cover Not Cake', title_zh: '遮瑕不厚', category: 'Concealer', imageAsset: '/assets/product/product-concealer.png' },
+    { title: 'Clean Spot Edit', title_zh: '干净点涂', category: 'Concealer', imageAsset: '/assets/evidence/evidence-beauty.png' }
+  ],
+  blush: [
+    { title: 'Soft Flush Morning', title_zh: '晨间气色', category: 'Blush', imageAsset: '/assets/product/product-blush.png' },
+    { title: 'Natural Cheek Color', title_zh: '自然腮红', category: 'Blush', imageAsset: '/assets/evidence/evidence-beauty.png' }
+  ],
+  eyeshadow: [
+    { title: 'Wearable Lid Palette', title_zh: '日常眼影盘', category: 'Eyeshadow', imageAsset: '/assets/product/product-eyeshadow.png' },
+    { title: 'Muted Tone Edit', title_zh: '克制色号', category: 'Eyeshadow', imageAsset: '/assets/evidence/evidence-beauty.png' }
+  ],
+  mascara: [
+    { title: 'Clean Lash Line', title_zh: '根根分明', category: 'Mascara', imageAsset: '/assets/product/product-mascara.png' },
+    { title: 'Camera Ready Lash', title_zh: '上镜睫毛', category: 'Mascara', imageAsset: '/assets/evidence/evidence-beauty.png' }
+  ],
+  sunwear: [
+    { title: 'UPF City Layer', title_zh: '城市防晒层', category: 'Sunwear', imageAsset: '/assets/product/product-sunwear.png' },
+    { title: 'Light Shield Walk', title_zh: '轻薄防晒出行', category: 'Sunwear', imageAsset: '/assets/evidence/evidence-lifestyle.png' }
+  ],
+  yoga: [
+    { title: 'Studio Mat Morning', title_zh: '教室晨间垫上', category: 'Yoga mat', imageAsset: '/assets/product/product-yoga.png' },
+    { title: 'Home Floor Reset', title_zh: '居家垫上放松', category: 'Yoga mat', imageAsset: '/assets/evidence/evidence-wellness.png' }
+  ],
+  bottle: [
+    { title: 'Train Sip Carry', title_zh: '训练随身补水', category: 'Sports bottle', imageAsset: '/assets/product/product-bottle.png' },
+    { title: 'Commute Hydration', title_zh: '通勤补水', category: 'Sports hydration', imageAsset: '/assets/evidence/evidence-lifestyle.png' }
+  ],
+  activewear: [
+    { title: 'Studio Set Edit', title_zh: '训练套装', category: 'Activewear', imageAsset: '/assets/product/product-activewear.png' },
+    { title: 'Move All Day', title_zh: '全天好活动', category: 'Lifestyle apparel', imageAsset: '/assets/evidence/evidence-lifestyle.png' }
   ],
   footwear: [
     { title: 'MotionLab Run Series', title_zh: 'MotionLab 训练系列', category: 'Performance footwear', imageAsset: '/assets/evidence/evidence-motionlab-run.png' },
@@ -831,10 +999,19 @@ function fixtureWeightScore(components, w) {
     + (w.engagement / 100) * (components.engagementQuality || 0)
     + (w.feasibility / 100) * (components.commercialFeasibility || 0);
 }
+function catalogFamilyOf(id) {
+  if (id === 'shoes') return 'footwear';
+  if (id === 'cold-brew') return 'beverage';
+  if (id === 'headphones') return 'audio';
+  return '';
+}
+
 function canUseAerostrideFixture() {
   const productId = (document.getElementById('product') || {}).value;
+  const family = typeof currentProductFamily === 'function' ? currentProductFamily() : '';
   return (state.dataMode || 'demo') === 'demo'
     && productId === 'shoes'
+    && (!family || family === 'footwear')
     && state.demoAnalysis
     && Array.isArray(state.demoAnalysis.results)
     && state.demoAnalysis.results.length === 10;
@@ -1245,6 +1422,7 @@ function goWork(path, opts) {
 }
 
 document.addEventListener('click', (e) => {
+  if (e.target.closest('#workEnter')) return;
   const a = e.target.closest('a[href]');
   if (!a || a.target === '_blank') return;
   const href = a.getAttribute('href') || '';
@@ -1643,6 +1821,8 @@ function titleChip(v) {
 function inferCustomUnderstanding(u, p) {
   if (!u || (p && p.id && p.id !== 'custom')) return u;
   const text = ((document.getElementById('desc') || {}).value || '') + ' ' + (u.name || '') + ' ' + (u.objective || '');
+  const kind = kindFromDesc(text);
+  if (kind && (!u.name || u.name === t('product.custom') || u.name === '自定义产品')) u.name = productKindLabel(kind);
   const tags = extractTags(text);
   if (!(u.features && u.features.length)) {
     u.features = tags.slice(0, 3).map(tag => FEATURE_EN[tag] || (isZh() ? tag : (CHIP_EN[tag] || tag)));
@@ -1659,9 +1839,10 @@ function inferCustomUnderstanding(u, p) {
   if (!u.priceTier || u.priceTier === 'Unavailable') u.priceTier = 'Mid';
   if (!u.category || u.category === 'Other') {
     const family = caseFamilyId(text);
-    if (family === 'beauty') u.category = 'Beauty';
+    if (family === 'beauty' || family === 'sunscreen' || family === 'powder' || family === 'lipstick' || family === 'cushion' || family === 'primer' || family === 'concealer' || family === 'blush' || family === 'eyeshadow' || family === 'mascara') u.category = 'Beauty';
+    else if (family === 'sunwear') u.category = 'Sunwear';
     else if (family === 'beverage') u.category = 'Coffee';
-    else if (family === 'footwear') u.category = 'Sports shoes';
+    else if (family === 'footwear' || family === 'yoga' || family === 'bottle' || family === 'activewear') u.category = 'Sports shoes';
     else if (family === 'audio') u.category = 'Smart headphones';
   }
   return u;
@@ -1766,9 +1947,12 @@ function renderSignalMap() {
 
 function productImageSrc(productId, category) {
   if (PRODUCT_IMAGES[productId] && productId !== 'custom') return PRODUCT_IMAGES[productId];
+  const family = typeof currentProductFamily === 'function' ? currentProductFamily() : '';
+  if (family && PRODUCT_IMAGES[family]) return PRODUCT_IMAGES[family];
   const cat = String(category || '').toLowerCase();
   const blob = cat + ' ' + ((document.getElementById('desc') || {}).value || '') + ' ' + ((state.understanding && state.understanding.name) || '');
-  if (CASE_FAMILY_RULES[0].test.test(blob)) return '/assets/evidence/evidence-beauty.png';
+  const fromText = caseFamilyId(blob);
+  if (fromText && PRODUCT_IMAGES[fromText]) return PRODUCT_IMAGES[fromText];
   if (cat.indexOf('coffee') >= 0) return PRODUCT_IMAGES['cold-brew'];
   if (cat.indexOf('shoe') >= 0 || cat.indexOf('sport') >= 0) return PRODUCT_IMAGES.shoes;
   if (cat.indexOf('headphone') >= 0 || cat.indexOf('smart') >= 0) return PRODUCT_IMAGES.headphones;
@@ -1807,6 +1991,50 @@ function caseImageSrc(cs) {
     if (CASE_IMAGE_BY_CATEGORY[i][0].test(cat)) return CASE_IMAGE_BY_CATEGORY[i][1];
   }
   return '/assets/evidence/evidence-lifestyle.png';
+}
+
+function caseImageCandidates(cs, celeb, index) {
+  const pack = state.matchPack || {};
+  const slug = campaignFaceSlug(celeb) || campaignFaceSlug({ id: celeb && celeb.id });
+  const family = typeof currentProductFamily === 'function' ? currentProductFamily() : '';
+  const productId = liveProductId(pack);
+  const dirs = (window.Match99Poster && Match99Poster.fusionDirs)
+    ? Match99Poster.fusionDirs(productId, family)
+    : [];
+  const gender = celebrityGender(celeb);
+  const out = [];
+  const push = (p) => { if (p && out.indexOf(p) < 0) out.push(p); };
+  if (slug) {
+    dirs.forEach((d) => {
+      const person = '/assets/evidence/people/' + slug + '-' + d + '.png';
+      const fusion = '/assets/campaign/fusion/' + d + '/' + slug + '/hero.png';
+      if (index === 0) {
+        push(person);
+        push(fusion);
+      } else {
+        push(fusion);
+        push(person);
+      }
+    });
+  }
+  const raw = (cs && cs.imageAsset) || caseImageSrc(cs);
+  const maleAudio = /evidence-nova-audio\.png/.test(String(raw || ''));
+  if (raw && !(gender === 'female' && maleAudio)) push(raw);
+  if (slug) push('/assets/portraits/' + slug + '.png');
+  return out;
+}
+
+function bindFallbackImages(root) {
+  (root || document).querySelectorAll('img[data-fallbacks]').forEach((img) => {
+    const list = String(img.getAttribute('data-fallbacks') || '').split('|').filter(Boolean);
+    if (!list.length) return;
+    let i = 0;
+    img.addEventListener('error', function onErr() {
+      i += 1;
+      if (i < list.length) img.src = withBase(list[i]);
+      else img.removeEventListener('error', onErr);
+    });
+  });
 }
 
 function overlayCase(src, tpl, suffix) {
@@ -1873,10 +2101,6 @@ function syncGenderUi() {
 }
 
 function syncGenderFromBrief(force) {
-  if (state.genderLocked && !force) {
-    syncGenderUi();
-    return;
-  }
   const inferred = parseTargetGender([
     document.getElementById('desc')?.value,
     document.getElementById('puName')?.value,
@@ -1884,6 +2108,10 @@ function syncGenderFromBrief(force) {
     state.understanding && state.understanding.name,
     state.understanding && state.understanding.objective
   ].join(' '));
+  if (state.genderLocked && !force && !(inferred && inferred !== targetGender())) {
+    syncGenderUi();
+    return;
+  }
   if (!state.understanding) return;
   if (inferred) state.understanding.gender = inferred;
   else if (!state.genderLocked) state.understanding.gender = '';
@@ -2298,13 +2526,13 @@ async function load(keepProduct) {
 }
 
 const TAG_RULES = {
-  '运动': /运动|健身|跑步|马拉松|NBA|CBA|足球|篮球|奥运|训练|瑜伽|骑行|网球|乒乓|运动员|跑鞋|球鞋|健身房|sports?|fitness|running|gym/i,
-  '户外': /户外|露营|徒步|登山|旅行|自驾|city\s*walk|海边|滑雪|冲浪|川西|outdoor|camping|hiking|travel/i,
+  '运动': /运动|健身|跑步|马拉松|NBA|CBA|足球|篮球|奥运|训练|瑜伽|骑行|网球|乒乓|运动员|跑鞋|球鞋|运动鞋|瑜伽垫|水壶|健身服|运动服|瑜伽服|健身房|sports?|fitness|running|gym/i,
+  '户外': /户外|露营|徒步|登山|旅行|自驾|city\s*walk|海边|滑雪|冲浪|川西|防晒服|防晒衣|upf|outdoor|camping|hiking|travel/i,
   '健康': /健康|养生|减脂|减肥|睡眠|防晒|低糖|无糖|轻食|蛋白|health|wellness/i,
   '科技': /科技|AI|人工智能|芯片|华为|苹果|小米|机器人|智能|数码|手机|耳机|降噪|折叠|tech|smart|gaming/i,
   '情绪价值': /情绪|治愈|松弛|氛围|陪伴|真诚|解压|燕麦系|healing/i,
   '便利': /便利|即饮|外卖|通勤|速溶|懒人|到家|convenient|snack|饮料/i,
-  '时尚': /时尚|穿搭|美妆|潮流|秀场|时装|造型|护肤|精华|serum|skincare|apparel|fashion|beauty|makeup/i,
+  '时尚': /时尚|穿搭|美妆|彩妆|潮流|秀场|时装|造型|护肤|精华|粉底|口红|散粉|气垫|隔离|腮红|眼影|防晒|遮瑕|睫毛膏|serum|skincare|apparel|fashion|beauty|makeup|sunscreen|powder/i,
   '体验': /体验|沉浸|快闪|线下|展览|市集|experience/i,
   '咖啡': /咖啡|拿铁|冷萃|美式|咖啡因|茶姬|coffee|latte|drink|beverage|饮品/i,
   '活力': /青春|活力|街舞|热血|燃|youth|energy/i
@@ -2362,6 +2590,117 @@ function syncTagsFromDesc() {
   const box = document.getElementById('seedTags');
   if (!box) return;
   box.innerHTML = seed.map(tag => `<span class="chip">${escHtml(chipLabel(tag))}</span>`).join('');
+  renderKindSuggest();
+}
+
+function productKindLabel(kind) {
+  return isZh() ? kind.label : kind.label_en;
+}
+
+function matchingProductKinds(query) {
+  const q = String(query || '').trim().toLowerCase();
+  if (!q) return PRODUCT_KIND_HINTS.slice();
+  return PRODUCT_KIND_HINTS.filter((kind) => {
+    if (kind.label.indexOf(q) >= 0 || String(kind.label_en).toLowerCase().indexOf(q) >= 0) return true;
+    return kind.keys.some((k) => q.indexOf(String(k).toLowerCase()) >= 0 || String(k).toLowerCase().indexOf(q) >= 0);
+  });
+}
+
+function renderKindSuggest() {
+  const box = document.getElementById('kindSuggest');
+  if (!box) return;
+  const desc = ((document.getElementById('desc') || {}).value || '');
+  const matched = matchingProductKinds(desc);
+  const matchIds = {};
+  matched.forEach((kind) => { matchIds[kind.id] = true; });
+  const family = typeof currentProductFamily === 'function' ? currentProductFamily() : '';
+  const typing = !!String(desc || '').trim();
+  const kinds = typing
+    ? PRODUCT_KIND_HINTS.slice().sort((a, b) => (matchIds[b.id] ? 1 : 0) - (matchIds[a.id] ? 1 : 0))
+    : PRODUCT_KIND_HINTS.slice();
+  box.hidden = false;
+  box.innerHTML = '<span class="kind-suggest-label">' + escHtml(t('home.kinds')) + '</span>'
+    + kinds.map((kind) => {
+      const on = family === kind.family || desc.indexOf(kind.label) >= 0 || (typing && matchIds[kind.id] && matched.length < PRODUCT_KIND_HINTS.length)
+        ? ' on'
+        : '';
+      return '<button type="button" class="kind-chip' + on + '" data-kind="' + escHtml(kind.id) + '">' + escHtml(productKindLabel(kind)) + '</button>';
+    }).join('');
+}
+
+function kindCategory(kind) {
+  const f = kind && kind.family;
+  if (f === 'sunwear') return 'Sunwear';
+  if (f === 'beauty' || f === 'sunscreen' || f === 'powder' || f === 'lipstick' || f === 'cushion' || f === 'primer' || f === 'concealer' || f === 'blush' || f === 'eyeshadow' || f === 'mascara') return 'Beauty';
+  if (f === 'footwear' || f === 'yoga' || f === 'bottle' || f === 'activewear') return 'Sports shoes';
+  if (f === 'beverage') return 'Coffee';
+  if (f === 'audio') return 'Smart headphones';
+  return 'Other';
+}
+
+function applyProductKind(id) {
+  const kind = PRODUCT_KIND_HINTS.find((k) => k.id === id);
+  if (!kind) return;
+  const desc = document.getElementById('desc');
+  const prevGender = parseTargetGender(desc && desc.value);
+  const sel = document.getElementById('product');
+  if (sel && sel.value !== 'custom') {
+    sel.value = 'custom';
+    state.pinnedTags = [];
+    state.briefConfirmed = false;
+    state.hadConfirmedBrief = false;
+    state.understanding = null;
+    state.matchPack = null;
+    fillProduct();
+  }
+  if (desc) {
+    desc.value = isZh() ? kind.brief : kind.brief_en;
+    if (prevGender === 'male' && !parseTargetGender(desc.value)) {
+      desc.value += isZh() ? ' 代言人要男性。' : ' Talent should be male.';
+    } else if (prevGender === 'female' && !parseTargetGender(desc.value)) {
+      desc.value += isZh() ? ' 代言人要女性。' : ' Talent should be female.';
+    }
+  }
+  if (state.understanding) {
+    state.understanding.name = productKindLabel(kind);
+    state.understanding.category = kindCategory(kind);
+    inferCustomUnderstanding(state.understanding, (state.products || []).find((p) => p.id === 'custom') || { id: 'custom' });
+  }
+  syncGenderFromBrief(true);
+  syncTagsFromDesc();
+  updateMatchGate();
+  saveSession();
+}
+
+function kindFromDesc(text) {
+  const raw = String(text || '');
+  if (!raw.trim()) return null;
+  const kinds = matchingProductKinds(raw);
+  return kinds.find((k) => raw.indexOf(k.label) >= 0 || raw.toLowerCase().indexOf(String(k.label_en).toLowerCase()) >= 0) || null;
+}
+
+function syncCatalogFromDesc() {
+  const desc = ((document.getElementById('desc') || {}).value || '');
+  const family = caseFamilyId(desc);
+  const sel = document.getElementById('product');
+  if (!sel || !family) return;
+  const catalog = catalogFamilyOf(sel.value);
+  if (sel.value !== 'custom' && catalog && catalog !== family) {
+    sel.value = 'custom';
+    state.pinnedTags = [];
+    state.matchPack = null;
+    if (!state.understanding || state.understanding.productId !== 'custom') {
+      state.understanding = Object.assign({ productId: 'custom' }, defaultUnderstanding({ id: 'custom' }));
+    } else {
+      state.understanding.productId = 'custom';
+    }
+  }
+  const kind = kindFromDesc(desc);
+  if (state.understanding && kind) {
+    state.understanding.name = productKindLabel(kind);
+    state.understanding.category = kindCategory(kind);
+    inferCustomUnderstanding(state.understanding, (state.products || []).find((p) => p.id === 'custom') || { id: 'custom' });
+  }
 }
 
 function fillProduct() {
@@ -4600,7 +4939,7 @@ function renderCandidateRail(row, celeb, page) {
     <div class="cd-idline">
       <h2>${escHtml(name)}</h2>
       ${row ? `<span class="cd-match">${escHtml(t('cd.match', { n: String(fit) }))}</span>` : ''}
-    </div>
+      </div>
     <p class="cd-role">${escHtml(role)}</p>
     ${bio}
     <div class="cl-tags">${tags.map(tag => `<span class="chip">${escHtml(chipLabel(tag))}</span>`).join('')}</div>
@@ -4673,6 +5012,57 @@ function currentConceptRecord(pack, id) {
   const bucket = conceptBucket(pack, id);
   if (!bucket || !bucket.versions || !bucket.versions.length) return null;
   return bucket.versions.find(v => v.id === bucket.currentId) || bucket.versions[bucket.versions.length - 1];
+}
+
+function conceptPortraitPath(row) {
+  const slug = campaignFaceSlug(row);
+  if (slug) return '/assets/portraits/' + slug + '.png';
+  const src = candidatePhotoSrc(row || {}, 'profile');
+  return src ? src.replace(/^https?:\/\/[^/]+/, '') : '';
+}
+
+function conceptVisualGuess(row, pack) {
+  const slug = campaignFaceSlug(row);
+  const productId = liveProductId(pack);
+  const family = typeof currentProductFamily === 'function' ? currentProductFamily() : '';
+  const dirs = (window.Match99Poster && Match99Poster.fusionDirs)
+    ? Match99Poster.fusionDirs(productId, family)
+    : [];
+  const fusion = (slug && dirs[0]) ? '/assets/campaign/fusion/' + dirs[0] + '/' + slug + '/hero.png' : '';
+  const portrait = conceptPortraitPath(row);
+  return { slug, productId, family, dirs, fusion, portrait };
+}
+
+function persistConceptVisual(pack, id, src, kind) {
+  if (!pack || !id || !src) return;
+  const rec = currentConceptRecord(pack, id);
+  if (!rec) return;
+  rec.visualSrc = src;
+  rec.visualKind = kind || rec.visualKind;
+}
+
+function refreshConceptVisual(row, pack) {
+  const figure = document.querySelector('#view-candidate .cd-concept-hero');
+  const img = figure && figure.querySelector('img');
+  if (!row || !img) return;
+  const guess = conceptVisualGuess(row, pack);
+  const apply = (src, kind) => {
+    if (!src) return;
+    img.src = withBase(src);
+    persistConceptVisual(pack, row.id, src, kind);
+    figure.classList.toggle('has-fusion', kind === 'candidate-fusion');
+    figure.classList.toggle('has-portrait', kind === 'candidate-portrait');
+    figure.classList.toggle('has-beauty', kind === 'candidate-fusion' && /\/beauty\//.test(src));
+    figure.classList.toggle('has-shoes', kind === 'candidate-fusion' && /\/shoes\//.test(src));
+  };
+  if (guess.portrait) apply(guess.portrait, 'candidate-portrait');
+  if (window.Match99Poster && guess.slug) {
+    Match99Poster.resolveFusionArt(guess.productId, guess.slug, guess.family).then((src) => {
+      if (src) apply(src, 'candidate-fusion');
+    }).catch(() => {});
+  } else if (guess.fusion) {
+    apply(guess.fusion, 'candidate-fusion');
+  }
 }
 
 function conceptScopeHtml(row, pack) {
@@ -4761,7 +5151,8 @@ function buildComparisonConcept(row, celeb, pack, variantIndex) {
   const tagBit = tags.length
     ? t('cd.concept.overlap', { name: name, tags: tags.join(isZh() ? '、' : ', ') })
     : t('cd.concept.noOverlap', { name: name });
-  const visualSrc = STANDARD_CONCEPT;
+  const guess = conceptVisualGuess(row || { id }, pack);
+  const visualSrc = guess.fusion || guess.portrait || '';
   const now = new Date().toISOString();
   const stamp = now.replace(/[^\d]/g, '').slice(0, 14);
   const outputId = 'out-' + stamp;
@@ -4786,13 +5177,13 @@ function buildComparisonConcept(row, celeb, pack, variantIndex) {
     moderation: {
       status: 'template',
       result: 'pass',
-      notes: 'Template copy plus approved product asset when present. No celebrity likeness is generated or attached.'
+      notes: 'Template copy plus this candidate’s campaign still or portrait. Labeled concept only, not a booked endorsement.'
     },
     headline,
     line,
     rationale: t('cd.concept.rationaleBody', { product: productShort, name: name, tags: tagBit }),
     pillars: lib.pillars.slice(),
-    visualKind: visualSrc ? 'product-asset' : 'typography-board',
+    visualKind: guess.fusion ? 'candidate-fusion' : (guess.portrait ? 'candidate-portrait' : 'typography-board'),
     visualSrc,
     visualNote: t('cd.concept.visualNote')
   };
@@ -4845,6 +5236,9 @@ function renderCandidateConcept(row, celeb) {
   if (rec) {
     const lib = comparisonConceptLibrary(rec.productId || pack.productId);
     const n = rec.variantIndex || 0;
+    const guess = conceptVisualGuess(row || { id }, pack);
+    const visualSrc = guess.portrait || guess.fusion || rec.visualSrc || '';
+    const visualKind = guess.portrait ? 'candidate-portrait' : (guess.fusion ? 'candidate-fusion' : rec.visualKind);
     rec = Object.assign({}, rec, {
       headline: lib.headlines[n % lib.headlines.length],
       line: lib.lines[n % lib.lines.length],
@@ -4856,13 +5250,23 @@ function renderCandidateConcept(row, celeb) {
           ? t('cd.concept.overlap', { name: name, tags: ((row && row.tags) || []).map(chipLabel).join(isZh() ? '、' : ', ') })
           : t('cd.concept.noOverlap', { name: name })
       }),
-      visualNote: t('cd.concept.visualNote')
+      visualNote: t('cd.concept.visualNote'),
+      visualSrc,
+      visualKind
     });
+    persistConceptVisual(pack, id, visualSrc, visualKind);
   }
   const using = !!(id && pack.selectedId === id);
+  const heroClass = rec && rec.visualSrc
+    ? 'has-asset'
+      + (rec.visualKind === 'candidate-fusion' ? ' has-fusion' : '')
+      + (rec.visualKind === 'candidate-portrait' ? ' has-portrait' : '')
+      + (/\/beauty\//.test(rec.visualSrc || '') ? ' has-beauty' : '')
+      + (/\/shoes\//.test(rec.visualSrc || '') ? ' has-shoes' : '')
+    : '';
   const board = rec
-    ? `<figure class="cd-concept-hero ${rec.visualSrc ? 'has-asset' : ''}" aria-label="${escHtml(rec.visualNote)}">
-        ${rec.visualSrc ? `<img src="${escHtml(withBase(rec.visualSrc))}" alt="">` : ''}
+    ? `<figure class="cd-concept-hero ${heroClass}" aria-label="${escHtml(rec.visualNote)}">
+        ${rec.visualSrc ? `<div class="cd-concept-art"><img src="${escHtml(withBase(rec.visualSrc))}" alt="${escHtml(name)}"></div>` : ''}
         <span class="cd-ai-mark">${escHtml(t('cd.concept.badge'))}</span>
         <div class="cd-concept-copy">
           <p class="cd-concept-brand">${escHtml(rec.productShort)}</p>
@@ -4877,7 +5281,7 @@ function renderCandidateConcept(row, celeb) {
   const line = rec ? rec.line : t('cd.concept.lineWait');
   const rationale = rec
     ? `<div class="cd-concept-meta">
-        <div>
+      <div>
           <p class="sub">${escHtml(t('cd.concept.rationale'))}</p>
           <p>${escHtml(rec.rationale)}</p>
         </div>
@@ -4908,6 +5312,7 @@ function renderCandidateConcept(row, celeb) {
     ${board}
     ${rationale}
     ${foot}`;
+  if (rec) refreshConceptVisual(row || { id, name }, pack);
 }
 
 function workingPlanHtml(row, pack) {
@@ -4993,10 +5398,11 @@ function renderCandidateEvidence(row, celeb) {
       ? t('cd.ev.interpTags', { tags: tags.join(isZh() ? '、' : ', ') })
       : t('cd.ev.interpNone', { name: name, product: productShort }));
   const caseCards = cases.length
-    ? cases.slice(0, 2).map(cs => {
+    ? cases.slice(0, 2).map((cs, i) => {
         const m = cs.metrics || {};
-        const img = caseImageSrc(cs)
-          ? '<img src="' + escHtml(withBase(caseImageSrc(cs))) + '" alt="">'
+        const srcs = caseImageCandidates(cs, celeb || row, i);
+        const img = srcs.length
+          ? '<img src="' + escHtml(withBase(srcs[0])) + '" alt="' + escHtml(name) + '" data-fallbacks="' + escHtml(srcs.join('|')) + '">'
           : '<div class="na">' + escHtml(t('cd.ev.imgNa')) + '</div>';
         return '<article class="cd-card cd-case"><div class="cd-case-media">' + img + '</div>'
           + '<p class="sub">' + escHtml(t('cd.ev.bench')) + '</p>'
@@ -5018,7 +5424,7 @@ function renderCandidateEvidence(row, celeb) {
     <div class="cd-ov-head">
       <p class="eyebrow">${escHtml(t('cd.ev.eyebrow'))}</p>
       <div class="cd-pager"><span>03 / 04</span></div>
-    </div>
+      </div>
     <h1>${escHtml(cases.length ? t('cd.ev.h1') : t('cd.ev.h1none'))}</h1>
     <p class="lede">${escHtml(cases.length ? t('cd.ev.lede') : t('cd.ev.ledenone', { name: name }))}</p>
     <div class="cd-cases">${caseCards}</div>
@@ -5042,6 +5448,7 @@ function renderCandidateEvidence(row, celeb) {
       <p class="note">${escHtml(t('cd.ev.note'))}</p>
       <a class="btn-primary" href="${candidateHref(id, 'concept')}" style="display:inline-flex;align-items:center;text-decoration:none">${escHtml(t('cd.ev.next'))}</a>
     </div>`;
+  bindFallbackImages(el);
 }
 
 function riskLevelLabel(level) {
@@ -5634,18 +6041,25 @@ document.getElementById('product').addEventListener('change', () => {
 document.getElementById('run').addEventListener('click', () => {
   if (!state.scoringValid) return;
   ensureDefaultBrief();
+  syncCatalogFromDesc();
   inferCustomUnderstanding(state.understanding, state.products.find(x => x.id === (document.getElementById('product') || {}).value) || {});
-  syncGenderFromBrief();
+  syncGenderFromBrief(true);
   if (state.tagDraft) applyTagProfile();
   try { render({ openTop: false, persist: true }); } catch (err) { console.error(err); }
   if (state.matchPack) goWork('/work/fit');
 });
 document.getElementById('desc').addEventListener('input', () => {
   if (state.matchPack) state.rankingStale = true;
+  syncCatalogFromDesc();
   syncGenderFromBrief();
   syncTagsFromDesc();
   updateMatchGate();
   saveSession();
+});
+document.getElementById('kindSuggest').addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-kind]');
+  if (!btn) return;
+  applyProductKind(btn.getAttribute('data-kind'));
 });
 document.getElementById('agePill').addEventListener('click', () => {
   goWork('/work/product');
@@ -6097,7 +6511,7 @@ document.getElementById('refresh').addEventListener('click', async () => {
   state.refreshError = null;
   renderSysBanner();
   try {
-    await fetch('/api/refresh', { method: 'POST' });
+  await fetch('/api/refresh', { method: 'POST' });
   } catch (err) {
     state.refreshError = String(err);
     btn.disabled = false;
@@ -6107,17 +6521,17 @@ document.getElementById('refresh').addEventListener('click', async () => {
   }
   const tick = setInterval(async () => {
     try {
-      const s = await fetch('/api/refresh/status').then(r => r.json());
+    const s = await fetch('/api/refresh/status').then(r => r.json());
       if (label) label.textContent = s.running ? t('refresh.ing') : (s.error ? t('refresh.fail') : t('refresh.done'));
-      if (!s.running) {
-        clearInterval(tick);
-        btn.disabled = false;
+    if (!s.running) {
+      clearInterval(tick);
+      btn.disabled = false;
         if (s.error) {
           state.refreshError = s.error;
           renderSysBanner();
         } else {
           state.refreshError = null;
-          await load(true);
+        await load(true);
           if (label) label.textContent = t('home.refresh');
         }
       }
@@ -6286,7 +6700,7 @@ document.getElementById('sysBanner').addEventListener('click', (e) => {
   state.boot = 'loading';
   state.loadError = null;
   renderSysBanner();
-  load().catch(err => {
+load().catch(err => {
     state.boot = 'error';
     state.loadError = String(err);
     renderSysBanner();

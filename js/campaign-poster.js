@@ -196,12 +196,56 @@
     return loadImage(src).then(() => src).catch(() => '');
   }
 
-  async function resolveFusionArt(productId, slug, family) {
+  const FUSION_DIR = {
+    beauty: 'beauty',
+    sunscreen: 'sunscreen',
+    powder: 'powder',
+    lipstick: 'lipstick',
+    cushion: 'cushion',
+    primer: 'primer',
+    concealer: 'concealer',
+    blush: 'blush',
+    eyeshadow: 'eyeshadow',
+    mascara: 'mascara',
+    sunwear: 'sunwear',
+    yoga: 'yoga',
+    bottle: 'bottle',
+    activewear: 'activewear',
+    footwear: 'shoes',
+    beverage: 'cold-brew',
+    audio: 'headphones',
+    shoes: 'shoes',
+    'cold-brew': 'cold-brew',
+    headphones: 'headphones'
+  };
+
+  function fusionDirs(productId, family) {
     const keys = [];
-    const push = (k) => { if (k && keys.indexOf(k) < 0) keys.push(k); };
+    const push = (k) => {
+      const dir = FUSION_DIR[k] || '';
+      if (dir && keys.indexOf(dir) < 0) keys.push(dir);
+    };
     push(family);
-    push(productId);
-    if (family === 'beauty') push('beauty');
+    const productDir = FUSION_DIR[productId];
+    const familyDir = FUSION_DIR[family];
+    if (productDir && (!familyDir || productDir === familyDir)) push(productId);
+    if (family === 'lipstick' || family === 'cushion' || family === 'primer' || family === 'concealer' || family === 'blush' || family === 'eyeshadow' || family === 'mascara') {
+      push(family);
+      push('beauty');
+    } else if (family === 'sunscreen' || family === 'powder' || family === 'beauty') {
+      push('beauty');
+    }
+    if (family === 'sunwear') push('sunwear');
+    if (family === 'yoga') push('yoga');
+    if (family === 'bottle') push('bottle');
+    if (family === 'activewear') push('activewear');
+    if (family === 'footwear') push('shoes');
+    return keys;
+  }
+
+  async function resolveFusionArt(productId, slug, family) {
+    if (!slug) return '';
+    const keys = fusionDirs(productId, family);
     for (let i = 0; i < keys.length; i++) {
       const src = asset('/assets/campaign/fusion/' + keys[i] + '/' + slug + '/hero.png');
       const ok = await probe(src);
@@ -212,9 +256,9 @@
 
   async function composeFromArt(src) {
     const art = await loadImage(src);
-    const beauty = /\/beauty\//.test(String(src || ''));
-    return composeScenes(art, beauty ? { biasX: 0.72, biasY: 0.12 } : undefined);
+    const faceRight = /\/(beauty|sunscreen|powder|lipstick|cushion|primer|concealer|blush|eyeshadow|mascara)\//.test(String(src || ''));
+    return composeScenes(art, faceRight ? { biasX: 0.72, biasY: 0.12 } : undefined);
   }
 
-  global.Match99Poster = { compose, composeScenes, composeFromArt, apply, resolveFusionArt, loadImage };
+  global.Match99Poster = { compose, composeScenes, composeFromArt, apply, resolveFusionArt, fusionDirs, loadImage };
 })(window);
