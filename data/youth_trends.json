@@ -3,7 +3,7 @@
     "tag": "运动",
     "mention_count": 246,
     "today_count": 4,
-    "heat": 0.212,
+    "heat": 0.202,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -23,7 +23,7 @@
         "date": "2026-09-19",
         "title": "中国篮球国家队回应“男篮负日本”",
         "platform": "toutiao",
-        "rank": 13
+        "rank": 18
       },
       {
         "date": "2026-09-19",
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 85,
     "today_count": 3,
-    "heat": 0.121,
+    "heat": 0.114,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 920,
-    "today_count": 22,
+    "mention_count": 922,
+    "today_count": 24,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -146,13 +146,13 @@
         "date": "2026-09-19",
         "title": "88小时抵一个人思考4000年！OpenAI核心研究员：除了自我进化，更可怕的是AI正学会“隐藏自己”",
         "platform": "wallstreetcn-hot",
-        "rank": 3
+        "rank": 2
       },
       {
         "date": "2026-09-19",
         "title": "日本央行行长：不排除连续加息选项，要先发制人地遏制通胀，中东、AI、汇率是关键变量",
         "platform": "wallstreetcn-hot",
-        "rank": 4
+        "rank": 3
       },
       {
         "date": "2026-09-19",
@@ -162,9 +162,9 @@
       },
       {
         "date": "2026-09-19",
-        "title": "问界M7车主称从华为亲儿子变东风小康",
-        "platform": "weibo",
-        "rank": 4
+        "title": "美股收盘：AI芯片股爆发推动纳指走高 华尔街告别动荡一周",
+        "platform": "cls-hot",
+        "rank": 5
       }
     ],
     "sources": [
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 51,
     "today_count": 1,
-    "heat": 0.049,
+    "heat": 0.046,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 37,
     "today_count": 3,
-    "heat": 0.103,
+    "heat": 0.095,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -230,14 +230,14 @@
       },
       {
         "date": "2026-09-19",
-        "title": "把胆子肥嘟嘟做成外卖游戏",
-        "platform": "bilibili-hot-search",
+        "title": "伊朗总统将赴纽约参会！巴勒斯坦总统遭美国拒签，只能通过预制录像发言",
+        "platform": "wallstreetcn-hot",
         "rank": 9
       },
       {
         "date": "2026-09-19",
-        "title": "伊朗总统将赴纽约参会！巴勒斯坦总统遭美国拒签，只能通过预制录像发言",
-        "platform": "wallstreetcn-hot",
+        "title": "把胆子肥嘟嘟做成外卖游戏",
+        "platform": "bilibili-hot-search",
         "rank": 10
       },
       {
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 55,
     "today_count": 2,
-    "heat": 0.08,
+    "heat": 0.075,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -269,13 +269,13 @@
         "date": "2026-09-19",
         "title": "海外时尚品牌透明牛仔裤1350美元",
         "platform": "baidu",
-        "rank": 21
+        "rank": 10
       },
       {
         "date": "2026-09-19",
         "title": "彩色系早秋穿搭教程",
         "platform": "douyin",
-        "rank": 22
+        "rank": 30
       },
       {
         "date": "2026-09-11",
