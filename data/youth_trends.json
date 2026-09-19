@@ -109,7 +109,7 @@
         "date": "2026-09-19",
         "title": "长期频繁喝奶茶有何健康风险",
         "platform": "toutiao",
-        "rank": 24
+        "rank": 23
       },
       {
         "date": "2026-09-19",
@@ -183,7 +183,7 @@
         "date": "2026-09-19",
         "title": "“三巫日”来袭 原油供应传闻拖累市场情绪 | 今夜看点",
         "platform": "cls-hot",
-        "rank": 7
+        "rank": 8
       },
       {
         "date": "2025-12-24",
@@ -224,12 +224,6 @@
     "evidence": [
       {
         "date": "2026-09-19",
-        "title": "把胆子肥嘟嘟做成外卖游戏",
-        "platform": "bilibili-hot-search",
-        "rank": 5
-      },
-      {
-        "date": "2026-09-19",
         "title": "如何评价 31 岁博士辞医院工作去送外卖、做驻唱？现代社会如何看待人选择生活方式的自由，探索生活的可能性？",
         "platform": "zhihu",
         "rank": 5
@@ -238,6 +232,12 @@
         "date": "2026-09-19",
         "title": "伊朗总统将赴纽约参会！巴勒斯坦总统遭美国拒签，只能通过预制录像发言",
         "platform": "wallstreetcn-hot",
+        "rank": 8
+      },
+      {
+        "date": "2026-09-19",
+        "title": "把胆子肥嘟嘟做成外卖游戏",
+        "platform": "bilibili-hot-search",
         "rank": 9
       },
       {
@@ -302,12 +302,18 @@
   },
   "体验": {
     "tag": "体验",
-    "mention_count": 63,
-    "today_count": 0,
-    "heat": 0.024,
+    "mention_count": 64,
+    "today_count": 1,
+    "heat": 0.051,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
+      {
+        "date": "2026-09-19",
+        "title": "国际市长们体验武汉光谷空轨",
+        "platform": "toutiao",
+        "rank": 22
+      },
       {
         "date": "2026-09-15",
         "title": "特种兵玩家准备开启快闪模式",
@@ -330,12 +336,6 @@
         "date": "2026-09-12",
         "title": "油价短线下挫！伊朗将与海湾六国会晤、红海西海岸停火，中东局势现缓和信号",
         "platform": "wallstreetcn-hot",
-        "rank": 3
-      },
-      {
-        "date": "2026-09-13",
-        "title": "沉浸式体验新德里的金砖元素",
-        "platform": "douyin",
         "rank": 3
       }
     ],
