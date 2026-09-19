@@ -23,7 +23,7 @@
         "date": "2026-09-19",
         "title": "中国篮球国家队回应“男篮负日本”",
         "platform": "toutiao",
-        "rank": 18
+        "rank": 25
       },
       {
         "date": "2026-09-19",
@@ -87,9 +87,9 @@
   },
   "健康": {
     "tag": "健康",
-    "mention_count": 85,
-    "today_count": 3,
-    "heat": 0.114,
+    "mention_count": 86,
+    "today_count": 4,
+    "heat": 0.141,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -107,6 +107,12 @@
       },
       {
         "date": "2026-09-19",
+        "title": "长期频繁喝奶茶有何健康风险",
+        "platform": "toutiao",
+        "rank": 24
+      },
+      {
+        "date": "2026-09-19",
         "title": "晚上11点是睡眠分水岭",
         "platform": "weibo",
         "rank": 28
@@ -115,12 +121,6 @@
         "date": "2025-12-22",
         "title": "抗癌药平替有效成分为0",
         "platform": "weibo",
-        "rank": 2
-      },
-      {
-        "date": "2025-12-23",
-        "title": "大脑消耗糖分这么多，为什么没有动脑减肥法？",
-        "platform": "zhihu",
         "rank": 2
       }
     ],
@@ -138,14 +138,14 @@
     "evidence": [
       {
         "date": "2026-09-19",
-        "title": "AI剧迎严审,官方力挺真人剧",
-        "platform": "tieba",
-        "rank": 1
+        "title": "88小时抵一个人思考4000年！OpenAI核心研究员：除了自我进化，更可怕的是AI正学会“隐藏自己”",
+        "platform": "wallstreetcn-hot",
+        "rank": 2
       },
       {
         "date": "2026-09-19",
-        "title": "88小时抵一个人思考4000年！OpenAI核心研究员：除了自我进化，更可怕的是AI正学会“隐藏自己”",
-        "platform": "wallstreetcn-hot",
+        "title": "AI剧迎严审,官方力挺真人剧",
+        "platform": "tieba",
         "rank": 2
       },
       {
@@ -224,21 +224,21 @@
     "evidence": [
       {
         "date": "2026-09-19",
+        "title": "把胆子肥嘟嘟做成外卖游戏",
+        "platform": "bilibili-hot-search",
+        "rank": 5
+      },
+      {
+        "date": "2026-09-19",
         "title": "如何评价 31 岁博士辞医院工作去送外卖、做驻唱？现代社会如何看待人选择生活方式的自由，探索生活的可能性？",
         "platform": "zhihu",
-        "rank": 8
+        "rank": 5
       },
       {
         "date": "2026-09-19",
         "title": "伊朗总统将赴纽约参会！巴勒斯坦总统遭美国拒签，只能通过预制录像发言",
         "platform": "wallstreetcn-hot",
         "rank": 9
-      },
-      {
-        "date": "2026-09-19",
-        "title": "把胆子肥嘟嘟做成外卖游戏",
-        "platform": "bilibili-hot-search",
-        "rank": 10
       },
       {
         "date": "2026-09-15",
@@ -269,7 +269,7 @@
         "date": "2026-09-19",
         "title": "海外时尚品牌透明牛仔裤1350美元",
         "platform": "baidu",
-        "rank": 10
+        "rank": 7
       },
       {
         "date": "2026-09-19",
