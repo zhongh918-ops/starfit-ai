@@ -1,9 +1,9 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 247,
-    "today_count": 5,
-    "heat": 0.186,
+    "mention_count": 248,
+    "today_count": 6,
+    "heat": 0.19,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
@@ -17,25 +17,25 @@
         "date": "2026-09-19",
         "title": "为压缩成本安排运动员住邮轮、集装箱房等，亚奥理事会回应住宿条件争议",
         "platform": "thepaper",
-        "rank": 6
+        "rank": 3
+      },
+      {
+        "date": "2026-09-19",
+        "title": "如何看待名古屋亚运会开幕式被吐槽诡异、审美丑？此前东京奥运会也遭吐槽，为何日式审美总给人感觉很阴冷？",
+        "platform": "zhihu",
+        "rank": 7
       },
       {
         "date": "2026-09-19",
         "title": "体坛联播｜C罗入选新一期国家队，切尔西半场崩盘三球败北",
         "platform": "thepaper",
-        "rank": 18
+        "rank": 15
       },
       {
         "date": "2026-09-19",
         "title": "中国篮球国家队回应“男篮负日本”",
         "platform": "toutiao",
         "rank": 25
-      },
-      {
-        "date": "2026-09-19",
-        "title": "中国篮球之队回应负于日本男篮",
-        "platform": "baidu",
-        "rank": 27
       }
     ],
     "sources": [
@@ -46,7 +46,7 @@
     "tag": "户外",
     "mention_count": 52,
     "today_count": 1,
-    "heat": 0.038,
+    "heat": 0.036,
     "verdict": "caution",
     "note": "有旅行/露营正向内容，但徒步遇险等负面新闻会拉高风险，适合轻户外而非硬核探险。",
     "evidence": [
@@ -89,7 +89,7 @@
     "tag": "健康",
     "mention_count": 86,
     "today_count": 4,
-    "heat": 0.107,
+    "heat": 0.097,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
@@ -130,8 +130,8 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 933,
-    "today_count": 35,
+    "mention_count": 938,
+    "today_count": 40,
     "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
@@ -150,6 +150,12 @@
       },
       {
         "date": "2026-09-19",
+        "title": "URKL机器人格斗开打",
+        "platform": "bilibili-hot-search",
+        "rank": 2
+      },
+      {
+        "date": "2026-09-19",
         "title": "日本央行行长：不排除连续加息选项，要先发制人地遏制通胀，中东、AI、汇率是关键变量",
         "platform": "wallstreetcn-hot",
         "rank": 3
@@ -159,12 +165,6 @@
         "title": "美媒：美军误信AI假情报，险些对中国船只采取行动",
         "platform": "ifeng",
         "rank": 4
-      },
-      {
-        "date": "2026-09-19",
-        "title": "Anthropic悄悄建起生物实验室！Claude指挥机器人做实验，AI制药再进一步",
-        "platform": "wallstreetcn-hot",
-        "rank": 5
       }
     ],
     "sources": [
@@ -175,7 +175,7 @@
     "tag": "情绪价值",
     "mention_count": 52,
     "today_count": 2,
-    "heat": 0.057,
+    "heat": 0.052,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
@@ -218,7 +218,7 @@
     "tag": "便利",
     "mention_count": 37,
     "today_count": 3,
-    "heat": 0.07,
+    "heat": 0.063,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
@@ -226,7 +226,7 @@
         "date": "2026-09-19",
         "title": "如何评价 31 岁博士辞医院工作去送外卖、做驻唱？现代社会如何看待人选择生活方式的自由，探索生活的可能性？",
         "platform": "zhihu",
-        "rank": 2
+        "rank": 4
       },
       {
         "date": "2026-09-19",
@@ -261,7 +261,7 @@
     "tag": "时尚",
     "mention_count": 55,
     "today_count": 2,
-    "heat": 0.058,
+    "heat": 0.053,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
@@ -275,7 +275,7 @@
         "date": "2026-09-19",
         "title": "彩色系早秋穿搭教程",
         "platform": "douyin",
-        "rank": 25
+        "rank": 29
       },
       {
         "date": "2026-09-11",
@@ -302,9 +302,9 @@
   },
   "体验": {
     "tag": "体验",
-    "mention_count": 65,
-    "today_count": 2,
-    "heat": 0.062,
+    "mention_count": 66,
+    "today_count": 3,
+    "heat": 0.073,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -321,6 +321,12 @@
         "rank": 21
       },
       {
+        "date": "2026-09-19",
+        "title": "沉浸式参与亚运开幕式",
+        "platform": "douyin",
+        "rank": 22
+      },
+      {
         "date": "2026-09-15",
         "title": "特种兵玩家准备开启快闪模式",
         "platform": "douyin",
@@ -330,12 +336,6 @@
         "date": "2025-12-22",
         "title": "老广沉浸式夜生活",
         "platform": "bilibili-hot-search",
-        "rank": 3
-      },
-      {
-        "date": "2025-12-26",
-        "title": "鸣潮3.0吧友体验实况",
-        "platform": "tieba",
         "rank": 3
       }
     ],
@@ -388,9 +388,9 @@
   },
   "活力": {
     "tag": "活力",
-    "mention_count": 65,
-    "today_count": 1,
-    "heat": 0.043,
+    "mention_count": 66,
+    "today_count": 2,
+    "heat": 0.057,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
@@ -399,6 +399,12 @@
         "title": "一组数据看中国经济活力迸发",
         "platform": "toutiao",
         "rank": 3
+      },
+      {
+        "date": "2026-09-19",
+        "title": "王者青春正农高校晚会",
+        "platform": "bilibili-hot-search",
+        "rank": 17
       },
       {
         "date": "2026-09-11",
@@ -416,12 +422,6 @@
         "date": "2025-12-22",
         "title": "中国人造太阳燃料取自海水",
         "platform": "weibo",
-        "rank": 3
-      },
-      {
-        "date": "2025-12-22",
-        "title": "从多领域成就感受中国经济活力",
-        "platform": "baidu",
         "rank": 3
       }
     ],
