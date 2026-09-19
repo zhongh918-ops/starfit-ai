@@ -1,12 +1,30 @@
 {
   "运动": {
     "tag": "运动",
-    "mention_count": 242,
-    "today_count": 0,
-    "heat": 0.094,
+    "mention_count": 245,
+    "today_count": 3,
+    "heat": 0.208,
     "verdict": "keep",
     "note": "热榜持续出现赛事、健身、运动员形象；18–28 人群对运动生活方式接受度高。",
     "evidence": [
+      {
+        "date": "2026-09-19",
+        "title": "涉乒乓球跳水领域恶意拉踩、公然侮辱等，5起网暴运动员案例公布",
+        "platform": "thepaper",
+        "rank": 2
+      },
+      {
+        "date": "2026-09-19",
+        "title": "为压缩成本安排运动员住邮轮、集装箱房等，亚奥理事会回应住宿条件争议",
+        "platform": "thepaper",
+        "rank": 7
+      },
+      {
+        "date": "2026-09-19",
+        "title": "中国篮球国家队回应“男篮负日本”",
+        "platform": "toutiao",
+        "rank": 8
+      },
       {
         "date": "2026-09-09",
         "title": "皇马2:1击败国米",
@@ -18,24 +36,6 @@
         "title": "回顾郑钦文美网之路",
         "platform": "bilibili-hot-search",
         "rank": 1
-      },
-      {
-        "date": "2026-09-10",
-        "title": "中国女篮不敌法国无缘世界杯四强",
-        "platform": "douyin",
-        "rank": 1
-      },
-      {
-        "date": "2026-09-14",
-        "title": "中国足球小将西班牙捧杯",
-        "platform": "toutiao",
-        "rank": 1
-      },
-      {
-        "date": "2025-12-21",
-        "title": "健身房教练说不报课自己练会练废，到底是为了卖课还是真的这样？",
-        "platform": "zhihu",
-        "rank": 2
       }
     ],
     "sources": [
@@ -87,12 +87,30 @@
   },
   "健康": {
     "tag": "健康",
-    "mention_count": 82,
-    "today_count": 0,
-    "heat": 0.032,
+    "mention_count": 85,
+    "today_count": 3,
+    "heat": 0.147,
     "verdict": "add",
     "note": "养生、成分党、神药打假同时在榜，年轻人要“健康感”但反伪科学。",
     "evidence": [
+      {
+        "date": "2026-09-19",
+        "title": "亚运会餐食 减肥都吃得比这多",
+        "platform": "baidu",
+        "rank": 4
+      },
+      {
+        "date": "2026-09-19",
+        "title": "松岛辉空说亚运会日本男乒「只发挥 50%-60% 也有机会击败中国队」对此你怎么看？",
+        "platform": "zhihu",
+        "rank": 14
+      },
+      {
+        "date": "2026-09-19",
+        "title": "晚上11点是睡眠分水岭",
+        "platform": "weibo",
+        "rank": 28
+      },
       {
         "date": "2025-12-22",
         "title": "抗癌药平替有效成分为0",
@@ -104,24 +122,6 @@
         "title": "大脑消耗糖分这么多，为什么没有动脑减肥法？",
         "platform": "zhihu",
         "rank": 2
-      },
-      {
-        "date": "2025-12-21",
-        "title": "冬至时节如何养生",
-        "platform": "weibo",
-        "rank": 3
-      },
-      {
-        "date": "2025-12-21",
-        "title": "持续加码医保投入 夯实健康中国",
-        "platform": "toutiao",
-        "rank": 3
-      },
-      {
-        "date": "2026-09-10",
-        "title": "起底“神药”直播间①｜年售3.9亿的“养生局”：假专家、假神药，卖货全靠演",
-        "platform": "thepaper",
-        "rank": 3
       }
     ],
     "sources": [
@@ -130,41 +130,41 @@
   },
   "科技": {
     "tag": "科技",
-    "mention_count": 898,
-    "today_count": 0,
-    "heat": 0.35,
+    "mention_count": 915,
+    "today_count": 17,
+    "heat": 1.0,
     "verdict": "keep",
     "note": "全平台最强信号（AI/折叠屏/智能硬件），科技感 TAG 有明确热度依据。",
     "evidence": [
       {
-        "date": "2025-12-21",
-        "title": "高盛2026年全球股市展望：更广泛的牛市，更宽泛的AI受益者",
-        "platform": "wallstreetcn-hot",
+        "date": "2026-09-19",
+        "title": "AI剧迎严审,官方力挺真人剧",
+        "platform": "tieba",
         "rank": 1
       },
       {
-        "date": "2025-12-21",
-        "title": "摩尔线程重磅发布：新一代GPU架构“花港”能效提升10倍，系列芯片明年量产上市，推出AI算力笔记本",
+        "date": "2026-09-19",
+        "title": "88小时抵一个人思考4000年！OpenAI核心研究员：除了自我进化，更可怕的是AI正学会“隐藏自己”",
         "platform": "wallstreetcn-hot",
-        "rank": 1
+        "rank": 4
       },
       {
-        "date": "2025-12-21",
-        "title": "火线解析智谱AI招股书：年营收3亿增速130%，“中国版OpenAI”率先冲刺全球大模型第一股",
-        "platform": "wallstreetcn-hot",
-        "rank": 1
+        "date": "2026-09-19",
+        "title": "美媒：美军误信AI假情报，险些对中国船只采取行动",
+        "platform": "ifeng",
+        "rank": 4
       },
       {
-        "date": "2025-12-21",
-        "title": "付鹏：决定2026全球资产涨跌的关键—AI“高速路”上，真有车跑吗? | Alpha峰会",
+        "date": "2026-09-19",
+        "title": "日本央行行长：不排除连续加息选项，要先发制人地遏制通胀，中东、AI、汇率是关键变量",
         "platform": "wallstreetcn-hot",
-        "rank": 1
+        "rank": 5
       },
       {
-        "date": "2025-12-24",
-        "title": "科技股助标普收创新高，金银铜再新高，人民币强势逼近7.0，GDP强劲打击美债",
-        "platform": "wallstreetcn-hot",
-        "rank": 1
+        "date": "2026-09-19",
+        "title": "美股收盘：AI芯片股爆发推动纳指走高 华尔街告别动荡一周",
+        "platform": "cls-hot",
+        "rank": 5
       }
     ],
     "sources": [
@@ -173,12 +173,18 @@
   },
   "情绪价值": {
     "tag": "情绪价值",
-    "mention_count": 50,
-    "today_count": 0,
-    "heat": 0.019,
+    "mention_count": 51,
+    "today_count": 1,
+    "heat": 0.058,
     "verdict": "add",
     "note": "治愈、松弛讨论在知乎/抖音出现，即饮与耳机场景可打陪伴。",
     "evidence": [
+      {
+        "date": "2026-09-19",
+        "title": "“三巫日”来袭 原油供应传闻拖累市场情绪 | 今夜看点",
+        "platform": "cls-hot",
+        "rank": 8
+      },
       {
         "date": "2025-12-24",
         "title": "马上测·回顾2025：两位“较真”记者，这一年测评的快乐、震惊和成就",
@@ -202,12 +208,6 @@
         "title": "燕麦系秋天的神",
         "platform": "douyin",
         "rank": 4
-      },
-      {
-        "date": "2026-09-14",
-        "title": "准备礼物的快乐总是先到一步",
-        "platform": "douyin",
-        "rank": 4
       }
     ],
     "sources": [
@@ -216,12 +216,30 @@
   },
   "便利": {
     "tag": "便利",
-    "mention_count": 34,
-    "today_count": 0,
-    "heat": 0.013,
+    "mention_count": 37,
+    "today_count": 3,
+    "heat": 0.129,
     "verdict": "add",
     "note": "外卖/预制菜/即时零售讨论多，即饮咖啡的便利是刚需。",
     "evidence": [
+      {
+        "date": "2026-09-19",
+        "title": "如何评价 31 岁博士辞医院工作去送外卖、做驻唱？现代社会如何看待人选择生活方式的自由，探索生活的可能性？",
+        "platform": "zhihu",
+        "rank": 4
+      },
+      {
+        "date": "2026-09-19",
+        "title": "把胆子肥嘟嘟做成外卖游戏",
+        "platform": "bilibili-hot-search",
+        "rank": 5
+      },
+      {
+        "date": "2026-09-19",
+        "title": "伊朗总统将赴纽约参会！巴勒斯坦总统遭美国拒签，只能通过预制录像发言",
+        "platform": "wallstreetcn-hot",
+        "rank": 10
+      },
       {
         "date": "2026-09-15",
         "title": "搜打撤?大学城猎手偷光外卖",
@@ -233,24 +251,6 @@
         "title": "贾国龙预制菜风波后发声，称靠吃安眠药入睡，如果能重来坚决不硬刚，如何看待西贝未来的发展？",
         "platform": "zhihu",
         "rank": 2
-      },
-      {
-        "date": "2025-12-27",
-        "title": "小区歧视外卖员,百名骑手集结抗议",
-        "platform": "tieba",
-        "rank": 4
-      },
-      {
-        "date": "2026-09-09",
-        "title": "自费买可乐的外卖骑手被奖励一年骑手餐",
-        "platform": "weibo",
-        "rank": 4
-      },
-      {
-        "date": "2025-12-27",
-        "title": "外卖骑手在家中猝死被保险公司拒赔",
-        "platform": "baidu",
-        "rank": 7
       }
     ],
     "sources": [
@@ -259,12 +259,18 @@
   },
   "时尚": {
     "tag": "时尚",
-    "mention_count": 53,
-    "today_count": 0,
-    "heat": 0.021,
+    "mention_count": 54,
+    "today_count": 1,
+    "heat": 0.059,
     "verdict": "optional",
     "note": "造型、美妆热搜集中在明星红毯，适合时尚向代言人加分。",
     "evidence": [
+      {
+        "date": "2026-09-19",
+        "title": "彩色系早秋穿搭教程",
+        "platform": "douyin",
+        "rank": 22
+      },
       {
         "date": "2026-09-11",
         "title": "速来领取可可系穿搭说明书",
@@ -288,12 +294,6 @@
         "title": "井柏然Luke穿搭爆火",
         "platform": "baidu",
         "rank": 10
-      },
-      {
-        "date": "2026-09-15",
-        "title": "国庆穿搭开始预备",
-        "platform": "douyin",
-        "rank": 10
       }
     ],
     "sources": [
@@ -304,7 +304,7 @@
     "tag": "体验",
     "mention_count": 63,
     "today_count": 0,
-    "heat": 0.025,
+    "heat": 0.024,
     "verdict": "add",
     "note": "沉浸式、市集、线下体验有内容热度，适合 campaign 落地形态。",
     "evidence": [
@@ -347,7 +347,7 @@
     "tag": "咖啡",
     "mention_count": 22,
     "today_count": 0,
-    "heat": 0.009,
+    "heat": 0.008,
     "verdict": "optional",
     "note": "茶饮咖啡因争议曾上热搜，产品需避开高咖啡因焦虑。",
     "evidence": [
@@ -390,7 +390,7 @@
     "tag": "活力",
     "mention_count": 64,
     "today_count": 0,
-    "heat": 0.025,
+    "heat": 0.024,
     "verdict": "optional",
     "note": "青春/燃向内容，适合运动与潮流人设。",
     "evidence": [
