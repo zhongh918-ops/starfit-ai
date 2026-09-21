@@ -5,9 +5,11 @@
   flex-direction: column;
   background: var(--olive-900);
   color: var(--white);
-  padding: 18px 22px 22px;
+  padding: 12px 18px 14px;
   min-height: 0;
   flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .cd-rail[hidden] { display: none !important; }
 
@@ -19,20 +21,20 @@
   text-decoration: none;
   font-size: 13px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .cd-back:hover { color: var(--white); }
 
 .cd-photo {
   position: relative;
   width: 100%;
-  height: 230px;
+  height: auto;
   border-radius: 16px;
   overflow: hidden;
   background: rgba(255,255,255,.08);
-  margin-bottom: 18px;
-  flex: 0 1 230px;
-  min-height: 148px;
+  margin-bottom: 10px;
+  flex: 1 1 300px;
+  min-height: 280px;
 }
 .cd-photo .na {
   width: 100%;
@@ -48,7 +50,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center top;
   display: block;
 }
 
@@ -58,7 +60,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255,255,255,.55);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .cd-idline {
@@ -87,7 +89,7 @@
   align-items: center;
 }
 .cd-role {
-  margin: 6px 0 14px;
+  margin: 4px 0 8px;
   font-size: 14px;
   color: rgba(255,255,255,.72);
 }
@@ -97,13 +99,13 @@
   border: 1px solid rgba(255,255,255,.32);
   color: var(--white);
 }
-.cd-rail .cl-tags { margin: 0; }
-.cd-spacer { flex: 1; min-height: 16px; }
+.cd-rail .cl-tags { margin: 0 0 2px; }
+.cd-spacer { display: none; }
 .cd-open-cs {
-  margin-top: auto;
+  margin-top: 8px;
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 36px;
   padding: 0 14px;
   border-radius: 999px;
   background: var(--lime-300);
@@ -111,6 +113,7 @@
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
+  flex-shrink: 0;
 }
 .cd-open-cs.hint {
   background: transparent;
@@ -118,7 +121,7 @@
   font-weight: 500;
   padding: 0;
   min-height: 0;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .cd-ov { padding: 2px 2px 4px; min-height: 100%; display: flex; flex-direction: column; }
@@ -330,14 +333,15 @@
 
 /* Candidate 02 — Risk and Trade-offs. Visual source: 10-candidate-risk-tradeoffs.png. Spec §14.2. */
 .cd-bio {
-  margin: 0 0 14px;
-  font-size: 13px;
-  line-height: 1.4;
+  margin: 0 0 8px;
+  font-size: 12.5px;
+  line-height: 1.35;
   color: rgba(255,255,255,.78);
 }
 .cd-ctx {
-  margin-top: auto;
-  padding-top: 18px;
+  margin-top: 10px;
+  padding-top: 10px;
+  flex-shrink: 0;
 }
 .cd-ctx .kicker {
   font-size: 11px;
@@ -345,13 +349,13 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255,255,255,.5);
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .cd-ctx dl {
-  margin: 0 0 14px;
+  margin: 0 0 8px;
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 8px 12px;
+  gap: 4px 12px;
   font-size: 13px;
 }
 .cd-ctx dt { color: rgba(255,255,255,.62); }

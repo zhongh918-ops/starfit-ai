@@ -321,8 +321,36 @@ a.wordmark {
 .demo-block a {
   color: var(--ink);
   font-weight: 700;
-  font-size: 20px;
   text-decoration: none;
+}
+
+.demo-url {
+  margin: 4px 0 10px;
+  line-height: 0.92;
+}
+
+.demo-url-local {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 6px;
+}
+
+.demo-url-host {
+  display: block;
+  font-size: clamp(26px, 2.5vw, 34px);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: var(--ink);
+  word-break: keep-all;
+}
+
+.demo-url-host:hover,
+.demo-url-local:hover {
+  color: var(--olive-700);
 }
 
 .contact-topics {

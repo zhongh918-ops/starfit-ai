@@ -43,7 +43,7 @@
 <link rel="stylesheet" href="css/tags.css">
 <link rel="stylesheet" href="css/scoring.css?v=custom3">
 <link rel="stylesheet" href="css/listing.css?v=fullimg1">
-<link rel="stylesheet" href="css/candidate.css?v=fullimg1">
+<link rel="stylesheet" href="css/candidate.css?v=rail2">
 <link rel="stylesheet" href="css/campaign.css?v=fullimg1">
 <link rel="stylesheet" href="css/legacy.css">
 </head>
@@ -4974,7 +4974,6 @@ function renderCandidateRail(row, celeb, page) {
   const tags = (row && row.tags && row.tags.length)
     ? row.tags
     : ((celeb && celeb.personaTags) || []).slice(0, 3).map(p => p.label);
-  const textLed = page && page !== 'overview';
   const backMap = {
     risk: { href: candidateHref(id, 'overview'), label: t('cd.overviewBack') },
     evidence: { href: candidateHref(id, 'risk'), label: t('cd.riskBack') },
@@ -4988,11 +4987,10 @@ function renderCandidateRail(row, celeb, page) {
   const photo = photoSrc
     ? `<div class="cd-photo"><img src="${escHtml(photoSrc)}" alt="${escHtml(name)}"></div>`
     : `<div class="cd-photo"><div class="na">${escHtml(t('fit.imageNa'))}</div></div>`;
-  const bio = textLed ? `<p class="cd-bio">${escHtml(candidateShortBio(row, celeb))}</p>` : '';
-  const context = page === 'risk' ? decisionContextHtml(row, pack)
-    : page === 'evidence' ? workingPlanHtml(row, pack)
+  const bio = `<p class="cd-bio">${escHtml(candidateShortBio(row, celeb))}</p>`;
+  const context = page === 'evidence' ? workingPlanHtml(row, pack)
     : page === 'concept' ? conceptScopeHtml(row, pack)
-    : '<div class="cd-spacer"></div>';
+    : decisionContextHtml(row, pack);
   el.innerHTML = `
     ${back}
     ${photo}
