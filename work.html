@@ -26,13 +26,9 @@
 (function () {
   try {
     var q = location.search || "";
-    if (/[?&](open|app)=1(?:&|$)/.test(q)) {
-      try { sessionStorage.setItem("match99-entered-work", "1"); } catch (e) {}
-      return;
-    }
+    if (/[?&](open|app)=1(?:&|$)/.test(q)) return;
     var p = (location.pathname || "").replace(/\/$/, "") || "/";
-    var entry = /(?:^|\/)work(?:\.html)?$/.test(p);
-    if (entry && !sessionStorage.getItem("match99-entered-work")) {
+    if (/(?:^|\/)work(?:\.html)?$/.test(p)) {
       document.documentElement.classList.add("work-splash-on");
     }
   } catch (e) {}
@@ -41,11 +37,11 @@
 <script src="js/public-base.js?v=base2"></script>
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/shell.css?v=backcenter">
-<link rel="stylesheet" href="css/work-home.css?v=ppt1">
+<link rel="stylesheet" href="css/work-home.css?v=splash2">
 <link rel="stylesheet" href="css/product.css?v=lang1">
 <link rel="stylesheet" href="css/trends.css?v=evimg2">
 <link rel="stylesheet" href="css/tags.css">
-<link rel="stylesheet" href="css/scoring.css?v=custom2">
+<link rel="stylesheet" href="css/scoring.css?v=custom3">
 <link rel="stylesheet" href="css/listing.css?v=fullimg1">
 <link rel="stylesheet" href="css/candidate.css?v=fullimg1">
 <link rel="stylesheet" href="css/campaign.css?v=fullimg1">
@@ -443,10 +439,10 @@
               <a class="btn-secondary ss-back" href="/work" id="ssBack" data-i18n="ss.back">Back to workbench</a>
             </div>
             <p class="ss-banner" id="ssLiveNote"></p>
+            <div class="ss-presets" id="ssPresets"></div>
+            <p class="ss-custom-hint" id="ssCustomHint"></p>
             <div class="ss-layout">
               <div>
-                <div class="ss-presets" id="ssPresets"></div>
-                <p class="ss-custom-hint" id="ssCustomHint"></p>
                 <div id="ssRows"></div>
                 <p class="ss-total" id="ssTotal"></p>
                 <div class="ss-actions">
