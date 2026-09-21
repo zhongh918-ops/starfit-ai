@@ -6,10 +6,13 @@ html, body {
   font-family: var(--font);
   background: var(--warm-white);
   color: var(--ink);
-  min-width: 1180px;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-body { min-height: 100vh; }
+body { min-height: 100%; }
 
 img {
   max-width: 100%;
@@ -36,19 +39,22 @@ img {
 }
 
 .page {
-  min-height: 100vh;
+  min-height: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding: var(--space-page);
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
   background: var(--warm-white);
 }
 
 .app-window {
   width: var(--window-width);
   height: var(--window-height);
-  max-width: calc(100vw - 72px);
-  max-height: calc(100vh - 72px);
+  max-width: none;
+  max-height: none;
+  flex-shrink: 0;
   border-radius: var(--window-radius);
   background: var(--warm-white);
   box-shadow: var(--shadow-window);
@@ -56,6 +62,10 @@ img {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transform: scale(var(--app-fit));
+  transform-origin: center center;
+  margin: calc((var(--window-height) * var(--app-fit) - var(--window-height)) / 2)
+    calc((var(--window-width) * var(--app-fit) - var(--window-width)) / 2);
 }
 
 .app-chrome {

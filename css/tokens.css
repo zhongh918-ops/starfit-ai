@@ -29,6 +29,7 @@
   --drawer-width: 400px;
   --space-page: 36px;
   --shadow-window: 0 18px 48px rgba(35, 45, 20, 0.14);
+  --app-fit: min(1, (100vw - 16px) / 1464, (100vh - 16px) / 952);
 
   --btn-height: 48px;
   --field-height: 48px;

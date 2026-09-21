@@ -462,16 +462,23 @@ html.work-splash-on #workSplash {
   position: fixed;
   inset: 0;
   z-index: 80;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
+  overflow: hidden;
   background: var(--warm-white, #f6f4ef);
 }
 .work-splash-window {
   display: flex;
   flex-direction: column;
-  width: min(1440px, 100%);
-  min-height: 100%;
+  width: var(--window-width, 1464px);
+  height: var(--window-height, 952px);
+  min-height: 0;
+  flex-shrink: 0;
   background: var(--warm-white, #f6f4ef);
+  transform: scale(var(--app-fit));
+  transform-origin: center center;
+  margin: calc((var(--window-height, 952px) * var(--app-fit) - var(--window-height, 952px)) / 2)
+    calc((var(--window-width, 1464px) * var(--app-fit) - var(--window-width, 1464px)) / 2);
 }
 .work-splash-chrome {
   padding: 0 32px 8px;

@@ -31,5 +31,15 @@
       history.replaceState({ work: true }, "", root + pending + location.search + location.hash);
     }
   } catch (e) {}
-  global.Match99Base = { root: root, href: href, withBase: withBase, isPublic: !!(gh || jsd) };
+  function fitApp() {
+    try {
+      var s = Math.min(1, (window.innerWidth - 16) / 1464, (window.innerHeight - 16) / 952);
+      if (s > 0 && isFinite(s)) {
+        document.documentElement.style.setProperty("--app-fit", String(s));
+      }
+    } catch (e) {}
+  }
+  fitApp();
+  window.addEventListener("resize", fitApp);
+  global.Match99Base = { root: root, href: href, withBase: withBase, isPublic: !!(gh || jsd), fitApp: fitApp };
 })(window);
