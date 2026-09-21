@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>99% match</title>
 <script>
 (function () {
@@ -24,6 +25,11 @@
 <script>
 (function () {
   try {
+    var q = location.search || "";
+    if (/[?&](open|app)=1(?:&|$)/.test(q)) {
+      try { sessionStorage.setItem("match99-entered-work", "1"); } catch (e) {}
+      return;
+    }
     var p = (location.pathname || "").replace(/\/$/, "") || "/";
     var entry = /(?:^|\/)work(?:\.html)?$/.test(p);
     if (entry && !sessionStorage.getItem("match99-entered-work")) {
@@ -35,7 +41,7 @@
 <script src="js/public-base.js?v=base2"></script>
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/shell.css?v=backcenter">
-<link rel="stylesheet" href="css/work-home.css?v=kinds6">
+<link rel="stylesheet" href="css/work-home.css?v=ppt1">
 <link rel="stylesheet" href="css/product.css?v=lang1">
 <link rel="stylesheet" href="css/trends.css?v=evimg2">
 <link rel="stylesheet" href="css/tags.css">
@@ -72,6 +78,7 @@
         <figure><img src="assets/opening/opening-02-editorial-headphones.png" width="451" height="565" data-i18n-alt="open.alt2" alt=""></figure>
         <figure><img src="assets/opening/opening-03-fashion-tech-portrait.png" width="474" height="565" data-i18n-alt="open.alt3" alt=""></figure>
       </div>
+      <button type="button" id="workEnterMain" class="work-splash-go" data-i18n="open.enter">Enter workbench</button>
     </section>
   </div>
 </div>
@@ -83,8 +90,9 @@
   }
   window.dismissWorkSplash = dismissWorkSplash;
   document.addEventListener("click", function (e) {
-    var btn = e.target && e.target.closest && e.target.closest("#workEnter");
-    if (!btn) return;
+    var t = e.target && e.target.closest && e.target.closest("#workEnter, #workEnterMain, .work-splash-opening");
+    if (!t) return;
+    if (e.target.closest && e.target.closest("a[href]")) return;
     e.preventDefault();
     e.stopPropagation();
     dismissWorkSplash();
@@ -511,7 +519,7 @@
     </div>
   </div>
 </div>
-<script src="js/i18n.js?v=custom2"></script>
+<script src="js/i18n.js?v=ppt1"></script>
 <script src="js/campaign-poster.js?v=kinds5"></script>
 <script>
 const state = { trends: null, celebrities: null, products: null, meta: null, seeded: false, pinnedTags: [], openCeleb: null, briefConfirmed: false, scoringValid: true, scoringVersion: 'scoring_balanced_v1', briefVersion: null, analysisId: null, minAge: 18, maxAge: 28, understanding: null, genderLocked: false, puClean: '', trendQuery: '', trendWindow: '7d', trendPlatform: 'all', inspect: null, trendStatus: 'idle', tagDraft: null, tagBaseline: null, appliedProfile: null, rankingStale: false, tagProductId: null, scoringDraft: null, scoringSaved: null, scoringApplied: null, scoringPreset: 'balanced', scoringCustom: null, matchPack: null, routeCandidateId: null, routeCandidatePage: 'overview', routeCampaignId: null, campaignScene: 'lobby', drawerOpen: false, drawerEdit: false, drawerMethod: false, boot: 'loading', loadError: null, refreshError: null, dataMode: 'demo', demoAnalysis: null, considerIds: [] };
@@ -2430,11 +2438,12 @@ function setLive() {
 async function fetchState() {
   const mode = readDataMode();
   try {
-    const r = await fetch('/api/state?mode=' + encodeURIComponent(mode), { cache: 'no-store' });
+    const r = await fetch(withBase('/api/state') + '?mode=' + encodeURIComponent(mode), { cache: 'no-store' });
     const ct = r.headers.get('content-type') || '';
     if (r.ok && ct.includes('application/json')) return r.json();
   } catch (e) {}
-  const r = await fetch('data/state.json?t=' + Date.now(), { cache: 'no-store' });
+  const file = withBase('/data/state.json');
+  const r = await fetch(file + (file.indexOf('?') >= 0 ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' });
   if (!r.ok) throw new Error('无法加载趋势数据');
   return r.json();
 }

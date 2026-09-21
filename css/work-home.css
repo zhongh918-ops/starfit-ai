@@ -580,3 +580,19 @@ html.work-splash-on #workSplash {
   object-fit: cover;
   object-position: center;
 }
+.work-splash-go {
+  appearance: none;
+  display: block;
+  width: min(280px, 100%);
+  margin: 18px auto 0;
+  height: 46px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--olive-900);
+  color: var(--white);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.work-splash-go:hover { filter: brightness(1.08); }
