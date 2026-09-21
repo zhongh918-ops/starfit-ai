@@ -33,13 +33,26 @@
   } catch (e) {}
   function fitApp() {
     try {
-      var s = Math.min(1, (window.innerWidth - 16) / 1464, (window.innerHeight - 16) / 952);
-      if (s > 0 && isFinite(s)) {
-        document.documentElement.style.setProperty("--app-fit", String(s));
+      var w = Math.max(window.innerWidth || 0, document.documentElement.clientWidth || 0);
+      var h = Math.max(window.innerHeight || 0, document.documentElement.clientHeight || 0);
+      if (window.visualViewport) {
+        if (window.visualViewport.width) w = window.visualViewport.width;
+        if (window.visualViewport.height) h = window.visualViewport.height;
+      }
+      var s = Math.min(1, (w - 16) / 1464, (h - 16) / 952);
+      if (!(s > 0 && isFinite(s))) s = 1;
+      document.documentElement.style.setProperty("--app-fit", String(s));
+      var nodes = document.querySelectorAll(".app-window, .work-splash-window");
+      for (var i = 0; i < nodes.length; i++) {
+        nodes[i].style.zoom = String(s);
+        nodes[i].style.transform = "none";
+        nodes[i].style.margin = "0";
       }
     } catch (e) {}
   }
   fitApp();
   window.addEventListener("resize", fitApp);
+  if (window.visualViewport) window.visualViewport.addEventListener("resize", fitApp);
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fitApp);
   global.Match99Base = { root: root, href: href, withBase: withBase, isPublic: !!(gh || jsd), fitApp: fitApp };
 })(window);

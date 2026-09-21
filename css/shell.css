@@ -62,10 +62,8 @@ img {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transform: scale(var(--app-fit));
-  transform-origin: center center;
-  margin: calc((var(--window-height) * var(--app-fit) - var(--window-height)) / 2)
-    calc((var(--window-width) * var(--app-fit) - var(--window-width)) / 2);
+  zoom: var(--app-fit);
+  margin: 0;
 }
 
 .app-chrome {

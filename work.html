@@ -34,10 +34,10 @@
   } catch (e) {}
 })();
 </script>
-<script src="js/public-base.js?v=fit1"></script>
-<link rel="stylesheet" href="css/tokens.css?v=fit1">
-<link rel="stylesheet" href="css/shell.css?v=fit1">
-<link rel="stylesheet" href="css/work-home.css?v=fit1">
+<script src="js/public-base.js?v=kind1"></script>
+<link rel="stylesheet" href="css/tokens.css?v=kind1">
+<link rel="stylesheet" href="css/shell.css?v=kind1">
+<link rel="stylesheet" href="css/work-home.css?v=kind1">
 <link rel="stylesheet" href="css/product.css?v=lang1">
 <link rel="stylesheet" href="css/trends.css?v=evimg2">
 <link rel="stylesheet" href="css/tags.css">
@@ -176,10 +176,33 @@
             <p class="lede" data-i18n="home.lede">Define the product. I’ll validate its tags against live trends and recommend the strongest celebrity fit.</p>
             <div class="brief-card" id="panel-product">
               <label for="product" data-i18n="home.product">Product</label>
-              <select class="field" id="product"></select>
+              <select class="field" id="product">
+                <option value="shoes" selected>AEROSTRIDE · 训练跑鞋</option>
+                <option value="cold-brew">NITEFLOW · 即饮冷萃</option>
+                <option value="headphones">PULSE AIR · 智能耳机</option>
+                <option value="custom">自定义 · 你的产品</option>
+              </select>
               <label for="desc" data-i18n="home.brief">Product brief</label>
               <textarea class="field-area" id="desc" data-i18n-placeholder="home.briefPh" placeholder="Describe the product, audience and the image you want to carry."></textarea>
-              <div class="kind-suggest" id="kindSuggest" hidden></div>
+              <div class="kind-suggest" id="kindSuggest">
+                <span class="kind-suggest-label">常见品类</span>
+                <button type="button" class="kind-chip" data-kind="running">跑鞋</button>
+                <button type="button" class="kind-chip" data-kind="sneakers">运动鞋</button>
+                <button type="button" class="kind-chip" data-kind="yoga">瑜伽垫</button>
+                <button type="button" class="kind-chip" data-kind="bottle">运动水壶</button>
+                <button type="button" class="kind-chip" data-kind="activewear">健身服</button>
+                <button type="button" class="kind-chip" data-kind="yogaset">瑜伽服</button>
+                <button type="button" class="kind-chip" data-kind="sunscreen">防晒霜</button>
+                <button type="button" class="kind-chip" data-kind="powder">散粉</button>
+                <button type="button" class="kind-chip" data-kind="lipstick">口红</button>
+                <button type="button" class="kind-chip" data-kind="cushion">气垫</button>
+                <button type="button" class="kind-chip" data-kind="primer">隔离</button>
+                <button type="button" class="kind-chip" data-kind="concealer">遮瑕</button>
+                <button type="button" class="kind-chip" data-kind="blush">腮红</button>
+                <button type="button" class="kind-chip" data-kind="eyeshadow">眼影</button>
+                <button type="button" class="kind-chip" data-kind="mascara">睫毛膏</button>
+                <button type="button" class="kind-chip" data-kind="sunwear">防晒服</button>
+              </div>
               <div class="brief-meta">
                 <div class="meta-block">
                   <span class="meta-label" data-i18n="home.audience">Target audience</span>
@@ -2438,10 +2461,22 @@ async function fetchState() {
     const ct = r.headers.get('content-type') || '';
     if (r.ok && ct.includes('application/json')) return r.json();
   } catch (e) {}
-  const file = withBase('/data/state.json');
-  const r = await fetch(file + (file.indexOf('?') >= 0 ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' });
-  if (!r.ok) throw new Error('无法加载趋势数据');
-  return r.json();
+  try {
+    const file = withBase('/data/state.json');
+    const r = await fetch(file + (file.indexOf('?') >= 0 ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' });
+    if (r.ok) return r.json();
+  } catch (e) {}
+  return {
+    products: [
+      { id: 'shoes', name: 'AEROSTRIDE 训练跑鞋', name_en: 'AEROSTRIDE training shoe', category: 'Sports shoes', audience: '18-28', seed_tags: ['运动', '活力'], description: '轻量训练跑鞋，面向日常跑步与健身房的年轻人。期望形象：运动、真诚、有活力。', description_en: 'A light training shoe for daily runs and the gym. Image: athletic, sincere, energetic.' },
+      { id: 'cold-brew', name: 'NITEFLOW 即饮冷萃', name_en: 'NITEFLOW cold brew', category: 'Coffee', audience: '18-28', seed_tags: ['咖啡', '便利'], description: '即饮冷萃咖啡，面向通勤年轻人。', description_en: 'Ready-to-drink cold brew for commuting youth.' },
+      { id: 'headphones', name: 'PULSE AIR 智能耳机', name_en: 'PULSE AIR headphones', category: 'Smart headphones', audience: '18-28', seed_tags: ['科技', '便利'], description: '轻量智能耳机。', description_en: 'Light smart headphones.' },
+      { id: 'custom', name: '自定义产品', name_en: 'Custom product', category: 'Custom', audience: '18-28', seed_tags: [], description: '', description_en: '' }
+    ],
+    trends: {},
+    celebrities: [],
+    meta: { live: false, dataMode: 'demo' }
+  };
 }
 
 async function load(keepProduct) {
@@ -2662,6 +2697,10 @@ function kindCategory(kind) {
 function applyProductKind(id) {
   const kind = PRODUCT_KIND_HINTS.find((k) => k.id === id);
   if (!kind) return;
+  if (!state.products) state.products = [];
+  if (!state.products.some((p) => p.id === 'custom')) {
+    state.products.push({ id: 'custom', name: '自定义产品', name_en: 'Custom product', category: 'Custom', audience: '18-28', seed_tags: [], description: '', description_en: '' });
+  }
   const desc = document.getElementById('desc');
   const prevGender = parseTargetGender(desc && desc.value);
   const sel = document.getElementById('product');
@@ -2725,7 +2764,8 @@ function syncCatalogFromDesc() {
 }
 
 function fillProduct() {
-  const p = state.products.find(x => x.id === document.getElementById('product').value) || {};
+  const list = state.products || [];
+  const p = list.find(x => x.id === document.getElementById('product').value) || {};
   document.getElementById('desc').value = productBriefText(p);
   const age = parseAge(p.audience || '18-28');
   state.minAge = age.minAge;

@@ -69,6 +69,9 @@
   align-items: center;
   gap: 8px;
   margin: 0 0 14px;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
 }
 .kind-suggest-label {
   font-size: 12px;
@@ -82,12 +85,15 @@
   background: var(--white);
   color: var(--ink);
   border-radius: 999px;
-  height: 28px;
-  padding: 0 10px;
+  height: 32px;
+  padding: 0 12px;
   font: inherit;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .kind-chip:hover { border-color: var(--olive-700); }
 .kind-chip.on {
@@ -475,10 +481,8 @@ html.work-splash-on #workSplash {
   min-height: 0;
   flex-shrink: 0;
   background: var(--warm-white, #f6f4ef);
-  transform: scale(var(--app-fit));
-  transform-origin: center center;
-  margin: calc((var(--window-height, 952px) * var(--app-fit) - var(--window-height, 952px)) / 2)
-    calc((var(--window-width, 1464px) * var(--app-fit) - var(--window-width, 1464px)) / 2);
+  zoom: var(--app-fit, 1);
+  margin: 0;
 }
 .work-splash-chrome {
   padding: 0 32px 8px;
